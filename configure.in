@@ -1,23 +1,55 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
+AC_INIT([llevm], [0.0.1], [lukas@erlang-solutions.com])
+AC_CONFIG_AUX_DIRS($srcdir/autoconf)
 AC_PREREQ([2.67])
-AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
 AC_CONFIG_SRCDIR([csrc/llvm_nif.cc])
-AC_CONFIG_HEADERS([config.h])
+
+AC_CANONICAL_HOST
+TARGET=$host
+AC_SUBST(TARGET)
 
 # Checks for programs.
 AC_PROG_CXX
-AC_PROG_CC
+AC_PROG_CPP
+AC_LANG([C++])
+AC_CHECK_PROG([llvm_config_var], [llvm-config], [llvm-config])
+ERLANG_ROOT_DIR=`erl -noshell -eval 'io:format("~s~n",[[code:root_dir()]])' -s erlang halt`
+AC_SUBST(ERLANG_ROOT_DIR)
+AC_MSG_NOTICE(ERL ROOT DIR: [$ERLANG_ROOT_DIR])
+
+AC_CHECK_SIZEOF(void *)
+
+case $ac_cv_sizeof_void_p in
+     8)
+	CFLAGS="-m64"
+	;;
+     *)
+	CFLAGS="-m32"
+       	;;
+esac
+
+CPPFLAGS="-O3  -fno-exceptions -fno-rtti -fno-common -Woverloaded-virtual -Wcast-qual -g -Wall -fPIC"
+
+case $host_os in
+     darwin*)
+	LDFLAGS="-fPIC -bundle -flat_namespace -undefined suppress"
+	;;
+     *)
+	LDFLAGS="-shared -fPIC"
+	;;
+esac
+
 
 # Checks for libraries.
 
 # Checks for header files.
+AC_CHECK_HEADERS([llvm/GlobalVariable.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
 AC_FUNC_MALLOC
 
-AC_CONFIG_FILES([Makefile])
-AC_OUTPUT(MakeFile, echo timestamp > stamp-h)
+AC_OUTPUT(Makefile, echo timestamp > stamp-h)

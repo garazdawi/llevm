@@ -5,18 +5,22 @@ CSRC=csrc
 OBJ_DIR=obj.$(ARCH)
 
 # llvm Variables
-LLVM_CCFLAGS=$(shell llvm-config --cppflags)
-LLVM_LDFLAGS=$(shell llvm-config --ldflags) `llvm-config --libs`
+LLVM_CONFIG=@llvm_config_var@
+LLVM_CCFLAGS=$(shell $(LLVM_CONFIG) --cppflags)
+LLVM_LDFLAGS=$(shell $(LLVM_CONFIG) --ldflags) `$(LLVM_CONFIG) --libs`
 
 # Erlang Variables
-ERL_TOP=/ldisk/lukas/otp/release/x86_64-unknown-linux-gnu
+ERL_TOP=@ERLANG_ROOT_DIR@
 ERL=$(ERL_TOP)/bin/erl
 
 # CPP Variables
-CC=g++
-LINKER=g++
-CCFLAGS=-m64 $(LLVM_CCFLAGS) -I $(ERL_TOP)/erts-5.8.4/include/ -O3  -fno-exceptions -fno-rtti -fno-common -Woverloaded-virtual -Wcast-qual -g -Wall -fPIC
-LDFLAGS=$(LLVM_LDFLAGS) -shared
+CXX=@CXX@
+LINKER=@CXX@
+CFLAGS=@CFLAGS@
+CPPFLAGS=@CPPFLAGS@
+LDFLAGS=@LDFLAGS@
+CPPFLAGS+=$(LLVM_CCFLAGS) -I $(ERL_TOP)/erts-5.8.4/include/ $(CFLAGS)
+LDFLAGS+=$(LLVM_LDFLAGS)
 OBJ_FILES=$(patsubst $(CSRC)/%.cc, $(OBJ_DIR)/%.o, $(wildcard $(CSRC)/*.cc))
 HH_FILES=$(wildcard $(CSRC)/*.hh)
 
@@ -27,7 +31,7 @@ compile: priv/$(ARCH)/llevm.so
 	@erl -noshell -pa ebin -eval "code:load_file(llvm_nif)." -s init stop
 
 $(OBJ_DIR)/%.o: $(CSRC)/%.cc $(HH_FILES) $(OBJ_DIR)
-	$(CC) -c $(CCFLAGS) -o $@ $<
+	$(CC) -c $(CPPFLAGS) -o $@ $<
 
 priv/$(ARCH)/llevm.so: $(OBJ_FILES) priv/$(ARCH)
 	$(LINKER) $(OBJ_FILES) $(LDFLAGS) -o $@
