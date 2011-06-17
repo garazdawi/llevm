@@ -41,7 +41,10 @@ priv/$(ARCH) $(OBJ_DIR):
 
 clean:
 	./rebar $@
-	rm -rf $(OBJ_DIR) priv/$(ARCH)
+	rm -rf $(OBJ_DIR) priv
+
+very_clean: clean
+	rm -rf config.status autom4te.cache Makefile config.log
 
 shell:
 	erl -pa ebin

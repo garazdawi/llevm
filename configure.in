@@ -52,4 +52,4 @@ AC_CHECK_HEADERS([llvm/GlobalVariable.h])
 # Checks for library functions.
 AC_FUNC_MALLOC
 
-AC_OUTPUT(Makefile, echo timestamp > stamp-h)
+AC_OUTPUT(Makefile)
