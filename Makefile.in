@@ -2,46 +2,56 @@
 # Global
 ARCH=x86_64
 CSRC=csrc
+ESRC=src
+EBIN=ebin
+INCLUDE_DIR=include
 OBJ_DIR=obj.$(ARCH)
 
 # llvm Variables
 LLVM_CONFIG=@llvm_config_var@
-LLVM_CCFLAGS=$(shell $(LLVM_CONFIG) --cppflags)
+LLVM_CFLAGS=$(shell $(LLVM_CONFIG) --cflags)
 LLVM_LDFLAGS=$(shell $(LLVM_CONFIG) --ldflags) `$(LLVM_CONFIG) --libs`
 
 # Erlang Variables
 ERL_TOP=@ERLANG_ROOT_DIR@
 ERL=$(ERL_TOP)/bin/erl
+ERLC=$(ERL_TOP)/bin/erlc
+BEAM_FILES=$(patsubst $(ESRC)/%.erl,$(EBIN)/%.beam,$(wildcard $(ESRC)/*.erl))
+HRL_FILES=$(wildcard $(ESRC)/*.hrl) $(wildcard $(INCLUDE_DIR)/*.hrl)
 
 # CPP Variables
-CXX=@CXX@
-LINKER=@CXX@
+CC=@CC@
+LINKER=@CC@
 CFLAGS=@CFLAGS@
-CPPFLAGS=@CPPFLAGS@
+CFLAGS+=$(LLVM_CFLAGS)
+CFLAGS+=-I @ERTS_DIR@/include/
 LDFLAGS=@LDFLAGS@
-CPPFLAGS+=$(LLVM_CCFLAGS) -I @ERTS_DIR@/include/ $(CFLAGS)
 LDFLAGS+=$(LLVM_LDFLAGS)
-OBJ_FILES=$(patsubst $(CSRC)/%.cc, $(OBJ_DIR)/%.o, $(wildcard $(CSRC)/*.cc))
-HH_FILES=$(wildcard $(CSRC)/*.hh)
+OBJ_FILES=$(patsubst $(CSRC)/%.c, $(OBJ_DIR)/%.o, $(wildcard $(CSRC)/*.c))
+H_FILES=$(wildcard $(CSRC)/*.h)
 
 all: compile
 
-compile: priv/$(ARCH)/llevm.so
-	./rebar $@
+compile: compile_erl priv/$(ARCH)/llevm.so
 	@erl -noshell -pa ebin -eval "code:load_file(llvm_nif)." -s init stop
 
-$(OBJ_DIR)/%.o: $(CSRC)/%.cc $(HH_FILES) $(OBJ_DIR)
-	$(CC) -c $(CPPFLAGS) -o $@ $<
+compile_erl: $(EBIN) $(BEAM_FILES)
+	cp $(ESRC)/llevm.app.src $(EBIN)/llevm.app
+
+$(EBIN)/%.beam: $(ESRC)/%.erl $(HRL_FILES)
+	$(ERLC) -I$(INCLUDE_DIR) -o $(EBIN) $<
+
+$(OBJ_DIR)/%.o: $(CSRC)/%.c $(H_FILES) $(OBJ_DIR)
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 priv/$(ARCH)/llevm.so: $(OBJ_FILES) priv/$(ARCH)
 	$(LINKER) $(OBJ_FILES) $(LDFLAGS) -o $@
 
-priv/$(ARCH) $(OBJ_DIR):
+priv/$(ARCH) $(OBJ_DIR) $(EBIN) $(INCLUDE_DIR):
 	@mkdir -p $@
 
 clean:
-	./rebar $@
-	rm -rf $(OBJ_DIR) priv
+	rm -rf $(OBJ_DIR) priv $(EBIN)
 
 very_clean: clean
 	rm -rf config.status autom4te.cache Makefile config.log
