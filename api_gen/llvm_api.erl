@@ -84,7 +84,7 @@ generate_enum_member(EnumName, [#enum_member{ name = Name,
 					      docs = Docs }|Rest]) ->
     ["-define(",Name,",{'",Name,"',",integer_to_list(Value),"}).~n",
      if Docs /= [] ->
-	    ["%% ",add_tilde(Docs),"~n"];
+	    ["%% ",add_escape(Docs),"~n"];
        true ->
 	    []
     end,
@@ -95,7 +95,7 @@ generate_enum_member(_EnumName, []) ->
 
 generate_types([#typedef{ name = Name, is_ptr = true, docs = Docs }|Rest]) ->
     ["-opaque '",Name,"'() :: {'",Name,"',binary()}.~n"
-     "%% ",add_tilde(Docs),"~n"|
+     "%% ",add_escape(Docs),"~n"|
      generate_types(Rest)];
 generate_types([#typedef{ name = Name, type = Type, 
 			  is_ptr = false, docs = Docs }|Rest]) ->
@@ -103,7 +103,7 @@ generate_types([#typedef{ name = Name, type = Type,
 		     "int" -> "integer"
 		 end,
     ["-type '",Name,"'() :: ",ErlangType,"().~n"
-     "%% ",add_tilde(Docs),"~n~n"|
+     "%% ",add_escape(Docs),"~n~n"|
      generate_types(Rest)];
 generate_types([#enum{ name = Name }|Rest]) ->
     ["-opaque '",Name,"'() :: {'",Name,"',integer()}.~n"|
@@ -117,10 +117,11 @@ generate_functions([#function{ name = Name,
 			       return_type = Return,
 			       params = Params,
 			       docs = Docs }|Rest]) ->
-    DocStr = ["%% @doc ",add_tilde(Docs),"~n"],
+    DocStr = ["%% @doc ",add_escape(Docs),"~n"],
     SpecStr = ["-spec '",Name,"'(",
-	       generate_params(Params,fun(#param{type=T}) -> 
-					      [to_erlang_type(T)] end),
+	       generate_params(Params,
+			       fun(#param{name = PName, type=T}) -> 
+				       [to_var(PName)," :: ",to_erlang_type(T)] end),
 	       ") -> ",to_erlang_type(Return),".~n"],
 
     BodyStr = ["'",Name,"'(",
@@ -129,23 +130,29 @@ generate_functions([#function{ name = Name,
 		 fun(#param{ name = PName, type = T }) ->
 			 case is_erlang_type(T) of
 			     false ->
-				 ["{",to_erlang_tag(T),",",PName,"}"];
+				 ["{",to_erlang_tag(T),",",to_var(PName),"}"];
 			     ptr ->
-				 ["{ptr,{",hd(string:tokens(to_erlang_tag(T)," ")),
-				  "',",PName,"}}"];
+				 Tag = case to_erlang_tag(T) of
+				     "'char * *'" ->
+					       "'string";
+					   Else ->
+					       hd(string:tokens(Else," "))
+				       end,
+				 ["{ptr,{",Tag,
+				  "',",to_var(PName),"}}"];
 			     true ->
-				 PName
+				 to_var(PName)
 			 end
 		 end),
 	       ") ->~n"
 	       "\t'",Name,"_internal'(",
 	       generate_params(Params,fun(#param{ name = PName }) ->
-					      PName
+					      to_var(PName)
 				      end),
 	       ").~n"
 	      "'",Name,"_internal'(",
 	      generate_params(Params, fun(#param{ name = PName}) ->
-					      ["_",PName]
+					      ["_",to_var(PName)]
 				      end),
 	      ") ->~n"
 	      "\tnif_not_loaded.~n~n"],
@@ -171,11 +178,13 @@ generate_exports([_|R]) ->
 generate_exports([]) ->
     [].
 
-add_tilde([$~|R]) ->
-    [$~,$~|add_tilde(R)];
-add_tilde([C|R]) ->
-    [C|add_tilde(R)];
-add_tilde([]) ->
+add_escape([$&|R]) ->
+    "&amp;"++add_escape(R);
+add_escape([$~|R]) ->
+    [$~,$~|add_escape(R)];
+add_escape([C|R]) ->
+    [C|add_escape(R)];
+add_escape([]) ->
     [].
 
 to_erlang_type(Val) ->
@@ -196,6 +205,8 @@ to_erlang_tag("integer") ->
     "integer";
 to_erlang_tag("char *") ->
     "string";
+to_erlang_tag("char **") ->
+    "'char * *'";
 to_erlang_tag("const char *") ->
     "string";
 to_erlang_tag("const uint64_t") ->
@@ -222,3 +233,9 @@ is_erlang_type(Type) ->
 	_Else ->
 	    true
     end.
+
+to_var([C|Rest]) when $a =< C, C =< $z ->
+    [C - $a + $A|Rest];
+to_var(Else) ->
+    Else.
+		       
