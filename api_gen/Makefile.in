@@ -1,0 +1,27 @@
+
+# Global
+ESRC=./
+EBIN=./
+
+# Erlang Variables
+ERL_TOP=@ERLANG_ROOT_DIR@
+ERL=$(ERL_TOP)/bin/erl
+ERLC=$(ERL_TOP)/bin/erlc
+BEAM_FILES=$(patsubst $(ESRC)/%.erl,$(EBIN)/%.beam,$(wildcard $(ESRC)/*.erl))
+HRL_FILES=$(wildcard $(ESRC)/*.hrl)
+
+# Other
+DOXYGEN=@DOXYGEN_PATH@
+
+all: generate
+
+compile: $(BEAM_FILES)
+
+$(EBIN)/%.beam: $(ESRC)/%.erl $(HRL_FILES)
+	$(ERLC) -o $(EBIN) $<
+
+generate_doxygen: doxygen.conf
+	$(DOXYGEN) doxygen.conf
+
+generate: compile generate_doxygen
+	$(ERL) -noshell -eval 'llvm_api:generate("llvm_xml/*Core*.xml","../")' -s init stop

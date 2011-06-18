@@ -14,6 +14,7 @@ AC_SUBST(TARGET)
 AC_PROG_CC
 AC_LANG([C])
 AC_CHECK_PROG([llvm_config_var], [llvm-config], [llvm-config])
+AC_CHECK_PROG([DOXYGEN_PATH], [doxygen], [doxygen])
 ERLANG_ROOT_DIR=`erl -noshell -eval 'io:format("~s~n",[[code:root_dir()]])' -s erlang halt`
 AC_SUBST(ERLANG_ROOT_DIR)
 ERTS_DIR=$ERLANG_ROOT_DIR`erl -noshell -eval 'io:format("~s~n",[[lists:concat([["/erts-", erlang:system_info(version)]])]])' -s erlang halt`
@@ -53,4 +54,4 @@ AC_CHECK_HEADERS([llvm-c/Core.h])
 # Checks for library functions.
 AC_FUNC_MALLOC
 
-AC_OUTPUT(Makefile)
+AC_OUTPUT([Makefile api_gen/Makefile])
