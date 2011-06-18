@@ -12,7 +12,7 @@ parse(Path) ->
 		  {[X|Acc], S}
 	  end,
     {XML, []} = xmerl_scan:file(Path,[{space,normalize}, {acc_fun, Acc}]),
-    parse_xml(XML,[]).
+    lists:reverse(parse_xml(XML,[])).
 
 
 parse_xml(#xmlElement{ name = memberdef, 
@@ -69,6 +69,9 @@ parse_enum_member(#xmlElement{ name = name,
 parse_enum_member(#xmlElement{ name = initializer, content = Text},
 		  Member) ->
     Member#enum_member{ value = parse_value(Text) };
+parse_enum_member(#xmlElement{ name = detaileddescription, content = Descr}, 
+	       Member) ->
+    Member#enum_member{ docs = parse_text(Descr) };
 parse_enum_member(#xmlElement{ }, Member) ->
     Member;
 parse_enum_member(XML, EnumMember) when is_list(XML) ->
@@ -125,19 +128,24 @@ parse_function(#xmlElement{ name = detaileddescription, content = Descr},
 parse_function(#xmlElement{ name = param, content = ParamXML },Func) ->
     Param = parse_param(ParamXML, #param{}),
     Func#function{ params = [Param|Func#function.params]};
-parse_function(#xmlElement{ name = Name }, Func) 
-  when 
-      Name == definition; 
-      Name == argsstring; 
-      Name == briefdescription; 
-      Name == inbodydescription; 
-      Name == location ->
+parse_function(#xmlElement{ }, Func) ->
     Func;
 parse_function(XML, Func) when is_list(XML) ->
     FinFunc = lists:foldl(fun(XMLElement, Acc) ->
 				  parse_function(XMLElement, Acc)
 			  end,Func,XML),
-    FinFunc#function{ params = lists:reverse(FinFunc#function.params)}.
+    NewParam = lists:flatmap(fun(#param{ type = "LLVMBuilderRef", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "B" }];
+				(#param{ type = "LLVMAttribute", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "PA" }];
+				(#param{ type = "void" }) ->
+				     [];
+				(P) ->
+				     [P]
+			     end,lists:reverse(FinFunc#function.params)),
+    FinFunc#function{ params = NewParam}.
 
 
 parse_param(#xmlElement{ name = type, content = TypeXML }, Param) ->
@@ -166,9 +174,8 @@ parse_type(Type) ->
 %
 parse_text(XML) ->
     parse_text(XML,"").
-parse_text([#xmlElement{ name = Name, content = Content}|Rest], Acc) ->
-    SName = atom_to_list(Name),
-    parse_text(Rest, [["<",SName++">",parse_text(Content),"</",SName++">"]|Acc]);
+parse_text([#xmlElement{ content = Content}|Rest], Acc) ->
+    parse_text(Rest, [parse_text(Content)|Acc]);
 parse_text([#xmlText{ value = Val }|Rest],Acc) ->
     parse_text(Rest,[Val|Acc]);
 parse_text([],Acc) ->

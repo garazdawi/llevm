@@ -1,0 +1,9 @@
+-module(llevm).
+
+@@EXPORTS@@
+
+-type llvm_ptr(Base) :: {llvm_ptr, Base}.
+
+@@TYPES@@
+
+@@FUNCTIONS@@
