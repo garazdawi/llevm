@@ -17,6 +17,8 @@ AC_LANG([C++])
 AC_CHECK_PROG([llvm_config_var], [llvm-config], [llvm-config])
 ERLANG_ROOT_DIR=`erl -noshell -eval 'io:format("~s~n",[[code:root_dir()]])' -s erlang halt`
 AC_SUBST(ERLANG_ROOT_DIR)
+ERTS_DIR=$ERLANG_ROOT_DIR`erl -noshell -eval 'io:format("~s~n",[[lists:concat([["/erts-", erlang:system_info(version)]])]])' -s erlang halt`
+AC_SUBST(ERTS_DIR)
 AC_MSG_NOTICE(ERL ROOT DIR: [$ERLANG_ROOT_DIR])
 
 AC_CHECK_SIZEOF(void *)

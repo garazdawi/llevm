@@ -607,6 +607,7 @@ LIBOBJS
 EGREP
 GREP
 CXXCPP
+ERTS_DIR
 ERLANG_ROOT_DIR
 llvm_config_var
 CPP
@@ -3571,6 +3572,8 @@ fi
 
 
 ERLANG_ROOT_DIR=`erl -noshell -eval 'io:format("~s~n",[code:root_dir()])' -s erlang halt`
+
+ERTS_DIR=$ERLANG_ROOT_DIR`erl -noshell -eval 'io:format("~s~n",[lists:concat([["/erts-", erlang:system_info(version)]])])' -s erlang halt`
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: ERL ROOT DIR: $ERLANG_ROOT_DIR" >&5
 $as_echo "$as_me: ERL ROOT DIR: $ERLANG_ROOT_DIR" >&6;}
