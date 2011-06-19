@@ -61,4 +61,4 @@ shell:
 
 test: compile
 	ulimit -c unlimited
-	ct_run -noshell -pa ../llevm/ebin -logdir logs -suite tests/basic_SUITE.erl
+	ct_run -noshell -pa ../llevm/ebin -logdir logs -suite tests/kaleidoscope_SUITE.erl
