@@ -25,7 +25,7 @@ generate_functions([#function{name = Name,
     put({param_count,Name},0),
     ["static ERL_NIF_TERM ",Name,"_nif(ErlNifEnv* env, int argc, "
      "const ERL_NIF_TERM argv[]) {~n"
-     "  printf(\"Calling ",Name,"\\r\\n\");~n"
+     "  printf(\"\\rCalling ",Name,"\\r\\n\");~n"
      "  if (argc != ",integer_to_list(length(Params)),")~n"
      "    return enif_make_string(env, \"wrong number of arguments\", ERL_NIF_LATIN1);~n~n",
      [generate_param_extract(Name,Param) || Param <- Params],
@@ -34,8 +34,12 @@ generate_functions([#function{name = Name,
 	      llvm_api:generate_params(Params,fun(#param{ name = PName}) ->
 						      PName
 					      end),
-	      ");~n~n"
-	      "  return llvm_ptr_create(env, RT",Return,", retVal);"];
+	      ");~n~n",
+	      if ?IS_ENUM(Return) ->
+		      ["  return enif_make_int(env, (int)RT",Return,");"];
+		 true ->
+		      ["  return llvm_ptr_create(env, RT",Return,", retVal);"]
+	      end];
 	true ->
 	     [Name,"(",
 	      llvm_api:generate_params(Params,fun(#param{ name = PName}) ->
@@ -74,9 +78,10 @@ generate_param_extract(_Func,#param{ name = Name, array = true, type = Type}, Nu
 generate_param_extract(_Func,#param{ name = Name, type = "double" = Type}, Num) ->
     ["  ",Type," ",Name,";~n"
      "  enif_get_double(env, argv[",Num,"], (double*)&",Name,");~n~n"];
-generate_param_extract(_Func,#param{ name = Name, type = "unsigned" = Type}, Num) ->
+generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
+  when ?IS_ENUM(Type); Type == "unsigned" ->
     ["  ",Type," ",Name,";~n"
-     "  enif_get_uint(env, argv[",Num,"], (unsigned*)&",Name,");~n~n"];
+     "  enif_get_uint(env, argv[",Num,"], (",Type,"*)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = "LLVMBool" = Type}, Num) ->
     ["  char *",Name,"_tmp = (char *) malloc(sizeof(char) * 255);~n"
      "  enif_get_atom(env, argv[",Num,"], (char*)",Name,"_tmp, 255, ERL_NIF_LATIN1);~n"

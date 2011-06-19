@@ -6,7 +6,7 @@
 #include "erl_nif.h"
 
 typedef enum {
-  // -- Start generating from Core_8h.xml on {{2011,6,19},{2,27,32}}--
+  // -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -38,7 +38,7 @@ typedef struct llvm_ptr {
   void *value;
 } llvm_ptr_t;
 
-// -- Start generating from Core_8h.xml on {{2011,6,19},{2,27,32}}--
+// -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
 
 // --- Stop generating from Core_8h.xml
 
@@ -76,10 +76,10 @@ static ERL_NIF_TERM llvm_ptr_create(ErlNifEnv* env, llvm_type_t type,
 }
 
 
-// -- Start generating from Core_8h.xml on {{2011,6,19},{2,27,32}}--
+// -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
 
 static ERL_NIF_TERM LLVMGetGlobalContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMGetGlobalContext\r\n");
+  printf("\rCalling LLVMGetGlobalContext\r\n");
   if (argc != 0)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -89,7 +89,7 @@ static ERL_NIF_TERM LLVMGetGlobalContext_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMModuleCreateWithName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMModuleCreateWithName\r\n");
+  printf("\rCalling LLVMModuleCreateWithName\r\n");
   if (argc != 1)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -102,7 +102,7 @@ static ERL_NIF_TERM LLVMModuleCreateWithName_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMDumpModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMDumpModule\r\n");
+  printf("\rCalling LLVMDumpModule\r\n");
   if (argc != 1)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -115,7 +115,7 @@ LLVMDumpModule(M);
 }
 
 static ERL_NIF_TERM LLVMDoubleType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMDoubleType\r\n");
+  printf("\rCalling LLVMDoubleType\r\n");
   if (argc != 0)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -125,7 +125,7 @@ static ERL_NIF_TERM LLVMDoubleType_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMFunctionType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMFunctionType\r\n");
+  printf("\rCalling LLVMFunctionType\r\n");
   if (argc != 4)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -160,8 +160,21 @@ static ERL_NIF_TERM LLVMFunctionType_nif(ErlNifEnv* env, int argc, const ERL_NIF
   return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
+static ERL_NIF_TERM LLVMDumpValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMDumpValue\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMValueRef Val;
+  llvm_ptr_deref(env, argv[0], (void **) &Val);
+
+LLVMDumpValue(Val);
+
+  return enif_make_atom(env,"ok");
+}
+
 static ERL_NIF_TERM LLVMConstReal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMConstReal\r\n");
+  printf("\rCalling LLVMConstReal\r\n");
   if (argc != 2)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -176,8 +189,37 @@ static ERL_NIF_TERM LLVMConstReal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
   return llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
 
+static ERL_NIF_TERM LLVMGetLinkage_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMGetLinkage\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMValueRef Global;
+  llvm_ptr_deref(env, argv[0], (void **) &Global);
+
+  LLVMLinkage retVal = LLVMGetLinkage(Global);
+
+  return enif_make_int(env, (int)RTLLVMLinkage);
+}
+
+static ERL_NIF_TERM LLVMSetLinkage_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMSetLinkage\r\n");
+  if (argc != 2)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMValueRef Global;
+  llvm_ptr_deref(env, argv[0], (void **) &Global);
+
+  LLVMLinkage Linkage;
+  enif_get_uint(env, argv[1], (LLVMLinkage*)&Linkage);
+  printf("\NewrLinkage: %d\r\n", Linkage);
+LLVMSetLinkage(Global,Linkage);
+
+  return enif_make_atom(env,"ok");
+}
+
 static ERL_NIF_TERM LLVMAddFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMAddFunction\r\n");
+  printf("\rCalling LLVMAddFunction\r\n");
   if (argc != 3)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -195,27 +237,56 @@ static ERL_NIF_TERM LLVMAddFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_
   return llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
 
-static ERL_NIF_TERM LLVMAppendBasicBlockInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMAppendBasicBlockInContext\r\n");
-  if (argc != 3)
+static ERL_NIF_TERM LLVMGetNamedFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMGetNamedFunction\r\n");
+  if (argc != 2)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
-  LLVMContextRef C;
-  llvm_ptr_deref(env, argv[0], (void **) &C);
-
-  LLVMValueRef Fn;
-  llvm_ptr_deref(env, argv[1], (void **) &Fn);
+  LLVMModuleRef M;
+  llvm_ptr_deref(env, argv[0], (void **) &M);
 
   const char *Name = (char *) malloc(sizeof(char) * 255);
-  enif_get_string(env, argv[2], (char*)Name, 255, ERL_NIF_LATIN1);
+  enif_get_string(env, argv[1], (char*)Name, 255, ERL_NIF_LATIN1);
 
-  LLVMBasicBlockRef retVal = LLVMAppendBasicBlockInContext(C,Fn,Name);
+  LLVMValueRef retVal = LLVMGetNamedFunction(M,Name);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMGetParam_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMGetParam\r\n");
+  if (argc != 2)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMValueRef Fn;
+  llvm_ptr_deref(env, argv[0], (void **) &Fn);
+
+  unsigned Index;
+  enif_get_uint(env, argv[1], (unsigned*)&Index);
+
+  LLVMValueRef retVal = LLVMGetParam(Fn,Index);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMAppendBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMAppendBasicBlock\r\n");
+  if (argc != 2)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMValueRef Fn;
+  llvm_ptr_deref(env, argv[0], (void **) &Fn);
+
+  const char *Name = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)Name, 255, ERL_NIF_LATIN1);
+
+  LLVMBasicBlockRef retVal = LLVMAppendBasicBlock(Fn,Name);
 
   return llvm_ptr_create(env, RTLLVMBasicBlockRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMCreateBuilderInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMCreateBuilderInContext\r\n");
+  printf("\rCalling LLVMCreateBuilderInContext\r\n");
   if (argc != 1)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -227,8 +298,24 @@ static ERL_NIF_TERM LLVMCreateBuilderInContext_nif(ErlNifEnv* env, int argc, con
   return llvm_ptr_create(env, RTLLVMBuilderRef, retVal);
 }
 
+static ERL_NIF_TERM LLVMPositionBuilderAtEnd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMPositionBuilderAtEnd\r\n");
+  if (argc != 2)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef Builder;
+  llvm_ptr_deref(env, argv[0], (void **) &Builder);
+
+  LLVMBasicBlockRef Block;
+  llvm_ptr_deref(env, argv[1], (void **) &Block);
+
+LLVMPositionBuilderAtEnd(Builder,Block);
+
+  return enif_make_atom(env,"ok");
+}
+
 static ERL_NIF_TERM LLVMBuildRet_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("Calling LLVMBuildRet\r\n");
+  printf("\rCalling LLVMBuildRet\r\n");
   if (argc != 2)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
@@ -243,23 +330,186 @@ static ERL_NIF_TERM LLVMBuildRet_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
   return llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
 
+static ERL_NIF_TERM LLVMBuildFAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildFAdd\r\n");
+  if (argc != 4)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMValueRef LHS;
+  llvm_ptr_deref(env, argv[1], (void **) &LHS);
+
+  LLVMValueRef RHS;
+  llvm_ptr_deref(env, argv[2], (void **) &RHS);
+
+  const char *Name = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[3], (char*)Name, 255, ERL_NIF_LATIN1);
+
+  LLVMValueRef retVal = LLVMBuildFAdd(B,LHS,RHS,Name);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMBuildFSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildFSub\r\n");
+  if (argc != 4)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMValueRef LHS;
+  llvm_ptr_deref(env, argv[1], (void **) &LHS);
+
+  LLVMValueRef RHS;
+  llvm_ptr_deref(env, argv[2], (void **) &RHS);
+
+  const char *Name = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[3], (char*)Name, 255, ERL_NIF_LATIN1);
+
+  LLVMValueRef retVal = LLVMBuildFSub(B,LHS,RHS,Name);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMBuildFMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildFMul\r\n");
+  if (argc != 4)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMValueRef LHS;
+  llvm_ptr_deref(env, argv[1], (void **) &LHS);
+
+  LLVMValueRef RHS;
+  llvm_ptr_deref(env, argv[2], (void **) &RHS);
+
+  const char *Name = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[3], (char*)Name, 255, ERL_NIF_LATIN1);
+
+  LLVMValueRef retVal = LLVMBuildFMul(B,LHS,RHS,Name);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMBuildUIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildUIToFP\r\n");
+  if (argc != 4)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMValueRef Val;
+  llvm_ptr_deref(env, argv[1], (void **) &Val);
+
+  LLVMTypeRef DestTy;
+  llvm_ptr_deref(env, argv[2], (void **) &DestTy);
+
+  const char *Name = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[3], (char*)Name, 255, ERL_NIF_LATIN1);
+
+  LLVMValueRef retVal = LLVMBuildUIToFP(B,Val,DestTy,Name);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMBuildFCmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildFCmp\r\n");
+  if (argc != 5)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMRealPredicate Op;
+  enif_get_uint(env, argv[1], (LLVMRealPredicate*)&Op);
+
+  LLVMValueRef LHS;
+  llvm_ptr_deref(env, argv[2], (void **) &LHS);
+
+  LLVMValueRef RHS;
+  llvm_ptr_deref(env, argv[3], (void **) &RHS);
+
+  const char *Name = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[4], (char*)Name, 255, ERL_NIF_LATIN1);
+
+  LLVMValueRef retVal = LLVMBuildFCmp(B,Op,LHS,RHS,Name);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildCall\r\n");
+  if (argc != 5)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMValueRef Fn;
+  llvm_ptr_deref(env, argv[1], (void **) &Fn);
+
+  int size = 0;
+  ERL_NIF_TERM *array;
+  enif_get_tuple(env, argv[2], &size, (const ERL_NIF_TERM **)&array);
+  LLVMValueRef * Args;
+  if (size == 0)
+    Args = NULL;
+  else {
+    Args = (LLVMValueRef *)malloc(sizeof(LLVMValueRef *)*size);
+    int i,local_size=0;
+    ERL_NIF_TERM *local_array;
+    for(i = 0;i < size; i++) {
+      enif_get_tuple(env,*(array+i), &local_size, (const ERL_NIF_TERM **)&local_array);
+      llvm_ptr_deref(env,*(local_array+1),(void **)Args+i);
+    }
+  }
+
+  unsigned NumArgs;
+  enif_get_uint(env, argv[3], (unsigned*)&NumArgs);
+
+  const char *Name = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[4], (char*)Name, 255, ERL_NIF_LATIN1);
+
+  LLVMValueRef retVal = LLVMBuildCall(B,Fn,Args,NumArgs,Name);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
 // --- Stop generating from Core_8h.xml
 
 
 static ErlNifFunc nif_funcs[] =
   {
-    // -- Start generating from Core_8h.xml on {{2011,6,19},{2,27,32}}--
+    // -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
 
     {"LLVMGetGlobalContext_internal",0,LLVMGetGlobalContext_nif},
     {"LLVMModuleCreateWithName_internal",1,LLVMModuleCreateWithName_nif},
     {"LLVMDumpModule_internal",1,LLVMDumpModule_nif},
     {"LLVMDoubleType_internal",0,LLVMDoubleType_nif},
     {"LLVMFunctionType_internal",4,LLVMFunctionType_nif},
+    {"LLVMDumpValue_internal",1,LLVMDumpValue_nif},
     {"LLVMConstReal_internal",2,LLVMConstReal_nif},
+    {"LLVMGetLinkage_internal",1,LLVMGetLinkage_nif},
+    {"LLVMSetLinkage_internal",2,LLVMSetLinkage_nif},
     {"LLVMAddFunction_internal",3,LLVMAddFunction_nif},
-    {"LLVMAppendBasicBlockInContext_internal",3,LLVMAppendBasicBlockInContext_nif},
+    {"LLVMGetNamedFunction_internal",2,LLVMGetNamedFunction_nif},
+    {"LLVMGetParam_internal",2,LLVMGetParam_nif},
+    {"LLVMAppendBasicBlock_internal",2,LLVMAppendBasicBlock_nif},
     {"LLVMCreateBuilderInContext_internal",1,LLVMCreateBuilderInContext_nif},
+    {"LLVMPositionBuilderAtEnd_internal",2,LLVMPositionBuilderAtEnd_nif},
     {"LLVMBuildRet_internal",2,LLVMBuildRet_nif},
+    {"LLVMBuildFAdd_internal",4,LLVMBuildFAdd_nif},
+    {"LLVMBuildFSub_internal",4,LLVMBuildFSub_nif},
+    {"LLVMBuildFMul_internal",4,LLVMBuildFMul_nif},
+    {"LLVMBuildUIToFP_internal",4,LLVMBuildUIToFP_nif},
+    {"LLVMBuildFCmp_internal",5,LLVMBuildFCmp_nif},
+    {"LLVMBuildCall_internal",5,LLVMBuildCall_nif},
 // --- Stop generating from Core_8h.xml
 
   };
