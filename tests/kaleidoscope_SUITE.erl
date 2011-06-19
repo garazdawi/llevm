@@ -38,18 +38,26 @@ extern(_Config) ->
     compile(["extern cos(x);",
 	     "cos(1.234);"]).
 
+condition(_Config) ->
+    compile(["def fib(x) if x < 3.0 then 1.0 else fib(x-1.0)+fib(x-2.0);"]).
+
+
 compile(Strs) ->
     Ctx = llevm:'LLVMGetGlobalContext'(),
     ModRef = llevm:'LLVMModuleCreateWithName'("test"),
     BuildRef = llevm:'LLVMCreateBuilderInContext'(Ctx),
     lists:map(fun(Str) ->
-		      Toks = kal_scan:string(Str),
-		      ?PRINT("Toks: ~p~n",[Toks]),
-		      {ok,[AST]} = kal_parse:parse(Toks),
-		      ?PRINT("AST: ~p~n",[AST]),
+		      AST = scan_and_parse(Str),
 		      FunRef = kal_gen:gen_function(ModRef,BuildRef,AST),
 		      llevm:'LLVMDumpValue'(FunRef),
 		      FunRef
 	      end,Strs),
     llevm:'LLVMDumpModule'(ModRef).
     
+
+scan_and_parse(Str) ->
+    Toks = kal_scan:string(Str),
+    ?PRINT("Toks: ~p~n",[Toks]),
+    {ok,[AST]} = kal_parse:parse(Toks),
+    ?PRINT("AST: ~p~n",[AST]),
+    AST.

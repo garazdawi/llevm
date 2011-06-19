@@ -4,7 +4,7 @@
 
 -on_load(load_my_nifs/0).
 
-%% -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
 
 -export(['LLVMGetGlobalContext'/0]).
 -export(['LLVMModuleCreateWithName'/1]).
@@ -18,22 +18,28 @@
 -export(['LLVMAddFunction'/3]).
 -export(['LLVMGetNamedFunction'/2]).
 -export(['LLVMGetParam'/2]).
+-export(['LLVMGetBasicBlockParent'/1]).
 -export(['LLVMAppendBasicBlock'/2]).
+-export(['LLVMAddIncoming'/4]).
 -export(['LLVMCreateBuilderInContext'/1]).
 -export(['LLVMPositionBuilderAtEnd'/2]).
+-export(['LLVMGetInsertBlock'/1]).
 -export(['LLVMBuildRet'/2]).
+-export(['LLVMBuildBr'/2]).
+-export(['LLVMBuildCondBr'/4]).
 -export(['LLVMBuildFAdd'/4]).
 -export(['LLVMBuildFSub'/4]).
 -export(['LLVMBuildFMul'/4]).
 -export(['LLVMBuildUIToFP'/4]).
 -export(['LLVMBuildFCmp'/5]).
+-export(['LLVMBuildPhi'/3]).
 -export(['LLVMBuildCall'/5]).
 %% --- Stop generating from Core_8h.xml
 
 
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
-%% -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -76,7 +82,7 @@
 load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
-%% -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
 
 %% @doc 
 -spec 'LLVMGetGlobalContext'() -> 'LLVMContextRef'().
@@ -163,10 +169,24 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMGetBasicBlockParent'(BB :: 'LLVMBasicBlockRef'()) -> 'LLVMValueRef'().
+'LLVMGetBasicBlockParent'({'LLVMBasicBlockRef',BB}) ->
+	{'LLVMValueRef','LLVMGetBasicBlockParent_internal'(BB)}.
+'LLVMGetBasicBlockParent_internal'(_BB) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMAppendBasicBlock'(Fn :: 'LLVMValueRef'(),Name :: string()) -> 'LLVMBasicBlockRef'().
 'LLVMAppendBasicBlock'({'LLVMValueRef',Fn},Name) ->
 	{'LLVMBasicBlockRef','LLVMAppendBasicBlock_internal'(Fn,Name)}.
 'LLVMAppendBasicBlock_internal'(_Fn,_Name) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMAddIncoming'(PhiNode :: 'LLVMValueRef'(),IncomingValues :: tuple('LLVMValueRef'()),IncomingBlocks :: tuple('LLVMBasicBlockRef'()),Count :: integer()) -> atom().
+'LLVMAddIncoming'({'LLVMValueRef',PhiNode},IncomingValues,IncomingBlocks,Count) ->
+	{atom,'LLVMAddIncoming_internal'(PhiNode,IncomingValues,IncomingBlocks,Count)}.
+'LLVMAddIncoming_internal'(_PhiNode,_IncomingValues,_IncomingBlocks,_Count) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -184,10 +204,31 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMGetInsertBlock'(Builder :: 'LLVMBuilderRef'()) -> 'LLVMBasicBlockRef'().
+'LLVMGetInsertBlock'({'LLVMBuilderRef',Builder}) ->
+	{'LLVMBasicBlockRef','LLVMGetInsertBlock_internal'(Builder)}.
+'LLVMGetInsertBlock_internal'(_Builder) ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMBuildRet'(B :: 'LLVMBuilderRef'(),V :: 'LLVMValueRef'()) -> 'LLVMValueRef'().
 'LLVMBuildRet'({'LLVMBuilderRef',B},{'LLVMValueRef',V}) ->
 	{'LLVMValueRef','LLVMBuildRet_internal'(B,V)}.
 'LLVMBuildRet_internal'(_B,_V) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMBuildBr'(B :: 'LLVMBuilderRef'(),Dest :: 'LLVMBasicBlockRef'()) -> 'LLVMValueRef'().
+'LLVMBuildBr'({'LLVMBuilderRef',B},{'LLVMBasicBlockRef',Dest}) ->
+	{'LLVMValueRef','LLVMBuildBr_internal'(B,Dest)}.
+'LLVMBuildBr_internal'(_B,_Dest) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMBuildCondBr'(B :: 'LLVMBuilderRef'(),If :: 'LLVMValueRef'(),Then :: 'LLVMBasicBlockRef'(),Else :: 'LLVMBasicBlockRef'()) -> 'LLVMValueRef'().
+'LLVMBuildCondBr'({'LLVMBuilderRef',B},{'LLVMValueRef',If},{'LLVMBasicBlockRef',Then},{'LLVMBasicBlockRef',Else}) ->
+	{'LLVMValueRef','LLVMBuildCondBr_internal'(B,If,Then,Else)}.
+'LLVMBuildCondBr_internal'(_B,_If,_Then,_Else) ->
 	nif_not_loaded.
 
 %% @doc 
@@ -223,6 +264,13 @@ load_my_nifs() ->
 'LLVMBuildFCmp'({'LLVMBuilderRef',B},{'LLVMRealPredicate',Op},{'LLVMValueRef',LHS},{'LLVMValueRef',RHS},Name) ->
 	{'LLVMValueRef','LLVMBuildFCmp_internal'(B,Op,LHS,RHS,Name)}.
 'LLVMBuildFCmp_internal'(_B,_Op,_LHS,_RHS,_Name) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMBuildPhi'(B :: 'LLVMBuilderRef'(),Ty :: 'LLVMTypeRef'(),Name :: string()) -> 'LLVMValueRef'().
+'LLVMBuildPhi'({'LLVMBuilderRef',B},{'LLVMTypeRef',Ty},Name) ->
+	{'LLVMValueRef','LLVMBuildPhi_internal'(B,Ty,Name)}.
+'LLVMBuildPhi_internal'(_B,_Ty,_Name) ->
 	nif_not_loaded.
 
 %% @doc 

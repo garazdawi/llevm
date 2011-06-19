@@ -18,7 +18,7 @@ generate_enums([]) ->
 generate_enum_member(EnumName, [#enum_member{ name = Name, 
 					      value = Value, 
 					      docs = Docs }|Rest]) ->
-    ["-define(",Name,",{'",Name,"',",integer_to_list(Value),"}).~n",
+    ["-define(",Name,",{'",EnumName,"',",integer_to_list(Value),"}).~n",
      if Docs /= [] ->
 	     ["%% ",add_escape(Docs),"~n"];
 	true ->

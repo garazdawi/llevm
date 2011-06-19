@@ -60,18 +60,18 @@ generate_param_extract(Func,Param) ->
     put({param_count,Func},Num+1),
     generate_param_extract(Func,Param,integer_to_list(Num)).
 generate_param_extract(_Func,#param{ name = Name, array = true, type = Type}, Num) ->
-    ["  int size = 0;~n"
-     "  ERL_NIF_TERM *array;~n"
-     "  enif_get_tuple(env, argv[",Num,"], &size, (const ERL_NIF_TERM **)&array);~n"
+    ["  int ",Name,"size = 0;~n"
+     "  ERL_NIF_TERM *",Name,"array;~n"
+     "  enif_get_tuple(env, argv[",Num,"], &",Name,"size, (const ERL_NIF_TERM **)&",Name,"array);~n"
      "  ",Type," ",Name,";~n"
-     "  if (size == 0)~n"
+     "  if (",Name,"size == 0)~n"
      "    ",Name," = NULL;~n"
      "  else {~n"
-     "    ",Name," = (",Type,")malloc(sizeof(",Type,")*size);~n"
+     "    ",Name," = (",Type,")malloc(sizeof(",Type,")*",Name,"size);~n"
      "    int i,local_size=0;~n"
      "    ERL_NIF_TERM *local_array;~n"
-     "    for(i = 0;i < size; i++) {~n"
-     "      enif_get_tuple(env,*(array+i), &local_size, (const ERL_NIF_TERM **)&local_array);~n"
+     "    for(i = 0;i < ",Name,"size; i++) {~n"
+     "      enif_get_tuple(env,*(",Name,"array+i), &local_size, (const ERL_NIF_TERM **)&local_array);~n"
      "      llvm_ptr_deref(env,*(local_array+1),(void **)",Name,"+i);~n"
      "    }~n"
      "  }~n~n"];

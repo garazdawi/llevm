@@ -1,11 +1,11 @@
 Nonterminals module variable expressions toplevelexpr expression variables params external function prototype.
-Terminals def extern num ident '(' ')' ';' ',' '+' '-' '/' '*'. 
+Terminals def extern num ident '(' ')' ';' ',' '+' '-' '<' '*' 'if' 'then' 'else'. 
 
 Rootsymbol module.
 Left 100 '+'.
 Left 150 '-'.
 Left 200 '*'.
-Left 250 '/'.
+Left 50 '<'.
 
 module -> prototype module : ['$1'|'$2'].
 module -> prototype : ['$1'].
@@ -29,7 +29,8 @@ expression -> '(' expression ')' : '$2'.
 expression -> expression '+' expression : {'+', '$1', '$3'}.
 expression -> expression '-' expression : {'-', '$1', '$3'}.
 expression -> expression '*' expression : {'*', '$1', '$3'}.
-expression -> expression '/' expression : {'/', '$1', '$3'}.
+expression -> expression '<' expression : {'<', '$1', '$3'}.
+expression -> 'if' expression 'then' expression 'else' expression : {'if', '$2','$4','$6'}.
 expression -> ident '(' params ')' : {call, value_of('$1'),'$3'}.
 
 params -> expression : ['$1'].

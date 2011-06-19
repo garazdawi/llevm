@@ -60,6 +60,12 @@
       Name == "LLVMGetLinkage";
       Name == "LLVMBuildCall";
       Name == "LLVMBuildUIToFP"; 
+      Name == "LLVMGetBasicBlockParent"; 
+      Name == "LLVMGetInsertBlock"; 
+      Name == "LLVMBuildCondBr"; 
+      Name == "LLVMBuildBr"; 
+      Name == "LLVMBuildPhi"; 
+      Name == "LLVMAddIncoming"; 
       Name == "LLVMAddFunction"
 %      Name == "LLVMGetNamedFunction";
 %      Name == "LLVMCountParams"; 

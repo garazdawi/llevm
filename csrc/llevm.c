@@ -6,7 +6,7 @@
 #include "erl_nif.h"
 
 typedef enum {
-  // -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
+  // -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -38,7 +38,7 @@ typedef struct llvm_ptr {
   void *value;
 } llvm_ptr_t;
 
-// -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
+// -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
 
 // --- Stop generating from Core_8h.xml
 
@@ -76,7 +76,7 @@ static ERL_NIF_TERM llvm_ptr_create(ErlNifEnv* env, llvm_type_t type,
 }
 
 
-// -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
+// -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
 
 static ERL_NIF_TERM LLVMGetGlobalContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMGetGlobalContext\r\n");
@@ -132,18 +132,18 @@ static ERL_NIF_TERM LLVMFunctionType_nif(ErlNifEnv* env, int argc, const ERL_NIF
   LLVMTypeRef ReturnType;
   llvm_ptr_deref(env, argv[0], (void **) &ReturnType);
 
-  int size = 0;
-  ERL_NIF_TERM *array;
-  enif_get_tuple(env, argv[1], &size, (const ERL_NIF_TERM **)&array);
+  int ParamTypessize = 0;
+  ERL_NIF_TERM *ParamTypesarray;
+  enif_get_tuple(env, argv[1], &ParamTypessize, (const ERL_NIF_TERM **)&ParamTypesarray);
   LLVMTypeRef * ParamTypes;
-  if (size == 0)
+  if (ParamTypessize == 0)
     ParamTypes = NULL;
   else {
-    ParamTypes = (LLVMTypeRef *)malloc(sizeof(LLVMTypeRef *)*size);
+    ParamTypes = (LLVMTypeRef *)malloc(sizeof(LLVMTypeRef *)*ParamTypessize);
     int i,local_size=0;
     ERL_NIF_TERM *local_array;
-    for(i = 0;i < size; i++) {
-      enif_get_tuple(env,*(array+i), &local_size, (const ERL_NIF_TERM **)&local_array);
+    for(i = 0;i < ParamTypessize; i++) {
+      enif_get_tuple(env,*(ParamTypesarray+i), &local_size, (const ERL_NIF_TERM **)&local_array);
       llvm_ptr_deref(env,*(local_array+1),(void **)ParamTypes+i);
     }
   }
@@ -212,7 +212,7 @@ static ERL_NIF_TERM LLVMSetLinkage_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 
   LLVMLinkage Linkage;
   enif_get_uint(env, argv[1], (LLVMLinkage*)&Linkage);
-  printf("\NewrLinkage: %d\r\n", Linkage);
+
 LLVMSetLinkage(Global,Linkage);
 
   return enif_make_atom(env,"ok");
@@ -269,6 +269,19 @@ static ERL_NIF_TERM LLVMGetParam_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
   return llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
 
+static ERL_NIF_TERM LLVMGetBasicBlockParent_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMGetBasicBlockParent\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBasicBlockRef BB;
+  llvm_ptr_deref(env, argv[0], (void **) &BB);
+
+  LLVMValueRef retVal = LLVMGetBasicBlockParent(BB);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
 static ERL_NIF_TERM LLVMAppendBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMAppendBasicBlock\r\n");
   if (argc != 2)
@@ -283,6 +296,54 @@ static ERL_NIF_TERM LLVMAppendBasicBlock_nif(ErlNifEnv* env, int argc, const ERL
   LLVMBasicBlockRef retVal = LLVMAppendBasicBlock(Fn,Name);
 
   return llvm_ptr_create(env, RTLLVMBasicBlockRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMAddIncoming_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMAddIncoming\r\n");
+  if (argc != 4)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMValueRef PhiNode;
+  llvm_ptr_deref(env, argv[0], (void **) &PhiNode);
+
+  int IncomingValuessize = 0;
+  ERL_NIF_TERM *IncomingValuesarray;
+  enif_get_tuple(env, argv[1], &IncomingValuessize, (const ERL_NIF_TERM **)&IncomingValuesarray);
+  LLVMValueRef * IncomingValues;
+  if (IncomingValuessize == 0)
+    IncomingValues = NULL;
+  else {
+    IncomingValues = (LLVMValueRef *)malloc(sizeof(LLVMValueRef *)*IncomingValuessize);
+    int i,local_size=0;
+    ERL_NIF_TERM *local_array;
+    for(i = 0;i < IncomingValuessize; i++) {
+      enif_get_tuple(env,*(IncomingValuesarray+i), &local_size, (const ERL_NIF_TERM **)&local_array);
+      llvm_ptr_deref(env,*(local_array+1),(void **)IncomingValues+i);
+    }
+  }
+
+  int IncomingBlockssize = 0;
+  ERL_NIF_TERM *IncomingBlocksarray;
+  enif_get_tuple(env, argv[2], &IncomingBlockssize, (const ERL_NIF_TERM **)&IncomingBlocksarray);
+  LLVMBasicBlockRef * IncomingBlocks;
+  if (IncomingBlockssize == 0)
+    IncomingBlocks = NULL;
+  else {
+    IncomingBlocks = (LLVMBasicBlockRef *)malloc(sizeof(LLVMBasicBlockRef *)*IncomingBlockssize);
+    int i,local_size=0;
+    ERL_NIF_TERM *local_array;
+    for(i = 0;i < IncomingBlockssize; i++) {
+      enif_get_tuple(env,*(IncomingBlocksarray+i), &local_size, (const ERL_NIF_TERM **)&local_array);
+      llvm_ptr_deref(env,*(local_array+1),(void **)IncomingBlocks+i);
+    }
+  }
+
+  unsigned Count;
+  enif_get_uint(env, argv[3], (unsigned*)&Count);
+
+LLVMAddIncoming(PhiNode,IncomingValues,IncomingBlocks,Count);
+
+  return enif_make_atom(env,"ok");
 }
 
 static ERL_NIF_TERM LLVMCreateBuilderInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
@@ -314,6 +375,19 @@ LLVMPositionBuilderAtEnd(Builder,Block);
   return enif_make_atom(env,"ok");
 }
 
+static ERL_NIF_TERM LLVMGetInsertBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMGetInsertBlock\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef Builder;
+  llvm_ptr_deref(env, argv[0], (void **) &Builder);
+
+  LLVMBasicBlockRef retVal = LLVMGetInsertBlock(Builder);
+
+  return llvm_ptr_create(env, RTLLVMBasicBlockRef, retVal);
+}
+
 static ERL_NIF_TERM LLVMBuildRet_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMBuildRet\r\n");
   if (argc != 2)
@@ -326,6 +400,44 @@ static ERL_NIF_TERM LLVMBuildRet_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
   llvm_ptr_deref(env, argv[1], (void **) &V);
 
   LLVMValueRef retVal = LLVMBuildRet(B,V);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMBuildBr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildBr\r\n");
+  if (argc != 2)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMBasicBlockRef Dest;
+  llvm_ptr_deref(env, argv[1], (void **) &Dest);
+
+  LLVMValueRef retVal = LLVMBuildBr(B,Dest);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMBuildCondBr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildCondBr\r\n");
+  if (argc != 4)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMValueRef If;
+  llvm_ptr_deref(env, argv[1], (void **) &If);
+
+  LLVMBasicBlockRef Then;
+  llvm_ptr_deref(env, argv[2], (void **) &Then);
+
+  LLVMBasicBlockRef Else;
+  llvm_ptr_deref(env, argv[3], (void **) &Else);
+
+  LLVMValueRef retVal = LLVMBuildCondBr(B,If,Then,Else);
 
   return llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
@@ -443,6 +555,25 @@ static ERL_NIF_TERM LLVMBuildFCmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
   return llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
 
+static ERL_NIF_TERM LLVMBuildPhi_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMBuildPhi\r\n");
+  if (argc != 3)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMBuilderRef B;
+  llvm_ptr_deref(env, argv[0], (void **) &B);
+
+  LLVMTypeRef Ty;
+  llvm_ptr_deref(env, argv[1], (void **) &Ty);
+
+  const char *Name = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[2], (char*)Name, 255, ERL_NIF_LATIN1);
+
+  LLVMValueRef retVal = LLVMBuildPhi(B,Ty,Name);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
+}
+
 static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMBuildCall\r\n");
   if (argc != 5)
@@ -454,18 +585,18 @@ static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[1], (void **) &Fn);
 
-  int size = 0;
-  ERL_NIF_TERM *array;
-  enif_get_tuple(env, argv[2], &size, (const ERL_NIF_TERM **)&array);
+  int Argssize = 0;
+  ERL_NIF_TERM *Argsarray;
+  enif_get_tuple(env, argv[2], &Argssize, (const ERL_NIF_TERM **)&Argsarray);
   LLVMValueRef * Args;
-  if (size == 0)
+  if (Argssize == 0)
     Args = NULL;
   else {
-    Args = (LLVMValueRef *)malloc(sizeof(LLVMValueRef *)*size);
+    Args = (LLVMValueRef *)malloc(sizeof(LLVMValueRef *)*Argssize);
     int i,local_size=0;
     ERL_NIF_TERM *local_array;
-    for(i = 0;i < size; i++) {
-      enif_get_tuple(env,*(array+i), &local_size, (const ERL_NIF_TERM **)&local_array);
+    for(i = 0;i < Argssize; i++) {
+      enif_get_tuple(env,*(Argsarray+i), &local_size, (const ERL_NIF_TERM **)&local_array);
       llvm_ptr_deref(env,*(local_array+1),(void **)Args+i);
     }
   }
@@ -486,7 +617,7 @@ static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 
 static ErlNifFunc nif_funcs[] =
   {
-    // -- Start generating from Core_8h.xml on {{2011,6,19},{21,9,49}}--
+    // -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
 
     {"LLVMGetGlobalContext_internal",0,LLVMGetGlobalContext_nif},
     {"LLVMModuleCreateWithName_internal",1,LLVMModuleCreateWithName_nif},
@@ -500,15 +631,21 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMAddFunction_internal",3,LLVMAddFunction_nif},
     {"LLVMGetNamedFunction_internal",2,LLVMGetNamedFunction_nif},
     {"LLVMGetParam_internal",2,LLVMGetParam_nif},
+    {"LLVMGetBasicBlockParent_internal",1,LLVMGetBasicBlockParent_nif},
     {"LLVMAppendBasicBlock_internal",2,LLVMAppendBasicBlock_nif},
+    {"LLVMAddIncoming_internal",4,LLVMAddIncoming_nif},
     {"LLVMCreateBuilderInContext_internal",1,LLVMCreateBuilderInContext_nif},
     {"LLVMPositionBuilderAtEnd_internal",2,LLVMPositionBuilderAtEnd_nif},
+    {"LLVMGetInsertBlock_internal",1,LLVMGetInsertBlock_nif},
     {"LLVMBuildRet_internal",2,LLVMBuildRet_nif},
+    {"LLVMBuildBr_internal",2,LLVMBuildBr_nif},
+    {"LLVMBuildCondBr_internal",4,LLVMBuildCondBr_nif},
     {"LLVMBuildFAdd_internal",4,LLVMBuildFAdd_nif},
     {"LLVMBuildFSub_internal",4,LLVMBuildFSub_nif},
     {"LLVMBuildFMul_internal",4,LLVMBuildFMul_nif},
     {"LLVMBuildUIToFP_internal",4,LLVMBuildUIToFP_nif},
     {"LLVMBuildFCmp_internal",5,LLVMBuildFCmp_nif},
+    {"LLVMBuildPhi_internal",3,LLVMBuildPhi_nif},
     {"LLVMBuildCall_internal",5,LLVMBuildCall_nif},
 // --- Stop generating from Core_8h.xml
 

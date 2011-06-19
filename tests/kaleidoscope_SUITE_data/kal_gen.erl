@@ -40,9 +40,9 @@ gen_body(M, B, Params, {Op,LHS,RHS})
 	'-' -> llevm:'LLVMBuildFSub'(B, LHSRef, RHSRef, "subtmp");
 	'*' -> llevm:'LLVMBuildFMul'(B, LHSRef, RHSRef, "multmp");
 	'<' ->
-	    L = llevm:'LLVMBuildFCmp'(B, {'LLVMRealULT',13},LHSRef, RHSRef, "cmptmp"),
+	    L = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',13},LHSRef, RHSRef, "cmptmp"),
 	    %% Convert bool 0/1 to double 0.0 or 1.0
-	    llevm:'LLVMBuildUIToFP'(L, llevm:'LLVMDoubleType'(), "booltmp")
+	    llevm:'LLVMBuildUIToFP'(B, L, llevm:'LLVMDoubleType'(), "booltmp")
     end;
 gen_body(_M, _B, _Params, {const, Val}) ->
     llevm:'LLVMConstReal'(llevm:'LLVMDoubleType'(),list_to_float(Val));
@@ -51,13 +51,34 @@ gen_body(_M, _B, Params, {variable, Name}) ->
 gen_body(M, B, Params, {call, Name, CParams}) ->
     CalleeRef = llevm:'LLVMGetNamedFunction'(M,Name),
     CParamsRefs = list_to_tuple([gen_body(M, B, Params, CParam) || CParam <- CParams]),
-    llevm:'LLVMBuildCall'(B, CalleeRef, CParamsRefs, length(CParams), "calltmp").
+    llevm:'LLVMBuildCall'(B, CalleeRef, CParamsRefs, length(CParams), "calltmp");
+gen_body(M, B, Params, {'if', Cond, Then, Else}) ->
+    CondRef = gen_body(M, B, Params, Cond),
+    CmpRef = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',7}, CondRef,
+				   gen_body(M, B, Params, {const,"0.0"}),
+				   "ifcond"),
+    FunRef = llevm:'LLVMGetBasicBlockParent'(
+	       llevm:'LLVMGetInsertBlock'(B)),
+    ThenBB = llevm:'LLVMAppendBasicBlock'(FunRef, "then"),
+    ElseBB = llevm:'LLVMAppendBasicBlock'(FunRef, "else"),
+    ContBB = llevm:'LLVMAppendBasicBlock'(FunRef, "if_cont"),
 
-
+    llevm:'LLVMBuildCondBr'(B, CmpRef, ThenBB, ElseBB),
     
+    llevm:'LLVMPositionBuilderAtEnd'(B, ThenBB),
+    ThenV = gen_body(M, B, Params, Then),
+    llevm:'LLVMBuildBr'(B, ContBB),
+    
+    llevm:'LLVMPositionBuilderAtEnd'(B, ElseBB),
+    ElseV = gen_body(M, B, Params, Else),
+    llevm:'LLVMBuildBr'(B, ContBB),
 
-
-
+    llevm:'LLVMPositionBuilderAtEnd'(B, ContBB),
+    PhiNode = llevm:'LLVMBuildPhi'(B, llevm:'LLVMDoubleType'(), "iftmp"),
+    llevm:'LLVMAddIncoming'(PhiNode, {ThenV,ElseV},{ThenBB,ElseBB},2),
+    PhiNode.
+    
+    
 get_params(FunRef, [{variable, Name}|Rest], I) ->
     [{Name, llevm:'LLVMGetParam'(FunRef, I)} | get_params(FunRef, Rest, I + 1)];
 get_params(_FunRef, [], _I) ->

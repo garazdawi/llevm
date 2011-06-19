@@ -15,6 +15,12 @@ scan("def"++Rest, none, Acc) ->
     scan(Rest, none, [{def,num()}|Acc]);
 scan("extern"++Rest, none, Acc) ->
     scan(Rest, none, [{extern,num()}|Acc]);
+scan("if"++Rest, none, Acc) ->
+    scan(Rest, none, [{'if',num()}|Acc]);
+scan("then"++Rest, none, Acc) ->
+    scan(Rest, none, [{then,num()}|Acc]);
+scan("else"++Rest, none, Acc) ->
+    scan(Rest, none, [{else,num()}|Acc]);
 scan(" "++Rest, none, Acc) ->
     scan(Rest, none, Acc);
 scan("\n"++Rest, none, Acc) ->
@@ -23,7 +29,8 @@ scan("\n"++Rest, none, Acc) ->
 %% special tokens
 scan([Tok|Rest], none, Acc) 
   when Tok == $(; Tok == $); Tok == $;; Tok == $,;
-       Tok == $+; Tok == $-; Tok == $/; Tok == $* ->
+       Tok == $+; Tok == $-; Tok == $/; Tok == $*;
+       Tok == $< ->
     scan(Rest, none, [{list_to_atom([Tok]),num()}|Acc]);
 
 %% Number scan
