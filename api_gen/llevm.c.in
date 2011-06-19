@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "llvm-c/Core.h"
+
+#include "erl_nif.h"
+
+typedef enum {
+  @@TYPES@@
+} llvm_type_t;
+
+typedef struct llvm_ptr {
+  llvm_type_t type;
+  void *value;
+} llvm_ptr_t;
+
+@@RESOURCE_TYPES@@
+static ErlNifResourceType* module;
+
+static int load_nif(ErlNifEnv* env, void** priv_data, ERL_NIF_TERM load_info) {
+  module = enif_open_resource_type(env, "llvm_nif", "module", NULL,
+				   ERL_NIF_RT_CREATE, NULL);
+  return 0;
+}
+
+static int llvm_ptr_deref(ErlNifEnv* env, ERL_NIF_TERM term, void** objp) {
+  llvm_ptr_t *ptr;
+  enif_get_resource(env, term, module, (void **) &ptr);
+  //  printf("fetching %ld\n",(long)ptr->value);
+  *objp = ptr->value;
+  return 0;
+}
+
+static ERL_NIF_TERM llvm_ptr_create(ErlNifEnv* env, llvm_type_t type,
+				    void *data) {
+  ERL_NIF_TERM term;
+  llvm_ptr_t *ptr = (llvm_ptr_t*) enif_alloc_resource(module,
+						      sizeof(llvm_ptr_t));
+
+  //  printf("storing %ld\n",(long)data);
+  /* initialize struct ... */
+  ptr->type = type;
+  ptr->value = data;
+
+  term = enif_make_resource(env, ptr);
+
+  enif_release_resource(ptr);
+  return term;
+}
+
+
+@@FUNCTIONS@@
+
+static ErlNifFunc nif_funcs[] =
+  {
+    @@NIF_MAPPINGS@@
+  };
+
+ERL_NIF_INIT(llevm,nif_funcs,load_nif,NULL,NULL,NULL)

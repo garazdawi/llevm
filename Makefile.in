@@ -9,7 +9,7 @@ OBJ_DIR=obj.$(ARCH)
 
 # llvm Variables
 LLVM_CONFIG=@llvm_config_var@
-LLVM_CFLAGS=$(shell $(LLVM_CONFIG) --cflags)
+LLVM_CFLAGS=-g3 -Wall -fPIC -I/usr/local/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS  -fno-common
 LLVM_LDFLAGS=$(shell $(LLVM_CONFIG) --ldflags) `$(LLVM_CONFIG) --libs`
 
 # Erlang Variables
@@ -33,7 +33,7 @@ H_FILES=$(wildcard $(CSRC)/*.h)
 all: compile
 
 compile: compile_erl priv/$(ARCH)/llevm.so
-	@erl -noshell -pa ebin -eval "code:load_file(llvm_nif)." -s init stop
+	@erl -noshell -pa ../llevm/ebin -eval "code:load_file(llevm)." -s init stop
 
 compile_erl: $(EBIN) $(BEAM_FILES)
 	cp $(ESRC)/llevm.app.src $(EBIN)/llevm.app
@@ -58,3 +58,7 @@ very_clean: clean
 
 shell:
 	erl -pa ebin
+
+test: compile
+	ulimit -c unlimited
+	ct_run -noshell -pa ../llevm/ebin -logdir logs -suite tests/basic_SUITE.erl

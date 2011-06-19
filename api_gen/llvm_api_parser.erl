@@ -1,6 +1,6 @@
 -module(llvm_api_parser).
 
--export([parse/1]).
+-export([parse/1,to_erlang_tag/1,to_erlang_type/1]).
 
 -include("llvm_api.hrl").
 -include_lib("xmerl/include/xmerl.hrl").
@@ -25,7 +25,9 @@ parse_xml(#xmlElement{ name = memberdef,
     [parse_typedef(Content,#typedef{})|Acc];
 parse_xml(#xmlElement{ name = memberdef, 
 		       attributes = [#xmlAttribute{ name = kind, value = "function"}|_],
-		     content = Content},Acc) ->
+		     content = [_,_,_,#xmlElement{ content = 
+						       [#xmlText{ value = Name }]}|_]
+		       = Content},Acc) ?LIMIT ->
     [parse_function(Content,#function{})|Acc];
 parse_xml(#xmlText{}, Acc) ->
     Acc;
@@ -126,6 +128,7 @@ parse_function(#xmlElement{ name = detaileddescription, content = Descr},
 	       Func) ->
     Func#function{ docs = parse_text(Descr) };
 parse_function(#xmlElement{ name = param, content = ParamXML },Func) ->
+    put(func_name, Func#function.name),
     Param = parse_param(ParamXML, #param{}),
     Func#function{ params = [Param|Func#function.params]};
 parse_function(#xmlElement{ }, Func) ->
@@ -147,19 +150,27 @@ parse_function(XML, Func) when is_list(XML) ->
 			     end,lists:reverse(FinFunc#function.params)),
     FinFunc#function{ params = NewParam}.
 
-
 parse_param(#xmlElement{ name = type, content = TypeXML }, Param) ->
     Type = parse_type(TypeXML),
-    Param#param{ type = Type };
+    case is_array(get(func_name),Param#param.name) of
+	true ->
+	    StrippedType = hd(string:tokens(Type," *")),
+	    Param#param{ type = Type, array = true,
+			 erlang_type = ["tuple(",to_erlang_type(StrippedType),")"],
+			 erlang_tag = to_erlang_tag(StrippedType) };
+	false ->
+	    Param#param{ type = Type, erlang_type = to_erlang_type(Type), 
+			 erlang_tag = to_erlang_tag(Type) }
+    end;
 parse_param(#xmlElement{ name = declname, content = [#xmlText{ value = Name }]}, 
 	    Param) ->
     Param#param{ name = Name };
-parse_param(#xmlElement{ name = array}, Param) ->
+parse_param(#xmlElement{ name = array }, Param) ->
     Param#param{ array = true };
 parse_param(XML, Param) when is_list(XML) ->
     lists:foldl(fun(XMLElement, Acc) ->
 			parse_param(XMLElement, Acc)
-		end,Param,XML).
+		end,Param,lists:reverse(XML)).
 
 parse_type([#xmlElement{ 
 	       name = ref, 
@@ -180,3 +191,46 @@ parse_text([#xmlText{ value = Val }|Rest],Acc) ->
     parse_text(Rest,[Val|Acc]);
 parse_text([],Acc) ->
     lists:flatten(lists:reverse(Acc)).
+
+to_erlang_type(Val) ->
+    Tag = to_erlang_tag(Val),
+    case lists:reverse(Tag) of
+	[$',$*,$ |Rest] ->
+	    "llvm_ptr("++to_erlang_type(tl(lists:reverse(Rest)))++")";
+	_ ->
+	    Tag++"()"
+    end.
+
+
+to_erlang_tag("unsigned") ->
+    "integer";
+to_erlang_tag("int") ->
+    "integer";
+to_erlang_tag("integer") ->
+    "integer";
+to_erlang_tag("char *") ->
+    "string";
+to_erlang_tag("char **") ->
+    "'char * *'";
+to_erlang_tag("const char *") ->
+    "string";
+to_erlang_tag("const uint64_t") ->
+    "integer";
+to_erlang_tag("uint8_t") ->
+    "integer";
+to_erlang_tag("unsigned long long") ->
+    "integer";
+to_erlang_tag("long long") ->
+    "integer";
+to_erlang_tag("double") ->
+    "float";
+to_erlang_tag("void") ->
+    "atom";
+to_erlang_tag("LLVMBool") ->
+    "boolean";
+to_erlang_tag(Else) ->
+    "'"++Else++"'".
+
+%% Check hardoded arrays
+is_array(FName,PName) ->
+    lists:member({FName,PName},?ARRAYS).

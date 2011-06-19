@@ -4,7 +4,7 @@
 AC_INIT([llevm], [0.0.1], [lukas@erlang-solutions.com])
 AC_CONFIG_AUX_DIRS($srcdir/autoconf)
 AC_PREREQ([2.67])
-AC_CONFIG_SRCDIR([csrc/llvm_nif.c])
+AC_CONFIG_SRCDIR([src/llevm.app.src])
 
 AC_CANONICAL_HOST
 TARGET=$host
@@ -32,7 +32,7 @@ case $ac_cv_sizeof_void_p in
        	;;
 esac
 
-CFLAGS="-O3 -g -Wall -fPIC"
+CFLAGS="-g3 -Wall -fPIC"
 
 case $host_os in
      darwin*)

@@ -565,7 +565,7 @@ PACKAGE_STRING='llevm 0.0.1'
 PACKAGE_BUGREPORT='lukas@erlang-solutions.com'
 PACKAGE_URL=''
 
-ac_unique_file="csrc/llvm_nif.c"
+ac_unique_file="src/llevm.app.src"
 # Factoring default headers for most tests.
 ac_includes_default="\
 #include <stdio.h>
@@ -3573,7 +3573,7 @@ case $ac_cv_sizeof_void_p in
        	;;
 esac
 
-CFLAGS="-O3 -g -Wall -fPIC"
+CFLAGS="-O2 -g -Wall -fPIC"
 
 case $host_os in
      darwin*)
