@@ -6,7 +6,7 @@
 #include "erl_nif.h"
 
 typedef enum {
-  // -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
+  // -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -38,7 +38,7 @@ typedef struct llvm_ptr {
   void *value;
 } llvm_ptr_t;
 
-// -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
+// -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
 
 // --- Stop generating from Core_8h.xml
 
@@ -76,7 +76,7 @@ static ERL_NIF_TERM llvm_ptr_create(ErlNifEnv* env, llvm_type_t type,
 }
 
 
-// -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
+// -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
 
 static ERL_NIF_TERM LLVMGetGlobalContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMGetGlobalContext\r\n");
@@ -397,6 +397,19 @@ static ERL_NIF_TERM LLVMDumpValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 LLVMDumpValue(Val);
 
   return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM LLVMConstNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMConstNull\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef Ty;
+  llvm_ptr_deref(env, argv[0], (void **) &Ty);
+
+  LLVMValueRef retVal = LLVMConstNull(Ty);
+
+  return llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMConstReal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
@@ -843,7 +856,7 @@ static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 
 static ErlNifFunc nif_funcs[] =
   {
-    // -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
+    // -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
 
     {"LLVMGetGlobalContext_internal",0,LLVMGetGlobalContext_nif},
     {"LLVMModuleCreateWithName_internal",1,LLVMModuleCreateWithName_nif},
@@ -870,6 +883,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMPPCFP128Type_internal",0,LLVMPPCFP128Type_nif},
     {"LLVMFunctionType_internal",4,LLVMFunctionType_nif},
     {"LLVMDumpValue_internal",1,LLVMDumpValue_nif},
+    {"LLVMConstNull_internal",1,LLVMConstNull_nif},
     {"LLVMConstReal_internal",2,LLVMConstReal_nif},
     {"LLVMGetLinkage_internal",1,LLVMGetLinkage_nif},
     {"LLVMSetLinkage_internal",2,LLVMSetLinkage_nif},

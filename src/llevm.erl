@@ -4,7 +4,7 @@
 
 -on_load(load_my_nifs/0).
 
-%% -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
 
 -export(['LLVMGetGlobalContext'/0]).
 -export(['LLVMModuleCreateWithName'/1]).
@@ -31,6 +31,7 @@
 -export(['LLVMPPCFP128Type'/0]).
 -export(['LLVMFunctionType'/4]).
 -export(['LLVMDumpValue'/1]).
+-export(['LLVMConstNull'/1]).
 -export(['LLVMConstReal'/2]).
 -export(['LLVMGetLinkage'/1]).
 -export(['LLVMSetLinkage'/2]).
@@ -58,7 +59,7 @@
 
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
-%% -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -101,7 +102,7 @@
 load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
-%% -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
 
 %% @doc 
 -spec 'LLVMGetGlobalContext'() -> 'LLVMContextRef'().
@@ -276,6 +277,13 @@ load_my_nifs() ->
 'LLVMDumpValue'({'LLVMValueRef',Val}) ->
 	{atom,'LLVMDumpValue_internal'(Val)}.
 'LLVMDumpValue_internal'(_Val) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMConstNull'(Ty :: 'LLVMTypeRef'()) -> 'LLVMValueRef'().
+'LLVMConstNull'({'LLVMTypeRef',Ty}) ->
+	{'LLVMValueRef','LLVMConstNull_internal'(Ty)}.
+'LLVMConstNull_internal'(_Ty) ->
 	nif_not_loaded.
 
 %% @doc 

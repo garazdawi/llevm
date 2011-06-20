@@ -1,4 +1,4 @@
-%% -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
 
 %% enum LLVMAttribute
 -define(LLVMZExtAttribute,{'LLVMAttribute',1}).

@@ -58,7 +58,8 @@
       Name == "LLVMSetLinkage";
       Name == "LLVMGetLinkage";
       Name == "LLVMBuildCall";
-      Name == "LLVMBuildUIToFP"; 
+      Name == "LLVMBuildUIToFP";
+      Name == "LLVMConstNull";
       Name == "LLVMGetBasicBlockParent"; 
       Name == "LLVMGetInsertBlock"; 
       Name == "LLVMBuildCondBr"; 
