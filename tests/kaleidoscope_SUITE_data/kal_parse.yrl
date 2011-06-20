@@ -1,5 +1,5 @@
 Nonterminals module variable expressions toplevelexpr expression variables params external function prototype.
-Terminals def extern num ident '(' ')' ';' ',' '+' '-' '<' '*' 'if' 'then' 'else'. 
+Terminals def extern num ident '(' ')' ';' ',' '+' '-' '<' '*' '=' 'if' 'then' 'else' 'for' 'in'. 
 
 Rootsymbol module.
 Left 100 '+'.
@@ -31,6 +31,8 @@ expression -> expression '-' expression : {'-', '$1', '$3'}.
 expression -> expression '*' expression : {'*', '$1', '$3'}.
 expression -> expression '<' expression : {'<', '$1', '$3'}.
 expression -> 'if' expression 'then' expression 'else' expression : {'if', '$2','$4','$6'}.
+expression -> 'for' variable '=' expression ',' expression 'in' expression : {for, '$2', '$4', '$6', undefined, '$8'}.
+expression -> 'for' variable '=' expression ',' expression ',' expression 'in' expression : {for, '$2', '$4', '$6', '$8', '$10'}.
 expression -> ident '(' params ')' : {call, value_of('$1'),'$3'}.
 
 params -> expression : ['$1'].

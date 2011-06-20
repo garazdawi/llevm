@@ -76,7 +76,41 @@ gen_body(M, B, Params, {'if', Cond, Then, Else}) ->
     llevm:'LLVMPositionBuilderAtEnd'(B, ContBB),
     PhiNode = llevm:'LLVMBuildPhi'(B, llevm:'LLVMDoubleType'(), "iftmp"),
     llevm:'LLVMAddIncoming'(PhiNode, {ThenV,ElseV},{ThenBB,ElseBB},2),
-    PhiNode.
+    PhiNode;
+gen_body(M, B, Params, {'for', {variable,VarName}, Value, Cond, Incr, Body}) ->
+    StartValRef = gen_body(M, B, Params, Value),
+
+    PreBB = llevm:'LLVMGetInsertBlock'(B),
+    FunRef = llevm:'LLVMGetBasicBlockParent'(PreBB),
+    LoopBB = llevm:'LLVMAppendBasicBlock'(FunRef, "loop"),
+    AfterBB = llevm:'LLVMAppendBasicBlock'(FunRef, "after_loop"),
+    
+    llevm:'LLVMBuildBr'(B, LoopBB),
+    
+    llevm:'LLVMPositionBuilderAtEnd'(B, LoopBB),
+    PhiVal = llevm:'LLVMBuildPhi'(B, llevm:'LLVMDoubleType'(), VarName),
+    NewParams = [{VarName,PhiVal}|Params],
+    gen_body(M, B, NewParams, Body),
+
+    StepVal = case Incr of
+		  undefined ->
+		      gen_body(M, B, NewParams, {const, "1.0"});
+		  _Else ->
+		      gen_body(M, B, NewParams, Incr)
+	      end,
+    NextVal = llevm:'LLVMBuildFAdd'(B, StepVal, PhiVal, "nextvar"),
+
+    llevm:'LLVMAddIncoming'(PhiVal, {StartValRef,NextVal},{PreBB,LoopBB},2),
+
+    CondRef = gen_body(M, B, NewParams, Cond),
+    CmpRef = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',7}, CondRef,
+				   gen_body(M, B, NewParams, {const,"0.0"}),
+				   "ifcond"),
+
+    llevm:'LLVMBuildCondBr'(B, CmpRef, LoopBB, AfterBB),
+    
+    llevm:'LLVMPositionBuilderAtEnd'(B, AfterBB),
+    llevm:'LLVMConstNull'(llevm:'LLVMDoubleType'()).
     
     
 get_params(FunRef, [{variable, Name}|Rest], I) ->

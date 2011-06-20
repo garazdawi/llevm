@@ -25,7 +25,7 @@ end_per_testcase(_Tc, _Config) ->
     ok.
 
 all() ->
-    [adder, complex, extern].
+    [adder, complex, extern, condition].
 
 adder(_Config) ->
     compile(["def adding(test1,test2) test1+test2;"]).
@@ -41,6 +41,10 @@ extern(_Config) ->
 condition(_Config) ->
     compile(["def fib(x) if x < 3.0 then 1.0 else fib(x-1.0)+fib(x-2.0);"]).
 
+for(_Config) ->
+    compile(["extern putchard(char);",
+	     "def printstar(n) for i = 1.0, i < n, 1.0 in putchard(42.0);",
+	     "def printstar2(n) for i = 1.0, i < n in putchard(42.0);"]).
 
 compile(Strs) ->
     Ctx = llevm:'LLVMGetGlobalContext'(),

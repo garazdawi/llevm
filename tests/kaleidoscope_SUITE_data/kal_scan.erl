@@ -21,6 +21,10 @@ scan("then"++Rest, none, Acc) ->
     scan(Rest, none, [{then,num()}|Acc]);
 scan("else"++Rest, none, Acc) ->
     scan(Rest, none, [{else,num()}|Acc]);
+scan("for"++Rest, none, Acc) ->
+    scan(Rest, none, [{for,num()}|Acc]);
+scan("in"++Rest, none, Acc) ->
+    scan(Rest, none, [{in,num()}|Acc]);
 scan(" "++Rest, none, Acc) ->
     scan(Rest, none, Acc);
 scan("\n"++Rest, none, Acc) ->
@@ -30,7 +34,7 @@ scan("\n"++Rest, none, Acc) ->
 scan([Tok|Rest], none, Acc) 
   when Tok == $(; Tok == $); Tok == $;; Tok == $,;
        Tok == $+; Tok == $-; Tok == $/; Tok == $*;
-       Tok == $< ->
+       Tok == $<; Tok == $=  ->
     scan(Rest, none, [{list_to_atom([Tok]),num()}|Acc]);
 
 %% Number scan
