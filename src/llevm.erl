@@ -4,12 +4,31 @@
 
 -on_load(load_my_nifs/0).
 
-%% -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
 
 -export(['LLVMGetGlobalContext'/0]).
 -export(['LLVMModuleCreateWithName'/1]).
 -export(['LLVMDumpModule'/1]).
+-export(['LLVMInt1TypeInContext'/1]).
+-export(['LLVMInt8TypeInContext'/1]).
+-export(['LLVMInt16TypeInContext'/1]).
+-export(['LLVMInt32TypeInContext'/1]).
+-export(['LLVMInt64TypeInContext'/1]).
+-export(['LLVMIntTypeInContext'/2]).
+-export(['LLVMInt1Type'/0]).
+-export(['LLVMInt8Type'/0]).
+-export(['LLVMInt16Type'/0]).
+-export(['LLVMInt32Type'/0]).
+-export(['LLVMInt64Type'/0]).
+-export(['LLVMIntType'/1]).
+-export(['LLVMFloatTypeInContext'/1]).
+-export(['LLVMDoubleTypeInContext'/1]).
+-export(['LLVMFP128TypeInContext'/1]).
+-export(['LLVMPPCFP128TypeInContext'/1]).
+-export(['LLVMFloatType'/0]).
 -export(['LLVMDoubleType'/0]).
+-export(['LLVMFP128Type'/0]).
+-export(['LLVMPPCFP128Type'/0]).
 -export(['LLVMFunctionType'/4]).
 -export(['LLVMDumpValue'/1]).
 -export(['LLVMConstReal'/2]).
@@ -39,7 +58,7 @@
 
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
-%% -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -82,7 +101,7 @@
 load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
-%% -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
 
 %% @doc 
 -spec 'LLVMGetGlobalContext'() -> 'LLVMContextRef'().
@@ -106,10 +125,143 @@ load_my_nifs() ->
 	nif_not_loaded.
 
 %% @doc 
+-spec 'LLVMInt1TypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMInt1TypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMInt1TypeInContext_internal'(C)}.
+'LLVMInt1TypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt8TypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMInt8TypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMInt8TypeInContext_internal'(C)}.
+'LLVMInt8TypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt16TypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMInt16TypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMInt16TypeInContext_internal'(C)}.
+'LLVMInt16TypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt32TypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMInt32TypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMInt32TypeInContext_internal'(C)}.
+'LLVMInt32TypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt64TypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMInt64TypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMInt64TypeInContext_internal'(C)}.
+'LLVMInt64TypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMIntTypeInContext'(C :: 'LLVMContextRef'(),NumBits :: integer()) -> 'LLVMTypeRef'().
+'LLVMIntTypeInContext'({'LLVMContextRef',C},NumBits) ->
+	{'LLVMTypeRef','LLVMIntTypeInContext_internal'(C,NumBits)}.
+'LLVMIntTypeInContext_internal'(_C,_NumBits) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt1Type'() -> 'LLVMTypeRef'().
+'LLVMInt1Type'() ->
+	{'LLVMTypeRef','LLVMInt1Type_internal'()}.
+'LLVMInt1Type_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt8Type'() -> 'LLVMTypeRef'().
+'LLVMInt8Type'() ->
+	{'LLVMTypeRef','LLVMInt8Type_internal'()}.
+'LLVMInt8Type_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt16Type'() -> 'LLVMTypeRef'().
+'LLVMInt16Type'() ->
+	{'LLVMTypeRef','LLVMInt16Type_internal'()}.
+'LLVMInt16Type_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt32Type'() -> 'LLVMTypeRef'().
+'LLVMInt32Type'() ->
+	{'LLVMTypeRef','LLVMInt32Type_internal'()}.
+'LLVMInt32Type_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInt64Type'() -> 'LLVMTypeRef'().
+'LLVMInt64Type'() ->
+	{'LLVMTypeRef','LLVMInt64Type_internal'()}.
+'LLVMInt64Type_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMIntType'(NumBits :: integer()) -> 'LLVMTypeRef'().
+'LLVMIntType'(NumBits) ->
+	{'LLVMTypeRef','LLVMIntType_internal'(NumBits)}.
+'LLVMIntType_internal'(_NumBits) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMFloatTypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMFloatTypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMFloatTypeInContext_internal'(C)}.
+'LLVMFloatTypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMDoubleTypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMDoubleTypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMDoubleTypeInContext_internal'(C)}.
+'LLVMDoubleTypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMFP128TypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMFP128TypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMFP128TypeInContext_internal'(C)}.
+'LLVMFP128TypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMPPCFP128TypeInContext'(C :: 'LLVMContextRef'()) -> 'LLVMTypeRef'().
+'LLVMPPCFP128TypeInContext'({'LLVMContextRef',C}) ->
+	{'LLVMTypeRef','LLVMPPCFP128TypeInContext_internal'(C)}.
+'LLVMPPCFP128TypeInContext_internal'(_C) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMFloatType'() -> 'LLVMTypeRef'().
+'LLVMFloatType'() ->
+	{'LLVMTypeRef','LLVMFloatType_internal'()}.
+'LLVMFloatType_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
 -spec 'LLVMDoubleType'() -> 'LLVMTypeRef'().
 'LLVMDoubleType'() ->
 	{'LLVMTypeRef','LLVMDoubleType_internal'()}.
 'LLVMDoubleType_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMFP128Type'() -> 'LLVMTypeRef'().
+'LLVMFP128Type'() ->
+	{'LLVMTypeRef','LLVMFP128Type_internal'()}.
+'LLVMFP128Type_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMPPCFP128Type'() -> 'LLVMTypeRef'().
+'LLVMPPCFP128Type'() ->
+	{'LLVMTypeRef','LLVMPPCFP128Type_internal'()}.
+'LLVMPPCFP128Type_internal'() ->
 	nif_not_loaded.
 
 %% @doc 

@@ -6,7 +6,7 @@
 #include "erl_nif.h"
 
 typedef enum {
-  // -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
+  // -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -38,7 +38,7 @@ typedef struct llvm_ptr {
   void *value;
 } llvm_ptr_t;
 
-// -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
+// -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
 
 // --- Stop generating from Core_8h.xml
 
@@ -76,7 +76,7 @@ static ERL_NIF_TERM llvm_ptr_create(ErlNifEnv* env, llvm_type_t type,
 }
 
 
-// -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
+// -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
 
 static ERL_NIF_TERM LLVMGetGlobalContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMGetGlobalContext\r\n");
@@ -114,12 +114,238 @@ LLVMDumpModule(M);
   return enif_make_atom(env,"ok");
 }
 
+static ERL_NIF_TERM LLVMInt1TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt1TypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMInt1TypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt8TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt8TypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMInt8TypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt16TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt16TypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMInt16TypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt32TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt32TypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMInt32TypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt64TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt64TypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMInt64TypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMIntTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMIntTypeInContext\r\n");
+  if (argc != 2)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  unsigned NumBits;
+  enif_get_uint(env, argv[1], (unsigned*)&NumBits);
+
+  LLVMTypeRef retVal = LLVMIntTypeInContext(C,NumBits);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt1Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt1Type\r\n");
+  if (argc != 0)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef retVal = LLVMInt1Type();
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt8Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt8Type\r\n");
+  if (argc != 0)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef retVal = LLVMInt8Type();
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt16Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt16Type\r\n");
+  if (argc != 0)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef retVal = LLVMInt16Type();
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt32Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt32Type\r\n");
+  if (argc != 0)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef retVal = LLVMInt32Type();
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMInt64Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInt64Type\r\n");
+  if (argc != 0)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef retVal = LLVMInt64Type();
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMIntType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMIntType\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  unsigned NumBits;
+  enif_get_uint(env, argv[0], (unsigned*)&NumBits);
+
+  LLVMTypeRef retVal = LLVMIntType(NumBits);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMFloatTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMFloatTypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMFloatTypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMDoubleTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMDoubleTypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMDoubleTypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMFP128TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMFP128TypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMFP128TypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMPPCFP128TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMPPCFP128TypeInContext\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMContextRef C;
+  llvm_ptr_deref(env, argv[0], (void **) &C);
+
+  LLVMTypeRef retVal = LLVMPPCFP128TypeInContext(C);
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMFloatType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMFloatType\r\n");
+  if (argc != 0)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef retVal = LLVMFloatType();
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
 static ERL_NIF_TERM LLVMDoubleType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMDoubleType\r\n");
   if (argc != 0)
     return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
 
   LLVMTypeRef retVal = LLVMDoubleType();
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMFP128Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMFP128Type\r\n");
+  if (argc != 0)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef retVal = LLVMFP128Type();
+
+  return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMPPCFP128Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMPPCFP128Type\r\n");
+  if (argc != 0)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMTypeRef retVal = LLVMPPCFP128Type();
 
   return llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
@@ -617,12 +843,31 @@ static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 
 static ErlNifFunc nif_funcs[] =
   {
-    // -- Start generating from Core_8h.xml on {{2011,6,19},{22,45,4}}--
+    // -- Start generating from Core_8h.xml on {{2011,6,20},{22,46,14}}--
 
     {"LLVMGetGlobalContext_internal",0,LLVMGetGlobalContext_nif},
     {"LLVMModuleCreateWithName_internal",1,LLVMModuleCreateWithName_nif},
     {"LLVMDumpModule_internal",1,LLVMDumpModule_nif},
+    {"LLVMInt1TypeInContext_internal",1,LLVMInt1TypeInContext_nif},
+    {"LLVMInt8TypeInContext_internal",1,LLVMInt8TypeInContext_nif},
+    {"LLVMInt16TypeInContext_internal",1,LLVMInt16TypeInContext_nif},
+    {"LLVMInt32TypeInContext_internal",1,LLVMInt32TypeInContext_nif},
+    {"LLVMInt64TypeInContext_internal",1,LLVMInt64TypeInContext_nif},
+    {"LLVMIntTypeInContext_internal",2,LLVMIntTypeInContext_nif},
+    {"LLVMInt1Type_internal",0,LLVMInt1Type_nif},
+    {"LLVMInt8Type_internal",0,LLVMInt8Type_nif},
+    {"LLVMInt16Type_internal",0,LLVMInt16Type_nif},
+    {"LLVMInt32Type_internal",0,LLVMInt32Type_nif},
+    {"LLVMInt64Type_internal",0,LLVMInt64Type_nif},
+    {"LLVMIntType_internal",1,LLVMIntType_nif},
+    {"LLVMFloatTypeInContext_internal",1,LLVMFloatTypeInContext_nif},
+    {"LLVMDoubleTypeInContext_internal",1,LLVMDoubleTypeInContext_nif},
+    {"LLVMFP128TypeInContext_internal",1,LLVMFP128TypeInContext_nif},
+    {"LLVMPPCFP128TypeInContext_internal",1,LLVMPPCFP128TypeInContext_nif},
+    {"LLVMFloatType_internal",0,LLVMFloatType_nif},
     {"LLVMDoubleType_internal",0,LLVMDoubleType_nif},
+    {"LLVMFP128Type_internal",0,LLVMFP128Type_nif},
+    {"LLVMPPCFP128Type_internal",0,LLVMPPCFP128Type_nif},
     {"LLVMFunctionType_internal",4,LLVMFunctionType_nif},
     {"LLVMDumpValue_internal",1,LLVMDumpValue_nif},
     {"LLVMConstReal_internal",2,LLVMConstReal_nif},

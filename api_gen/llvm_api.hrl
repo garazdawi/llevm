@@ -42,7 +42,6 @@
       Name == "LLVMDumpModule";
       Name == "LLVMDumpValue";
       Name == "LLVMConstReal"; 
-      Name == "LLVMDoubleType";
       Name == "LLVMCreateBuilderInContext"; 
       Name == "LLVMGetGlobalContext";
       Name == "LLVMConstReal";
@@ -66,13 +65,37 @@
       Name == "LLVMBuildBr"; 
       Name == "LLVMBuildPhi"; 
       Name == "LLVMAddIncoming"; 
-      Name == "LLVMAddFunction"
+      Name == "LLVMAddFunction";
+%% Types
+      Name == "LLVMInt1Type";
+      Name == "LLVMInt8Type";
+      Name == "LLVMInt16Type";
+      Name == "LLVMInt32Type";
+      Name == "LLVMInt64Type";
+      Name == "LLVMIntType";
+      Name == "LLVMInt1TypeInContext";
+      Name == "LLVMInt8TypeInContext";
+      Name == "LLVMInt16TypeInContext";
+      Name == "LLVMInt32TypeInContext";
+      Name == "LLVMInt64TypeInContext";
+      Name == "LLVMIntTypeInContext";
+      Name == "LLVMFloatType";
+      Name == "LLVMDoubleType";
+      Name == "LLVMX86FP80TypeType";
+      Name == "LLVMFP128Type";
+      Name == "LLVMPPCFP128Type";
+      Name == "LLVMFloatTypeInContext";
+      Name == "LLVMDoubleTypeInContext";
+      Name == "LLVMX86FP80TypeTypeInContext";
+      Name == "LLVMFP128TypeInContext";
+      Name == "LLVMPPCFP128TypeInContext";
 %      Name == "LLVMGetNamedFunction";
 %      Name == "LLVMCountParams"; 
 %      Name == "LLVMBuildCall";
 %      Name == "LLVMSetLinkage";
 %      Name == "LLVMDeleteFunction"; 
 %      Name == "LLVMCountBasicBlocks"
+      false
       ).
 %-define(LIMIT, when length(Params) == 0).
 %-define(LIMIT, ).
