@@ -13,8 +13,14 @@ AC_SUBST(TARGET)
 # Checks for programs.
 AC_PROG_CC
 AC_LANG([C])
-AC_CHECK_PROG([llvm_config_var], [llvm-config], [llvm-config])
-AC_CHECK_PROG([DOXYGEN_PATH], [doxygen], [doxygen])
+AC_PATH_PROGS([llvm_config_var], [llvm-config llvm-config-2.8], [no])
+if test ${llvm_config_var} = no; then
+	AC_MSG_ERROR([llvm-config not found in path])
+fi
+AC_PATH_PROG([DOXYGEN_PATH], [doxygen], [no])
+if test ${DOXYGEN_PATH} = no; then
+	AC_MSG_WARN([doxygen not found in path, cannot re-generate llvm nif])
+fi
 ERLANG_ROOT_DIR=`erl -noshell -eval 'io:format("~s~n",[[code:root_dir()]])' -s erlang halt`
 AC_SUBST(ERLANG_ROOT_DIR)
 ERTS_DIR=$ERLANG_ROOT_DIR`erl -noshell -eval 'io:format("~s~n",[[lists:concat([["/erts-", erlang:system_info(version)]])]])' -s erlang halt`
@@ -37,21 +43,30 @@ CFLAGS="-g3 -Wall -fPIC"
 case $host_os in
      darwin*)
 	LDFLAGS="-fPIC -bundle -flat_namespace -undefined suppress"
+	LINKER=gcc
 	;;
      *)
 	LDFLAGS="-shared -fPIC"
+	LINKER=g++
 	;;
 esac
+AC_SUBST(LINKER)
 
 
 # Checks for libraries.
 
 # Checks for header files.
-AC_CHECK_HEADERS([llvm-c/Core.h])
+LLVM_INCLUDES=`$llvm_config_var --includedir`/llvm-c
+AC_SUBST(LLVM_INCLUDES)
 
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
 AC_FUNC_MALLOC
+if test ${DOXYGEN_PATH} != no; then
+	AC_CONFIG_FILES([api_gen/Makefile api_gen/doxygen.conf])
+fi
 
-AC_OUTPUT([Makefile api_gen/Makefile])
+AC_CONFIG_FILES([Makefile])
+
+AC_OUTPUT

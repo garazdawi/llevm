@@ -10,7 +10,7 @@ OBJ_DIR=obj.$(ARCH)
 # llvm Variables
 LLVM_CONFIG=@llvm_config_var@
 LLVM_CFLAGS=-g3 -Wall -fPIC -I/usr/local/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS  -fno-common
-LLVM_LDFLAGS=$(shell $(LLVM_CONFIG) --ldflags) `$(LLVM_CONFIG) --libs`
+LLVM_LDFLAGS=$(shell $(LLVM_CONFIG) --ldflags) `$(LLVM_CONFIG) --libs Core`
 
 # Erlang Variables
 ERL_TOP=@ERLANG_ROOT_DIR@
@@ -21,7 +21,7 @@ HRL_FILES=$(wildcard $(ESRC)/*.hrl) $(wildcard $(INCLUDE_DIR)/*.hrl)
 
 # CPP Variables
 CC=@CC@
-LINKER=@CC@
+LINKER=@LINKER@
 CFLAGS=@CFLAGS@
 CFLAGS+=$(LLVM_CFLAGS)
 CFLAGS+=-I @ERTS_DIR@/include/
@@ -47,7 +47,7 @@ $(OBJ_DIR)/%.o: $(CSRC)/%.c $(H_FILES) $(OBJ_DIR)
 priv/$(ARCH)/llevm.so: $(OBJ_FILES) priv/$(ARCH)
 	$(LINKER) $(OBJ_FILES) $(LDFLAGS) -o $@
 
-priv/$(ARCH) $(OBJ_DIR) $(EBIN) $(INCLUDE_DIR):
+priv/$(ARCH) $(OBJ_DIR) $(EBIN) $(INCLUDE_DIR) logs:
 	@mkdir -p $@
 
 clean:
@@ -59,6 +59,5 @@ very_clean: clean
 shell:
 	erl -pa ebin
 
-test: compile
-	ulimit -c unlimited
+test: compile logs
 	ct_run -noshell -pa ../llevm/ebin -logdir logs -suite tests/kaleidoscope_SUITE.erl
