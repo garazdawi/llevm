@@ -50,13 +50,24 @@ compile(Strs) ->
     Ctx = llevm:'LLVMGetGlobalContext'(),
     ModRef = llevm:'LLVMModuleCreateWithName'("test"),
     BuildRef = llevm:'LLVMCreateBuilderInContext'(Ctx),
+    FPMRef = llevm:'LLVMCreateFunctionPassManagerForModule'(ModRef),
+    
+    llevm:'LLVMAddInstructionCombiningPass'(FPMRef),
+    llevm:'LLVMAddReassociatePass'(FPMRef),
+    llevm:'LLVMAddGVNPass'(FPMRef),
+    llevm:'LLVMAddCFGSimplificationPass'(FPMRef),
+
+    llevm:'LLVMInitializeFunctionPassManager'(FPMRef),
     lists:map(fun(Str) ->
 		      AST = scan_and_parse(Str),
 		      FunRef = kal_gen:gen_function(ModRef,BuildRef,AST),
-		      llevm:'LLVMDumpValue'(FunRef),
+		      llevm:'LLVMRunFunctionPassManager'(FPMRef, FunRef),
 		      FunRef
 	      end,Strs),
-    llevm:'LLVMDumpModule'(ModRef).
+    llevm:'LLVMFinalizeFunctionPassManager'(FPMRef),
+    llevm:'LLVMDumpModule'(ModRef),
+    ok.
+    
     
 
 scan_and_parse(Str) ->

@@ -40,7 +40,7 @@ gen_body(M, B, Params, {Op,LHS,RHS})
 	'-' -> llevm:'LLVMBuildFSub'(B, LHSRef, RHSRef, "subtmp");
 	'*' -> llevm:'LLVMBuildFMul'(B, LHSRef, RHSRef, "multmp");
 	'<' ->
-	    L = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',13},LHSRef, RHSRef, "cmptmp"),
+	    L = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',12},LHSRef, RHSRef, "cmptmp"),
 	    %% Convert bool 0/1 to double 0.0 or 1.0
 	    llevm:'LLVMBuildUIToFP'(B, L, llevm:'LLVMDoubleType'(), "booltmp")
     end;
@@ -54,7 +54,7 @@ gen_body(M, B, Params, {call, Name, CParams}) ->
     llevm:'LLVMBuildCall'(B, CalleeRef, CParamsRefs, length(CParams), "calltmp");
 gen_body(M, B, Params, {'if', Cond, Then, Else}) ->
     CondRef = gen_body(M, B, Params, Cond),
-    CmpRef = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',7}, CondRef,
+    CmpRef = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',6}, CondRef,
 				   gen_body(M, B, Params, {const,"0.0"}),
 				   "ifcond"),
     FunRef = llevm:'LLVMGetBasicBlockParent'(
@@ -103,7 +103,7 @@ gen_body(M, B, Params, {'for', {variable,VarName}, Value, Cond, Incr, Body}) ->
     llevm:'LLVMAddIncoming'(PhiVal, {StartValRef,NextVal},{PreBB,LoopBB},2),
 
     CondRef = gen_body(M, B, NewParams, Cond),
-    CmpRef = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',7}, CondRef,
+    CmpRef = llevm:'LLVMBuildFCmp'(B, {'LLVMRealPredicate',6}, CondRef,
 				   gen_body(M, B, NewParams, {const,"0.0"}),
 				   "ifcond"),
 
