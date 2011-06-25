@@ -4,7 +4,20 @@
 
 -on_load(load_my_nifs/0).
 
-%% -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
+%% @@EXPORTS@@
+%% -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+
+-export(['LLVMAddCFGSimplificationPass'/1]).
+-export(['LLVMAddGVNPass'/1]).
+-export(['LLVMAddInstructionCombiningPass'/1]).
+-export(['LLVMAddReassociatePass'/1]).
+%% --- Stop generating from Scalar_8h.xml
+
+%% -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+
+%% --- Stop generating from IPO_8h.xml
+
+%% -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
 
 -export(['LLVMGetGlobalContext'/0]).
 -export(['LLVMModuleCreateWithName'/1]).
@@ -54,12 +67,26 @@
 -export(['LLVMBuildFCmp'/5]).
 -export(['LLVMBuildPhi'/3]).
 -export(['LLVMBuildCall'/5]).
+-export(['LLVMCreateFunctionPassManagerForModule'/1]).
+-export(['LLVMRunPassManager'/2]).
+-export(['LLVMInitializeFunctionPassManager'/1]).
+-export(['LLVMRunFunctionPassManager'/2]).
+-export(['LLVMFinalizeFunctionPassManager'/1]).
 %% --- Stop generating from Core_8h.xml
 
 
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
-%% -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
+%% @@TYPES@@
+%% -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+
+%% --- Stop generating from Scalar_8h.xml
+
+%% -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+
+%% --- Stop generating from IPO_8h.xml
+
+%% -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -102,7 +129,44 @@
 load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
-%% -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
+%% @@FUNCTIONS@@
+%% -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+
+%% @doc See llvm::createCFGSimplificationPass function. 
+-spec 'LLVMAddCFGSimplificationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
+'LLVMAddCFGSimplificationPass'({'LLVMPassManagerRef',PM}) ->
+	{atom,'LLVMAddCFGSimplificationPass_internal'(PM)}.
+'LLVMAddCFGSimplificationPass_internal'(_PM) ->
+	nif_not_loaded.
+
+%% @doc See llvm::createGVNPass function. 
+-spec 'LLVMAddGVNPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
+'LLVMAddGVNPass'({'LLVMPassManagerRef',PM}) ->
+	{atom,'LLVMAddGVNPass_internal'(PM)}.
+'LLVMAddGVNPass_internal'(_PM) ->
+	nif_not_loaded.
+
+%% @doc See llvm::createInstructionCombiningPass function. 
+-spec 'LLVMAddInstructionCombiningPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
+'LLVMAddInstructionCombiningPass'({'LLVMPassManagerRef',PM}) ->
+	{atom,'LLVMAddInstructionCombiningPass_internal'(PM)}.
+'LLVMAddInstructionCombiningPass_internal'(_PM) ->
+	nif_not_loaded.
+
+%% @doc See llvm::createReassociatePass function. 
+-spec 'LLVMAddReassociatePass'(PM :: 'LLVMPassManagerRef'()) -> atom().
+'LLVMAddReassociatePass'({'LLVMPassManagerRef',PM}) ->
+	{atom,'LLVMAddReassociatePass_internal'(PM)}.
+'LLVMAddReassociatePass_internal'(_PM) ->
+	nif_not_loaded.
+
+%% --- Stop generating from Scalar_8h.xml
+
+%% -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+
+%% --- Stop generating from IPO_8h.xml
+
+%% -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
 
 %% @doc 
 -spec 'LLVMGetGlobalContext'() -> 'LLVMContextRef'().
@@ -438,6 +502,41 @@ load_my_nifs() ->
 'LLVMBuildCall'({'LLVMBuilderRef',B},{'LLVMValueRef',Fn},Args,NumArgs,Name) ->
 	{'LLVMValueRef','LLVMBuildCall_internal'(B,Fn,Args,NumArgs,Name)}.
 'LLVMBuildCall_internal'(_B,_Fn,_Args,_NumArgs,_Name) ->
+	nif_not_loaded.
+
+%% @doc Constructs a new function-by-function pass pipeline over the module provider. It does not take ownership of the module provider. This type of pipeline is suitable for code generation and JIT compilation tasks. See llvm::FunctionPassManager::FunctionPassManager. 
+-spec 'LLVMCreateFunctionPassManagerForModule'(M :: 'LLVMModuleRef'()) -> 'LLVMPassManagerRef'().
+'LLVMCreateFunctionPassManagerForModule'({'LLVMModuleRef',M}) ->
+	{'LLVMPassManagerRef','LLVMCreateFunctionPassManagerForModule_internal'(M)}.
+'LLVMCreateFunctionPassManagerForModule_internal'(_M) ->
+	nif_not_loaded.
+
+%% @doc Initializes, executes on the provided module, and finalizes all of the passes scheduled in the pass manager. Returns 1 if any of the passes modified the module, 0 otherwise. See llvm::PassManager::run(Module&amp;). 
+-spec 'LLVMRunPassManager'(PM :: 'LLVMPassManagerRef'(),M :: 'LLVMModuleRef'()) -> boolean().
+'LLVMRunPassManager'({'LLVMPassManagerRef',PM},{'LLVMModuleRef',M}) ->
+	{boolean,'LLVMRunPassManager_internal'(PM,M)}.
+'LLVMRunPassManager_internal'(_PM,_M) ->
+	nif_not_loaded.
+
+%% @doc Initializes all of the function passes scheduled in the function pass manager. Returns 1 if any of the passes modified the module, 0 otherwise. See llvm::FunctionPassManager::doInitialization. 
+-spec 'LLVMInitializeFunctionPassManager'(FPM :: 'LLVMPassManagerRef'()) -> boolean().
+'LLVMInitializeFunctionPassManager'({'LLVMPassManagerRef',FPM}) ->
+	{boolean,'LLVMInitializeFunctionPassManager_internal'(FPM)}.
+'LLVMInitializeFunctionPassManager_internal'(_FPM) ->
+	nif_not_loaded.
+
+%% @doc Executes all of the function passes scheduled in the function pass manager on the provided function. Returns 1 if any of the passes modified the function, false otherwise. See llvm::FunctionPassManager::run(Function&amp;). 
+-spec 'LLVMRunFunctionPassManager'(FPM :: 'LLVMPassManagerRef'(),F :: 'LLVMValueRef'()) -> boolean().
+'LLVMRunFunctionPassManager'({'LLVMPassManagerRef',FPM},{'LLVMValueRef',F}) ->
+	{boolean,'LLVMRunFunctionPassManager_internal'(FPM,F)}.
+'LLVMRunFunctionPassManager_internal'(_FPM,_F) ->
+	nif_not_loaded.
+
+%% @doc Finalizes all of the function passes scheduled in in the function pass manager. Returns 1 if any of the passes modified the module, 0 otherwise. See llvm::FunctionPassManager::doFinalization. 
+-spec 'LLVMFinalizeFunctionPassManager'(FPM :: 'LLVMPassManagerRef'()) -> boolean().
+'LLVMFinalizeFunctionPassManager'({'LLVMPassManagerRef',FPM}) ->
+	{boolean,'LLVMFinalizeFunctionPassManager_internal'(FPM)}.
+'LLVMFinalizeFunctionPassManager_internal'(_FPM) ->
 	nif_not_loaded.
 
 %% --- Stop generating from Core_8h.xml

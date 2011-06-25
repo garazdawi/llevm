@@ -36,7 +36,8 @@ generate_erlang_types([#typedef{ name = Name, is_ptr = true, docs = Docs }|Rest]
 generate_erlang_types([#typedef{ name = Name, type = Type, 
 				 is_ptr = false, docs = Docs }|Rest]) ->
     ErlangType = case Type of
-		     "int" -> "integer"
+		     "int" -> "integer";
+		     "unsigned" -> "integer"
 		 end,
     ["-type '",Name,"'() :: ",ErlangType,"().~n"
      "%% ",add_escape(Docs),"~n~n"|

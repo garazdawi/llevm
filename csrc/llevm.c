@@ -6,7 +6,16 @@
 #include "erl_nif.h"
 
 typedef enum {
-  // -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
+//  @@TYPES@@
+// -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+
+// --- Stop generating from Scalar_8h.xml
+
+// -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+
+// --- Stop generating from IPO_8h.xml
+
+// -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -38,7 +47,16 @@ typedef struct llvm_ptr {
   void *value;
 } llvm_ptr_t;
 
-// -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
+// @@RESOURCE_TYPES@@
+// -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+
+// --- Stop generating from Scalar_8h.xml
+
+// -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+
+// --- Stop generating from IPO_8h.xml
+
+// -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
 
 // --- Stop generating from Core_8h.xml
 
@@ -76,7 +94,68 @@ static ERL_NIF_TERM llvm_ptr_create(ErlNifEnv* env, llvm_type_t type,
 }
 
 
-// -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
+// @@FUNCTIONS@@
+// -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+
+static ERL_NIF_TERM LLVMAddCFGSimplificationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMAddCFGSimplificationPass\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMPassManagerRef PM;
+  llvm_ptr_deref(env, argv[0], (void **) &PM);
+
+LLVMAddCFGSimplificationPass(PM);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM LLVMAddGVNPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMAddGVNPass\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMPassManagerRef PM;
+  llvm_ptr_deref(env, argv[0], (void **) &PM);
+
+LLVMAddGVNPass(PM);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM LLVMAddInstructionCombiningPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMAddInstructionCombiningPass\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMPassManagerRef PM;
+  llvm_ptr_deref(env, argv[0], (void **) &PM);
+
+LLVMAddInstructionCombiningPass(PM);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM LLVMAddReassociatePass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMAddReassociatePass\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMPassManagerRef PM;
+  llvm_ptr_deref(env, argv[0], (void **) &PM);
+
+LLVMAddReassociatePass(PM);
+
+  return enif_make_atom(env,"ok");
+}
+
+// --- Stop generating from Scalar_8h.xml
+
+// -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+
+// --- Stop generating from IPO_8h.xml
+
+// -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
 
 static ERL_NIF_TERM LLVMGetGlobalContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMGetGlobalContext\r\n");
@@ -851,12 +930,96 @@ static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
   return llvm_ptr_create(env, RTLLVMValueRef, retVal);
 }
 
+static ERL_NIF_TERM LLVMCreateFunctionPassManagerForModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMCreateFunctionPassManagerForModule\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMModuleRef M;
+  llvm_ptr_deref(env, argv[0], (void **) &M);
+
+  LLVMPassManagerRef retVal = LLVMCreateFunctionPassManagerForModule(M);
+
+  return llvm_ptr_create(env, RTLLVMPassManagerRef, retVal);
+}
+
+static ERL_NIF_TERM LLVMRunPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMRunPassManager\r\n");
+  if (argc != 2)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMPassManagerRef PM;
+  llvm_ptr_deref(env, argv[0], (void **) &PM);
+
+  LLVMModuleRef M;
+  llvm_ptr_deref(env, argv[1], (void **) &M);
+
+  LLVMBool retVal = LLVMRunPassManager(PM,M);
+
+  return llvm_ptr_create(env, RTLLVMBool, retVal);
+}
+
+static ERL_NIF_TERM LLVMInitializeFunctionPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMInitializeFunctionPassManager\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMPassManagerRef FPM;
+  llvm_ptr_deref(env, argv[0], (void **) &FPM);
+
+  LLVMBool retVal = LLVMInitializeFunctionPassManager(FPM);
+
+  return llvm_ptr_create(env, RTLLVMBool, retVal);
+}
+
+static ERL_NIF_TERM LLVMRunFunctionPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMRunFunctionPassManager\r\n");
+  if (argc != 2)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMPassManagerRef FPM;
+  llvm_ptr_deref(env, argv[0], (void **) &FPM);
+
+  LLVMValueRef F;
+  llvm_ptr_deref(env, argv[1], (void **) &F);
+
+  LLVMBool retVal = LLVMRunFunctionPassManager(FPM,F);
+
+  return llvm_ptr_create(env, RTLLVMBool, retVal);
+}
+
+static ERL_NIF_TERM LLVMFinalizeFunctionPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling LLVMFinalizeFunctionPassManager\r\n");
+  if (argc != 1)
+    return enif_make_string(env, "wrong number of arguments", ERL_NIF_LATIN1);
+
+  LLVMPassManagerRef FPM;
+  llvm_ptr_deref(env, argv[0], (void **) &FPM);
+
+  LLVMBool retVal = LLVMFinalizeFunctionPassManager(FPM);
+
+  return llvm_ptr_create(env, RTLLVMBool, retVal);
+}
+
 // --- Stop generating from Core_8h.xml
 
 
 static ErlNifFunc nif_funcs[] =
   {
-    // -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
+// @@NIF_MAPPINGS@@
+// -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+
+    {"LLVMAddCFGSimplificationPass_internal",1,LLVMAddCFGSimplificationPass_nif},
+    {"LLVMAddGVNPass_internal",1,LLVMAddGVNPass_nif},
+    {"LLVMAddInstructionCombiningPass_internal",1,LLVMAddInstructionCombiningPass_nif},
+    {"LLVMAddReassociatePass_internal",1,LLVMAddReassociatePass_nif},
+// --- Stop generating from Scalar_8h.xml
+
+// -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+
+// --- Stop generating from IPO_8h.xml
+
+// -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
 
     {"LLVMGetGlobalContext_internal",0,LLVMGetGlobalContext_nif},
     {"LLVMModuleCreateWithName_internal",1,LLVMModuleCreateWithName_nif},
@@ -906,6 +1069,11 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMBuildFCmp_internal",5,LLVMBuildFCmp_nif},
     {"LLVMBuildPhi_internal",3,LLVMBuildPhi_nif},
     {"LLVMBuildCall_internal",5,LLVMBuildCall_nif},
+    {"LLVMCreateFunctionPassManagerForModule_internal",1,LLVMCreateFunctionPassManagerForModule_nif},
+    {"LLVMRunPassManager_internal",2,LLVMRunPassManager_nif},
+    {"LLVMInitializeFunctionPassManager_internal",1,LLVMInitializeFunctionPassManager_nif},
+    {"LLVMRunFunctionPassManager_internal",2,LLVMRunFunctionPassManager_nif},
+    {"LLVMFinalizeFunctionPassManager_internal",1,LLVMFinalizeFunctionPassManager_nif},
 // --- Stop generating from Core_8h.xml
 
   };

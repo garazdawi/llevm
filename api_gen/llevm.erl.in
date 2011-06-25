@@ -4,13 +4,13 @@
 
 -on_load(load_my_nifs/0).
 
-@@EXPORTS@@
+%% @@EXPORTS@@
 
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
-@@TYPES@@
+%% @@TYPES@@
 
 load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
-@@FUNCTIONS@@
+%% @@FUNCTIONS@@

@@ -90,6 +90,16 @@
       Name == "LLVMX86FP80TypeTypeInContext";
       Name == "LLVMFP128TypeInContext";
       Name == "LLVMPPCFP128TypeInContext";
+      Name == "LLVMCreateFunctionPassManagerForModule";
+      Name == "LLVMInitializeFunctionPassManager";
+      Name == "LLVMFinalizeFunctionPassManager";
+      Name == "LLVMRunFunctionPassManager";
+      Name == "LLVMRunPassManager";
+%% Transforms
+      Name == "LLVMAddGVNPass";
+      Name == "LLVMAddInstructionCombiningPass";
+      Name == "LLVMAddReassociatePass";
+      Name == "LLVMAddCFGSimplificationPass";
 %      Name == "LLVMGetNamedFunction";
 %      Name == "LLVMCountParams"; 
 %      Name == "LLVMBuildCall";

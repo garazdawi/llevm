@@ -60,7 +60,7 @@ parse_enum(XML, Enum) when is_list(XML) ->
 			       {Member#enum_member{ value = Num}, Num + 1};
 			  (Member, Num) ->
 			       {Member, Num}
-		       end,1, Members),
+		       end,0, Members),
     FinEnum#enum{ members = NewMembers }.
     
 

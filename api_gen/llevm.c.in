@@ -6,7 +6,7 @@
 #include "erl_nif.h"
 
 typedef enum {
-  @@TYPES@@
+//  @@TYPES@@
 } llvm_type_t;
 
 typedef struct llvm_ptr {
@@ -14,7 +14,7 @@ typedef struct llvm_ptr {
   void *value;
 } llvm_ptr_t;
 
-@@RESOURCE_TYPES@@
+// @@RESOURCE_TYPES@@
 static ErlNifResourceType* module;
 
 static int load_nif(ErlNifEnv* env, void** priv_data, ERL_NIF_TERM load_info) {
@@ -49,11 +49,11 @@ static ERL_NIF_TERM llvm_ptr_create(ErlNifEnv* env, llvm_type_t type,
 }
 
 
-@@FUNCTIONS@@
+// @@FUNCTIONS@@
 
 static ErlNifFunc nif_funcs[] =
   {
-    @@NIF_MAPPINGS@@
+// @@NIF_MAPPINGS@@
   };
 
 ERL_NIF_INIT(llevm,nif_funcs,load_nif,NULL,NULL,NULL)

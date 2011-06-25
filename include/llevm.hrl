@@ -1,4 +1,13 @@
-%% -- Start generating from Core_8h.xml on {{2011,6,21},{0,28,3}}--
+%% @@CONST@@
+%% -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+
+%% --- Stop generating from Scalar_8h.xml
+
+%% -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+
+%% --- Stop generating from IPO_8h.xml
+
+%% -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
 
 %% enum LLVMAttribute
 -define(LLVMZExtAttribute,{'LLVMAttribute',1}).
@@ -80,80 +89,80 @@
 -define(LLVMInsertValue,{'LLVMOpcode',54}).
 
 %% enum LLVMTypeKind
--define(LLVMVoidTypeKind,{'LLVMTypeKind',1}).
+-define(LLVMVoidTypeKind,{'LLVMTypeKind',0}).
 %% type with no size 
--define(LLVMFloatTypeKind,{'LLVMTypeKind',2}).
+-define(LLVMFloatTypeKind,{'LLVMTypeKind',1}).
 %% 32 bit floating point type 
--define(LLVMDoubleTypeKind,{'LLVMTypeKind',3}).
+-define(LLVMDoubleTypeKind,{'LLVMTypeKind',2}).
 %% 64 bit floating point type 
--define(LLVMX86_FP80TypeKind,{'LLVMTypeKind',4}).
+-define(LLVMX86_FP80TypeKind,{'LLVMTypeKind',3}).
 %% 80 bit floating point type (X87) 
--define(LLVMFP128TypeKind,{'LLVMTypeKind',5}).
+-define(LLVMFP128TypeKind,{'LLVMTypeKind',4}).
 %% 128 bit floating point type (112-bit mantissa) 
--define(LLVMPPC_FP128TypeKind,{'LLVMTypeKind',6}).
+-define(LLVMPPC_FP128TypeKind,{'LLVMTypeKind',5}).
 %% 128 bit floating point type (two 64-bits) 
--define(LLVMLabelTypeKind,{'LLVMTypeKind',7}).
+-define(LLVMLabelTypeKind,{'LLVMTypeKind',6}).
 %% Labels 
--define(LLVMIntegerTypeKind,{'LLVMTypeKind',8}).
+-define(LLVMIntegerTypeKind,{'LLVMTypeKind',7}).
 %% Arbitrary bit width integers 
--define(LLVMFunctionTypeKind,{'LLVMTypeKind',9}).
+-define(LLVMFunctionTypeKind,{'LLVMTypeKind',8}).
 %% Functions 
--define(LLVMStructTypeKind,{'LLVMTypeKind',10}).
+-define(LLVMStructTypeKind,{'LLVMTypeKind',9}).
 %% Structures 
--define(LLVMArrayTypeKind,{'LLVMTypeKind',11}).
+-define(LLVMArrayTypeKind,{'LLVMTypeKind',10}).
 %% Arrays 
--define(LLVMPointerTypeKind,{'LLVMTypeKind',12}).
+-define(LLVMPointerTypeKind,{'LLVMTypeKind',11}).
 %% Pointers 
--define(LLVMOpaqueTypeKind,{'LLVMTypeKind',13}).
+-define(LLVMOpaqueTypeKind,{'LLVMTypeKind',12}).
 %% Opaque: type with unknown structure 
--define(LLVMVectorTypeKind,{'LLVMTypeKind',14}).
+-define(LLVMVectorTypeKind,{'LLVMTypeKind',13}).
 %% SIMD 'packed' format, or other vector type 
--define(LLVMMetadataTypeKind,{'LLVMTypeKind',15}).
+-define(LLVMMetadataTypeKind,{'LLVMTypeKind',14}).
 %% Metadata 
--define(LLVMX86_MMXTypeKind,{'LLVMTypeKind',16}).
+-define(LLVMX86_MMXTypeKind,{'LLVMTypeKind',15}).
 %% X86 MMX 
 
 %% enum LLVMLinkage
--define(LLVMExternalLinkage,{'LLVMLinkage',1}).
+-define(LLVMExternalLinkage,{'LLVMLinkage',0}).
 %% Externally visible function 
--define(LLVMAvailableExternallyLinkage,{'LLVMLinkage',2}).
--define(LLVMLinkOnceAnyLinkage,{'LLVMLinkage',3}).
+-define(LLVMAvailableExternallyLinkage,{'LLVMLinkage',1}).
+-define(LLVMLinkOnceAnyLinkage,{'LLVMLinkage',2}).
 %% Keep one copy of function when linking (inline) 
--define(LLVMLinkOnceODRLinkage,{'LLVMLinkage',4}).
+-define(LLVMLinkOnceODRLinkage,{'LLVMLinkage',3}).
 %% Same, but only replaced by something equivalent. 
--define(LLVMWeakAnyLinkage,{'LLVMLinkage',5}).
+-define(LLVMWeakAnyLinkage,{'LLVMLinkage',4}).
 %% Keep one copy of function when linking (weak) 
--define(LLVMWeakODRLinkage,{'LLVMLinkage',6}).
+-define(LLVMWeakODRLinkage,{'LLVMLinkage',5}).
 %% Same, but only replaced by something equivalent. 
--define(LLVMAppendingLinkage,{'LLVMLinkage',7}).
+-define(LLVMAppendingLinkage,{'LLVMLinkage',6}).
 %% Special purpose, only applies to global arrays 
--define(LLVMInternalLinkage,{'LLVMLinkage',8}).
+-define(LLVMInternalLinkage,{'LLVMLinkage',7}).
 %% Rename collisions when linking (static functions) 
--define(LLVMPrivateLinkage,{'LLVMLinkage',9}).
+-define(LLVMPrivateLinkage,{'LLVMLinkage',8}).
 %% Like Internal, but omit from symbol table 
--define(LLVMDLLImportLinkage,{'LLVMLinkage',10}).
+-define(LLVMDLLImportLinkage,{'LLVMLinkage',9}).
 %% Function to be imported from DLL 
--define(LLVMDLLExportLinkage,{'LLVMLinkage',11}).
+-define(LLVMDLLExportLinkage,{'LLVMLinkage',10}).
 %% Function to be accessible from DLL 
--define(LLVMExternalWeakLinkage,{'LLVMLinkage',12}).
+-define(LLVMExternalWeakLinkage,{'LLVMLinkage',11}).
 %% ExternalWeak linkage description 
--define(LLVMGhostLinkage,{'LLVMLinkage',13}).
+-define(LLVMGhostLinkage,{'LLVMLinkage',12}).
 %% Obsolete 
--define(LLVMCommonLinkage,{'LLVMLinkage',14}).
+-define(LLVMCommonLinkage,{'LLVMLinkage',13}).
 %% Tentative definitions 
--define(LLVMLinkerPrivateLinkage,{'LLVMLinkage',15}).
+-define(LLVMLinkerPrivateLinkage,{'LLVMLinkage',14}).
 %% Like Private, but linker removes. 
--define(LLVMLinkerPrivateWeakLinkage,{'LLVMLinkage',16}).
+-define(LLVMLinkerPrivateWeakLinkage,{'LLVMLinkage',15}).
 %% Like LinkerPrivate, but is weak. 
--define(LLVMLinkerPrivateWeakDefAutoLinkage,{'LLVMLinkage',17}).
+-define(LLVMLinkerPrivateWeakDefAutoLinkage,{'LLVMLinkage',16}).
 %% Like LinkerPrivateWeak, but possibly hidden. 
 
 %% enum LLVMVisibility
--define(LLVMDefaultVisibility,{'LLVMVisibility',1}).
+-define(LLVMDefaultVisibility,{'LLVMVisibility',0}).
 %% The GV is visible 
--define(LLVMHiddenVisibility,{'LLVMVisibility',2}).
+-define(LLVMHiddenVisibility,{'LLVMVisibility',1}).
 %% The GV is hidden 
--define(LLVMProtectedVisibility,{'LLVMVisibility',3}).
+-define(LLVMProtectedVisibility,{'LLVMVisibility',2}).
 %% The GV is protected 
 
 %% enum LLVMCallConv
@@ -166,57 +175,57 @@
 %% enum LLVMIntPredicate
 -define(LLVMIntEQ,{'LLVMIntPredicate',32}).
 %% equal 
--define(LLVMIntNE,{'LLVMIntPredicate',1}).
+-define(LLVMIntNE,{'LLVMIntPredicate',0}).
 %% not equal 
--define(LLVMIntUGT,{'LLVMIntPredicate',2}).
+-define(LLVMIntUGT,{'LLVMIntPredicate',1}).
 %% unsigned greater than 
--define(LLVMIntUGE,{'LLVMIntPredicate',3}).
+-define(LLVMIntUGE,{'LLVMIntPredicate',2}).
 %% unsigned greater or equal 
--define(LLVMIntULT,{'LLVMIntPredicate',4}).
+-define(LLVMIntULT,{'LLVMIntPredicate',3}).
 %% unsigned less than 
--define(LLVMIntULE,{'LLVMIntPredicate',5}).
+-define(LLVMIntULE,{'LLVMIntPredicate',4}).
 %% unsigned less or equal 
--define(LLVMIntSGT,{'LLVMIntPredicate',6}).
+-define(LLVMIntSGT,{'LLVMIntPredicate',5}).
 %% signed greater than 
--define(LLVMIntSGE,{'LLVMIntPredicate',7}).
+-define(LLVMIntSGE,{'LLVMIntPredicate',6}).
 %% signed greater or equal 
--define(LLVMIntSLT,{'LLVMIntPredicate',8}).
+-define(LLVMIntSLT,{'LLVMIntPredicate',7}).
 %% signed less than 
--define(LLVMIntSLE,{'LLVMIntPredicate',9}).
+-define(LLVMIntSLE,{'LLVMIntPredicate',8}).
 %% signed less or equal 
 
 %% enum LLVMRealPredicate
--define(LLVMRealPredicateFalse,{'LLVMRealPredicate',1}).
+-define(LLVMRealPredicateFalse,{'LLVMRealPredicate',0}).
 %% Always false (always folded) 
--define(LLVMRealOEQ,{'LLVMRealPredicate',2}).
+-define(LLVMRealOEQ,{'LLVMRealPredicate',1}).
 %% True if ordered and equal 
--define(LLVMRealOGT,{'LLVMRealPredicate',3}).
+-define(LLVMRealOGT,{'LLVMRealPredicate',2}).
 %% True if ordered and greater than 
--define(LLVMRealOGE,{'LLVMRealPredicate',4}).
+-define(LLVMRealOGE,{'LLVMRealPredicate',3}).
 %% True if ordered and greater than or equal 
--define(LLVMRealOLT,{'LLVMRealPredicate',5}).
+-define(LLVMRealOLT,{'LLVMRealPredicate',4}).
 %% True if ordered and less than 
--define(LLVMRealOLE,{'LLVMRealPredicate',6}).
+-define(LLVMRealOLE,{'LLVMRealPredicate',5}).
 %% True if ordered and less than or equal 
--define(LLVMRealONE,{'LLVMRealPredicate',7}).
+-define(LLVMRealONE,{'LLVMRealPredicate',6}).
 %% True if ordered and operands are unequal 
--define(LLVMRealORD,{'LLVMRealPredicate',8}).
+-define(LLVMRealORD,{'LLVMRealPredicate',7}).
 %% True if ordered (no nans) 
--define(LLVMRealUNO,{'LLVMRealPredicate',9}).
+-define(LLVMRealUNO,{'LLVMRealPredicate',8}).
 %% True if unordered: isnan(X) | isnan(Y) 
--define(LLVMRealUEQ,{'LLVMRealPredicate',10}).
+-define(LLVMRealUEQ,{'LLVMRealPredicate',9}).
 %% True if unordered or equal 
--define(LLVMRealUGT,{'LLVMRealPredicate',11}).
+-define(LLVMRealUGT,{'LLVMRealPredicate',10}).
 %% True if unordered or greater than 
--define(LLVMRealUGE,{'LLVMRealPredicate',12}).
+-define(LLVMRealUGE,{'LLVMRealPredicate',11}).
 %% True if unordered, greater than, or equal 
--define(LLVMRealULT,{'LLVMRealPredicate',13}).
+-define(LLVMRealULT,{'LLVMRealPredicate',12}).
 %% True if unordered or less than 
--define(LLVMRealULE,{'LLVMRealPredicate',14}).
+-define(LLVMRealULE,{'LLVMRealPredicate',13}).
 %% True if unordered, less than, or equal 
--define(LLVMRealUNE,{'LLVMRealPredicate',15}).
+-define(LLVMRealUNE,{'LLVMRealPredicate',14}).
 %% True if unordered or not equal 
--define(LLVMRealPredicateTrue,{'LLVMRealPredicate',16}).
+-define(LLVMRealPredicateTrue,{'LLVMRealPredicate',15}).
 %% Always true (always folded) 
 
 %% --- Stop generating from Core_8h.xml

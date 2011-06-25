@@ -19,7 +19,7 @@ replace(Where, What, With) when is_atom(Where) ->
 replace("@@"++Rest, What, With) ->
     case lists:prefix(What,Rest) of
 	true ->
-	    [With,Rest -- (What++"@@")];
+	    ["@@",What,"@@\n",With,Rest -- (What++"@@")];
 	_Else ->
 	    ["@@"|replace(Rest, What, With)]
     end;
