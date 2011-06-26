@@ -148,7 +148,9 @@ parse_function(XML, Func) when is_list(XML) ->
 				(P) ->
 				     [P]
 			     end,lists:reverse(FinFunc#function.params)),
-    FinFunc#function{ params = NewParam}.
+    OutParam = [Param#param{ out_param = is_out_param(get(func_name),PName) } ||
+		   Param = #param{ name = PName} <- NewParam],
+    FinFunc#function{ params = OutParam}.
 
 parse_param(#xmlElement{ name = type, content = TypeXML }, Param) ->
     Type = parse_type(TypeXML),
@@ -234,3 +236,5 @@ to_erlang_tag(Else) ->
 %% Check hardoded arrays
 is_array(FName,PName) ->
     lists:member({FName,PName},?ARRAYS).
+is_out_param(FName,PName) ->
+    lists:member({FName,PName},?OUT_PARAM).

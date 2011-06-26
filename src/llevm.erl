@@ -5,7 +5,12 @@
 -on_load(load_my_nifs/0).
 
 %% @@EXPORTS@@
-%% -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+
+-export(['LLVMInitializeNativeTarget'/0]).
+%% --- Stop generating from Target_8h.xml
+
+%% -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
 
 -export(['LLVMAddCFGSimplificationPass'/1]).
 -export(['LLVMAddGVNPass'/1]).
@@ -13,11 +18,32 @@
 -export(['LLVMAddReassociatePass'/1]).
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+
+-export(['LLVMInitializeScalarOpts'/1]).
+-export(['LLVMInitializeInstCombine'/1]).
+-export(['LLVMInitializeInstrumentation'/1]).
+-export(['LLVMInitializeIPA'/1]).
+-export(['LLVMInitializeCodeGen'/1]).
+-export(['LLVMInitializeTarget'/1]).
+%% --- Stop generating from Initialization_8h.xml
+
+%% -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+
+-export(['LLVMLinkInInterpreter'/0]).
+-export(['LLVMCreateGenericValueOfFloat'/2]).
+-export(['LLVMGenericValueToFloat'/2]).
+-export(['LLVMCreateExecutionEngineForModule'/1]).
+-export(['LLVMCreateInterpreterForModule'/1]).
+-export(['LLVMCreateJITCompilerForModule'/2]).
+-export(['LLVMRunFunction'/4]).
+%% --- Stop generating from ExecutionEngine_8h.xml
+
+%% -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
 
 -export(['LLVMGetGlobalContext'/0]).
 -export(['LLVMModuleCreateWithName'/1]).
@@ -67,6 +93,7 @@
 -export(['LLVMBuildFCmp'/5]).
 -export(['LLVMBuildPhi'/3]).
 -export(['LLVMBuildCall'/5]).
+-export(['LLVMGetGlobalPassRegistry'/0]).
 -export(['LLVMCreateFunctionPassManagerForModule'/1]).
 -export(['LLVMRunPassManager'/2]).
 -export(['LLVMInitializeFunctionPassManager'/1]).
@@ -78,15 +105,36 @@
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
 %% @@TYPES@@
-%% -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+
+-opaque 'LLVMByteOrdering'() :: {'LLVMByteOrdering',integer()}.
+-opaque 'LLVMTargetDataRef'() :: {'LLVMTargetDataRef',binary()}.
+%% 
+-opaque 'LLVMStructLayoutRef'() :: {'LLVMStructLayoutRef',binary()}.
+%% 
+%% --- Stop generating from Target_8h.xml
+
+%% -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+
+%% --- Stop generating from Initialization_8h.xml
+
+%% -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+
+-opaque 'LLVMGenericValueRef'() :: {'LLVMGenericValueRef',binary()}.
+%% 
+-opaque 'LLVMExecutionEngineRef'() :: {'LLVMExecutionEngineRef',binary()}.
+%% 
+%% --- Stop generating from ExecutionEngine_8h.xml
+
+%% -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -130,7 +178,18 @@ load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
 %% @@FUNCTIONS@@
-%% -- Start generating from Scalar_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+
+%% @doc LLVMInitializeNativeTarget - The main program should call this function to initialize the native target corresponding to the host. This is useful for JIT applications to ensure that the target gets linked in correctly. 
+-spec 'LLVMInitializeNativeTarget'() -> boolean().
+'LLVMInitializeNativeTarget'() ->
+	{boolean,'LLVMInitializeNativeTarget_internal'()}.
+'LLVMInitializeNativeTarget_internal'() ->
+	nif_not_loaded.
+
+%% --- Stop generating from Target_8h.xml
+
+%% -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
 
 %% @doc See llvm::createCFGSimplificationPass function. 
 -spec 'LLVMAddCFGSimplificationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
@@ -162,11 +221,113 @@ load_my_nifs() ->
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+
+%% @doc 
+-spec 'LLVMInitializeScalarOpts'(R :: 'LLVMPassRegistryRef'()) -> atom().
+'LLVMInitializeScalarOpts'({'LLVMPassRegistryRef',R}) ->
+	{atom,'LLVMInitializeScalarOpts_internal'(R)}.
+'LLVMInitializeScalarOpts_internal'(_R) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInitializeInstCombine'(R :: 'LLVMPassRegistryRef'()) -> atom().
+'LLVMInitializeInstCombine'({'LLVMPassRegistryRef',R}) ->
+	{atom,'LLVMInitializeInstCombine_internal'(R)}.
+'LLVMInitializeInstCombine_internal'(_R) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInitializeInstrumentation'(R :: 'LLVMPassRegistryRef'()) -> atom().
+'LLVMInitializeInstrumentation'({'LLVMPassRegistryRef',R}) ->
+	{atom,'LLVMInitializeInstrumentation_internal'(R)}.
+'LLVMInitializeInstrumentation_internal'(_R) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInitializeIPA'(R :: 'LLVMPassRegistryRef'()) -> atom().
+'LLVMInitializeIPA'({'LLVMPassRegistryRef',R}) ->
+	{atom,'LLVMInitializeIPA_internal'(R)}.
+'LLVMInitializeIPA_internal'(_R) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInitializeCodeGen'(R :: 'LLVMPassRegistryRef'()) -> atom().
+'LLVMInitializeCodeGen'({'LLVMPassRegistryRef',R}) ->
+	{atom,'LLVMInitializeCodeGen_internal'(R)}.
+'LLVMInitializeCodeGen_internal'(_R) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMInitializeTarget'(R :: 'LLVMPassRegistryRef'()) -> atom().
+'LLVMInitializeTarget'({'LLVMPassRegistryRef',R}) ->
+	{atom,'LLVMInitializeTarget_internal'(R)}.
+'LLVMInitializeTarget_internal'(_R) ->
+	nif_not_loaded.
+
+%% --- Stop generating from Initialization_8h.xml
+
+%% -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2011,6,25},{15,38,45}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+
+%% @doc 
+-spec 'LLVMLinkInInterpreter'() -> atom().
+'LLVMLinkInInterpreter'() ->
+	{atom,'LLVMLinkInInterpreter_internal'()}.
+'LLVMLinkInInterpreter_internal'() ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMCreateGenericValueOfFloat'(Ty :: 'LLVMTypeRef'(),N :: float()) -> 'LLVMGenericValueRef'().
+'LLVMCreateGenericValueOfFloat'({'LLVMTypeRef',Ty},N) ->
+	{'LLVMGenericValueRef','LLVMCreateGenericValueOfFloat_internal'(Ty,N)}.
+'LLVMCreateGenericValueOfFloat_internal'(_Ty,_N) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMGenericValueToFloat'(TyRef :: 'LLVMTypeRef'(),GenVal :: 'LLVMGenericValueRef'()) -> float().
+'LLVMGenericValueToFloat'({'LLVMTypeRef',TyRef},{'LLVMGenericValueRef',GenVal}) ->
+	{float,'LLVMGenericValueToFloat_internal'(TyRef,GenVal)}.
+'LLVMGenericValueToFloat_internal'(_TyRef,_GenVal) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMCreateExecutionEngineForModule'(M :: 'LLVMModuleRef'()) -> boolean().
+'LLVMCreateExecutionEngineForModule'({'LLVMModuleRef',M}) ->
+	{Return, OutEE,OutError} = 'LLVMCreateExecutionEngineForModule_internal'(M),
+	{{boolean,Return},{'LLVMExecutionEngineRef',OutEE},{'char *',OutError}}.
+'LLVMCreateExecutionEngineForModule_internal'(_M) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMCreateInterpreterForModule'(M :: 'LLVMModuleRef'()) -> boolean().
+'LLVMCreateInterpreterForModule'({'LLVMModuleRef',M}) ->
+	{Return, OutInterp,OutError} = 'LLVMCreateInterpreterForModule_internal'(M),
+	{{boolean,Return},{'LLVMExecutionEngineRef',OutInterp},{'char *',OutError}}.
+'LLVMCreateInterpreterForModule_internal'(_M) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMCreateJITCompilerForModule'(M :: 'LLVMModuleRef'(),OptLevel :: integer()) -> boolean().
+'LLVMCreateJITCompilerForModule'({'LLVMModuleRef',M},OptLevel) ->
+	{Return, OutJIT,OutError} = 'LLVMCreateJITCompilerForModule_internal'(M,OptLevel),
+	{{boolean,Return},{'LLVMExecutionEngineRef',OutJIT},{'char *',OutError}}.
+'LLVMCreateJITCompilerForModule_internal'(_M,_OptLevel) ->
+	nif_not_loaded.
+
+%% @doc 
+-spec 'LLVMRunFunction'(EE :: 'LLVMExecutionEngineRef'(),F :: 'LLVMValueRef'(),NumArgs :: integer(),Args :: tuple('LLVMGenericValueRef'())) -> 'LLVMGenericValueRef'().
+'LLVMRunFunction'({'LLVMExecutionEngineRef',EE},{'LLVMValueRef',F},NumArgs,Args) ->
+	{'LLVMGenericValueRef','LLVMRunFunction_internal'(EE,F,NumArgs,Args)}.
+'LLVMRunFunction_internal'(_EE,_F,_NumArgs,_Args) ->
+	nif_not_loaded.
+
+%% --- Stop generating from ExecutionEngine_8h.xml
+
+%% -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
 
 %% @doc 
 -spec 'LLVMGetGlobalContext'() -> 'LLVMContextRef'().
@@ -502,6 +663,13 @@ load_my_nifs() ->
 'LLVMBuildCall'({'LLVMBuilderRef',B},{'LLVMValueRef',Fn},Args,NumArgs,Name) ->
 	{'LLVMValueRef','LLVMBuildCall_internal'(B,Fn,Args,NumArgs,Name)}.
 'LLVMBuildCall_internal'(_B,_Fn,_Args,_NumArgs,_Name) ->
+	nif_not_loaded.
+
+%% @doc Return the global pass registry, for use with initialization functions. See llvm::PassRegistry::getPassRegistry. 
+-spec 'LLVMGetGlobalPassRegistry'() -> 'LLVMPassRegistryRef'().
+'LLVMGetGlobalPassRegistry'() ->
+	{'LLVMPassRegistryRef','LLVMGetGlobalPassRegistry_internal'()}.
+'LLVMGetGlobalPassRegistry_internal'() ->
 	nif_not_loaded.
 
 %% @doc Constructs a new function-by-function pass pipeline over the module provider. It does not take ownership of the module provider. This type of pipeline is suitable for code generation and JIT compilation tasks. See llvm::FunctionPassManager::FunctionPassManager. 

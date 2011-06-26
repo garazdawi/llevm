@@ -3,7 +3,8 @@
 -record(enum_member, {name, value, docs }).
 -record(enum, {name, members = [], docs }).
 
--record(param, {name, type, erlang_type, erlang_tag, array = false}).
+-record(param, {name, type, erlang_type, erlang_tag, array = false, 
+		out_param = false}).
 -record(function, {name, return_type, params = [], docs }).
 
 -define(ARRAYS, [{"LLVMFunctionType", "ParamTypes"},
@@ -22,8 +23,17 @@
 		 {"LLVMBuildInvoke","Args"},
 		 {"LLVMBuildGEP","Indices"},
 		 {"LLVMBuildInBoundsGEP","Indices"},
-		 {"LLVMBuildCall","Args"}
+		 {"LLVMBuildCall","Args"},
+		 {"LLVMRunFunction","Args"}
 		]).
+
+-define(OUT_PARAM, [{"LLVMCreateExecutionEngineForModule","OutEE"},
+		    {"LLVMCreateExecutionEngineForModule","OutError"},
+		    {"LLVMCreateInterpreterForModule","OutInterp"},
+		    {"LLVMCreateInterpreterForModule","OutError"},
+		    {"LLVMCreateJITCompilerForModule","OutJIT"},
+		    {"LLVMCreateJITCompilerForModule","OutError"}
+		   ]).
 
 -define(IS_ENUM(Value),
 	Value == "LLVMAttribute";
@@ -100,6 +110,27 @@
       Name == "LLVMAddInstructionCombiningPass";
       Name == "LLVMAddReassociatePass";
       Name == "LLVMAddCFGSimplificationPass";
+      Name == "LLVMGetGlobalPassRegistry";
+%% Execution Engine
+      Name == "LLVMLinkInInterpreter";
+      Name == "LLVMCreateExecutionEngineForModule";
+      Name == "LLVMCreateInterpreterForModule";
+      Name == "LLVMCreateJITCompilerForModule";
+      Name == "LLVMRunFunction";
+      Name == "LLVMCreateGenericValueOfFloat";
+      Name == "LLVMGenericValueToFloat";
+%% Target
+      Name == "LLVMInitializeNativeTarget";
+%% Inits
+%      Name == "LLVMInitializeCore";
+      Name == "LLVMInitializeScalarOpts";
+      Name == "LLVMInitializeInstCombine";
+%      Name == "LLVMInitializeIPO";
+      Name == "LLVMInitializeInstrumentation";
+%      Name == "LLVMInitializeAnalysis";
+      Name == "LLVMInitializeIPA";
+      Name == "LLVMInitializeCodeGen";
+      Name == "LLVMInitializeTarget";
 %      Name == "LLVMGetNamedFunction";
 %      Name == "LLVMCountParams"; 
 %      Name == "LLVMBuildCall";

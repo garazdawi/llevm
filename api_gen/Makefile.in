@@ -24,4 +24,4 @@ generate_doxygen: doxygen.conf
 	$(DOXYGEN) doxygen.conf
 
 generate: compile generate_doxygen
-	$(ERL) -noshell -eval 'llvm_api:generate("llvm_xml/*{Core,Scalar,IPO}_8h.xml","../")' -s init stop
+	$(ERL) -noshell -eval 'llvm_api:generate("llvm_xml/*{Initialization,Target,Engine,Core,Scalar,IPO}_8h.xml","../")' -s init stop

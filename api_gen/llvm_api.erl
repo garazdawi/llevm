@@ -79,7 +79,17 @@ generate_int(From, Entities) ->
 
 generate_params([], _Fun) ->
     [];
-generate_params([#param{} = P], Fun) ->
-    [Fun(P)];
-generate_params([#param{} = P|Rest], Fun) ->
-    [Fun(P),","|generate_params(Rest,Fun)].
+generate_params([P | Rest], Fun) ->
+    case Fun(P) of
+	[] -> generate_params(Rest, Fun);
+	Res ->
+	    [Res | generate_rest(Rest, Fun)]
+    end.
+generate_rest([], _Fun) ->
+    [];
+generate_rest([#param{} = P|Rest], Fun) ->
+    case Fun(P) of
+	[] -> generate_rest(Rest,Fun);
+	Res -> 
+	    [",",Res|generate_rest(Rest,Fun)]
+    end.

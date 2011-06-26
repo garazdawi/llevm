@@ -57,14 +57,18 @@ generate_erlang_functions([#function{ name = Name,
     DocStr = ["%% @doc ",add_escape(Docs),"~n"],
     SpecStr = ["-spec '",Name,"'(",
 	       llvm_api:generate_params(Params,
-					fun(#param{name = PName, erlang_type=T}) -> 
+					fun(#param{ out_param = true }) ->
+						[];
+					    (#param{name = PName, erlang_type=T}) -> 
 						[to_var(PName)," :: ",T] end),
 	       ") -> ",llvm_api_parser:to_erlang_type(Return),".~n"],
 
     BodyStr = ["'",Name,"'(",
 	       llvm_api:generate_params(
 		 Params,
-		 fun(#param{ name = PName, array = false, erlang_type = T, 
+		 fun(#param{ out_param = true} ) ->
+			 [];
+		     (#param{ name = PName, array = false, erlang_type = T, 
 			     erlang_tag = Tag}) ->
 			 case is_erlang_type(T) of
 			     false ->
@@ -85,17 +89,17 @@ generate_erlang_functions([#function{ name = Name,
 			 to_var(PName)
 		 end),
 	       ") ->~n"
-	       "\t{",llvm_api_parser:to_erlang_tag(Return),",'",Name,"_internal'(",
-	       llvm_api:generate_params(Params,fun(#param{ name = PName }) ->
-						       to_var(PName)
-					       end),
-	       ")}.~n"
-	       "'",Name,"_internal'(",
-	       llvm_api:generate_params(Params, fun(#param{ name = PName}) ->
-							["_",to_var(PName)]
-						end),
-	       ") ->~n"
-	       "\tnif_not_loaded.~n~n"],
+	       "\t",generate_return_value(Name, Return, Params),
+	      "'",Name,"_internal'(",
+	       llvm_api:generate_params(Params, 
+					fun(#param{ name = PName, 
+						    out_param = false}) ->
+						["_",to_var(PName)];
+					   (#param{ }) ->
+						[]
+					end),
+	     ") ->~n"
+	     "\tnif_not_loaded.~n~n"],
     [DocStr,SpecStr,BodyStr|generate_erlang_functions(Rest)];
 
 generate_erlang_functions([_|R]) ->
@@ -103,8 +107,33 @@ generate_erlang_functions([_|R]) ->
 generate_erlang_functions([]) ->
     [].
 
+generate_return_value(Name, Return, Params) ->
+    case [P || P <- Params, P#param.out_param == true] of
+	[] -> ["{",llvm_api_parser:to_erlang_tag(Return),",'",Name,"_internal'(",
+	       llvm_api:generate_params(Params,fun(#param{ name = PName }) ->
+						       to_var(PName)
+					       end),
+	       ")}.~n"];
+	OutParams ->
+	    ["{Return, ",llvm_api:generate_params(OutParams, 
+						  fun(#param{ name = PName }) ->
+							  PName
+						  end),"} = '",Name,"_internal'(",
+	     llvm_api:generate_params(Params--OutParams,
+				      fun(#param{ name = PName, 
+						  out_param = false }) ->
+					      to_var(PName)
+				      end),"),~n",
+	     "\t{{",llvm_api_parser:to_erlang_tag(Return),",Return},",
+	     llvm_api:generate_params(OutParams, fun(#param{ name = PName, 
+							     erlang_tag = Tag }) ->
+							 ["{",strip_ptr(Tag),",",PName,"}"]
+						 end),"}.~n"]
+    end.
+
 generate_exports([#function{ name = Name, params = Params}|Rest]) ->
-    ["-export(['",Name,"'/",integer_to_list(length(Params)),"]).~n"|
+    InParams = [P || P <- Params, P#param.out_param == false],
+    ["-export(['",Name,"'/",integer_to_list(length(InParams)),"]).~n"|
      generate_exports(Rest)];
 generate_exports([_|R]) ->
     generate_exports(R);
@@ -119,6 +148,13 @@ add_escape([C|R]) ->
     [C|add_escape(R)];
 add_escape([]) ->
     [].
+
+strip_ptr(Atom) when is_atom(Atom) ->
+    list_to_atom(strip_ptr(atom_to_list(Atom)));
+strip_ptr(List) when is_list(List) ->
+    [_,_,_|Rest] = lists:reverse(List),
+    lists:reverse([$'|Rest]).
+
 
 to_var([C|Rest]) when $a =< C, C =< $z ->
     [C - $a + $A|Rest];

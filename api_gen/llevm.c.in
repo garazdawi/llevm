@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "llvm-c/Core.h"
+#include "llvm-c/ExecutionEngine.h"
+#include "llvm-c/Transforms/Scalar.h"
+#include "llvm-c/Transforms/IPO.h"
+#include "llvm-c/Target.h"
+#include "llvm-c/Initialization.h"
 
 #include "erl_nif.h"
 
@@ -44,7 +50,8 @@ static ERL_NIF_TERM llvm_ptr_create(ErlNifEnv* env, llvm_type_t type,
 
   term = enif_make_resource(env, ptr);
 
-  enif_release_resource(ptr);
+//  enif_release_resource(ptr);
+enif_keep_resource(ptr);
   return term;
 }
 

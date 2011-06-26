@@ -25,21 +25,15 @@ generate_functions([#function{name = Name,
     put({param_count,Name},0),
     ["static ERL_NIF_TERM ",Name,"_nif(ErlNifEnv* env, int argc, "
      "const ERL_NIF_TERM argv[]) {~n"
-     "  printf(\"\\rCalling ",Name,"\\r\\n\");~n"
-     "  if (argc != ",integer_to_list(length(Params)),")~n"
-     "    return enif_make_string(env, \"wrong number of arguments\", ERL_NIF_LATIN1);~n~n",
+     "  printf(\"\\rCalling ",Name,"\\r\\n\");~n",
      [generate_param_extract(Name,Param) || Param <- Params],
      if Return /= "void" ->
 	     ["  ",Return," retVal = ",Name,"(",
 	      llvm_api:generate_params(Params,fun(#param{ name = PName}) ->
 						      PName
 					      end),
-	      ");~n~n",
-	      if ?IS_ENUM(Return) ->
-		      ["  return enif_make_int(env, (int)RT",Return,");"];
-		 true ->
-		      ["  return llvm_ptr_create(env, RT",Return,", retVal);"]
-	      end];
+	      ");~n~n  return ",
+	      generate_return(Params, Return),";"];
 	true ->
 	     [Name,"(",
 	      llvm_api:generate_params(Params,fun(#param{ name = PName}) ->
@@ -55,10 +49,16 @@ generate_functions([_|R]) ->
 generate_functions([]) ->
     [].
 
+generate_param_extract(Func,#param{ out_param = true} = Param) ->
+    generate_param_extract(Func,Param,undefined);
 generate_param_extract(Func,Param) ->
     Num = get({param_count,Func}),
     put({param_count,Func},Num+1),
     generate_param_extract(Func,Param,integer_to_list(Num)).
+
+generate_param_extract(_Fun, #param{ name = Name, out_param = true, type = Type}, 
+		       _Num) ->
+    ["  ",Type," ",Name," = (",Type,")malloc(sizeof(",Type,"));~n~n"];
 generate_param_extract(_Func,#param{ name = Name, array = true, type = Type}, Num) ->
     ["  int ",Name,"size = 0;~n"
      "  ERL_NIF_TERM *",Name,"array;~n"
@@ -94,12 +94,46 @@ generate_param_extract(_Func,#param{ name = Name, type = Type }, Num) ->
     ["  ",Type," ",Name,";~n"
      "  llvm_ptr_deref(env, argv[",Num,"], (void **) &",Name,");~n~n"].
 	
+generate_return(Params, Return) ->
+    case [P || P <- Params, P#param.out_param == true] of
+	[] ->
+	    generate_return(Return);
+	OutParams ->
+	    generate_return_with_out_params(OutParams, Return)
+    end.
+
+generate_return(Return) when ?IS_ENUM(Return) ->
+    ["  enif_make_int(env, (int)RT",Return,")"];
+generate_return("LLVMBool") ->
+    ["  retVal ? enif_make_atom(env,\"true\") : enif_make_atom(env,\"false\")"];
+generate_return("double") ->
+    ["  enif_make_double(env,retVal)"];
+generate_return(Return) ->
+    ["  llvm_ptr_create(env, RT",Return,", retVal)"].
+
+generate_return_with_out_params(OutParams, Return) ->
+    ["  enif_make_tuple",integer_to_list(length(OutParams)+1),
+     "(env, ", generate_return(Return),",",
+     llvm_api:generate_params(
+       OutParams,
+       fun(#param{ type = "char **", name = PName }) ->
+	       ["*",PName," == NULL?enif_make_string(env, *",PName,",ERL_NIF_LATIN1):enif_make_list(env,0)"];
+	  (#param{ type = Type, name = PName }) ->
+	       ["llvm_ptr_create(env, RT",strip_ptr(Type),",*",PName,")"]
+       end),");~n~n"].
+
 
 generate_mappings([#function{ name = Name, params = Params}|Rest]) ?LIMIT ->
-    ["    {\"",Name,"_internal\",",integer_to_list(length(Params)),
+    InParams = [P || P <- Params, P#param.out_param == false],
+    ["    {\"",Name,"_internal\",",integer_to_list(length(InParams)),
      ",",Name,"_nif},~n",generate_mappings(Rest)];
 generate_mappings([_|R]) ->
     generate_mappings(R);
 generate_mappings([]) ->
     [].
 
+strip_ptr(Atom) when is_atom(Atom) ->
+    list_to_atom(strip_ptr(atom_to_list(Atom)));
+strip_ptr(List) when is_list(List) ->
+    [_,_|Rest] = lists:reverse(List),
+    lists:reverse(Rest).
