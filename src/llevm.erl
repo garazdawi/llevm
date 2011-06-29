@@ -5,12 +5,12 @@
 -on_load(load_my_nifs/0).
 
 %% @@EXPORTS@@
-%% -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Target_8h.xml on {{2011,6,29},{23,3,15}}--
 
 -export(['LLVMInitializeNativeTarget'/0]).
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Scalar_8h.xml on {{2011,6,29},{23,3,15}}--
 
 -export(['LLVMAddCFGSimplificationPass'/1]).
 -export(['LLVMAddGVNPass'/1]).
@@ -18,7 +18,7 @@
 -export(['LLVMAddReassociatePass'/1]).
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Initialization_8h.xml on {{2011,6,29},{23,3,14}}--
 
 -export(['LLVMInitializeScalarOpts'/1]).
 -export(['LLVMInitializeInstCombine'/1]).
@@ -28,11 +28,11 @@
 -export(['LLVMInitializeTarget'/1]).
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from IPO_8h.xml on {{2011,6,29},{23,3,14}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,29},{23,3,14}}--
 
 -export(['LLVMLinkInInterpreter'/0]).
 -export(['LLVMCreateGenericValueOfFloat'/2]).
@@ -43,7 +43,7 @@
 -export(['LLVMRunFunction'/4]).
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,29},{23,3,14}}--
 
 -export(['LLVMGetGlobalContext'/0]).
 -export(['LLVMModuleCreateWithName'/1]).
@@ -105,7 +105,7 @@
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
 %% @@TYPES@@
-%% -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Target_8h.xml on {{2011,6,29},{23,3,15}}--
 
 -opaque 'LLVMByteOrdering'() :: {'LLVMByteOrdering',integer()}.
 -opaque 'LLVMTargetDataRef'() :: {'LLVMTargetDataRef',binary()}.
@@ -114,19 +114,19 @@
 %% 
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Scalar_8h.xml on {{2011,6,29},{23,3,15}}--
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Initialization_8h.xml on {{2011,6,29},{23,3,14}}--
 
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from IPO_8h.xml on {{2011,6,29},{23,3,14}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,29},{23,3,14}}--
 
 -opaque 'LLVMGenericValueRef'() :: {'LLVMGenericValueRef',binary()}.
 %% 
@@ -134,7 +134,7 @@
 %% 
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,29},{23,3,14}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -178,7 +178,7 @@ load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
 %% @@FUNCTIONS@@
-%% -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Target_8h.xml on {{2011,6,29},{23,3,15}}--
 
 %% @doc LLVMInitializeNativeTarget - The main program should call this function to initialize the native target corresponding to the host. This is useful for JIT applications to ensure that the target gets linked in correctly. 
 -spec 'LLVMInitializeNativeTarget'() -> boolean().
@@ -189,7 +189,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Scalar_8h.xml on {{2011,6,29},{23,3,15}}--
 
 %% @doc See llvm::createCFGSimplificationPass function. 
 -spec 'LLVMAddCFGSimplificationPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
@@ -221,7 +221,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Initialization_8h.xml on {{2011,6,29},{23,3,14}}--
 
 %% @doc 
 -spec 'LLVMInitializeScalarOpts'(R :: 'LLVMPassRegistryRef'()) -> atom().
@@ -267,11 +267,11 @@ load_my_nifs() ->
 
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from IPO_8h.xml on {{2011,6,29},{23,3,14}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2011,6,29},{23,3,14}}--
 
 %% @doc 
 -spec 'LLVMLinkInInterpreter'() -> atom().
@@ -327,7 +327,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
+%% -- Start generating from Core_8h.xml on {{2011,6,29},{23,3,14}}--
 
 %% @doc 
 -spec 'LLVMGetGlobalContext'() -> 'LLVMContextRef'().

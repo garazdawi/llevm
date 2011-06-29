@@ -13,32 +13,32 @@
 
 typedef enum {
 //  @@TYPES@@
-// -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Target_8h.xml on {{2011,6,29},{23,3,15}}--
 
 RTLLVMByteOrdering,
 RTLLVMTargetDataRef,
 RTLLVMStructLayoutRef,
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Scalar_8h.xml on {{2011,6,29},{23,3,15}}--
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Initialization_8h.xml on {{2011,6,29},{23,3,14}}--
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from IPO_8h.xml on {{2011,6,29},{23,3,14}}--
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2011,6,29},{23,3,14}}--
 
 RTLLVMGenericValueRef,
 RTLLVMExecutionEngineRef,
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Core_8h.xml on {{2011,6,29},{23,3,14}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -71,27 +71,27 @@ typedef struct llvm_ptr {
 } llvm_ptr_t;
 
 // @@RESOURCE_TYPES@@
-// -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Target_8h.xml on {{2011,6,29},{23,3,15}}--
 
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Scalar_8h.xml on {{2011,6,29},{23,3,15}}--
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Initialization_8h.xml on {{2011,6,29},{23,3,14}}--
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from IPO_8h.xml on {{2011,6,29},{23,3,14}}--
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2011,6,29},{23,3,14}}--
 
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Core_8h.xml on {{2011,6,29},{23,3,14}}--
 
 // --- Stop generating from Core_8h.xml
 
@@ -131,7 +131,7 @@ enif_keep_resource(ptr);
 
 
 // @@FUNCTIONS@@
-// -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Target_8h.xml on {{2011,6,29},{23,3,15}}--
 
 static ERL_NIF_TERM LLVMInitializeNativeTarget_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMInitializeNativeTarget\r\n");
@@ -142,7 +142,7 @@ static ERL_NIF_TERM LLVMInitializeNativeTarget_nif(ErlNifEnv* env, int argc, con
 
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Scalar_8h.xml on {{2011,6,29},{23,3,15}}--
 
 static ERL_NIF_TERM LLVMAddCFGSimplificationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMAddCFGSimplificationPass\r\n");
@@ -186,7 +186,7 @@ LLVMAddReassociatePass(PM);
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Initialization_8h.xml on {{2011,6,29},{23,3,14}}--
 
 static ERL_NIF_TERM LLVMInitializeScalarOpts_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMInitializeScalarOpts\r\n");
@@ -250,11 +250,11 @@ LLVMInitializeTarget(R);
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from IPO_8h.xml on {{2011,6,29},{23,3,14}}--
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2011,6,29},{23,3,14}}--
 
 static ERL_NIF_TERM LLVMLinkInInterpreter_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMLinkInInterpreter\r\n");
@@ -291,39 +291,39 @@ static ERL_NIF_TERM LLVMGenericValueToFloat_nif(ErlNifEnv* env, int argc, const 
 
 static ERL_NIF_TERM LLVMCreateExecutionEngineForModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMCreateExecutionEngineForModule\r\n");
-  LLVMExecutionEngineRef * OutEE = (LLVMExecutionEngineRef *)malloc(sizeof(LLVMExecutionEngineRef *));
+  LLVMExecutionEngineRef * OutEE = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
-  char ** OutError = (char **)malloc(sizeof(char **));
+  char ** OutError = (char **)calloc(1,sizeof(char **));
 
   LLVMBool retVal = LLVMCreateExecutionEngineForModule(OutEE,M,OutError);
 
-  return   enif_make_tuple3(env,   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false"),llvm_ptr_create(env, RTLLVMExecutionEngineRef,*OutEE),*OutError == NULL?enif_make_string(env, *OutError,ERL_NIF_LATIN1):enif_make_list(env,0));
+  return   enif_make_tuple3(env,   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false"),llvm_ptr_create(env, RTLLVMExecutionEngineRef,*OutEE),*OutError != NULL?enif_make_string(env, *OutError,ERL_NIF_LATIN1):enif_make_list(env,0));
 
 ;
 }
 
 static ERL_NIF_TERM LLVMCreateInterpreterForModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMCreateInterpreterForModule\r\n");
-  LLVMExecutionEngineRef * OutInterp = (LLVMExecutionEngineRef *)malloc(sizeof(LLVMExecutionEngineRef *));
+  LLVMExecutionEngineRef * OutInterp = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
-  char ** OutError = (char **)malloc(sizeof(char **));
+  char ** OutError = (char **)calloc(1,sizeof(char **));
 
   LLVMBool retVal = LLVMCreateInterpreterForModule(OutInterp,M,OutError);
 
-  return   enif_make_tuple3(env,   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false"),llvm_ptr_create(env, RTLLVMExecutionEngineRef,*OutInterp),*OutError == NULL?enif_make_string(env, *OutError,ERL_NIF_LATIN1):enif_make_list(env,0));
+  return   enif_make_tuple3(env,   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false"),llvm_ptr_create(env, RTLLVMExecutionEngineRef,*OutInterp),*OutError != NULL?enif_make_string(env, *OutError,ERL_NIF_LATIN1):enif_make_list(env,0));
 
 ;
 }
 
 static ERL_NIF_TERM LLVMCreateJITCompilerForModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMCreateJITCompilerForModule\r\n");
-  LLVMExecutionEngineRef * OutJIT = (LLVMExecutionEngineRef *)malloc(sizeof(LLVMExecutionEngineRef *));
+  LLVMExecutionEngineRef * OutJIT = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
@@ -331,11 +331,11 @@ static ERL_NIF_TERM LLVMCreateJITCompilerForModule_nif(ErlNifEnv* env, int argc,
   unsigned OptLevel;
   enif_get_uint(env, argv[1], (unsigned*)&OptLevel);
 
-  char ** OutError = (char **)malloc(sizeof(char **));
+  char ** OutError = (char **)calloc(1,sizeof(char **));
 
   LLVMBool retVal = LLVMCreateJITCompilerForModule(OutJIT,M,OptLevel,OutError);
 
-  return   enif_make_tuple3(env,   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false"),llvm_ptr_create(env, RTLLVMExecutionEngineRef,*OutJIT),*OutError == NULL?enif_make_string(env, *OutError,ERL_NIF_LATIN1):enif_make_list(env,0));
+  return   enif_make_tuple3(env,   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false"),llvm_ptr_create(env, RTLLVMExecutionEngineRef,*OutJIT),*OutError != NULL?enif_make_string(env, *OutError,ERL_NIF_LATIN1):enif_make_list(env,0));
 
 ;
 }
@@ -374,7 +374,7 @@ static ERL_NIF_TERM LLVMRunFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Core_8h.xml on {{2011,6,29},{23,3,14}}--
 
 static ERL_NIF_TERM LLVMGetGlobalContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMGetGlobalContext\r\n");
@@ -1074,12 +1074,12 @@ static ERL_NIF_TERM LLVMFinalizeFunctionPassManager_nif(ErlNifEnv* env, int argc
 static ErlNifFunc nif_funcs[] =
   {
 // @@NIF_MAPPINGS@@
-// -- Start generating from Target_8h.xml on {{2011,6,26},{23,42,50}}--
+// -- Start generating from Target_8h.xml on {{2011,6,29},{23,3,15}}--
 
     {"LLVMInitializeNativeTarget_internal",0,LLVMInitializeNativeTarget_nif},
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Scalar_8h.xml on {{2011,6,29},{23,3,15}}--
 
     {"LLVMAddCFGSimplificationPass_internal",1,LLVMAddCFGSimplificationPass_nif},
     {"LLVMAddGVNPass_internal",1,LLVMAddGVNPass_nif},
@@ -1087,7 +1087,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMAddReassociatePass_internal",1,LLVMAddReassociatePass_nif},
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Initialization_8h.xml on {{2011,6,29},{23,3,14}}--
 
     {"LLVMInitializeScalarOpts_internal",1,LLVMInitializeScalarOpts_nif},
     {"LLVMInitializeInstCombine_internal",1,LLVMInitializeInstCombine_nif},
@@ -1097,11 +1097,11 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMInitializeTarget_internal",1,LLVMInitializeTarget_nif},
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from IPO_8h.xml on {{2011,6,29},{23,3,14}}--
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2011,6,29},{23,3,14}}--
 
     {"LLVMLinkInInterpreter_internal",0,LLVMLinkInInterpreter_nif},
     {"LLVMCreateGenericValueOfFloat_internal",2,LLVMCreateGenericValueOfFloat_nif},
@@ -1112,7 +1112,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMRunFunction_internal",4,LLVMRunFunction_nif},
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2011,6,26},{23,42,49}}--
+// -- Start generating from Core_8h.xml on {{2011,6,29},{23,3,14}}--
 
     {"LLVMGetGlobalContext_internal",0,LLVMGetGlobalContext_nif},
     {"LLVMModuleCreateWithName_internal",1,LLVMModuleCreateWithName_nif},

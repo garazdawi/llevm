@@ -58,7 +58,7 @@ generate_param_extract(Func,Param) ->
 
 generate_param_extract(_Fun, #param{ name = Name, out_param = true, type = Type}, 
 		       _Num) ->
-    ["  ",Type," ",Name," = (",Type,")malloc(sizeof(",Type,"));~n~n"];
+    ["  ",Type," ",Name," = (",Type,")calloc(1,sizeof(",Type,"));~n~n"];
 generate_param_extract(_Func,#param{ name = Name, array = true, type = Type}, Num) ->
     ["  int ",Name,"size = 0;~n"
      "  ERL_NIF_TERM *",Name,"array;~n"
@@ -117,7 +117,7 @@ generate_return_with_out_params(OutParams, Return) ->
      llvm_api:generate_params(
        OutParams,
        fun(#param{ type = "char **", name = PName }) ->
-	       ["*",PName," == NULL?enif_make_string(env, *",PName,",ERL_NIF_LATIN1):enif_make_list(env,0)"];
+	       ["*",PName," != NULL?enif_make_string(env, *",PName,",ERL_NIF_LATIN1):enif_make_list(env,0)"];
 	  (#param{ type = Type, name = PName }) ->
 	       ["llvm_ptr_create(env, RT",strip_ptr(Type),",*",PName,")"]
        end),");~n~n"].

@@ -25,38 +25,48 @@ end_per_testcase(_Tc, _Config) ->
     ok.
 
 all() ->
-    [adder, complex, extern, condition, compile].
+    [adder, complex, extern, condition, for].
 
 adder(_Config) ->
-    build(["def adding(test1,test2) test1+test2;"]).
+    {ModRef, [FunRef]} = build(["def adding(test1,test2) test1+test2;"]),
+    {float, 2.0} = run(ModRef, FunRef, [1.0,1.0]),
+    {float, 3.0} = run(ModRef, FunRef, [1.0,2.0]),
+    {float, 4.0} = run(ModRef, FunRef, [3.0,1.0]),
+    {float, 5.0} = run(ModRef, FunRef, [1.0,4.0]),
+    {float, 6.0} = run(ModRef, FunRef, [5.0,1.0]),
+    {float, 7.0} = run(ModRef, FunRef, [1.0,6.0]).
+
 
 complex(_Config) ->
-    build(["def foo(a,b) a*a + 2.0*a*b + b*b;",
-	     "def bar(a) foo(a, 4.0) + bar(31337.0);"]).
+    {ModRef, [_Foo, Bar]} = build(["def foo(a,b) a*a + 2.0*a*b + b*b;",
+				   "def bar(a) if 1337.0 < a then 1337.0 else "
+				   " foo(a, 4.0) + bar(a*5.0);"]),
+    {float,151629.0} = run(ModRef, Bar, [3.0]).
 
 extern(_Config) ->
-    build(["extern cos(x);",
-	     "cos(1.234);"]).
+    {ModRef, [_, FunRef]} = build(["extern cos(x);",
+				   "cos(1.234);"]),
+    {float,0.33046510807172985} = run(ModRef, FunRef, []).
 
 condition(_Config) ->
-    build(["def fib(x) if x < 3.0 then 1.0 else fib(x-1.0)+fib(x-2.0);"]).
+    {ModRef, [FunRef]} =
+	build(["def fib(x) if x < 3.0 then 1.0 else fib(x-1.0)+fib(x-2.0);"]),
+    {float, 8.0} = run(ModRef, FunRef, [6.0]).
+
 
 for(_Config) ->
     build(["extern putchard(char);",
 	     "def printstar(n) for i = 1.0, i < n, 1.0 in putchard(42.0);",
 	     "def printstar2(n) for i = 1.0, i < n in putchard(42.0);"]).
 
-
-compile(_Config) ->
-    {ModRef, [FunRef]} = build(["def mult(i) i * 3.0;"]),
-
-    R = {_, EERef, _} = llevm:'LLVMCreateExecutionEngineForModule'(ModRef),
-    ct:pal("EE create res: ~p~n",[R]),
+run(ModRef, FunRef, Args) ->
+    FloatArgs = list_to_tuple([llevm:'LLVMCreateGenericValueOfFloat'(
+				 llevm:'LLVMDoubleType'(),Float) || Float <- Args]),
+    {_, EERef, _} = llevm:'LLVMCreateExecutionEngineForModule'(ModRef),
     Res = llevm:'LLVMRunFunction'(
-	    EERef, FunRef, 1, 
-	    {llevm:'LLVMCreateGenericValueOfFloat'(
-	       llevm:'LLVMDoubleType'(),3.0)}),
-    {float, 9.0} = llevm:'LLVMGenericValueToFloat'(llevm:'LLVMDoubleType'(),Res).
+	    EERef, FunRef, length(Args),
+	    FloatArgs),
+    llevm:'LLVMGenericValueToFloat'(llevm:'LLVMDoubleType'(),Res).
     
 
 
