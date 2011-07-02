@@ -8,11 +8,18 @@
 #include "llvm-c/Transforms/IPO.h"
 #include "llvm-c/Target.h"
 #include "llvm-c/Initialization.h"
+#include "llvm-c/lto.h"
+#include "llvm-c/LinkTimeOptimizer.h"
+#include "llvm-c/BitWriter.h"
+#include "llvm-c/BitReader.h"
+#include "llvm-c/EnhancedDisassembly.h"
+#include "llvm-c/Analysis.h"
 
 #include "erl_nif.h"
 
 typedef enum {
 //  @@TYPES@@
+RTVoidPtr
 } llvm_type_t;
 
 typedef struct llvm_ptr {

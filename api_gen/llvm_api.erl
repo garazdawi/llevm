@@ -14,7 +14,8 @@ replace(Where, What, With) when is_atom(Where) ->
     {ok, Bin} = file:read_file(get(Where)),
     NewStr = replace(binary_to_list(Bin), What, With),
     {ok,D} = file:open(get(Where),[write]),
-    io:format(D,NewStr,[]),
+    split_format(lists:flatten(NewStr),0,[], 
+		 fun(SubStr) -> io:format(D,add_escape(SubStr),[]) end),
     file:close(D);
 replace("@@"++Rest, What, With) ->
     case lists:prefix(What,Rest) of
@@ -44,20 +45,20 @@ init(Path) ->
 
 header(From, Str, Cmt) ->
     Pre = io_lib:format(Cmt++" -- Start generating from ~s "
-				     "on ~p--~n~n",[From,calendar:local_time()]),
-    List = split_io_lib_format(lists:flatten(Str),0,[]),
+				     "on ~w--~n~n",[From,calendar:local_time()]),
+    List = split_format(lists:flatten(Str),0,[], 
+			fun(SubStr) -> io_lib:format(SubStr,[]) end),
     Post = io_lib:format(Cmt++" --- Stop generating from ~s~n",[From]),
     [Pre,List,Post].
 
-split_io_lib_format(Rest,Len,Acc) when Len == 128, hd(Acc) /= $~ ->
-    [split_io_lib_format([],0,Acc)|split_io_lib_format(Rest,0,[])];
-split_io_lib_format([C|R],Len,Acc) ->
-    split_io_lib_format(R,Len+1,[C|Acc]);
-split_io_lib_format([],_,[]) ->
+split_format(Rest,Len,Acc,F) when Len == 128, hd(Acc) /= $~ ->
+    [split_format([],0,Acc,F)|split_format(Rest,0,[],F)];
+split_format([C|R],Len,Acc,F) ->
+    split_format(R,Len+1,[C|Acc],F);
+split_format([],_,[],_) ->
     [];
-split_io_lib_format([],_,Acc) ->
-    io_lib:format(lists:reverse(Acc),[]).
-
+split_format([],_,Acc,F) ->
+    F(lists:reverse(Acc)).
 
 generate_int(From, Entities) ->
     replace(include, "CONST",
@@ -93,3 +94,10 @@ generate_rest([#param{} = P|Rest], Fun) ->
 	Res -> 
 	    [",",Res|generate_rest(Rest,Fun)]
     end.
+
+add_escape([$~|R]) ->
+    [$~,$~|add_escape(R)];
+add_escape([C|R]) ->
+    [C|add_escape(R)];
+add_escape([]) ->
+    [].

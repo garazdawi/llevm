@@ -24,7 +24,10 @@
 		 {"LLVMBuildGEP","Indices"},
 		 {"LLVMBuildInBoundsGEP","Indices"},
 		 {"LLVMBuildCall","Args"},
-		 {"LLVMRunFunction","Args"}
+		 {"LLVMRunFunction","Args"},
+		 {"LLVMRunFunctionAsMain","ArgV"},
+		 {"LLVMRunFunctionAsMain","EnvP"},
+		 {"lto_codegen_set_assembler_args","args"}
 		]).
 
 -define(OUT_PARAM, [{"LLVMCreateExecutionEngineForModule","OutEE"},
@@ -32,22 +35,55 @@
 		    {"LLVMCreateInterpreterForModule","OutInterp"},
 		    {"LLVMCreateInterpreterForModule","OutError"},
 		    {"LLVMCreateJITCompilerForModule","OutJIT"},
-		    {"LLVMCreateJITCompilerForModule","OutError"}
+		    {"LLVMCreateJITCompilerForModule","OutError"},
+		    {"LLVMCreateExecutionEngine","OutEE"},
+		    {"LLVMCreateExecutionEngine","OutError"},
+		    {"LLVMCreateInterpreter","OutInterp"},
+		    {"LLVMCreateInterpreter","OutError"},
+		    {"LLVMCreateJITCompiler","OutJIT"},
+		    {"LLVMCreateJITCompiler","OutError"},
+		    {"LLVMCreateMemoryBufferWithContentsOfFile","OutMemBuf"},
+		    {"LLVMCreateMemoryBufferWithContentsOfFile","OutMessage"},
+		    {"LLVMRemoveModule","OutMod"},
+		    {"LLVMRemoveModule","OutError"},
+		    {"LLVMRemoveModulePrivider","OutMod"},
+		    {"LLVMRemoveModulePrivider","OutError"},
+		    {"LLVMFindFunction","OutFn"},
+		    {"LLVMParseBitcode","OutModule"}
 		   ]).
 
 -define(IS_ENUM(Value),
 	Value == "LLVMAttribute";
-	Value == "LLVMOpCode";
+	Value == "LLVMOpcode";
 	Value == "LLVMTypeKind";
 	Value == "LLVMLinkage";
 	Value == "LLVMVisibility";
 	Value == "LLVMCallConv";
 	Value == "LLVMIntPredicate";
-	Value == "LLVMRealPredicate").
+	Value == "LLVMRealPredicate";
+	Value == "lto_symbol_attributes";
+        Value == "lto_debug_model";
+        Value == "lto_codegen_model";
+        Value == "llvm_lto_status_t").
 	
-	    
+-define(LIMIT, when
+      Name /= "LLVMCreateMemoryBufferWithSTDIN"
+      ,Name /= "lto_module_create_from_fd"
+      %% These symbols do not resolve for some reason
+      ,Name /= "LLVMInitializeCore"
+      ,Name /= "LLVMInitializeIPO"
+      ,Name /= "LLVMInitializeAnalysis"
+      ,Name /= "EDInstID"
+      %% I think the LinkTimeOptimizer is supposed to be used from C++ code to
+      %% interface with existing LTO C code.
+      ,Name /= "llvm_create_optimizer"
+      ,Name /= "llvm_destroy_optimizer"
+      ,Name /= "llvm_read_object_file"
+      ,Name /= "llvm_optimize_modules"
+      ).
 
--define(LIMIT, when 
+
+-define(LIMIT_OLD, when 
       Name == "LLVMModuleCreateWithName"; 
       Name == "LLVMDumpModule";
       Name == "LLVMDumpValue";
@@ -121,6 +157,8 @@
       Name == "LLVMGenericValueToFloat";
 %% Target
       Name == "LLVMInitializeNativeTarget";
+%% Bitwriter
+      Name == "LLVMWriteBitcodeToFile";
 %% Inits
 %      Name == "LLVMInitializeCore";
       Name == "LLVMInitializeScalarOpts";

@@ -83,10 +83,12 @@ parse_enum_member(XML, EnumMember) when is_list(XML) ->
 
 parse_value(XML) ->
     Str = parse_text(XML, ""),
-    case string:tokens(Str, " <") of
-	[Left,Right] ->
+    case {string:tokens(Str, " <"),string:tokens(Str, "x")} of
+	{[Left,Right],_} ->
 	    list_to_integer(Left) bsl list_to_integer(Right);
-	[Integer] ->
+	{_,[_Left,Right]} ->
+	    list_to_integer(Right,16);
+	{[Integer],_} ->
 	    list_to_integer(Integer)
     end.
 
@@ -94,7 +96,8 @@ parse_value(XML) ->
 % Parse typedef
 %
 parse_typedef(#xmlElement{ name = type, content = TypeXML }, Typedef) ->
-    TypeStr = parse_text(TypeXML),
+    [TypeStr|_] = lists:reverse(string:tokens(parse_text(TypeXML)," ")),
+		  
     IsPtr = case lists:reverse(TypeStr) of
 		[$*|_] ->
 		    true;
@@ -143,8 +146,32 @@ parse_function(XML, Func) when is_list(XML) ->
 				(#param{ type = "LLVMAttribute", 
 					 name = undefined } = Param) ->
 				     [Param#param{ name = "PA" }];
+				(#param{ type = "LLVMPassManagerRef", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "PM" }];
+				(#param{ type = "LLVMTargetDataRef", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "TD" }];
+				(#param{ type = "LLVMTypeRef", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "TypeRef" }];
+				(#param{ type = "lto_code_gen_t", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "code_gen" }];
+				(#param{ type = "lto_debug_model", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "dbg" }];
+				(#param{ type = "lto_codegen_model", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "code_gen" }];
+				(#param{ type = "const char *", 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = "string" }];
 				(#param{ type = "void" }) ->
 				     [];
+				(#param{ type = Type, 
+					 name = undefined } = Param) ->
+				     [Param#param{ name = Type++"_var" }];
 				(P) ->
 				     [P]
 			     end,lists:reverse(FinFunc#function.params)),
@@ -156,7 +183,7 @@ parse_param(#xmlElement{ name = type, content = TypeXML }, Param) ->
     Type = parse_type(TypeXML),
     case is_array(get(func_name),Param#param.name) of
 	true ->
-	    StrippedType = hd(string:tokens(Type," *")),
+	    StrippedType = lists:flatten(string:tokens(Type," *")),
 	    Param#param{ type = Type, array = true,
 			 erlang_type = ["tuple(",to_erlang_type(StrippedType),")"],
 			 erlang_tag = to_erlang_tag(StrippedType) };
@@ -208,6 +235,10 @@ to_erlang_tag("unsigned") ->
     "integer";
 to_erlang_tag("int") ->
     "integer";
+to_erlang_tag("unsigned int") ->
+    "integer";
+to_erlang_tag("uint64_t") ->
+    "integer";
 to_erlang_tag("integer") ->
     "integer";
 to_erlang_tag("char *") ->
@@ -224,17 +255,32 @@ to_erlang_tag("unsigned long long") ->
     "integer";
 to_erlang_tag("long long") ->
     "integer";
+to_erlang_tag("size_t") ->
+    "integer";
+to_erlang_tag("off_t") ->
+    "integer";
 to_erlang_tag("double") ->
     "float";
 to_erlang_tag("void") ->
     "atom";
 to_erlang_tag("LLVMBool") ->
     "boolean";
+to_erlang_tag("constcharconst") ->
+    "string";
+to_erlang_tag("constchar") ->
+    "string";
+to_erlang_tag("const "++Rest) ->
+    to_erlang_tag(Rest);
+to_erlang_tag("enum "++Rest) ->
+    to_erlang_tag(Rest);
 to_erlang_tag(Else) ->
     "'"++Else++"'".
 
 %% Check hardoded arrays
 is_array(FName,PName) ->
     lists:member({FName,PName},?ARRAYS).
-is_out_param(FName,PName) ->
-    lists:member({FName,PName},?OUT_PARAM).
+is_out_param(_FName,"Out"++_) ->
+    true;
+is_out_param(_,_) ->
+    false.
+

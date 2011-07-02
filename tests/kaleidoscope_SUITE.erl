@@ -55,9 +55,11 @@ condition(_Config) ->
 
 
 for(_Config) ->
-    build(["extern putchard(char);",
-	     "def printstar(n) for i = 1.0, i < n, 1.0 in putchard(42.0);",
-	     "def printstar2(n) for i = 1.0, i < n in putchard(42.0);"]).
+    {ModRef,_} = build(["extern putchard(char);",
+			"def printstar(n) for i = 1.0, i < n, 1.0 in putchard(42.0);",
+			"def printstar2(n) for i = 1.0, i < n in putchard(42.0);"]),
+    {integer, 0} = llevm:'LLVMWriteBitcodeToFile'(
+		     ModRef, filename:join(proplists:get_value(priv_dir, _Config),"for.ll")).
 
 run(ModRef, FunRef, Args) ->
     FloatArgs = list_to_tuple([llevm:'LLVMCreateGenericValueOfFloat'(

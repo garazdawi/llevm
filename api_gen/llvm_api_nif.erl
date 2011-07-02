@@ -9,6 +9,8 @@
 
 generate_types([#typedef{ name = Name }|Rest]) ->
     ["RT",Name,",~n",generate_types(Rest)];
+generate_types([#enum{ name = "@0" }|Rest]) ->
+    generate_types(Rest);
 generate_types([#enum{ name = Name }|Rest]) ->
     ["RT",Name,",~n",generate_types(Rest)];
 generate_types([_|R]) ->
@@ -29,15 +31,15 @@ generate_functions([#function{name = Name,
      [generate_param_extract(Name,Param) || Param <- Params],
      if Return /= "void" ->
 	     ["  ",Return," retVal = ",Name,"(",
-	      llvm_api:generate_params(Params,fun(#param{ name = PName}) ->
-						      PName
+	      llvm_api:generate_params(Params,fun(#param{ name = PName, type = T}) ->
+						      ["(",T,")",PName]
 					      end),
 	      ");~n~n  return ",
 	      generate_return(Params, Return),";"];
 	true ->
 	     [Name,"(",
-	      llvm_api:generate_params(Params,fun(#param{ name = PName}) ->
-						      PName
+	      llvm_api:generate_params(Params,fun(#param{ name = PName, type = T}) ->
+						      ["(",T,")",PName]
 					      end),
 	      ");~n~n",
 	     "  return enif_make_atom(env,\"ok\");"]
@@ -59,6 +61,8 @@ generate_param_extract(Func,Param) ->
 generate_param_extract(_Fun, #param{ name = Name, out_param = true, type = Type}, 
 		       _Num) ->
     ["  ",Type," ",Name," = (",Type,")calloc(1,sizeof(",Type,"));~n~n"];
+generate_param_extract(Func, #param{ type = "const "++Type} = Param, Num ) ->
+    generate_param_extract(Func, Param#param{ type = Type }, Num);
 generate_param_extract(_Func,#param{ name = Name, array = true, type = Type}, Num) ->
     ["  int ",Name,"size = 0;~n"
      "  ERL_NIF_TERM *",Name,"array;~n"
@@ -79,9 +83,13 @@ generate_param_extract(_Func,#param{ name = Name, type = "double" = Type}, Num) 
     ["  ",Type," ",Name,";~n"
      "  enif_get_double(env, argv[",Num,"], (double*)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
-  when ?IS_ENUM(Type); Type == "unsigned" ->
+  when ?IS_ENUM(Type); Type == "unsigned"->
     ["  ",Type," ",Name,";~n"
      "  enif_get_uint(env, argv[",Num,"], (",Type,"*)&",Name,");~n~n"];
+generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
+  when Type == "int"->
+    ["  ",Type," ",Name,";~n"
+     "  enif_get_int(env, argv[",Num,"], (",Type,"*)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = "LLVMBool" = Type}, Num) ->
     ["  char *",Name,"_tmp = (char *) malloc(sizeof(char) * 255);~n"
      "  enif_get_atom(env, argv[",Num,"], (char*)",Name,"_tmp, 255, ERL_NIF_LATIN1);~n"
@@ -102,12 +110,26 @@ generate_return(Params, Return) ->
 	    generate_return_with_out_params(OutParams, Return)
     end.
 
+generate_return("unsigned"++_) ->
+    ["  enif_make_uint(env, retVal)"];
+generate_return("int") ->
+    ["  enif_make_int(env, retVal)"];
+generate_return("long long") ->
+    ["  enif_make_int(env, retVal)"];
 generate_return(Return) when ?IS_ENUM(Return) ->
-    ["  enif_make_int(env, (int)RT",Return,")"];
-generate_return("LLVMBool") ->
+    ["  enif_make_int(env, (int)retVal)"];
+generate_return(Bool) when Bool == "LLVMBool";Bool == "bool" ->
     ["  retVal ? enif_make_atom(env,\"true\") : enif_make_atom(env,\"false\")"];
 generate_return("double") ->
     ["  enif_make_double(env,retVal)"];
+generate_return(String) when String == "const char *"; String == "char *" ->
+    ["  enif_make_string(env,retVal,ERL_NIF_LATIN1)"];
+generate_return("const void *") ->
+    ["  llvm_ptr_create(env, RTVoidPtr, (void *)retVal)"];
+generate_return("void *") ->
+    generate_return("VoidPtr");
+generate_return("enum "++_Rest) ->
+    ["  enif_make_int(env, (int)retVal)"];
 generate_return(Return) ->
     ["  llvm_ptr_create(env, RT",Return,", retVal)"].
 
