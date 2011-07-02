@@ -1,0 +1,8 @@
+## Generara och kör testerna
+cd ~/Documents/etc/llevm/ && source mac_env && (cd api_gen && make) && make test
+
+## Generara och starta gdb
+cd ~/Documents/etc/llevm/ && source mac_env && (cd api_gen && make) && make && erlc -o tests tests/*.erl && export BINDIR=/Users/lukas/Documents/etc/otp/release/i386-apple-darwin10.7.0/bin/ && gdb /Users/lukas/Documents/etc/otp/release/i386-apple-darwin10.7.0//erts-5.8.4/bin/beam.smp
+
+## Start erl i gdb
+run -- -root /Users/lukas/Documents/etc/otp/release/i386-apple-darwin10.7.0/ -- -pa ../llevm/ebin tests

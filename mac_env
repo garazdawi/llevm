@@ -1,0 +1,2 @@
+#!/bin/sh
+export PATH=/Applications/Doxygen.app/Contents/Resources/:/Users/lukas/Documents/etc/otp/release/i386-apple-darwin10.7.0/bin/:$PATH
