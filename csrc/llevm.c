@@ -19,7 +19,7 @@
 
 typedef enum {
 //  @@TYPES@@
-// -- Start generating from lto_8h.xml on {{2011,7,2},{17,38,39}}--
+// -- Start generating from lto_8h.xml on {{2011,10,2},{18,38,43}}--
 
 RTlto_symbol_attributes,
 RTlto_debug_model,
@@ -28,39 +28,39 @@ RTlto_module_t,
 RTlto_code_gen_t,
 // --- Stop generating from lto_8h.xml
 
-// -- Start generating from Target_8h.xml on {{2011,7,2},{17,38,37}}--
+// -- Start generating from Target_8h.xml on {{2011,10,2},{18,38,42}}--
 
 RTLLVMByteOrdering,
 RTLLVMTargetDataRef,
 RTLLVMStructLayoutRef,
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2011,7,2},{17,38,35}}--
+// -- Start generating from Scalar_8h.xml on {{2011,10,2},{18,38,40}}--
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,7,2},{17,38,34}}--
+// -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,10,2},{18,38,39}}--
 
 RTllvm_lto_status,
 RTllvm_lto_t,
 RTllvm_lto_status_t,
 // --- Stop generating from LinkTimeOptimizer_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2011,7,2},{17,38,32}}--
+// -- Start generating from Initialization_8h.xml on {{2011,10,2},{18,38,38}}--
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2011,7,2},{17,38,31}}--
+// -- Start generating from IPO_8h.xml on {{2011,10,2},{18,38,36}}--
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2011,7,2},{17,38,30}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2011,10,2},{18,38,35}}--
 
 RTLLVMGenericValueRef,
 RTLLVMExecutionEngineRef,
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from EnhancedDisassembly_8h.xml on {{2011,7,2},{17,38,28}}--
+// -- Start generating from EnhancedDisassembly_8h.xml on {{2011,10,2},{18,38,34}}--
 
 RTEDByteReaderCallback,
 RTEDRegisterReaderCallback,
@@ -71,7 +71,7 @@ RTEDTokenRef,
 RTEDOperandRef,
 // --- Stop generating from EnhancedDisassembly_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2011,7,2},{17,38,27}}--
+// -- Start generating from Core_8h.xml on {{2011,10,2},{18,38,33}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -96,15 +96,15 @@ RTLLVMPassRegistryRef,
 RTLLVMUseRef,
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from BitWriter_8h.xml on {{2011,10,2},{18,38,33}}--
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from BitReader_8h.xml on {{2011,10,2},{18,38,33}}--
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from Analysis_8h.xml on {{2011,10,2},{18,38,33}}--
 
 RTLLVMVerifierFailureAction,
 // --- Stop generating from Analysis_8h.xml
@@ -118,51 +118,51 @@ typedef struct llvm_ptr {
 } llvm_ptr_t;
 
 // @@RESOURCE_TYPES@@
-// -- Start generating from lto_8h.xml on {{2011,7,2},{17,38,39}}--
+// -- Start generating from lto_8h.xml on {{2011,10,2},{18,38,43}}--
 
 // --- Stop generating from lto_8h.xml
 
-// -- Start generating from Target_8h.xml on {{2011,7,2},{17,38,37}}--
+// -- Start generating from Target_8h.xml on {{2011,10,2},{18,38,42}}--
 
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2011,7,2},{17,38,36}}--
+// -- Start generating from Scalar_8h.xml on {{2011,10,2},{18,38,40}}--
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,7,2},{17,38,34}}--
+// -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,10,2},{18,38,39}}--
 
 // --- Stop generating from LinkTimeOptimizer_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2011,7,2},{17,38,33}}--
+// -- Start generating from Initialization_8h.xml on {{2011,10,2},{18,38,38}}--
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2011,7,2},{17,38,31}}--
+// -- Start generating from IPO_8h.xml on {{2011,10,2},{18,38,37}}--
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2011,7,2},{17,38,30}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2011,10,2},{18,38,35}}--
 
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from EnhancedDisassembly_8h.xml on {{2011,7,2},{17,38,28}}--
+// -- Start generating from EnhancedDisassembly_8h.xml on {{2011,10,2},{18,38,34}}--
 
 // --- Stop generating from EnhancedDisassembly_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2011,7,2},{17,38,27}}--
+// -- Start generating from Core_8h.xml on {{2011,10,2},{18,38,33}}--
 
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from BitWriter_8h.xml on {{2011,10,2},{18,38,33}}--
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from BitReader_8h.xml on {{2011,10,2},{18,38,33}}--
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from Analysis_8h.xml on {{2011,10,2},{18,38,33}}--
 
 // --- Stop generating from Analysis_8h.xml
 
@@ -202,24 +202,21 @@ enif_keep_resource(ptr);
 
 
 // @@FUNCTIONS@@
-// -- Start generating from lto_8h.xml on {{2011,7,2},{17,38,39}}--
+// -- Start generating from lto_8h.xml on {{2011,10,2},{18,38,43}}--
 
 static ERL_NIF_TERM lto_get_version_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_get_version\r\n");
   const char * retVal = lto_get_version();
 
   return   enif_make_string(env,retVal,ERL_NIF_LATIN1);
 }
 
 static ERL_NIF_TERM lto_get_error_message_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_get_error_message\r\n");
   const char * retVal = lto_get_error_message();
 
   return   enif_make_string(env,retVal,ERL_NIF_LATIN1);
 }
 
 static ERL_NIF_TERM lto_module_is_object_file_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_is_object_file\r\n");
   char *path = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)path, 255, ERL_NIF_LATIN1);
 
@@ -229,7 +226,6 @@ static ERL_NIF_TERM lto_module_is_object_file_nif(ErlNifEnv* env, int argc, cons
 }
 
 static ERL_NIF_TERM lto_module_is_object_file_for_target_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_is_object_file_for_target\r\n");
   char *path = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)path, 255, ERL_NIF_LATIN1);
 
@@ -242,7 +238,6 @@ static ERL_NIF_TERM lto_module_is_object_file_for_target_nif(ErlNifEnv* env, int
 }
 
 static ERL_NIF_TERM lto_module_is_object_file_in_memory_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_is_object_file_in_memory\r\n");
   void * mem;
   llvm_ptr_deref(env, argv[0], (void **) &mem);
 
@@ -255,7 +250,6 @@ static ERL_NIF_TERM lto_module_is_object_file_in_memory_nif(ErlNifEnv* env, int 
 }
 
 static ERL_NIF_TERM lto_module_is_object_file_in_memory_for_target_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_is_object_file_in_memory_for_target\r\n");
   void * mem;
   llvm_ptr_deref(env, argv[0], (void **) &mem);
 
@@ -271,7 +265,6 @@ static ERL_NIF_TERM lto_module_is_object_file_in_memory_for_target_nif(ErlNifEnv
 }
 
 static ERL_NIF_TERM lto_module_create_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_create\r\n");
   char *path = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)path, 255, ERL_NIF_LATIN1);
 
@@ -281,7 +274,6 @@ static ERL_NIF_TERM lto_module_create_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM lto_module_create_from_memory_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_create_from_memory\r\n");
   void * mem;
   llvm_ptr_deref(env, argv[0], (void **) &mem);
 
@@ -294,7 +286,6 @@ static ERL_NIF_TERM lto_module_create_from_memory_nif(ErlNifEnv* env, int argc, 
 }
 
 static ERL_NIF_TERM lto_module_dispose_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_dispose\r\n");
   lto_module_t mod;
   llvm_ptr_deref(env, argv[0], (void **) &mod);
 
@@ -304,7 +295,6 @@ lto_module_dispose((lto_module_t)mod);
 }
 
 static ERL_NIF_TERM lto_module_get_target_triple_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_get_target_triple\r\n");
   lto_module_t mod;
   llvm_ptr_deref(env, argv[0], (void **) &mod);
 
@@ -314,7 +304,6 @@ static ERL_NIF_TERM lto_module_get_target_triple_nif(ErlNifEnv* env, int argc, c
 }
 
 static ERL_NIF_TERM lto_module_set_target_triple_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_set_target_triple\r\n");
   lto_module_t mod;
   llvm_ptr_deref(env, argv[0], (void **) &mod);
 
@@ -327,7 +316,6 @@ lto_module_set_target_triple((lto_module_t)mod,(const char *)triple);
 }
 
 static ERL_NIF_TERM lto_module_get_num_symbols_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_get_num_symbols\r\n");
   lto_module_t mod;
   llvm_ptr_deref(env, argv[0], (void **) &mod);
 
@@ -337,7 +325,6 @@ static ERL_NIF_TERM lto_module_get_num_symbols_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM lto_module_get_symbol_name_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_get_symbol_name\r\n");
   lto_module_t mod;
   llvm_ptr_deref(env, argv[0], (void **) &mod);
 
@@ -350,7 +337,6 @@ static ERL_NIF_TERM lto_module_get_symbol_name_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM lto_module_get_symbol_attribute_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_module_get_symbol_attribute\r\n");
   lto_module_t mod;
   llvm_ptr_deref(env, argv[0], (void **) &mod);
 
@@ -363,14 +349,12 @@ static ERL_NIF_TERM lto_module_get_symbol_attribute_nif(ErlNifEnv* env, int argc
 }
 
 static ERL_NIF_TERM lto_codegen_create_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_create\r\n");
   lto_code_gen_t retVal = lto_codegen_create();
 
   return   llvm_ptr_create(env, RTlto_code_gen_t, retVal);
 }
 
 static ERL_NIF_TERM lto_codegen_dispose_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_dispose\r\n");
   lto_code_gen_t code_gen;
   llvm_ptr_deref(env, argv[0], (void **) &code_gen);
 
@@ -380,7 +364,6 @@ lto_codegen_dispose((lto_code_gen_t)code_gen);
 }
 
 static ERL_NIF_TERM lto_codegen_add_module_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_add_module\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -393,7 +376,6 @@ static ERL_NIF_TERM lto_codegen_add_module_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM lto_codegen_set_debug_model_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_set_debug_model\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -406,7 +388,6 @@ static ERL_NIF_TERM lto_codegen_set_debug_model_nif(ErlNifEnv* env, int argc, co
 }
 
 static ERL_NIF_TERM lto_codegen_set_pic_model_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_set_pic_model\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -419,7 +400,6 @@ static ERL_NIF_TERM lto_codegen_set_pic_model_nif(ErlNifEnv* env, int argc, cons
 }
 
 static ERL_NIF_TERM lto_codegen_set_cpu_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_set_cpu\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -432,7 +412,6 @@ lto_codegen_set_cpu((lto_code_gen_t)cg,(const char *)cpu);
 }
 
 static ERL_NIF_TERM lto_codegen_set_assembler_path_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_set_assembler_path\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -445,7 +424,6 @@ lto_codegen_set_assembler_path((lto_code_gen_t)cg,(const char *)path);
 }
 
 static ERL_NIF_TERM lto_codegen_set_assembler_args_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_set_assembler_args\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -474,7 +452,6 @@ lto_codegen_set_assembler_args((lto_code_gen_t)cg,(const char **)args,(int)nargs
 }
 
 static ERL_NIF_TERM lto_codegen_add_must_preserve_symbol_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_add_must_preserve_symbol\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -487,7 +464,6 @@ lto_codegen_add_must_preserve_symbol((lto_code_gen_t)cg,(const char *)symbol);
 }
 
 static ERL_NIF_TERM lto_codegen_write_merged_modules_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_write_merged_modules\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -500,7 +476,6 @@ static ERL_NIF_TERM lto_codegen_write_merged_modules_nif(ErlNifEnv* env, int arg
 }
 
 static ERL_NIF_TERM lto_codegen_compile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_compile\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -513,7 +488,6 @@ static ERL_NIF_TERM lto_codegen_compile_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM lto_codegen_debug_options_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling lto_codegen_debug_options\r\n");
   lto_code_gen_t cg;
   llvm_ptr_deref(env, argv[0], (void **) &cg);
 
@@ -527,31 +501,27 @@ lto_codegen_debug_options((lto_code_gen_t)cg,(const char *)string);
 
 // --- Stop generating from lto_8h.xml
 
-// -- Start generating from Target_8h.xml on {{2011,7,2},{17,38,37}}--
+// -- Start generating from Target_8h.xml on {{2011,10,2},{18,38,42}}--
 
 static ERL_NIF_TERM LLVMInitializeAllTargetInfos_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeAllTargetInfos\r\n");
 LLVMInitializeAllTargetInfos();
 
   return enif_make_atom(env,"ok");
 }
 
 static ERL_NIF_TERM LLVMInitializeAllTargets_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeAllTargets\r\n");
 LLVMInitializeAllTargets();
 
   return enif_make_atom(env,"ok");
 }
 
 static ERL_NIF_TERM LLVMInitializeNativeTarget_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeNativeTarget\r\n");
   LLVMBool retVal = LLVMInitializeNativeTarget();
 
   return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
 }
 
 static ERL_NIF_TERM LLVMCreateTargetData_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateTargetData\r\n");
   char *StringRep = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)StringRep, 255, ERL_NIF_LATIN1);
 
@@ -561,7 +531,6 @@ static ERL_NIF_TERM LLVMCreateTargetData_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMAddTargetData_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddTargetData\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -574,7 +543,6 @@ LLVMAddTargetData((LLVMTargetDataRef)TD,(LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMCopyStringRepOfTargetData_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCopyStringRepOfTargetData\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -584,7 +552,6 @@ static ERL_NIF_TERM LLVMCopyStringRepOfTargetData_nif(ErlNifEnv* env, int argc, 
 }
 
 static ERL_NIF_TERM LLVMByteOrder_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMByteOrder\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -594,7 +561,6 @@ static ERL_NIF_TERM LLVMByteOrder_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMPointerSize_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPointerSize\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -604,7 +570,6 @@ static ERL_NIF_TERM LLVMPointerSize_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIntPtrType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIntPtrType\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -614,7 +579,6 @@ static ERL_NIF_TERM LLVMIntPtrType_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMSizeOfTypeInBits_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSizeOfTypeInBits\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -627,7 +591,6 @@ static ERL_NIF_TERM LLVMSizeOfTypeInBits_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMStoreSizeOfType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMStoreSizeOfType\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -640,7 +603,6 @@ static ERL_NIF_TERM LLVMStoreSizeOfType_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMABISizeOfType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMABISizeOfType\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -653,7 +615,6 @@ static ERL_NIF_TERM LLVMABISizeOfType_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMABIAlignmentOfType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMABIAlignmentOfType\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -666,7 +627,6 @@ static ERL_NIF_TERM LLVMABIAlignmentOfType_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMCallFrameAlignmentOfType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCallFrameAlignmentOfType\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -679,7 +639,6 @@ static ERL_NIF_TERM LLVMCallFrameAlignmentOfType_nif(ErlNifEnv* env, int argc, c
 }
 
 static ERL_NIF_TERM LLVMPreferredAlignmentOfType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPreferredAlignmentOfType\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -692,7 +651,6 @@ static ERL_NIF_TERM LLVMPreferredAlignmentOfType_nif(ErlNifEnv* env, int argc, c
 }
 
 static ERL_NIF_TERM LLVMPreferredAlignmentOfGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPreferredAlignmentOfGlobal\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -705,7 +663,6 @@ static ERL_NIF_TERM LLVMPreferredAlignmentOfGlobal_nif(ErlNifEnv* env, int argc,
 }
 
 static ERL_NIF_TERM LLVMElementAtOffset_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMElementAtOffset\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -713,7 +670,7 @@ static ERL_NIF_TERM LLVMElementAtOffset_nif(ErlNifEnv* env, int argc, const ERL_
   llvm_ptr_deref(env, argv[1], (void **) &StructTy);
 
   unsigned long long Offset;
-  llvm_ptr_deref(env, argv[2], (void **) &Offset);
+  enif_get_uint64(env, argv[2], (ErlNifUInt64 *)&Offset);
 
   unsigned retVal = LLVMElementAtOffset((LLVMTargetDataRef)TD,(LLVMTypeRef)StructTy,(unsigned long long)Offset);
 
@@ -721,7 +678,6 @@ static ERL_NIF_TERM LLVMElementAtOffset_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMOffsetOfElement_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMOffsetOfElement\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -737,7 +693,6 @@ static ERL_NIF_TERM LLVMOffsetOfElement_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMInvalidateStructLayout_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInvalidateStructLayout\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -750,7 +705,6 @@ LLVMInvalidateStructLayout((LLVMTargetDataRef)TD,(LLVMTypeRef)StructTy);
 }
 
 static ERL_NIF_TERM LLVMDisposeTargetData_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeTargetData\r\n");
   LLVMTargetDataRef TD;
   llvm_ptr_deref(env, argv[0], (void **) &TD);
 
@@ -761,10 +715,9 @@ LLVMDisposeTargetData((LLVMTargetDataRef)TD);
 
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2011,7,2},{17,38,36}}--
+// -- Start generating from Scalar_8h.xml on {{2011,10,2},{18,38,41}}--
 
 static ERL_NIF_TERM LLVMAddAggressiveDCEPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddAggressiveDCEPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -774,7 +727,6 @@ LLVMAddAggressiveDCEPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddCFGSimplificationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddCFGSimplificationPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -784,7 +736,6 @@ LLVMAddCFGSimplificationPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddDeadStoreEliminationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddDeadStoreEliminationPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -794,7 +745,6 @@ LLVMAddDeadStoreEliminationPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddGVNPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddGVNPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -804,7 +754,6 @@ LLVMAddGVNPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddIndVarSimplifyPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddIndVarSimplifyPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -814,7 +763,6 @@ LLVMAddIndVarSimplifyPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddInstructionCombiningPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddInstructionCombiningPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -824,7 +772,6 @@ LLVMAddInstructionCombiningPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddJumpThreadingPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddJumpThreadingPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -834,7 +781,6 @@ LLVMAddJumpThreadingPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddLICMPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddLICMPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -844,7 +790,6 @@ LLVMAddLICMPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddLoopDeletionPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddLoopDeletionPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -854,7 +799,6 @@ LLVMAddLoopDeletionPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddLoopRotatePass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddLoopRotatePass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -864,7 +808,6 @@ LLVMAddLoopRotatePass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddLoopUnrollPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddLoopUnrollPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -874,7 +817,6 @@ LLVMAddLoopUnrollPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddLoopUnswitchPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddLoopUnswitchPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -884,7 +826,6 @@ LLVMAddLoopUnswitchPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddMemCpyOptPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddMemCpyOptPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -894,7 +835,6 @@ LLVMAddMemCpyOptPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddPromoteMemoryToRegisterPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddPromoteMemoryToRegisterPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -904,7 +844,6 @@ LLVMAddPromoteMemoryToRegisterPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddReassociatePass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddReassociatePass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -914,7 +853,6 @@ LLVMAddReassociatePass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddSCCPPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddSCCPPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -924,7 +862,6 @@ LLVMAddSCCPPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddScalarReplAggregatesPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddScalarReplAggregatesPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -934,7 +871,6 @@ LLVMAddScalarReplAggregatesPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddScalarReplAggregatesPassWithThreshold_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddScalarReplAggregatesPassWithThreshold\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -947,7 +883,6 @@ LLVMAddScalarReplAggregatesPassWithThreshold((LLVMPassManagerRef)PM,(int)Thresho
 }
 
 static ERL_NIF_TERM LLVMAddSimplifyLibCallsPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddSimplifyLibCallsPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -957,7 +892,6 @@ LLVMAddSimplifyLibCallsPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddTailCallEliminationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddTailCallEliminationPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -967,7 +901,6 @@ LLVMAddTailCallEliminationPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddConstantPropagationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddConstantPropagationPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -977,7 +910,6 @@ LLVMAddConstantPropagationPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddDemoteMemoryToRegisterPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddDemoteMemoryToRegisterPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -987,7 +919,6 @@ LLVMAddDemoteMemoryToRegisterPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddVerifierPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddVerifierPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -998,14 +929,13 @@ LLVMAddVerifierPass((LLVMPassManagerRef)PM);
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,7,2},{17,38,34}}--
+// -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,10,2},{18,38,39}}--
 
 // --- Stop generating from LinkTimeOptimizer_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2011,7,2},{17,38,33}}--
+// -- Start generating from Initialization_8h.xml on {{2011,10,2},{18,38,38}}--
 
 static ERL_NIF_TERM LLVMInitializeTransformUtils_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeTransformUtils\r\n");
   LLVMPassRegistryRef R;
   llvm_ptr_deref(env, argv[0], (void **) &R);
 
@@ -1015,7 +945,6 @@ LLVMInitializeTransformUtils((LLVMPassRegistryRef)R);
 }
 
 static ERL_NIF_TERM LLVMInitializeScalarOpts_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeScalarOpts\r\n");
   LLVMPassRegistryRef R;
   llvm_ptr_deref(env, argv[0], (void **) &R);
 
@@ -1025,7 +954,6 @@ LLVMInitializeScalarOpts((LLVMPassRegistryRef)R);
 }
 
 static ERL_NIF_TERM LLVMInitializeInstCombine_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeInstCombine\r\n");
   LLVMPassRegistryRef R;
   llvm_ptr_deref(env, argv[0], (void **) &R);
 
@@ -1035,7 +963,6 @@ LLVMInitializeInstCombine((LLVMPassRegistryRef)R);
 }
 
 static ERL_NIF_TERM LLVMInitializeInstrumentation_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeInstrumentation\r\n");
   LLVMPassRegistryRef R;
   llvm_ptr_deref(env, argv[0], (void **) &R);
 
@@ -1045,7 +972,6 @@ LLVMInitializeInstrumentation((LLVMPassRegistryRef)R);
 }
 
 static ERL_NIF_TERM LLVMInitializeIPA_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeIPA\r\n");
   LLVMPassRegistryRef R;
   llvm_ptr_deref(env, argv[0], (void **) &R);
 
@@ -1055,7 +981,6 @@ LLVMInitializeIPA((LLVMPassRegistryRef)R);
 }
 
 static ERL_NIF_TERM LLVMInitializeCodeGen_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeCodeGen\r\n");
   LLVMPassRegistryRef R;
   llvm_ptr_deref(env, argv[0], (void **) &R);
 
@@ -1065,7 +990,6 @@ LLVMInitializeCodeGen((LLVMPassRegistryRef)R);
 }
 
 static ERL_NIF_TERM LLVMInitializeTarget_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeTarget\r\n");
   LLVMPassRegistryRef R;
   llvm_ptr_deref(env, argv[0], (void **) &R);
 
@@ -1076,10 +1000,9 @@ LLVMInitializeTarget((LLVMPassRegistryRef)R);
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2011,7,2},{17,38,31}}--
+// -- Start generating from IPO_8h.xml on {{2011,10,2},{18,38,37}}--
 
 static ERL_NIF_TERM LLVMAddArgumentPromotionPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddArgumentPromotionPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1089,7 +1012,6 @@ LLVMAddArgumentPromotionPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddConstantMergePass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddConstantMergePass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1099,7 +1021,6 @@ LLVMAddConstantMergePass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddDeadArgEliminationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddDeadArgEliminationPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1109,7 +1030,6 @@ LLVMAddDeadArgEliminationPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddDeadTypeEliminationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddDeadTypeEliminationPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1119,7 +1039,6 @@ LLVMAddDeadTypeEliminationPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddFunctionAttrsPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddFunctionAttrsPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1129,7 +1048,6 @@ LLVMAddFunctionAttrsPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddFunctionInliningPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddFunctionInliningPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1139,7 +1057,6 @@ LLVMAddFunctionInliningPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddGlobalDCEPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddGlobalDCEPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1149,7 +1066,6 @@ LLVMAddGlobalDCEPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddGlobalOptimizerPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddGlobalOptimizerPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1159,7 +1075,6 @@ LLVMAddGlobalOptimizerPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddIPConstantPropagationPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddIPConstantPropagationPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1169,7 +1084,6 @@ LLVMAddIPConstantPropagationPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddLowerSetJmpPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddLowerSetJmpPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1179,7 +1093,6 @@ LLVMAddLowerSetJmpPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddPruneEHPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddPruneEHPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1189,7 +1102,6 @@ LLVMAddPruneEHPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddIPSCCPPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddIPSCCPPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1199,7 +1111,6 @@ LLVMAddIPSCCPPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddInternalizePass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddInternalizePass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1212,7 +1123,6 @@ LLVMAddInternalizePass((LLVMPassManagerRef)PM,(unsigned)AllButMain);
 }
 
 static ERL_NIF_TERM LLVMAddRaiseAllocationsPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddRaiseAllocationsPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1222,7 +1132,6 @@ LLVMAddRaiseAllocationsPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddStripDeadPrototypesPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddStripDeadPrototypesPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1232,7 +1141,6 @@ LLVMAddStripDeadPrototypesPass((LLVMPassManagerRef)PM);
 }
 
 static ERL_NIF_TERM LLVMAddStripSymbolsPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddStripSymbolsPass\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -1243,29 +1151,26 @@ LLVMAddStripSymbolsPass((LLVMPassManagerRef)PM);
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2011,7,2},{17,38,30}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2011,10,2},{18,38,36}}--
 
 static ERL_NIF_TERM LLVMLinkInJIT_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMLinkInJIT\r\n");
 LLVMLinkInJIT();
 
   return enif_make_atom(env,"ok");
 }
 
 static ERL_NIF_TERM LLVMLinkInInterpreter_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMLinkInInterpreter\r\n");
 LLVMLinkInInterpreter();
 
   return enif_make_atom(env,"ok");
 }
 
 static ERL_NIF_TERM LLVMCreateGenericValueOfInt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateGenericValueOfInt\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
   unsigned long long N;
-  llvm_ptr_deref(env, argv[1], (void **) &N);
+  enif_get_uint64(env, argv[1], (ErlNifUInt64 *)&N);
 
   char *IsSigned_tmp = (char *) malloc(sizeof(char) * 255);
   enif_get_atom(env, argv[2], (char*)IsSigned_tmp, 255, ERL_NIF_LATIN1);
@@ -1277,7 +1182,6 @@ static ERL_NIF_TERM LLVMCreateGenericValueOfInt_nif(ErlNifEnv* env, int argc, co
 }
 
 static ERL_NIF_TERM LLVMCreateGenericValueOfPointer_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateGenericValueOfPointer\r\n");
   void * P;
   llvm_ptr_deref(env, argv[0], (void **) &P);
 
@@ -1287,7 +1191,6 @@ static ERL_NIF_TERM LLVMCreateGenericValueOfPointer_nif(ErlNifEnv* env, int argc
 }
 
 static ERL_NIF_TERM LLVMCreateGenericValueOfFloat_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateGenericValueOfFloat\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -1300,7 +1203,6 @@ static ERL_NIF_TERM LLVMCreateGenericValueOfFloat_nif(ErlNifEnv* env, int argc, 
 }
 
 static ERL_NIF_TERM LLVMGenericValueIntWidth_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGenericValueIntWidth\r\n");
   LLVMGenericValueRef GenValRef;
   llvm_ptr_deref(env, argv[0], (void **) &GenValRef);
 
@@ -1310,7 +1212,6 @@ static ERL_NIF_TERM LLVMGenericValueIntWidth_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMGenericValueToInt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGenericValueToInt\r\n");
   LLVMGenericValueRef GenVal;
   llvm_ptr_deref(env, argv[0], (void **) &GenVal);
 
@@ -1324,7 +1225,6 @@ static ERL_NIF_TERM LLVMGenericValueToInt_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMGenericValueToPointer_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGenericValueToPointer\r\n");
   LLVMGenericValueRef GenVal;
   llvm_ptr_deref(env, argv[0], (void **) &GenVal);
 
@@ -1334,7 +1234,6 @@ static ERL_NIF_TERM LLVMGenericValueToPointer_nif(ErlNifEnv* env, int argc, cons
 }
 
 static ERL_NIF_TERM LLVMGenericValueToFloat_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGenericValueToFloat\r\n");
   LLVMTypeRef TyRef;
   llvm_ptr_deref(env, argv[0], (void **) &TyRef);
 
@@ -1347,7 +1246,6 @@ static ERL_NIF_TERM LLVMGenericValueToFloat_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMDisposeGenericValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeGenericValue\r\n");
   LLVMGenericValueRef GenVal;
   llvm_ptr_deref(env, argv[0], (void **) &GenVal);
 
@@ -1357,7 +1255,6 @@ LLVMDisposeGenericValue((LLVMGenericValueRef)GenVal);
 }
 
 static ERL_NIF_TERM LLVMCreateExecutionEngineForModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateExecutionEngineForModule\r\n");
   LLVMExecutionEngineRef * OutEE = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleRef M;
@@ -1373,7 +1270,6 @@ static ERL_NIF_TERM LLVMCreateExecutionEngineForModule_nif(ErlNifEnv* env, int a
 }
 
 static ERL_NIF_TERM LLVMCreateInterpreterForModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateInterpreterForModule\r\n");
   LLVMExecutionEngineRef * OutInterp = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleRef M;
@@ -1389,7 +1285,6 @@ static ERL_NIF_TERM LLVMCreateInterpreterForModule_nif(ErlNifEnv* env, int argc,
 }
 
 static ERL_NIF_TERM LLVMCreateJITCompilerForModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateJITCompilerForModule\r\n");
   LLVMExecutionEngineRef * OutJIT = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleRef M;
@@ -1408,7 +1303,6 @@ static ERL_NIF_TERM LLVMCreateJITCompilerForModule_nif(ErlNifEnv* env, int argc,
 }
 
 static ERL_NIF_TERM LLVMCreateExecutionEngine_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateExecutionEngine\r\n");
   LLVMExecutionEngineRef * OutEE = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleProviderRef MP;
@@ -1424,7 +1318,6 @@ static ERL_NIF_TERM LLVMCreateExecutionEngine_nif(ErlNifEnv* env, int argc, cons
 }
 
 static ERL_NIF_TERM LLVMCreateInterpreter_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateInterpreter\r\n");
   LLVMExecutionEngineRef * OutInterp = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleProviderRef MP;
@@ -1440,7 +1333,6 @@ static ERL_NIF_TERM LLVMCreateInterpreter_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMCreateJITCompiler_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateJITCompiler\r\n");
   LLVMExecutionEngineRef * OutJIT = (LLVMExecutionEngineRef *)calloc(1,sizeof(LLVMExecutionEngineRef *));
 
   LLVMModuleProviderRef MP;
@@ -1459,7 +1351,6 @@ static ERL_NIF_TERM LLVMCreateJITCompiler_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMDisposeExecutionEngine_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeExecutionEngine\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1469,7 +1360,6 @@ LLVMDisposeExecutionEngine((LLVMExecutionEngineRef)EE);
 }
 
 static ERL_NIF_TERM LLVMRunStaticConstructors_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRunStaticConstructors\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1479,7 +1369,6 @@ LLVMRunStaticConstructors((LLVMExecutionEngineRef)EE);
 }
 
 static ERL_NIF_TERM LLVMRunStaticDestructors_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRunStaticDestructors\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1489,7 +1378,6 @@ LLVMRunStaticDestructors((LLVMExecutionEngineRef)EE);
 }
 
 static ERL_NIF_TERM LLVMRunFunctionAsMain_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRunFunctionAsMain\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1537,7 +1425,6 @@ static ERL_NIF_TERM LLVMRunFunctionAsMain_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMRunFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRunFunction\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1569,7 +1456,6 @@ static ERL_NIF_TERM LLVMRunFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMFreeMachineCodeForFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMFreeMachineCodeForFunction\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1582,7 +1468,6 @@ LLVMFreeMachineCodeForFunction((LLVMExecutionEngineRef)EE,(LLVMValueRef)F);
 }
 
 static ERL_NIF_TERM LLVMAddModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddModule\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1595,7 +1480,6 @@ LLVMAddModule((LLVMExecutionEngineRef)EE,(LLVMModuleRef)M);
 }
 
 static ERL_NIF_TERM LLVMAddModuleProvider_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddModuleProvider\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1608,7 +1492,6 @@ LLVMAddModuleProvider((LLVMExecutionEngineRef)EE,(LLVMModuleProviderRef)MP);
 }
 
 static ERL_NIF_TERM LLVMRemoveModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRemoveModule\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1627,7 +1510,6 @@ static ERL_NIF_TERM LLVMRemoveModule_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMRemoveModuleProvider_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRemoveModuleProvider\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1646,7 +1528,6 @@ static ERL_NIF_TERM LLVMRemoveModuleProvider_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMFindFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMFindFunction\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1663,7 +1544,6 @@ static ERL_NIF_TERM LLVMFindFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMRecompileAndRelinkFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRecompileAndRelinkFunction\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1676,7 +1556,6 @@ static ERL_NIF_TERM LLVMRecompileAndRelinkFunction_nif(ErlNifEnv* env, int argc,
 }
 
 static ERL_NIF_TERM LLVMGetExecutionEngineTargetData_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetExecutionEngineTargetData\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1686,7 +1565,6 @@ static ERL_NIF_TERM LLVMGetExecutionEngineTargetData_nif(ErlNifEnv* env, int arg
 }
 
 static ERL_NIF_TERM LLVMAddGlobalMapping_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddGlobalMapping\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1702,7 +1580,6 @@ LLVMAddGlobalMapping((LLVMExecutionEngineRef)EE,(LLVMValueRef)Global,(void *)Add
 }
 
 static ERL_NIF_TERM LLVMGetPointerToGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetPointerToGlobal\r\n");
   LLVMExecutionEngineRef EE;
   llvm_ptr_deref(env, argv[0], (void **) &EE);
 
@@ -1716,10 +1593,9 @@ static ERL_NIF_TERM LLVMGetPointerToGlobal_nif(ErlNifEnv* env, int argc, const E
 
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from EnhancedDisassembly_8h.xml on {{2011,7,2},{17,38,29}}--
+// -- Start generating from EnhancedDisassembly_8h.xml on {{2011,10,2},{18,38,34}}--
 
 static ERL_NIF_TERM EDGetDisassembler_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDGetDisassembler\r\n");
   EDDisassemblerRef * disassembler;
   llvm_ptr_deref(env, argv[0], (void **) &disassembler);
 
@@ -1735,7 +1611,6 @@ static ERL_NIF_TERM EDGetDisassembler_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM EDGetRegisterName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDGetRegisterName\r\n");
   char ** regName;
   llvm_ptr_deref(env, argv[0], (void **) &regName);
 
@@ -1751,7 +1626,6 @@ static ERL_NIF_TERM EDGetRegisterName_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM EDRegisterIsStackPointer_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDRegisterIsStackPointer\r\n");
   EDDisassemblerRef disassembler;
   llvm_ptr_deref(env, argv[0], (void **) &disassembler);
 
@@ -1764,7 +1638,6 @@ static ERL_NIF_TERM EDRegisterIsStackPointer_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM EDRegisterIsProgramCounter_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDRegisterIsProgramCounter\r\n");
   EDDisassemblerRef disassembler;
   llvm_ptr_deref(env, argv[0], (void **) &disassembler);
 
@@ -1777,7 +1650,6 @@ static ERL_NIF_TERM EDRegisterIsProgramCounter_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM EDCreateInsts_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDCreateInsts\r\n");
   EDInstRef * insts;
   llvm_ptr_deref(env, argv[0], (void **) &insts);
 
@@ -1802,7 +1674,6 @@ static ERL_NIF_TERM EDCreateInsts_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM EDReleaseInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDReleaseInst\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -1812,7 +1683,6 @@ EDReleaseInst((EDInstRef)inst);
 }
 
 static ERL_NIF_TERM EDInstByteSize_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDInstByteSize\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -1822,7 +1692,6 @@ static ERL_NIF_TERM EDInstByteSize_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM EDGetInstString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDGetInstString\r\n");
   char ** buf;
   llvm_ptr_deref(env, argv[0], (void **) &buf);
 
@@ -1835,7 +1704,6 @@ static ERL_NIF_TERM EDGetInstString_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM EDInstIsBranch_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDInstIsBranch\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -1845,7 +1713,6 @@ static ERL_NIF_TERM EDInstIsBranch_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM EDInstIsMove_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDInstIsMove\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -1855,7 +1722,6 @@ static ERL_NIF_TERM EDInstIsMove_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM EDBranchTargetID_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDBranchTargetID\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -1865,7 +1731,6 @@ static ERL_NIF_TERM EDBranchTargetID_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM EDMoveSourceID_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDMoveSourceID\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -1875,7 +1740,6 @@ static ERL_NIF_TERM EDMoveSourceID_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM EDMoveTargetID_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDMoveTargetID\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -1885,7 +1749,6 @@ static ERL_NIF_TERM EDMoveTargetID_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM EDNumTokens_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDNumTokens\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -1895,7 +1758,6 @@ static ERL_NIF_TERM EDNumTokens_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM EDGetToken_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDGetToken\r\n");
   EDTokenRef * token;
   llvm_ptr_deref(env, argv[0], (void **) &token);
 
@@ -1911,7 +1773,6 @@ static ERL_NIF_TERM EDGetToken_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM 
 }
 
 static ERL_NIF_TERM EDGetTokenString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDGetTokenString\r\n");
   char ** buf;
   llvm_ptr_deref(env, argv[0], (void **) &buf);
 
@@ -1924,7 +1785,6 @@ static ERL_NIF_TERM EDGetTokenString_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM EDOperandIndexForToken_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDOperandIndexForToken\r\n");
   EDTokenRef token;
   llvm_ptr_deref(env, argv[0], (void **) &token);
 
@@ -1934,7 +1794,6 @@ static ERL_NIF_TERM EDOperandIndexForToken_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM EDTokenIsWhitespace_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDTokenIsWhitespace\r\n");
   EDTokenRef token;
   llvm_ptr_deref(env, argv[0], (void **) &token);
 
@@ -1944,7 +1803,6 @@ static ERL_NIF_TERM EDTokenIsWhitespace_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM EDTokenIsPunctuation_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDTokenIsPunctuation\r\n");
   EDTokenRef token;
   llvm_ptr_deref(env, argv[0], (void **) &token);
 
@@ -1954,7 +1812,6 @@ static ERL_NIF_TERM EDTokenIsPunctuation_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM EDTokenIsOpcode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDTokenIsOpcode\r\n");
   EDTokenRef token;
   llvm_ptr_deref(env, argv[0], (void **) &token);
 
@@ -1964,7 +1821,6 @@ static ERL_NIF_TERM EDTokenIsOpcode_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM EDTokenIsLiteral_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDTokenIsLiteral\r\n");
   EDTokenRef token;
   llvm_ptr_deref(env, argv[0], (void **) &token);
 
@@ -1974,7 +1830,6 @@ static ERL_NIF_TERM EDTokenIsLiteral_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM EDTokenIsRegister_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDTokenIsRegister\r\n");
   EDTokenRef token;
   llvm_ptr_deref(env, argv[0], (void **) &token);
 
@@ -1984,7 +1839,6 @@ static ERL_NIF_TERM EDTokenIsRegister_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM EDTokenIsNegativeLiteral_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDTokenIsNegativeLiteral\r\n");
   EDTokenRef token;
   llvm_ptr_deref(env, argv[0], (void **) &token);
 
@@ -1994,7 +1848,6 @@ static ERL_NIF_TERM EDTokenIsNegativeLiteral_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM EDLiteralTokenAbsoluteValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDLiteralTokenAbsoluteValue\r\n");
   uint64_t * value;
   llvm_ptr_deref(env, argv[0], (void **) &value);
 
@@ -2007,7 +1860,6 @@ static ERL_NIF_TERM EDLiteralTokenAbsoluteValue_nif(ErlNifEnv* env, int argc, co
 }
 
 static ERL_NIF_TERM EDRegisterTokenValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDRegisterTokenValue\r\n");
   unsigned * registerID;
   llvm_ptr_deref(env, argv[0], (void **) &registerID);
 
@@ -2020,7 +1872,6 @@ static ERL_NIF_TERM EDRegisterTokenValue_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM EDNumOperands_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDNumOperands\r\n");
   EDInstRef inst;
   llvm_ptr_deref(env, argv[0], (void **) &inst);
 
@@ -2030,7 +1881,6 @@ static ERL_NIF_TERM EDNumOperands_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM EDGetOperand_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDGetOperand\r\n");
   EDOperandRef * operand;
   llvm_ptr_deref(env, argv[0], (void **) &operand);
 
@@ -2046,7 +1896,6 @@ static ERL_NIF_TERM EDGetOperand_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM EDOperandIsRegister_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDOperandIsRegister\r\n");
   EDOperandRef operand;
   llvm_ptr_deref(env, argv[0], (void **) &operand);
 
@@ -2056,7 +1905,6 @@ static ERL_NIF_TERM EDOperandIsRegister_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM EDOperandIsImmediate_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDOperandIsImmediate\r\n");
   EDOperandRef operand;
   llvm_ptr_deref(env, argv[0], (void **) &operand);
 
@@ -2066,7 +1914,6 @@ static ERL_NIF_TERM EDOperandIsImmediate_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM EDOperandIsMemory_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDOperandIsMemory\r\n");
   EDOperandRef operand;
   llvm_ptr_deref(env, argv[0], (void **) &operand);
 
@@ -2076,7 +1923,6 @@ static ERL_NIF_TERM EDOperandIsMemory_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM EDRegisterOperandValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDRegisterOperandValue\r\n");
   unsigned * value;
   llvm_ptr_deref(env, argv[0], (void **) &value);
 
@@ -2089,7 +1935,6 @@ static ERL_NIF_TERM EDRegisterOperandValue_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM EDImmediateOperandValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDImmediateOperandValue\r\n");
   uint64_t * value;
   llvm_ptr_deref(env, argv[0], (void **) &value);
 
@@ -2102,7 +1947,6 @@ static ERL_NIF_TERM EDImmediateOperandValue_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM EDEvaluateOperand_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling EDEvaluateOperand\r\n");
   uint64_t * result;
   llvm_ptr_deref(env, argv[0], (void **) &result);
 
@@ -2122,10 +1966,9 @@ static ERL_NIF_TERM EDEvaluateOperand_nif(ErlNifEnv* env, int argc, const ERL_NI
 
 // --- Stop generating from EnhancedDisassembly_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2011,7,2},{17,38,27}}--
+// -- Start generating from Core_8h.xml on {{2011,10,2},{18,38,33}}--
 
 static ERL_NIF_TERM LLVMDisposeMessage_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeMessage\r\n");
   char *Message = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)Message, 255, ERL_NIF_LATIN1);
 
@@ -2135,21 +1978,18 @@ LLVMDisposeMessage((char *)Message);
 }
 
 static ERL_NIF_TERM LLVMContextCreate_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMContextCreate\r\n");
   LLVMContextRef retVal = LLVMContextCreate();
 
   return   llvm_ptr_create(env, RTLLVMContextRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMGetGlobalContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetGlobalContext\r\n");
   LLVMContextRef retVal = LLVMGetGlobalContext();
 
   return   llvm_ptr_create(env, RTLLVMContextRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMContextDispose_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMContextDispose\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2159,7 +1999,6 @@ LLVMContextDispose((LLVMContextRef)C);
 }
 
 static ERL_NIF_TERM LLVMGetMDKindIDInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetMDKindIDInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2175,7 +2014,6 @@ static ERL_NIF_TERM LLVMGetMDKindIDInContext_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMGetMDKindID_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetMDKindID\r\n");
   char *Name = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)Name, 255, ERL_NIF_LATIN1);
 
@@ -2188,7 +2026,6 @@ static ERL_NIF_TERM LLVMGetMDKindID_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMModuleCreateWithName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMModuleCreateWithName\r\n");
   char *ModuleID = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)ModuleID, 255, ERL_NIF_LATIN1);
 
@@ -2198,7 +2035,6 @@ static ERL_NIF_TERM LLVMModuleCreateWithName_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMModuleCreateWithNameInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMModuleCreateWithNameInContext\r\n");
   char *ModuleID = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)ModuleID, 255, ERL_NIF_LATIN1);
 
@@ -2211,7 +2047,6 @@ static ERL_NIF_TERM LLVMModuleCreateWithNameInContext_nif(ErlNifEnv* env, int ar
 }
 
 static ERL_NIF_TERM LLVMDisposeModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeModule\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2221,7 +2056,6 @@ LLVMDisposeModule((LLVMModuleRef)M);
 }
 
 static ERL_NIF_TERM LLVMGetDataLayout_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetDataLayout\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2231,7 +2065,6 @@ static ERL_NIF_TERM LLVMGetDataLayout_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMSetDataLayout_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetDataLayout\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2244,7 +2077,6 @@ LLVMSetDataLayout((LLVMModuleRef)M,(const char *)Triple);
 }
 
 static ERL_NIF_TERM LLVMGetTarget_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetTarget\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2254,7 +2086,6 @@ static ERL_NIF_TERM LLVMGetTarget_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMSetTarget_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetTarget\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2267,7 +2098,6 @@ LLVMSetTarget((LLVMModuleRef)M,(const char *)Triple);
 }
 
 static ERL_NIF_TERM LLVMAddTypeName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddTypeName\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2283,7 +2113,6 @@ static ERL_NIF_TERM LLVMAddTypeName_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMDeleteTypeName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDeleteTypeName\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2296,7 +2125,6 @@ LLVMDeleteTypeName((LLVMModuleRef)M,(const char *)Name);
 }
 
 static ERL_NIF_TERM LLVMGetTypeByName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetTypeByName\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2309,7 +2137,6 @@ static ERL_NIF_TERM LLVMGetTypeByName_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMGetTypeName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetTypeName\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2322,7 +2149,6 @@ static ERL_NIF_TERM LLVMGetTypeName_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMDumpModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDumpModule\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2332,7 +2158,6 @@ LLVMDumpModule((LLVMModuleRef)M);
 }
 
 static ERL_NIF_TERM LLVMSetModuleInlineAsm_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetModuleInlineAsm\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2345,7 +2170,6 @@ LLVMSetModuleInlineAsm((LLVMModuleRef)M,(const char *)Asm);
 }
 
 static ERL_NIF_TERM LLVMGetModuleContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetModuleContext\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -2355,7 +2179,6 @@ static ERL_NIF_TERM LLVMGetModuleContext_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMGetTypeKind_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetTypeKind\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -2365,7 +2188,6 @@ static ERL_NIF_TERM LLVMGetTypeKind_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMGetTypeContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetTypeContext\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -2375,7 +2197,6 @@ static ERL_NIF_TERM LLVMGetTypeContext_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMInt1TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt1TypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2385,7 +2206,6 @@ static ERL_NIF_TERM LLVMInt1TypeInContext_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMInt8TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt8TypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2395,7 +2215,6 @@ static ERL_NIF_TERM LLVMInt8TypeInContext_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMInt16TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt16TypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2405,7 +2224,6 @@ static ERL_NIF_TERM LLVMInt16TypeInContext_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMInt32TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt32TypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2415,7 +2233,6 @@ static ERL_NIF_TERM LLVMInt32TypeInContext_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMInt64TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt64TypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2425,7 +2242,6 @@ static ERL_NIF_TERM LLVMInt64TypeInContext_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMIntTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIntTypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2438,42 +2254,36 @@ static ERL_NIF_TERM LLVMIntTypeInContext_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMInt1Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt1Type\r\n");
   LLVMTypeRef retVal = LLVMInt1Type();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMInt8Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt8Type\r\n");
   LLVMTypeRef retVal = LLVMInt8Type();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMInt16Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt16Type\r\n");
   LLVMTypeRef retVal = LLVMInt16Type();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMInt32Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt32Type\r\n");
   LLVMTypeRef retVal = LLVMInt32Type();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMInt64Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInt64Type\r\n");
   LLVMTypeRef retVal = LLVMInt64Type();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMIntType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIntType\r\n");
   unsigned NumBits;
   enif_get_uint(env, argv[0], (unsigned*)&NumBits);
 
@@ -2483,7 +2293,6 @@ static ERL_NIF_TERM LLVMIntType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM LLVMGetIntTypeWidth_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetIntTypeWidth\r\n");
   LLVMTypeRef IntegerTy;
   llvm_ptr_deref(env, argv[0], (void **) &IntegerTy);
 
@@ -2493,7 +2302,6 @@ static ERL_NIF_TERM LLVMGetIntTypeWidth_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMFloatTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMFloatTypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2503,7 +2311,6 @@ static ERL_NIF_TERM LLVMFloatTypeInContext_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMDoubleTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDoubleTypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2513,7 +2320,6 @@ static ERL_NIF_TERM LLVMDoubleTypeInContext_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMX86FP80TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMX86FP80TypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2523,7 +2329,6 @@ static ERL_NIF_TERM LLVMX86FP80TypeInContext_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMFP128TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMFP128TypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2533,7 +2338,6 @@ static ERL_NIF_TERM LLVMFP128TypeInContext_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMPPCFP128TypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPPCFP128TypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2543,42 +2347,36 @@ static ERL_NIF_TERM LLVMPPCFP128TypeInContext_nif(ErlNifEnv* env, int argc, cons
 }
 
 static ERL_NIF_TERM LLVMFloatType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMFloatType\r\n");
   LLVMTypeRef retVal = LLVMFloatType();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMDoubleType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDoubleType\r\n");
   LLVMTypeRef retVal = LLVMDoubleType();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMX86FP80Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMX86FP80Type\r\n");
   LLVMTypeRef retVal = LLVMX86FP80Type();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMFP128Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMFP128Type\r\n");
   LLVMTypeRef retVal = LLVMFP128Type();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMPPCFP128Type_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPPCFP128Type\r\n");
   LLVMTypeRef retVal = LLVMPPCFP128Type();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMFunctionType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMFunctionType\r\n");
   LLVMTypeRef ReturnType;
   llvm_ptr_deref(env, argv[0], (void **) &ReturnType);
 
@@ -2611,7 +2409,6 @@ static ERL_NIF_TERM LLVMFunctionType_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMIsFunctionVarArg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsFunctionVarArg\r\n");
   LLVMTypeRef FunctionTy;
   llvm_ptr_deref(env, argv[0], (void **) &FunctionTy);
 
@@ -2621,7 +2418,6 @@ static ERL_NIF_TERM LLVMIsFunctionVarArg_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMGetReturnType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetReturnType\r\n");
   LLVMTypeRef FunctionTy;
   llvm_ptr_deref(env, argv[0], (void **) &FunctionTy);
 
@@ -2631,7 +2427,6 @@ static ERL_NIF_TERM LLVMGetReturnType_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMCountParamTypes_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCountParamTypes\r\n");
   LLVMTypeRef FunctionTy;
   llvm_ptr_deref(env, argv[0], (void **) &FunctionTy);
 
@@ -2641,7 +2436,6 @@ static ERL_NIF_TERM LLVMCountParamTypes_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMGetParamTypes_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetParamTypes\r\n");
   LLVMTypeRef FunctionTy;
   llvm_ptr_deref(env, argv[0], (void **) &FunctionTy);
 
@@ -2654,7 +2448,6 @@ LLVMGetParamTypes((LLVMTypeRef)FunctionTy,(LLVMTypeRef *)Dest);
 }
 
 static ERL_NIF_TERM LLVMStructTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMStructTypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2687,7 +2480,6 @@ static ERL_NIF_TERM LLVMStructTypeInContext_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMStructType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMStructType\r\n");
   int ElementTypessize = 0;
   ERL_NIF_TERM *ElementTypesarray;
   enif_get_tuple(env, argv[0], &ElementTypessize, (const ERL_NIF_TERM **)&ElementTypesarray);
@@ -2717,7 +2509,6 @@ static ERL_NIF_TERM LLVMStructType_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMCountStructElementTypes_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCountStructElementTypes\r\n");
   LLVMTypeRef StructTy;
   llvm_ptr_deref(env, argv[0], (void **) &StructTy);
 
@@ -2727,7 +2518,6 @@ static ERL_NIF_TERM LLVMCountStructElementTypes_nif(ErlNifEnv* env, int argc, co
 }
 
 static ERL_NIF_TERM LLVMGetStructElementTypes_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetStructElementTypes\r\n");
   LLVMTypeRef StructTy;
   llvm_ptr_deref(env, argv[0], (void **) &StructTy);
 
@@ -2740,7 +2530,6 @@ LLVMGetStructElementTypes((LLVMTypeRef)StructTy,(LLVMTypeRef *)Dest);
 }
 
 static ERL_NIF_TERM LLVMIsPackedStruct_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsPackedStruct\r\n");
   LLVMTypeRef StructTy;
   llvm_ptr_deref(env, argv[0], (void **) &StructTy);
 
@@ -2750,7 +2539,6 @@ static ERL_NIF_TERM LLVMIsPackedStruct_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMArrayType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMArrayType\r\n");
   LLVMTypeRef ElementType;
   llvm_ptr_deref(env, argv[0], (void **) &ElementType);
 
@@ -2763,7 +2551,6 @@ static ERL_NIF_TERM LLVMArrayType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMPointerType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPointerType\r\n");
   LLVMTypeRef ElementType;
   llvm_ptr_deref(env, argv[0], (void **) &ElementType);
 
@@ -2776,7 +2563,6 @@ static ERL_NIF_TERM LLVMPointerType_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMVectorType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMVectorType\r\n");
   LLVMTypeRef ElementType;
   llvm_ptr_deref(env, argv[0], (void **) &ElementType);
 
@@ -2789,7 +2575,6 @@ static ERL_NIF_TERM LLVMVectorType_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMGetElementType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetElementType\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -2799,7 +2584,6 @@ static ERL_NIF_TERM LLVMGetElementType_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMGetArrayLength_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetArrayLength\r\n");
   LLVMTypeRef ArrayTy;
   llvm_ptr_deref(env, argv[0], (void **) &ArrayTy);
 
@@ -2809,7 +2593,6 @@ static ERL_NIF_TERM LLVMGetArrayLength_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMGetPointerAddressSpace_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetPointerAddressSpace\r\n");
   LLVMTypeRef PointerTy;
   llvm_ptr_deref(env, argv[0], (void **) &PointerTy);
 
@@ -2819,7 +2602,6 @@ static ERL_NIF_TERM LLVMGetPointerAddressSpace_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM LLVMGetVectorSize_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetVectorSize\r\n");
   LLVMTypeRef VectorTy;
   llvm_ptr_deref(env, argv[0], (void **) &VectorTy);
 
@@ -2829,7 +2611,6 @@ static ERL_NIF_TERM LLVMGetVectorSize_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMVoidTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMVoidTypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2839,7 +2620,6 @@ static ERL_NIF_TERM LLVMVoidTypeInContext_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMLabelTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMLabelTypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2849,7 +2629,6 @@ static ERL_NIF_TERM LLVMLabelTypeInContext_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMOpaqueTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMOpaqueTypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2859,7 +2638,6 @@ static ERL_NIF_TERM LLVMOpaqueTypeInContext_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMX86MMXTypeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMX86MMXTypeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -2869,35 +2647,30 @@ static ERL_NIF_TERM LLVMX86MMXTypeInContext_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMVoidType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMVoidType\r\n");
   LLVMTypeRef retVal = LLVMVoidType();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMLabelType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMLabelType\r\n");
   LLVMTypeRef retVal = LLVMLabelType();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMOpaqueType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMOpaqueType\r\n");
   LLVMTypeRef retVal = LLVMOpaqueType();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMX86MMXType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMX86MMXType\r\n");
   LLVMTypeRef retVal = LLVMX86MMXType();
 
   return   llvm_ptr_create(env, RTLLVMTypeRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMCreateTypeHandle_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateTypeHandle\r\n");
   LLVMTypeRef PotentiallyAbstractTy;
   llvm_ptr_deref(env, argv[0], (void **) &PotentiallyAbstractTy);
 
@@ -2907,7 +2680,6 @@ static ERL_NIF_TERM LLVMCreateTypeHandle_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMRefineType_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRefineType\r\n");
   LLVMTypeRef AbstractTy;
   llvm_ptr_deref(env, argv[0], (void **) &AbstractTy);
 
@@ -2920,7 +2692,6 @@ LLVMRefineType((LLVMTypeRef)AbstractTy,(LLVMTypeRef)ConcreteTy);
 }
 
 static ERL_NIF_TERM LLVMResolveTypeHandle_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMResolveTypeHandle\r\n");
   LLVMTypeHandleRef TypeHandle;
   llvm_ptr_deref(env, argv[0], (void **) &TypeHandle);
 
@@ -2930,7 +2701,6 @@ static ERL_NIF_TERM LLVMResolveTypeHandle_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMDisposeTypeHandle_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeTypeHandle\r\n");
   LLVMTypeHandleRef TypeHandle;
   llvm_ptr_deref(env, argv[0], (void **) &TypeHandle);
 
@@ -2940,7 +2710,6 @@ LLVMDisposeTypeHandle((LLVMTypeHandleRef)TypeHandle);
 }
 
 static ERL_NIF_TERM LLVMTypeOf_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMTypeOf\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -2950,7 +2719,6 @@ static ERL_NIF_TERM LLVMTypeOf_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM 
 }
 
 static ERL_NIF_TERM LLVMGetValueName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetValueName\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -2960,7 +2728,6 @@ static ERL_NIF_TERM LLVMGetValueName_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMSetValueName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetValueName\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -2973,7 +2740,6 @@ LLVMSetValueName((LLVMValueRef)Val,(const char *)Name);
 }
 
 static ERL_NIF_TERM LLVMDumpValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDumpValue\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -2983,7 +2749,6 @@ LLVMDumpValue((LLVMValueRef)Val);
 }
 
 static ERL_NIF_TERM LLVMReplaceAllUsesWith_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMReplaceAllUsesWith\r\n");
   LLVMValueRef OldVal;
   llvm_ptr_deref(env, argv[0], (void **) &OldVal);
 
@@ -2996,7 +2761,6 @@ LLVMReplaceAllUsesWith((LLVMValueRef)OldVal,(LLVMValueRef)NewVal);
 }
 
 static ERL_NIF_TERM LLVMHasMetadata_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMHasMetadata\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3006,7 +2770,6 @@ static ERL_NIF_TERM LLVMHasMetadata_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMGetMetadata_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetMetadata\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3019,7 +2782,6 @@ static ERL_NIF_TERM LLVMGetMetadata_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMSetMetadata_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetMetadata\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3035,7 +2797,6 @@ LLVMSetMetadata((LLVMValueRef)Val,(unsigned)KindID,(LLVMValueRef)Node);
 }
 
 static ERL_NIF_TERM LLVMIsAArgument_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAArgument\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3045,7 +2806,6 @@ static ERL_NIF_TERM LLVMIsAArgument_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsABasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsABasicBlock\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3055,7 +2815,6 @@ static ERL_NIF_TERM LLVMIsABasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAInlineAsm_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAInlineAsm\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3065,7 +2824,6 @@ static ERL_NIF_TERM LLVMIsAInlineAsm_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMIsAUser_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAUser\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3075,7 +2833,6 @@ static ERL_NIF_TERM LLVMIsAUser_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM LLVMIsAConstant_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstant\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3085,7 +2842,6 @@ static ERL_NIF_TERM LLVMIsAConstant_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsAConstantAggregateZero_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstantAggregateZero\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3095,7 +2851,6 @@ static ERL_NIF_TERM LLVMIsAConstantAggregateZero_nif(ErlNifEnv* env, int argc, c
 }
 
 static ERL_NIF_TERM LLVMIsAConstantArray_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstantArray\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3105,7 +2860,6 @@ static ERL_NIF_TERM LLVMIsAConstantArray_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMIsAConstantExpr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstantExpr\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3115,7 +2869,6 @@ static ERL_NIF_TERM LLVMIsAConstantExpr_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMIsAConstantFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstantFP\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3125,7 +2878,6 @@ static ERL_NIF_TERM LLVMIsAConstantFP_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAConstantInt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstantInt\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3135,7 +2887,6 @@ static ERL_NIF_TERM LLVMIsAConstantInt_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMIsAConstantPointerNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstantPointerNull\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3145,7 +2896,6 @@ static ERL_NIF_TERM LLVMIsAConstantPointerNull_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM LLVMIsAConstantStruct_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstantStruct\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3155,7 +2905,6 @@ static ERL_NIF_TERM LLVMIsAConstantStruct_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMIsAConstantVector_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAConstantVector\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3165,7 +2914,6 @@ static ERL_NIF_TERM LLVMIsAConstantVector_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMIsAGlobalValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAGlobalValue\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3175,7 +2923,6 @@ static ERL_NIF_TERM LLVMIsAGlobalValue_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMIsAFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAFunction\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3185,7 +2932,6 @@ static ERL_NIF_TERM LLVMIsAFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsAGlobalAlias_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAGlobalAlias\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3195,7 +2941,6 @@ static ERL_NIF_TERM LLVMIsAGlobalAlias_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMIsAGlobalVariable_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAGlobalVariable\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3205,7 +2950,6 @@ static ERL_NIF_TERM LLVMIsAGlobalVariable_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMIsAUndefValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAUndefValue\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3215,7 +2959,6 @@ static ERL_NIF_TERM LLVMIsAUndefValue_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAInstruction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAInstruction\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3225,7 +2968,6 @@ static ERL_NIF_TERM LLVMIsAInstruction_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMIsABinaryOperator_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsABinaryOperator\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3235,7 +2977,6 @@ static ERL_NIF_TERM LLVMIsABinaryOperator_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMIsACallInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsACallInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3245,7 +2986,6 @@ static ERL_NIF_TERM LLVMIsACallInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsAIntrinsicInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAIntrinsicInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3255,7 +2995,6 @@ static ERL_NIF_TERM LLVMIsAIntrinsicInst_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMIsADbgInfoIntrinsic_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsADbgInfoIntrinsic\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3265,7 +3004,6 @@ static ERL_NIF_TERM LLVMIsADbgInfoIntrinsic_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMIsADbgDeclareInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsADbgDeclareInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3275,7 +3013,6 @@ static ERL_NIF_TERM LLVMIsADbgDeclareInst_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMIsAEHSelectorInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAEHSelectorInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3285,7 +3022,6 @@ static ERL_NIF_TERM LLVMIsAEHSelectorInst_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMIsAMemIntrinsic_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAMemIntrinsic\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3295,7 +3031,6 @@ static ERL_NIF_TERM LLVMIsAMemIntrinsic_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMIsAMemCpyInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAMemCpyInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3305,7 +3040,6 @@ static ERL_NIF_TERM LLVMIsAMemCpyInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAMemMoveInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAMemMoveInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3315,7 +3049,6 @@ static ERL_NIF_TERM LLVMIsAMemMoveInst_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMIsAMemSetInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAMemSetInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3325,7 +3058,6 @@ static ERL_NIF_TERM LLVMIsAMemSetInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsACmpInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsACmpInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3335,7 +3067,6 @@ static ERL_NIF_TERM LLVMIsACmpInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMIsAFCmpInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAFCmpInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3345,7 +3076,6 @@ static ERL_NIF_TERM LLVMIsAFCmpInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsAICmpInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAICmpInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3355,7 +3085,6 @@ static ERL_NIF_TERM LLVMIsAICmpInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsAExtractElementInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAExtractElementInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3365,7 +3094,6 @@ static ERL_NIF_TERM LLVMIsAExtractElementInst_nif(ErlNifEnv* env, int argc, cons
 }
 
 static ERL_NIF_TERM LLVMIsAGetElementPtrInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAGetElementPtrInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3375,7 +3103,6 @@ static ERL_NIF_TERM LLVMIsAGetElementPtrInst_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMIsAInsertElementInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAInsertElementInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3385,7 +3112,6 @@ static ERL_NIF_TERM LLVMIsAInsertElementInst_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMIsAInsertValueInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAInsertValueInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3395,7 +3121,6 @@ static ERL_NIF_TERM LLVMIsAInsertValueInst_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMIsAPHINode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAPHINode\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3405,7 +3130,6 @@ static ERL_NIF_TERM LLVMIsAPHINode_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMIsASelectInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsASelectInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3415,7 +3139,6 @@ static ERL_NIF_TERM LLVMIsASelectInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAShuffleVectorInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAShuffleVectorInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3425,7 +3148,6 @@ static ERL_NIF_TERM LLVMIsAShuffleVectorInst_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMIsAStoreInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAStoreInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3435,7 +3157,6 @@ static ERL_NIF_TERM LLVMIsAStoreInst_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMIsATerminatorInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsATerminatorInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3445,7 +3166,6 @@ static ERL_NIF_TERM LLVMIsATerminatorInst_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMIsABranchInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsABranchInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3455,7 +3175,6 @@ static ERL_NIF_TERM LLVMIsABranchInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAInvokeInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAInvokeInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3465,7 +3184,6 @@ static ERL_NIF_TERM LLVMIsAInvokeInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAReturnInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAReturnInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3475,7 +3193,6 @@ static ERL_NIF_TERM LLVMIsAReturnInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsASwitchInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsASwitchInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3485,7 +3202,6 @@ static ERL_NIF_TERM LLVMIsASwitchInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAUnreachableInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAUnreachableInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3495,7 +3211,6 @@ static ERL_NIF_TERM LLVMIsAUnreachableInst_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMIsAUnwindInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAUnwindInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3505,7 +3220,6 @@ static ERL_NIF_TERM LLVMIsAUnwindInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAUnaryInstruction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAUnaryInstruction\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3515,7 +3229,6 @@ static ERL_NIF_TERM LLVMIsAUnaryInstruction_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMIsAAllocaInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAAllocaInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3525,7 +3238,6 @@ static ERL_NIF_TERM LLVMIsAAllocaInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsACastInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsACastInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3535,7 +3247,6 @@ static ERL_NIF_TERM LLVMIsACastInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsABitCastInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsABitCastInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3545,7 +3256,6 @@ static ERL_NIF_TERM LLVMIsABitCastInst_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMIsAFPExtInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAFPExtInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3555,7 +3265,6 @@ static ERL_NIF_TERM LLVMIsAFPExtInst_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMIsAFPToSIInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAFPToSIInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3565,7 +3274,6 @@ static ERL_NIF_TERM LLVMIsAFPToSIInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAFPToUIInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAFPToUIInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3575,7 +3283,6 @@ static ERL_NIF_TERM LLVMIsAFPToUIInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAFPTruncInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAFPTruncInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3585,7 +3292,6 @@ static ERL_NIF_TERM LLVMIsAFPTruncInst_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMIsAIntToPtrInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAIntToPtrInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3595,7 +3301,6 @@ static ERL_NIF_TERM LLVMIsAIntToPtrInst_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMIsAPtrToIntInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAPtrToIntInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3605,7 +3310,6 @@ static ERL_NIF_TERM LLVMIsAPtrToIntInst_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMIsASExtInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsASExtInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3615,7 +3319,6 @@ static ERL_NIF_TERM LLVMIsASExtInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsASIToFPInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsASIToFPInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3625,7 +3328,6 @@ static ERL_NIF_TERM LLVMIsASIToFPInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsATruncInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsATruncInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3635,7 +3337,6 @@ static ERL_NIF_TERM LLVMIsATruncInst_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMIsAUIToFPInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAUIToFPInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3645,7 +3346,6 @@ static ERL_NIF_TERM LLVMIsAUIToFPInst_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMIsAZExtInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAZExtInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3655,7 +3355,6 @@ static ERL_NIF_TERM LLVMIsAZExtInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsAExtractValueInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAExtractValueInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3665,7 +3364,6 @@ static ERL_NIF_TERM LLVMIsAExtractValueInst_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMIsALoadInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsALoadInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3675,7 +3373,6 @@ static ERL_NIF_TERM LLVMIsALoadInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMIsAVAArgInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsAVAArgInst\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3685,7 +3382,6 @@ static ERL_NIF_TERM LLVMIsAVAArgInst_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMGetFirstUse_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetFirstUse\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3695,7 +3391,6 @@ static ERL_NIF_TERM LLVMGetFirstUse_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMGetNextUse_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNextUse\r\n");
   LLVMUseRef U;
   llvm_ptr_deref(env, argv[0], (void **) &U);
 
@@ -3705,7 +3400,6 @@ static ERL_NIF_TERM LLVMGetNextUse_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMGetUser_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetUser\r\n");
   LLVMUseRef U;
   llvm_ptr_deref(env, argv[0], (void **) &U);
 
@@ -3715,7 +3409,6 @@ static ERL_NIF_TERM LLVMGetUser_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM LLVMGetUsedValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetUsedValue\r\n");
   LLVMUseRef U;
   llvm_ptr_deref(env, argv[0], (void **) &U);
 
@@ -3725,7 +3418,6 @@ static ERL_NIF_TERM LLVMGetUsedValue_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMGetOperand_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetOperand\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3738,7 +3430,6 @@ static ERL_NIF_TERM LLVMGetOperand_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMSetOperand_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetOperand\r\n");
   LLVMValueRef User;
   llvm_ptr_deref(env, argv[0], (void **) &User);
 
@@ -3754,7 +3445,6 @@ LLVMSetOperand((LLVMValueRef)User,(unsigned)Index,(LLVMValueRef)Val);
 }
 
 static ERL_NIF_TERM LLVMGetNumOperands_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNumOperands\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3764,7 +3454,6 @@ static ERL_NIF_TERM LLVMGetNumOperands_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMConstNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNull\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -3774,7 +3463,6 @@ static ERL_NIF_TERM LLVMConstNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstAllOnes_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstAllOnes\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -3784,7 +3472,6 @@ static ERL_NIF_TERM LLVMConstAllOnes_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMGetUndef_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetUndef\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -3794,7 +3481,6 @@ static ERL_NIF_TERM LLVMGetUndef_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMIsConstant_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsConstant\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3804,7 +3490,6 @@ static ERL_NIF_TERM LLVMIsConstant_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMIsNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsNull\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3814,7 +3499,6 @@ static ERL_NIF_TERM LLVMIsNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM 
 }
 
 static ERL_NIF_TERM LLVMIsUndef_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsUndef\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -3824,7 +3508,6 @@ static ERL_NIF_TERM LLVMIsUndef_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM LLVMConstPointerNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstPointerNull\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -3834,7 +3517,6 @@ static ERL_NIF_TERM LLVMConstPointerNull_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMMDStringInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMMDStringInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -3850,7 +3532,6 @@ static ERL_NIF_TERM LLVMMDStringInContext_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMMDString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMMDString\r\n");
   char *Str = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)Str, 255, ERL_NIF_LATIN1);
 
@@ -3863,7 +3544,6 @@ static ERL_NIF_TERM LLVMMDString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMMDNodeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMMDNodeInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -3879,7 +3559,6 @@ static ERL_NIF_TERM LLVMMDNodeInContext_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMMDNode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMMDNode\r\n");
   int Valssize = 0;
   ERL_NIF_TERM *Valsarray;
   enif_get_tuple(env, argv[0], &Valssize, (const ERL_NIF_TERM **)&Valsarray);
@@ -3905,12 +3584,11 @@ static ERL_NIF_TERM LLVMMDNode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM 
 }
 
 static ERL_NIF_TERM LLVMConstInt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstInt\r\n");
   LLVMTypeRef IntTy;
   llvm_ptr_deref(env, argv[0], (void **) &IntTy);
 
   unsigned long long N;
-  llvm_ptr_deref(env, argv[1], (void **) &N);
+  enif_get_uint64(env, argv[1], (ErlNifUInt64 *)&N);
 
   char *SignExtend_tmp = (char *) malloc(sizeof(char) * 255);
   enif_get_atom(env, argv[2], (char*)SignExtend_tmp, 255, ERL_NIF_LATIN1);
@@ -3922,7 +3600,6 @@ static ERL_NIF_TERM LLVMConstInt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstIntOfArbitraryPrecision_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstIntOfArbitraryPrecision\r\n");
   LLVMTypeRef IntTy;
   llvm_ptr_deref(env, argv[0], (void **) &IntTy);
 
@@ -3951,7 +3628,6 @@ static ERL_NIF_TERM LLVMConstIntOfArbitraryPrecision_nif(ErlNifEnv* env, int arg
 }
 
 static ERL_NIF_TERM LLVMConstIntOfString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstIntOfString\r\n");
   LLVMTypeRef IntTy;
   llvm_ptr_deref(env, argv[0], (void **) &IntTy);
 
@@ -3967,7 +3643,6 @@ static ERL_NIF_TERM LLVMConstIntOfString_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMConstIntOfStringAndSize_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstIntOfStringAndSize\r\n");
   LLVMTypeRef IntTy;
   llvm_ptr_deref(env, argv[0], (void **) &IntTy);
 
@@ -3986,7 +3661,6 @@ static ERL_NIF_TERM LLVMConstIntOfStringAndSize_nif(ErlNifEnv* env, int argc, co
 }
 
 static ERL_NIF_TERM LLVMConstReal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstReal\r\n");
   LLVMTypeRef RealTy;
   llvm_ptr_deref(env, argv[0], (void **) &RealTy);
 
@@ -3999,7 +3673,6 @@ static ERL_NIF_TERM LLVMConstReal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstRealOfString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstRealOfString\r\n");
   LLVMTypeRef RealTy;
   llvm_ptr_deref(env, argv[0], (void **) &RealTy);
 
@@ -4012,7 +3685,6 @@ static ERL_NIF_TERM LLVMConstRealOfString_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMConstRealOfStringAndSize_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstRealOfStringAndSize\r\n");
   LLVMTypeRef RealTy;
   llvm_ptr_deref(env, argv[0], (void **) &RealTy);
 
@@ -4028,7 +3700,6 @@ static ERL_NIF_TERM LLVMConstRealOfStringAndSize_nif(ErlNifEnv* env, int argc, c
 }
 
 static ERL_NIF_TERM LLVMConstIntGetZExtValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstIntGetZExtValue\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4038,7 +3709,6 @@ static ERL_NIF_TERM LLVMConstIntGetZExtValue_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMConstIntGetSExtValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstIntGetSExtValue\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4048,7 +3718,6 @@ static ERL_NIF_TERM LLVMConstIntGetSExtValue_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMConstStringInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstStringInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -4068,7 +3737,6 @@ static ERL_NIF_TERM LLVMConstStringInContext_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMConstStructInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstStructInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -4101,7 +3769,6 @@ static ERL_NIF_TERM LLVMConstStructInContext_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMConstString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstString\r\n");
   char *Str = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)Str, 255, ERL_NIF_LATIN1);
 
@@ -4118,7 +3785,6 @@ static ERL_NIF_TERM LLVMConstString_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstArray_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstArray\r\n");
   LLVMTypeRef ElementTy;
   llvm_ptr_deref(env, argv[0], (void **) &ElementTy);
 
@@ -4147,7 +3813,6 @@ static ERL_NIF_TERM LLVMConstArray_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMConstStruct_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstStruct\r\n");
   int ConstantValssize = 0;
   ERL_NIF_TERM *ConstantValsarray;
   enif_get_tuple(env, argv[0], &ConstantValssize, (const ERL_NIF_TERM **)&ConstantValsarray);
@@ -4177,7 +3842,6 @@ static ERL_NIF_TERM LLVMConstStruct_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstVector_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstVector\r\n");
   int ScalarConstantValssize = 0;
   ERL_NIF_TERM *ScalarConstantValsarray;
   enif_get_tuple(env, argv[0], &ScalarConstantValssize, (const ERL_NIF_TERM **)&ScalarConstantValsarray);
@@ -4203,7 +3867,6 @@ static ERL_NIF_TERM LLVMConstVector_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMGetConstOpcode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetConstOpcode\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4213,7 +3876,6 @@ static ERL_NIF_TERM LLVMGetConstOpcode_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMAlignOf_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAlignOf\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -4223,7 +3885,6 @@ static ERL_NIF_TERM LLVMAlignOf_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM LLVMSizeOf_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSizeOf\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -4233,7 +3894,6 @@ static ERL_NIF_TERM LLVMSizeOf_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM 
 }
 
 static ERL_NIF_TERM LLVMConstNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNeg\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4243,7 +3903,6 @@ static ERL_NIF_TERM LLVMConstNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstNSWNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNSWNeg\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4253,7 +3912,6 @@ static ERL_NIF_TERM LLVMConstNSWNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstNUWNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNUWNeg\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4263,7 +3921,6 @@ static ERL_NIF_TERM LLVMConstNUWNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstFNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFNeg\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4273,7 +3930,6 @@ static ERL_NIF_TERM LLVMConstFNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstNot_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNot\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4283,7 +3939,6 @@ static ERL_NIF_TERM LLVMConstNot_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstAdd\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4296,7 +3951,6 @@ static ERL_NIF_TERM LLVMConstAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstNSWAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNSWAdd\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4309,7 +3963,6 @@ static ERL_NIF_TERM LLVMConstNSWAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstNUWAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNUWAdd\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4322,7 +3975,6 @@ static ERL_NIF_TERM LLVMConstNUWAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstFAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFAdd\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4335,7 +3987,6 @@ static ERL_NIF_TERM LLVMConstFAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstSub\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4348,7 +3999,6 @@ static ERL_NIF_TERM LLVMConstSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstNSWSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNSWSub\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4361,7 +4011,6 @@ static ERL_NIF_TERM LLVMConstNSWSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstNUWSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNUWSub\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4374,7 +4023,6 @@ static ERL_NIF_TERM LLVMConstNUWSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstFSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFSub\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4387,7 +4035,6 @@ static ERL_NIF_TERM LLVMConstFSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstMul\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4400,7 +4047,6 @@ static ERL_NIF_TERM LLVMConstMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstNSWMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNSWMul\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4413,7 +4059,6 @@ static ERL_NIF_TERM LLVMConstNSWMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstNUWMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstNUWMul\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4426,7 +4071,6 @@ static ERL_NIF_TERM LLVMConstNUWMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstFMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFMul\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4439,7 +4083,6 @@ static ERL_NIF_TERM LLVMConstFMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstUDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstUDiv\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4452,7 +4095,6 @@ static ERL_NIF_TERM LLVMConstUDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstSDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstSDiv\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4465,7 +4107,6 @@ static ERL_NIF_TERM LLVMConstSDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstExactSDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstExactSDiv\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4478,7 +4119,6 @@ static ERL_NIF_TERM LLVMConstExactSDiv_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMConstFDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFDiv\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4491,7 +4131,6 @@ static ERL_NIF_TERM LLVMConstFDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstURem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstURem\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4504,7 +4143,6 @@ static ERL_NIF_TERM LLVMConstURem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstSRem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstSRem\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4517,7 +4155,6 @@ static ERL_NIF_TERM LLVMConstSRem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstFRem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFRem\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4530,7 +4167,6 @@ static ERL_NIF_TERM LLVMConstFRem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstAnd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstAnd\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4543,7 +4179,6 @@ static ERL_NIF_TERM LLVMConstAnd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstOr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstOr\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4556,7 +4191,6 @@ static ERL_NIF_TERM LLVMConstOr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM LLVMConstXor_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstXor\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4569,7 +4203,6 @@ static ERL_NIF_TERM LLVMConstXor_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstICmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstICmp\r\n");
   LLVMIntPredicate Predicate;
   enif_get_uint(env, argv[0], (LLVMIntPredicate*)&Predicate);
 
@@ -4585,7 +4218,6 @@ static ERL_NIF_TERM LLVMConstICmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstFCmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFCmp\r\n");
   LLVMRealPredicate Predicate;
   enif_get_uint(env, argv[0], (LLVMRealPredicate*)&Predicate);
 
@@ -4601,7 +4233,6 @@ static ERL_NIF_TERM LLVMConstFCmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstShl_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstShl\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4614,7 +4245,6 @@ static ERL_NIF_TERM LLVMConstShl_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstLShr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstLShr\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4627,7 +4257,6 @@ static ERL_NIF_TERM LLVMConstLShr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstAShr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstAShr\r\n");
   LLVMValueRef LHSConstant;
   llvm_ptr_deref(env, argv[0], (void **) &LHSConstant);
 
@@ -4640,7 +4269,6 @@ static ERL_NIF_TERM LLVMConstAShr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstGEP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstGEP\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4669,7 +4297,6 @@ static ERL_NIF_TERM LLVMConstGEP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMConstInBoundsGEP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstInBoundsGEP\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4698,7 +4325,6 @@ static ERL_NIF_TERM LLVMConstInBoundsGEP_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMConstTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstTrunc\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4711,7 +4337,6 @@ static ERL_NIF_TERM LLVMConstTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMConstSExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstSExt\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4724,7 +4349,6 @@ static ERL_NIF_TERM LLVMConstSExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstZExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstZExt\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4737,7 +4361,6 @@ static ERL_NIF_TERM LLVMConstZExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMConstFPTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFPTrunc\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4750,7 +4373,6 @@ static ERL_NIF_TERM LLVMConstFPTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMConstFPExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFPExt\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4763,7 +4385,6 @@ static ERL_NIF_TERM LLVMConstFPExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMConstUIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstUIToFP\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4776,7 +4397,6 @@ static ERL_NIF_TERM LLVMConstUIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstSIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstSIToFP\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4789,7 +4409,6 @@ static ERL_NIF_TERM LLVMConstSIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstFPToUI_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFPToUI\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4802,7 +4421,6 @@ static ERL_NIF_TERM LLVMConstFPToUI_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstFPToSI_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFPToSI\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4815,7 +4433,6 @@ static ERL_NIF_TERM LLVMConstFPToSI_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstPtrToInt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstPtrToInt\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4828,7 +4445,6 @@ static ERL_NIF_TERM LLVMConstPtrToInt_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMConstIntToPtr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstIntToPtr\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4841,7 +4457,6 @@ static ERL_NIF_TERM LLVMConstIntToPtr_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMConstBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstBitCast\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4854,7 +4469,6 @@ static ERL_NIF_TERM LLVMConstBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMConstZExtOrBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstZExtOrBitCast\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4867,7 +4481,6 @@ static ERL_NIF_TERM LLVMConstZExtOrBitCast_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMConstSExtOrBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstSExtOrBitCast\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4880,7 +4493,6 @@ static ERL_NIF_TERM LLVMConstSExtOrBitCast_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMConstTruncOrBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstTruncOrBitCast\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4893,7 +4505,6 @@ static ERL_NIF_TERM LLVMConstTruncOrBitCast_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMConstPointerCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstPointerCast\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4906,7 +4517,6 @@ static ERL_NIF_TERM LLVMConstPointerCast_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMConstIntCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstIntCast\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4923,7 +4533,6 @@ static ERL_NIF_TERM LLVMConstIntCast_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMConstFPCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstFPCast\r\n");
   LLVMValueRef ConstantVal;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantVal);
 
@@ -4936,7 +4545,6 @@ static ERL_NIF_TERM LLVMConstFPCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstSelect_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstSelect\r\n");
   LLVMValueRef ConstantCondition;
   llvm_ptr_deref(env, argv[0], (void **) &ConstantCondition);
 
@@ -4952,7 +4560,6 @@ static ERL_NIF_TERM LLVMConstSelect_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMConstExtractElement_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstExtractElement\r\n");
   LLVMValueRef VectorConstant;
   llvm_ptr_deref(env, argv[0], (void **) &VectorConstant);
 
@@ -4965,7 +4572,6 @@ static ERL_NIF_TERM LLVMConstExtractElement_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMConstInsertElement_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstInsertElement\r\n");
   LLVMValueRef VectorConstant;
   llvm_ptr_deref(env, argv[0], (void **) &VectorConstant);
 
@@ -4981,7 +4587,6 @@ static ERL_NIF_TERM LLVMConstInsertElement_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMConstShuffleVector_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstShuffleVector\r\n");
   LLVMValueRef VectorAConstant;
   llvm_ptr_deref(env, argv[0], (void **) &VectorAConstant);
 
@@ -4997,7 +4602,6 @@ static ERL_NIF_TERM LLVMConstShuffleVector_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMConstExtractValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstExtractValue\r\n");
   LLVMValueRef AggConstant;
   llvm_ptr_deref(env, argv[0], (void **) &AggConstant);
 
@@ -5013,7 +4617,6 @@ static ERL_NIF_TERM LLVMConstExtractValue_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMConstInsertValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstInsertValue\r\n");
   LLVMValueRef AggConstant;
   llvm_ptr_deref(env, argv[0], (void **) &AggConstant);
 
@@ -5032,7 +4635,6 @@ static ERL_NIF_TERM LLVMConstInsertValue_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMConstInlineAsm_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMConstInlineAsm\r\n");
   LLVMTypeRef Ty;
   llvm_ptr_deref(env, argv[0], (void **) &Ty);
 
@@ -5056,7 +4658,6 @@ static ERL_NIF_TERM LLVMConstInlineAsm_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMBlockAddress_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBlockAddress\r\n");
   LLVMValueRef F;
   llvm_ptr_deref(env, argv[0], (void **) &F);
 
@@ -5069,7 +4670,6 @@ static ERL_NIF_TERM LLVMBlockAddress_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMGetGlobalParent_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetGlobalParent\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5079,7 +4679,6 @@ static ERL_NIF_TERM LLVMGetGlobalParent_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMIsDeclaration_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsDeclaration\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5089,7 +4688,6 @@ static ERL_NIF_TERM LLVMIsDeclaration_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMGetLinkage_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetLinkage\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5099,7 +4697,6 @@ static ERL_NIF_TERM LLVMGetLinkage_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMSetLinkage_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetLinkage\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5112,7 +4709,6 @@ LLVMSetLinkage((LLVMValueRef)Global,(LLVMLinkage)Linkage);
 }
 
 static ERL_NIF_TERM LLVMGetSection_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetSection\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5122,7 +4718,6 @@ static ERL_NIF_TERM LLVMGetSection_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMSetSection_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetSection\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5135,7 +4730,6 @@ LLVMSetSection((LLVMValueRef)Global,(const char *)Section);
 }
 
 static ERL_NIF_TERM LLVMGetVisibility_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetVisibility\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5145,7 +4739,6 @@ static ERL_NIF_TERM LLVMGetVisibility_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMSetVisibility_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetVisibility\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5158,7 +4751,6 @@ LLVMSetVisibility((LLVMValueRef)Global,(LLVMVisibility)Viz);
 }
 
 static ERL_NIF_TERM LLVMGetAlignment_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetAlignment\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5168,7 +4760,6 @@ static ERL_NIF_TERM LLVMGetAlignment_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMSetAlignment_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetAlignment\r\n");
   LLVMValueRef Global;
   llvm_ptr_deref(env, argv[0], (void **) &Global);
 
@@ -5181,7 +4772,6 @@ LLVMSetAlignment((LLVMValueRef)Global,(unsigned)Bytes);
 }
 
 static ERL_NIF_TERM LLVMAddGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddGlobal\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5197,7 +4787,6 @@ static ERL_NIF_TERM LLVMAddGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMAddGlobalInAddressSpace_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddGlobalInAddressSpace\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5216,7 +4805,6 @@ static ERL_NIF_TERM LLVMAddGlobalInAddressSpace_nif(ErlNifEnv* env, int argc, co
 }
 
 static ERL_NIF_TERM LLVMGetNamedGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNamedGlobal\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5229,7 +4817,6 @@ static ERL_NIF_TERM LLVMGetNamedGlobal_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMGetFirstGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetFirstGlobal\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5239,7 +4826,6 @@ static ERL_NIF_TERM LLVMGetFirstGlobal_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMGetLastGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetLastGlobal\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5249,7 +4835,6 @@ static ERL_NIF_TERM LLVMGetLastGlobal_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMGetNextGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNextGlobal\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5259,7 +4844,6 @@ static ERL_NIF_TERM LLVMGetNextGlobal_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMGetPreviousGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetPreviousGlobal\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5269,7 +4853,6 @@ static ERL_NIF_TERM LLVMGetPreviousGlobal_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMDeleteGlobal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDeleteGlobal\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5279,7 +4862,6 @@ LLVMDeleteGlobal((LLVMValueRef)GlobalVar);
 }
 
 static ERL_NIF_TERM LLVMGetInitializer_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetInitializer\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5289,7 +4871,6 @@ static ERL_NIF_TERM LLVMGetInitializer_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMSetInitializer_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetInitializer\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5302,7 +4883,6 @@ LLVMSetInitializer((LLVMValueRef)GlobalVar,(LLVMValueRef)ConstantVal);
 }
 
 static ERL_NIF_TERM LLVMIsThreadLocal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsThreadLocal\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5312,7 +4892,6 @@ static ERL_NIF_TERM LLVMIsThreadLocal_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMSetThreadLocal_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetThreadLocal\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5326,7 +4905,6 @@ LLVMSetThreadLocal((LLVMValueRef)GlobalVar,(LLVMBool)IsThreadLocal);
 }
 
 static ERL_NIF_TERM LLVMIsGlobalConstant_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsGlobalConstant\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5336,7 +4914,6 @@ static ERL_NIF_TERM LLVMIsGlobalConstant_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMSetGlobalConstant_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetGlobalConstant\r\n");
   LLVMValueRef GlobalVar;
   llvm_ptr_deref(env, argv[0], (void **) &GlobalVar);
 
@@ -5350,7 +4927,6 @@ LLVMSetGlobalConstant((LLVMValueRef)GlobalVar,(LLVMBool)IsConstant);
 }
 
 static ERL_NIF_TERM LLVMAddAlias_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddAlias\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5369,7 +4945,6 @@ static ERL_NIF_TERM LLVMAddAlias_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMAddFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddFunction\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5385,7 +4960,6 @@ static ERL_NIF_TERM LLVMAddFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMGetNamedFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNamedFunction\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5398,7 +4972,6 @@ static ERL_NIF_TERM LLVMGetNamedFunction_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMGetFirstFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetFirstFunction\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5408,7 +4981,6 @@ static ERL_NIF_TERM LLVMGetFirstFunction_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMGetLastFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetLastFunction\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -5418,7 +4990,6 @@ static ERL_NIF_TERM LLVMGetLastFunction_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMGetNextFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNextFunction\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5428,7 +4999,6 @@ static ERL_NIF_TERM LLVMGetNextFunction_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMGetPreviousFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetPreviousFunction\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5438,7 +5008,6 @@ static ERL_NIF_TERM LLVMGetPreviousFunction_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMDeleteFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDeleteFunction\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5448,7 +5017,6 @@ LLVMDeleteFunction((LLVMValueRef)Fn);
 }
 
 static ERL_NIF_TERM LLVMGetIntrinsicID_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetIntrinsicID\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5458,7 +5026,6 @@ static ERL_NIF_TERM LLVMGetIntrinsicID_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMGetFunctionCallConv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetFunctionCallConv\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5468,7 +5035,6 @@ static ERL_NIF_TERM LLVMGetFunctionCallConv_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMSetFunctionCallConv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetFunctionCallConv\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5481,7 +5047,6 @@ LLVMSetFunctionCallConv((LLVMValueRef)Fn,(unsigned)CC);
 }
 
 static ERL_NIF_TERM LLVMGetGC_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetGC\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5491,7 +5056,6 @@ static ERL_NIF_TERM LLVMGetGC_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM a
 }
 
 static ERL_NIF_TERM LLVMSetGC_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetGC\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5504,7 +5068,6 @@ LLVMSetGC((LLVMValueRef)Fn,(const char *)Name);
 }
 
 static ERL_NIF_TERM LLVMAddFunctionAttr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddFunctionAttr\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5517,7 +5080,6 @@ LLVMAddFunctionAttr((LLVMValueRef)Fn,(LLVMAttribute)PA);
 }
 
 static ERL_NIF_TERM LLVMGetFunctionAttr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetFunctionAttr\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5527,7 +5089,6 @@ static ERL_NIF_TERM LLVMGetFunctionAttr_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMRemoveFunctionAttr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRemoveFunctionAttr\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5540,7 +5101,6 @@ LLVMRemoveFunctionAttr((LLVMValueRef)Fn,(LLVMAttribute)PA);
 }
 
 static ERL_NIF_TERM LLVMCountParams_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCountParams\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5550,7 +5110,6 @@ static ERL_NIF_TERM LLVMCountParams_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMGetParams_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetParams\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5563,7 +5122,6 @@ LLVMGetParams((LLVMValueRef)Fn,(LLVMValueRef *)Params);
 }
 
 static ERL_NIF_TERM LLVMGetParam_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetParam\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5576,7 +5134,6 @@ static ERL_NIF_TERM LLVMGetParam_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMGetParamParent_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetParamParent\r\n");
   LLVMValueRef Inst;
   llvm_ptr_deref(env, argv[0], (void **) &Inst);
 
@@ -5586,7 +5143,6 @@ static ERL_NIF_TERM LLVMGetParamParent_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMGetFirstParam_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetFirstParam\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5596,7 +5152,6 @@ static ERL_NIF_TERM LLVMGetFirstParam_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMGetLastParam_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetLastParam\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5606,7 +5161,6 @@ static ERL_NIF_TERM LLVMGetLastParam_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMGetNextParam_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNextParam\r\n");
   LLVMValueRef Arg;
   llvm_ptr_deref(env, argv[0], (void **) &Arg);
 
@@ -5616,7 +5170,6 @@ static ERL_NIF_TERM LLVMGetNextParam_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMGetPreviousParam_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetPreviousParam\r\n");
   LLVMValueRef Arg;
   llvm_ptr_deref(env, argv[0], (void **) &Arg);
 
@@ -5626,7 +5179,6 @@ static ERL_NIF_TERM LLVMGetPreviousParam_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMAddAttribute_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddAttribute\r\n");
   LLVMValueRef Arg;
   llvm_ptr_deref(env, argv[0], (void **) &Arg);
 
@@ -5639,7 +5191,6 @@ LLVMAddAttribute((LLVMValueRef)Arg,(LLVMAttribute)PA);
 }
 
 static ERL_NIF_TERM LLVMRemoveAttribute_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRemoveAttribute\r\n");
   LLVMValueRef Arg;
   llvm_ptr_deref(env, argv[0], (void **) &Arg);
 
@@ -5652,7 +5203,6 @@ LLVMRemoveAttribute((LLVMValueRef)Arg,(LLVMAttribute)PA);
 }
 
 static ERL_NIF_TERM LLVMGetAttribute_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetAttribute\r\n");
   LLVMValueRef Arg;
   llvm_ptr_deref(env, argv[0], (void **) &Arg);
 
@@ -5662,7 +5212,6 @@ static ERL_NIF_TERM LLVMGetAttribute_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMSetParamAlignment_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetParamAlignment\r\n");
   LLVMValueRef Arg;
   llvm_ptr_deref(env, argv[0], (void **) &Arg);
 
@@ -5675,7 +5224,6 @@ LLVMSetParamAlignment((LLVMValueRef)Arg,(unsigned)align);
 }
 
 static ERL_NIF_TERM LLVMBasicBlockAsValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBasicBlockAsValue\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5685,7 +5233,6 @@ static ERL_NIF_TERM LLVMBasicBlockAsValue_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMValueIsBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMValueIsBasicBlock\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -5695,7 +5242,6 @@ static ERL_NIF_TERM LLVMValueIsBasicBlock_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMValueAsBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMValueAsBasicBlock\r\n");
   LLVMValueRef Val;
   llvm_ptr_deref(env, argv[0], (void **) &Val);
 
@@ -5705,7 +5251,6 @@ static ERL_NIF_TERM LLVMValueAsBasicBlock_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMGetBasicBlockParent_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetBasicBlockParent\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5715,7 +5260,6 @@ static ERL_NIF_TERM LLVMGetBasicBlockParent_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMCountBasicBlocks_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCountBasicBlocks\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5725,7 +5269,6 @@ static ERL_NIF_TERM LLVMCountBasicBlocks_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMGetBasicBlocks_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetBasicBlocks\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5738,7 +5281,6 @@ LLVMGetBasicBlocks((LLVMValueRef)Fn,(LLVMBasicBlockRef *)BasicBlocks);
 }
 
 static ERL_NIF_TERM LLVMGetFirstBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetFirstBasicBlock\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5748,7 +5290,6 @@ static ERL_NIF_TERM LLVMGetFirstBasicBlock_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMGetLastBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetLastBasicBlock\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5758,7 +5299,6 @@ static ERL_NIF_TERM LLVMGetLastBasicBlock_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMGetNextBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNextBasicBlock\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5768,7 +5308,6 @@ static ERL_NIF_TERM LLVMGetNextBasicBlock_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMGetPreviousBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetPreviousBasicBlock\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5778,7 +5317,6 @@ static ERL_NIF_TERM LLVMGetPreviousBasicBlock_nif(ErlNifEnv* env, int argc, cons
 }
 
 static ERL_NIF_TERM LLVMGetEntryBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetEntryBasicBlock\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5788,7 +5326,6 @@ static ERL_NIF_TERM LLVMGetEntryBasicBlock_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMAppendBasicBlockInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAppendBasicBlockInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -5804,7 +5341,6 @@ static ERL_NIF_TERM LLVMAppendBasicBlockInContext_nif(ErlNifEnv* env, int argc, 
 }
 
 static ERL_NIF_TERM LLVMInsertBasicBlockInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInsertBasicBlockInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -5820,7 +5356,6 @@ static ERL_NIF_TERM LLVMInsertBasicBlockInContext_nif(ErlNifEnv* env, int argc, 
 }
 
 static ERL_NIF_TERM LLVMAppendBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAppendBasicBlock\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -5833,7 +5368,6 @@ static ERL_NIF_TERM LLVMAppendBasicBlock_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMInsertBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInsertBasicBlock\r\n");
   LLVMBasicBlockRef InsertBeforeBB;
   llvm_ptr_deref(env, argv[0], (void **) &InsertBeforeBB);
 
@@ -5846,7 +5380,6 @@ static ERL_NIF_TERM LLVMInsertBasicBlock_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMDeleteBasicBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDeleteBasicBlock\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5856,7 +5389,6 @@ LLVMDeleteBasicBlock((LLVMBasicBlockRef)BB);
 }
 
 static ERL_NIF_TERM LLVMMoveBasicBlockBefore_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMMoveBasicBlockBefore\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5869,7 +5401,6 @@ LLVMMoveBasicBlockBefore((LLVMBasicBlockRef)BB,(LLVMBasicBlockRef)MovePos);
 }
 
 static ERL_NIF_TERM LLVMMoveBasicBlockAfter_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMMoveBasicBlockAfter\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5882,7 +5413,6 @@ LLVMMoveBasicBlockAfter((LLVMBasicBlockRef)BB,(LLVMBasicBlockRef)MovePos);
 }
 
 static ERL_NIF_TERM LLVMGetInstructionParent_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetInstructionParent\r\n");
   LLVMValueRef Inst;
   llvm_ptr_deref(env, argv[0], (void **) &Inst);
 
@@ -5892,7 +5422,6 @@ static ERL_NIF_TERM LLVMGetInstructionParent_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMGetFirstInstruction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetFirstInstruction\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5902,7 +5431,6 @@ static ERL_NIF_TERM LLVMGetFirstInstruction_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMGetLastInstruction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetLastInstruction\r\n");
   LLVMBasicBlockRef BB;
   llvm_ptr_deref(env, argv[0], (void **) &BB);
 
@@ -5912,7 +5440,6 @@ static ERL_NIF_TERM LLVMGetLastInstruction_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMGetNextInstruction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetNextInstruction\r\n");
   LLVMValueRef Inst;
   llvm_ptr_deref(env, argv[0], (void **) &Inst);
 
@@ -5922,7 +5449,6 @@ static ERL_NIF_TERM LLVMGetNextInstruction_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMGetPreviousInstruction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetPreviousInstruction\r\n");
   LLVMValueRef Inst;
   llvm_ptr_deref(env, argv[0], (void **) &Inst);
 
@@ -5932,7 +5458,6 @@ static ERL_NIF_TERM LLVMGetPreviousInstruction_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM LLVMSetInstructionCallConv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetInstructionCallConv\r\n");
   LLVMValueRef Instr;
   llvm_ptr_deref(env, argv[0], (void **) &Instr);
 
@@ -5945,7 +5470,6 @@ LLVMSetInstructionCallConv((LLVMValueRef)Instr,(unsigned)CC);
 }
 
 static ERL_NIF_TERM LLVMGetInstructionCallConv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetInstructionCallConv\r\n");
   LLVMValueRef Instr;
   llvm_ptr_deref(env, argv[0], (void **) &Instr);
 
@@ -5955,7 +5479,6 @@ static ERL_NIF_TERM LLVMGetInstructionCallConv_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM LLVMAddInstrAttribute_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddInstrAttribute\r\n");
   LLVMValueRef Instr;
   llvm_ptr_deref(env, argv[0], (void **) &Instr);
 
@@ -5971,7 +5494,6 @@ LLVMAddInstrAttribute((LLVMValueRef)Instr,(unsigned)index,(LLVMAttribute)PA);
 }
 
 static ERL_NIF_TERM LLVMRemoveInstrAttribute_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRemoveInstrAttribute\r\n");
   LLVMValueRef Instr;
   llvm_ptr_deref(env, argv[0], (void **) &Instr);
 
@@ -5987,7 +5509,6 @@ LLVMRemoveInstrAttribute((LLVMValueRef)Instr,(unsigned)index,(LLVMAttribute)PA);
 }
 
 static ERL_NIF_TERM LLVMSetInstrParamAlignment_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetInstrParamAlignment\r\n");
   LLVMValueRef Instr;
   llvm_ptr_deref(env, argv[0], (void **) &Instr);
 
@@ -6003,7 +5524,6 @@ LLVMSetInstrParamAlignment((LLVMValueRef)Instr,(unsigned)index,(unsigned)align);
 }
 
 static ERL_NIF_TERM LLVMIsTailCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMIsTailCall\r\n");
   LLVMValueRef CallInst;
   llvm_ptr_deref(env, argv[0], (void **) &CallInst);
 
@@ -6013,7 +5533,6 @@ static ERL_NIF_TERM LLVMIsTailCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMSetTailCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetTailCall\r\n");
   LLVMValueRef CallInst;
   llvm_ptr_deref(env, argv[0], (void **) &CallInst);
 
@@ -6027,7 +5546,6 @@ LLVMSetTailCall((LLVMValueRef)CallInst,(LLVMBool)IsTailCall);
 }
 
 static ERL_NIF_TERM LLVMAddIncoming_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddIncoming\r\n");
   LLVMValueRef PhiNode;
   llvm_ptr_deref(env, argv[0], (void **) &PhiNode);
 
@@ -6072,7 +5590,6 @@ LLVMAddIncoming((LLVMValueRef)PhiNode,(LLVMValueRef *)IncomingValues,(LLVMBasicB
 }
 
 static ERL_NIF_TERM LLVMCountIncoming_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCountIncoming\r\n");
   LLVMValueRef PhiNode;
   llvm_ptr_deref(env, argv[0], (void **) &PhiNode);
 
@@ -6082,7 +5599,6 @@ static ERL_NIF_TERM LLVMCountIncoming_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMGetIncomingValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetIncomingValue\r\n");
   LLVMValueRef PhiNode;
   llvm_ptr_deref(env, argv[0], (void **) &PhiNode);
 
@@ -6095,7 +5611,6 @@ static ERL_NIF_TERM LLVMGetIncomingValue_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMGetIncomingBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetIncomingBlock\r\n");
   LLVMValueRef PhiNode;
   llvm_ptr_deref(env, argv[0], (void **) &PhiNode);
 
@@ -6108,7 +5623,6 @@ static ERL_NIF_TERM LLVMGetIncomingBlock_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMCreateBuilderInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateBuilderInContext\r\n");
   LLVMContextRef C;
   llvm_ptr_deref(env, argv[0], (void **) &C);
 
@@ -6118,14 +5632,12 @@ static ERL_NIF_TERM LLVMCreateBuilderInContext_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM LLVMCreateBuilder_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateBuilder\r\n");
   LLVMBuilderRef retVal = LLVMCreateBuilder();
 
   return   llvm_ptr_create(env, RTLLVMBuilderRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMPositionBuilder_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPositionBuilder\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6141,7 +5653,6 @@ LLVMPositionBuilder((LLVMBuilderRef)Builder,(LLVMBasicBlockRef)Block,(LLVMValueR
 }
 
 static ERL_NIF_TERM LLVMPositionBuilderBefore_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPositionBuilderBefore\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6154,7 +5665,6 @@ LLVMPositionBuilderBefore((LLVMBuilderRef)Builder,(LLVMValueRef)Instr);
 }
 
 static ERL_NIF_TERM LLVMPositionBuilderAtEnd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMPositionBuilderAtEnd\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6167,7 +5677,6 @@ LLVMPositionBuilderAtEnd((LLVMBuilderRef)Builder,(LLVMBasicBlockRef)Block);
 }
 
 static ERL_NIF_TERM LLVMGetInsertBlock_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetInsertBlock\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6177,7 +5686,6 @@ static ERL_NIF_TERM LLVMGetInsertBlock_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMClearInsertionPosition_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMClearInsertionPosition\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6187,7 +5695,6 @@ LLVMClearInsertionPosition((LLVMBuilderRef)Builder);
 }
 
 static ERL_NIF_TERM LLVMInsertIntoBuilder_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInsertIntoBuilder\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6200,7 +5707,6 @@ LLVMInsertIntoBuilder((LLVMBuilderRef)Builder,(LLVMValueRef)Instr);
 }
 
 static ERL_NIF_TERM LLVMInsertIntoBuilderWithName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInsertIntoBuilderWithName\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6216,7 +5722,6 @@ LLVMInsertIntoBuilderWithName((LLVMBuilderRef)Builder,(LLVMValueRef)Instr,(const
 }
 
 static ERL_NIF_TERM LLVMDisposeBuilder_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeBuilder\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6226,7 +5731,6 @@ LLVMDisposeBuilder((LLVMBuilderRef)Builder);
 }
 
 static ERL_NIF_TERM LLVMSetCurrentDebugLocation_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetCurrentDebugLocation\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6239,7 +5743,6 @@ LLVMSetCurrentDebugLocation((LLVMBuilderRef)Builder,(LLVMValueRef)L);
 }
 
 static ERL_NIF_TERM LLVMGetCurrentDebugLocation_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetCurrentDebugLocation\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6249,7 +5752,6 @@ static ERL_NIF_TERM LLVMGetCurrentDebugLocation_nif(ErlNifEnv* env, int argc, co
 }
 
 static ERL_NIF_TERM LLVMSetInstDebugLocation_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMSetInstDebugLocation\r\n");
   LLVMBuilderRef Builder;
   llvm_ptr_deref(env, argv[0], (void **) &Builder);
 
@@ -6262,7 +5764,6 @@ LLVMSetInstDebugLocation((LLVMBuilderRef)Builder,(LLVMValueRef)Inst);
 }
 
 static ERL_NIF_TERM LLVMBuildRetVoid_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildRetVoid\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6272,7 +5773,6 @@ static ERL_NIF_TERM LLVMBuildRetVoid_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMBuildRet_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildRet\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6285,7 +5785,6 @@ static ERL_NIF_TERM LLVMBuildRet_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildAggregateRet_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildAggregateRet\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6314,7 +5813,6 @@ static ERL_NIF_TERM LLVMBuildAggregateRet_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMBuildBr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildBr\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6327,7 +5825,6 @@ static ERL_NIF_TERM LLVMBuildBr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM LLVMBuildCondBr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildCondBr\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6346,7 +5843,6 @@ static ERL_NIF_TERM LLVMBuildCondBr_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildSwitch_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildSwitch\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6365,7 +5861,6 @@ static ERL_NIF_TERM LLVMBuildSwitch_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildIndirectBr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildIndirectBr\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6381,7 +5876,6 @@ static ERL_NIF_TERM LLVMBuildIndirectBr_nif(ErlNifEnv* env, int argc, const ERL_
 }
 
 static ERL_NIF_TERM LLVMBuildInvoke_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildInvoke\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6422,7 +5916,6 @@ static ERL_NIF_TERM LLVMBuildInvoke_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildUnwind_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildUnwind\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6432,7 +5925,6 @@ static ERL_NIF_TERM LLVMBuildUnwind_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildUnreachable_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildUnreachable\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6442,7 +5934,6 @@ static ERL_NIF_TERM LLVMBuildUnreachable_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMAddCase_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddCase\r\n");
   LLVMValueRef Switch;
   llvm_ptr_deref(env, argv[0], (void **) &Switch);
 
@@ -6458,7 +5949,6 @@ LLVMAddCase((LLVMValueRef)Switch,(LLVMValueRef)OnVal,(LLVMBasicBlockRef)Dest);
 }
 
 static ERL_NIF_TERM LLVMAddDestination_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMAddDestination\r\n");
   LLVMValueRef IndirectBr;
   llvm_ptr_deref(env, argv[0], (void **) &IndirectBr);
 
@@ -6471,7 +5961,6 @@ LLVMAddDestination((LLVMValueRef)IndirectBr,(LLVMBasicBlockRef)Dest);
 }
 
 static ERL_NIF_TERM LLVMBuildAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildAdd\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6490,7 +5979,6 @@ static ERL_NIF_TERM LLVMBuildAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildNSWAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNSWAdd\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6509,7 +5997,6 @@ static ERL_NIF_TERM LLVMBuildNSWAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildNUWAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNUWAdd\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6528,7 +6015,6 @@ static ERL_NIF_TERM LLVMBuildNUWAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildFAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFAdd\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6547,7 +6033,6 @@ static ERL_NIF_TERM LLVMBuildFAdd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildSub\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6566,7 +6051,6 @@ static ERL_NIF_TERM LLVMBuildSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildNSWSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNSWSub\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6585,7 +6069,6 @@ static ERL_NIF_TERM LLVMBuildNSWSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildNUWSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNUWSub\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6604,7 +6087,6 @@ static ERL_NIF_TERM LLVMBuildNUWSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildFSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFSub\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6623,7 +6105,6 @@ static ERL_NIF_TERM LLVMBuildFSub_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildMul\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6642,7 +6123,6 @@ static ERL_NIF_TERM LLVMBuildMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildNSWMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNSWMul\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6661,7 +6141,6 @@ static ERL_NIF_TERM LLVMBuildNSWMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildNUWMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNUWMul\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6680,7 +6159,6 @@ static ERL_NIF_TERM LLVMBuildNUWMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildFMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFMul\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6699,7 +6177,6 @@ static ERL_NIF_TERM LLVMBuildFMul_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildUDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildUDiv\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6718,7 +6195,6 @@ static ERL_NIF_TERM LLVMBuildUDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildSDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildSDiv\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6737,7 +6213,6 @@ static ERL_NIF_TERM LLVMBuildSDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildExactSDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildExactSDiv\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6756,7 +6231,6 @@ static ERL_NIF_TERM LLVMBuildExactSDiv_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMBuildFDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFDiv\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6775,7 +6249,6 @@ static ERL_NIF_TERM LLVMBuildFDiv_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildURem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildURem\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6794,7 +6267,6 @@ static ERL_NIF_TERM LLVMBuildURem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildSRem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildSRem\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6813,7 +6285,6 @@ static ERL_NIF_TERM LLVMBuildSRem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildFRem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFRem\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6832,7 +6303,6 @@ static ERL_NIF_TERM LLVMBuildFRem_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildShl_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildShl\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6851,7 +6321,6 @@ static ERL_NIF_TERM LLVMBuildShl_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildLShr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildLShr\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6870,7 +6339,6 @@ static ERL_NIF_TERM LLVMBuildLShr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildAShr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildAShr\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6889,7 +6357,6 @@ static ERL_NIF_TERM LLVMBuildAShr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildAnd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildAnd\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6908,7 +6375,6 @@ static ERL_NIF_TERM LLVMBuildAnd_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildOr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildOr\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6927,7 +6393,6 @@ static ERL_NIF_TERM LLVMBuildOr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM
 }
 
 static ERL_NIF_TERM LLVMBuildXor_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildXor\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6946,7 +6411,6 @@ static ERL_NIF_TERM LLVMBuildXor_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildBinOp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildBinOp\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6968,7 +6432,6 @@ static ERL_NIF_TERM LLVMBuildBinOp_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMBuildNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNeg\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -6984,7 +6447,6 @@ static ERL_NIF_TERM LLVMBuildNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildNSWNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNSWNeg\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7000,7 +6462,6 @@ static ERL_NIF_TERM LLVMBuildNSWNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildNUWNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNUWNeg\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7016,7 +6477,6 @@ static ERL_NIF_TERM LLVMBuildNUWNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildFNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFNeg\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7032,7 +6492,6 @@ static ERL_NIF_TERM LLVMBuildFNeg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildNot_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildNot\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7048,7 +6507,6 @@ static ERL_NIF_TERM LLVMBuildNot_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildMalloc_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildMalloc\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7064,7 +6522,6 @@ static ERL_NIF_TERM LLVMBuildMalloc_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildArrayMalloc_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildArrayMalloc\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7083,7 +6540,6 @@ static ERL_NIF_TERM LLVMBuildArrayMalloc_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMBuildAlloca_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildAlloca\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7099,7 +6555,6 @@ static ERL_NIF_TERM LLVMBuildAlloca_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildArrayAlloca_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildArrayAlloca\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7118,7 +6573,6 @@ static ERL_NIF_TERM LLVMBuildArrayAlloca_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMBuildFree_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFree\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7131,7 +6585,6 @@ static ERL_NIF_TERM LLVMBuildFree_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildLoad_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildLoad\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7147,7 +6600,6 @@ static ERL_NIF_TERM LLVMBuildLoad_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildStore_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildStore\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7163,7 +6615,6 @@ static ERL_NIF_TERM LLVMBuildStore_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMBuildGEP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildGEP\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7198,7 +6649,6 @@ static ERL_NIF_TERM LLVMBuildGEP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildInBoundsGEP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildInBoundsGEP\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7233,7 +6683,6 @@ static ERL_NIF_TERM LLVMBuildInBoundsGEP_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMBuildStructGEP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildStructGEP\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7252,7 +6701,6 @@ static ERL_NIF_TERM LLVMBuildStructGEP_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMBuildGlobalString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildGlobalString\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7268,7 +6716,6 @@ static ERL_NIF_TERM LLVMBuildGlobalString_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMBuildGlobalStringPtr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildGlobalStringPtr\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7284,7 +6731,6 @@ static ERL_NIF_TERM LLVMBuildGlobalStringPtr_nif(ErlNifEnv* env, int argc, const
 }
 
 static ERL_NIF_TERM LLVMBuildTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildTrunc\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7303,7 +6749,6 @@ static ERL_NIF_TERM LLVMBuildTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMBuildZExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildZExt\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7322,7 +6767,6 @@ static ERL_NIF_TERM LLVMBuildZExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildSExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildSExt\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7341,7 +6785,6 @@ static ERL_NIF_TERM LLVMBuildSExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildFPToUI_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFPToUI\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7360,7 +6803,6 @@ static ERL_NIF_TERM LLVMBuildFPToUI_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildFPToSI_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFPToSI\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7379,7 +6821,6 @@ static ERL_NIF_TERM LLVMBuildFPToSI_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildUIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildUIToFP\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7398,7 +6839,6 @@ static ERL_NIF_TERM LLVMBuildUIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildSIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildSIToFP\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7417,7 +6857,6 @@ static ERL_NIF_TERM LLVMBuildSIToFP_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildFPTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFPTrunc\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7436,7 +6875,6 @@ static ERL_NIF_TERM LLVMBuildFPTrunc_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMBuildFPExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFPExt\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7455,7 +6893,6 @@ static ERL_NIF_TERM LLVMBuildFPExt_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMBuildPtrToInt_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildPtrToInt\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7474,7 +6911,6 @@ static ERL_NIF_TERM LLVMBuildPtrToInt_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMBuildIntToPtr_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildIntToPtr\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7493,7 +6929,6 @@ static ERL_NIF_TERM LLVMBuildIntToPtr_nif(ErlNifEnv* env, int argc, const ERL_NI
 }
 
 static ERL_NIF_TERM LLVMBuildBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildBitCast\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7512,7 +6947,6 @@ static ERL_NIF_TERM LLVMBuildBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMBuildZExtOrBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildZExtOrBitCast\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7531,7 +6965,6 @@ static ERL_NIF_TERM LLVMBuildZExtOrBitCast_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMBuildSExtOrBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildSExtOrBitCast\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7550,7 +6983,6 @@ static ERL_NIF_TERM LLVMBuildSExtOrBitCast_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMBuildTruncOrBitCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildTruncOrBitCast\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7569,7 +7001,6 @@ static ERL_NIF_TERM LLVMBuildTruncOrBitCast_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMBuildCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildCast\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7591,7 +7022,6 @@ static ERL_NIF_TERM LLVMBuildCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildPointerCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildPointerCast\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7610,7 +7040,6 @@ static ERL_NIF_TERM LLVMBuildPointerCast_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMBuildIntCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildIntCast\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7629,7 +7058,6 @@ static ERL_NIF_TERM LLVMBuildIntCast_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMBuildFPCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFPCast\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7648,7 +7076,6 @@ static ERL_NIF_TERM LLVMBuildFPCast_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildICmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildICmp\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7670,7 +7097,6 @@ static ERL_NIF_TERM LLVMBuildICmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildFCmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildFCmp\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7692,7 +7118,6 @@ static ERL_NIF_TERM LLVMBuildFCmp_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildPhi_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildPhi\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7708,7 +7133,6 @@ static ERL_NIF_TERM LLVMBuildPhi_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
 }
 
 static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildCall\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7743,7 +7167,6 @@ static ERL_NIF_TERM LLVMBuildCall_nif(ErlNifEnv* env, int argc, const ERL_NIF_TE
 }
 
 static ERL_NIF_TERM LLVMBuildSelect_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildSelect\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7765,7 +7188,6 @@ static ERL_NIF_TERM LLVMBuildSelect_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildVAArg_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildVAArg\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7784,7 +7206,6 @@ static ERL_NIF_TERM LLVMBuildVAArg_nif(ErlNifEnv* env, int argc, const ERL_NIF_T
 }
 
 static ERL_NIF_TERM LLVMBuildExtractElement_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildExtractElement\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7803,7 +7224,6 @@ static ERL_NIF_TERM LLVMBuildExtractElement_nif(ErlNifEnv* env, int argc, const 
 }
 
 static ERL_NIF_TERM LLVMBuildInsertElement_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildInsertElement\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7825,7 +7245,6 @@ static ERL_NIF_TERM LLVMBuildInsertElement_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMBuildShuffleVector_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildShuffleVector\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7847,7 +7266,6 @@ static ERL_NIF_TERM LLVMBuildShuffleVector_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMBuildExtractValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildExtractValue\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7866,7 +7284,6 @@ static ERL_NIF_TERM LLVMBuildExtractValue_nif(ErlNifEnv* env, int argc, const ER
 }
 
 static ERL_NIF_TERM LLVMBuildInsertValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildInsertValue\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7888,7 +7305,6 @@ static ERL_NIF_TERM LLVMBuildInsertValue_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMBuildIsNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildIsNull\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7904,7 +7320,6 @@ static ERL_NIF_TERM LLVMBuildIsNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_
 }
 
 static ERL_NIF_TERM LLVMBuildIsNotNull_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildIsNotNull\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7920,7 +7335,6 @@ static ERL_NIF_TERM LLVMBuildIsNotNull_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMBuildPtrDiff_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMBuildPtrDiff\r\n");
   LLVMBuilderRef B;
   llvm_ptr_deref(env, argv[0], (void **) &B);
 
@@ -7939,7 +7353,6 @@ static ERL_NIF_TERM LLVMBuildPtrDiff_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMCreateModuleProviderForExistingModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateModuleProviderForExistingModule\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -7949,7 +7362,6 @@ static ERL_NIF_TERM LLVMCreateModuleProviderForExistingModule_nif(ErlNifEnv* env
 }
 
 static ERL_NIF_TERM LLVMDisposeModuleProvider_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeModuleProvider\r\n");
   LLVMModuleProviderRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -7959,7 +7371,6 @@ LLVMDisposeModuleProvider((LLVMModuleProviderRef)M);
 }
 
 static ERL_NIF_TERM LLVMCreateMemoryBufferWithContentsOfFile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateMemoryBufferWithContentsOfFile\r\n");
   char *Path = (char *) malloc(sizeof(char) * 255);
   enif_get_string(env, argv[0], (char*)Path, 255, ERL_NIF_LATIN1);
 
@@ -7975,7 +7386,6 @@ static ERL_NIF_TERM LLVMCreateMemoryBufferWithContentsOfFile_nif(ErlNifEnv* env,
 }
 
 static ERL_NIF_TERM LLVMDisposeMemoryBuffer_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposeMemoryBuffer\r\n");
   LLVMMemoryBufferRef MemBuf;
   llvm_ptr_deref(env, argv[0], (void **) &MemBuf);
 
@@ -7985,21 +7395,18 @@ LLVMDisposeMemoryBuffer((LLVMMemoryBufferRef)MemBuf);
 }
 
 static ERL_NIF_TERM LLVMGetGlobalPassRegistry_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetGlobalPassRegistry\r\n");
   LLVMPassRegistryRef retVal = LLVMGetGlobalPassRegistry();
 
   return   llvm_ptr_create(env, RTLLVMPassRegistryRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMCreatePassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreatePassManager\r\n");
   LLVMPassManagerRef retVal = LLVMCreatePassManager();
 
   return   llvm_ptr_create(env, RTLLVMPassManagerRef, retVal);
 }
 
 static ERL_NIF_TERM LLVMCreateFunctionPassManagerForModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateFunctionPassManagerForModule\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -8009,7 +7416,6 @@ static ERL_NIF_TERM LLVMCreateFunctionPassManagerForModule_nif(ErlNifEnv* env, i
 }
 
 static ERL_NIF_TERM LLVMCreateFunctionPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMCreateFunctionPassManager\r\n");
   LLVMModuleProviderRef MP;
   llvm_ptr_deref(env, argv[0], (void **) &MP);
 
@@ -8019,7 +7425,6 @@ static ERL_NIF_TERM LLVMCreateFunctionPassManager_nif(ErlNifEnv* env, int argc, 
 }
 
 static ERL_NIF_TERM LLVMRunPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRunPassManager\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -8032,7 +7437,6 @@ static ERL_NIF_TERM LLVMRunPassManager_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMInitializeFunctionPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMInitializeFunctionPassManager\r\n");
   LLVMPassManagerRef FPM;
   llvm_ptr_deref(env, argv[0], (void **) &FPM);
 
@@ -8042,7 +7446,6 @@ static ERL_NIF_TERM LLVMInitializeFunctionPassManager_nif(ErlNifEnv* env, int ar
 }
 
 static ERL_NIF_TERM LLVMRunFunctionPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMRunFunctionPassManager\r\n");
   LLVMPassManagerRef FPM;
   llvm_ptr_deref(env, argv[0], (void **) &FPM);
 
@@ -8055,7 +7458,6 @@ static ERL_NIF_TERM LLVMRunFunctionPassManager_nif(ErlNifEnv* env, int argc, con
 }
 
 static ERL_NIF_TERM LLVMFinalizeFunctionPassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMFinalizeFunctionPassManager\r\n");
   LLVMPassManagerRef FPM;
   llvm_ptr_deref(env, argv[0], (void **) &FPM);
 
@@ -8065,7 +7467,6 @@ static ERL_NIF_TERM LLVMFinalizeFunctionPassManager_nif(ErlNifEnv* env, int argc
 }
 
 static ERL_NIF_TERM LLVMDisposePassManager_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMDisposePassManager\r\n");
   LLVMPassManagerRef PM;
   llvm_ptr_deref(env, argv[0], (void **) &PM);
 
@@ -8076,10 +7477,9 @@ LLVMDisposePassManager((LLVMPassManagerRef)PM);
 
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from BitWriter_8h.xml on {{2011,10,2},{18,38,33}}--
 
 static ERL_NIF_TERM LLVMWriteBitcodeToFile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMWriteBitcodeToFile\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -8092,7 +7492,6 @@ static ERL_NIF_TERM LLVMWriteBitcodeToFile_nif(ErlNifEnv* env, int argc, const E
 }
 
 static ERL_NIF_TERM LLVMWriteBitcodeToFD_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMWriteBitcodeToFD\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -8111,7 +7510,6 @@ static ERL_NIF_TERM LLVMWriteBitcodeToFD_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMWriteBitcodeToFileHandle_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMWriteBitcodeToFileHandle\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -8125,10 +7523,9 @@ static ERL_NIF_TERM LLVMWriteBitcodeToFileHandle_nif(ErlNifEnv* env, int argc, c
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from BitReader_8h.xml on {{2011,10,2},{18,38,33}}--
 
 static ERL_NIF_TERM LLVMParseBitcode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMParseBitcode\r\n");
   LLVMMemoryBufferRef MemBuf;
   llvm_ptr_deref(env, argv[0], (void **) &MemBuf);
 
@@ -8144,7 +7541,6 @@ static ERL_NIF_TERM LLVMParseBitcode_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMParseBitcodeInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMParseBitcodeInContext\r\n");
   LLVMContextRef ContextRef;
   llvm_ptr_deref(env, argv[0], (void **) &ContextRef);
 
@@ -8163,7 +7559,6 @@ static ERL_NIF_TERM LLVMParseBitcodeInContext_nif(ErlNifEnv* env, int argc, cons
 }
 
 static ERL_NIF_TERM LLVMGetBitcodeModuleInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetBitcodeModuleInContext\r\n");
   LLVMContextRef ContextRef;
   llvm_ptr_deref(env, argv[0], (void **) &ContextRef);
 
@@ -8182,7 +7577,6 @@ static ERL_NIF_TERM LLVMGetBitcodeModuleInContext_nif(ErlNifEnv* env, int argc, 
 }
 
 static ERL_NIF_TERM LLVMGetBitcodeModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetBitcodeModule\r\n");
   LLVMMemoryBufferRef MemBuf;
   llvm_ptr_deref(env, argv[0], (void **) &MemBuf);
 
@@ -8198,7 +7592,6 @@ static ERL_NIF_TERM LLVMGetBitcodeModule_nif(ErlNifEnv* env, int argc, const ERL
 }
 
 static ERL_NIF_TERM LLVMGetBitcodeModuleProviderInContext_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetBitcodeModuleProviderInContext\r\n");
   LLVMContextRef ContextRef;
   llvm_ptr_deref(env, argv[0], (void **) &ContextRef);
 
@@ -8217,7 +7610,6 @@ static ERL_NIF_TERM LLVMGetBitcodeModuleProviderInContext_nif(ErlNifEnv* env, in
 }
 
 static ERL_NIF_TERM LLVMGetBitcodeModuleProvider_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMGetBitcodeModuleProvider\r\n");
   LLVMMemoryBufferRef MemBuf;
   llvm_ptr_deref(env, argv[0], (void **) &MemBuf);
 
@@ -8234,10 +7626,9 @@ static ERL_NIF_TERM LLVMGetBitcodeModuleProvider_nif(ErlNifEnv* env, int argc, c
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from Analysis_8h.xml on {{2011,10,2},{18,38,33}}--
 
 static ERL_NIF_TERM LLVMVerifyModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMVerifyModule\r\n");
   LLVMModuleRef M;
   llvm_ptr_deref(env, argv[0], (void **) &M);
 
@@ -8254,7 +7645,6 @@ static ERL_NIF_TERM LLVMVerifyModule_nif(ErlNifEnv* env, int argc, const ERL_NIF
 }
 
 static ERL_NIF_TERM LLVMVerifyFunction_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMVerifyFunction\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -8267,7 +7657,6 @@ static ERL_NIF_TERM LLVMVerifyFunction_nif(ErlNifEnv* env, int argc, const ERL_N
 }
 
 static ERL_NIF_TERM LLVMViewFunctionCFG_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMViewFunctionCFG\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -8277,7 +7666,6 @@ LLVMViewFunctionCFG((LLVMValueRef)Fn);
 }
 
 static ERL_NIF_TERM LLVMViewFunctionCFGOnly_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
-  printf("\rCalling LLVMViewFunctionCFGOnly\r\n");
   LLVMValueRef Fn;
   llvm_ptr_deref(env, argv[0], (void **) &Fn);
 
@@ -8292,7 +7680,7 @@ LLVMViewFunctionCFGOnly((LLVMValueRef)Fn);
 static ErlNifFunc nif_funcs[] =
   {
 // @@NIF_MAPPINGS@@
-// -- Start generating from lto_8h.xml on {{2011,7,2},{17,38,39}}--
+// -- Start generating from lto_8h.xml on {{2011,10,2},{18,38,44}}--
 
     {"lto_get_version_internal",0,lto_get_version_nif},
     {"lto_get_error_message_internal",0,lto_get_error_message_nif},
@@ -8322,7 +7710,7 @@ static ErlNifFunc nif_funcs[] =
     {"lto_codegen_debug_options_internal",2,lto_codegen_debug_options_nif},
 // --- Stop generating from lto_8h.xml
 
-// -- Start generating from Target_8h.xml on {{2011,7,2},{17,38,38}}--
+// -- Start generating from Target_8h.xml on {{2011,10,2},{18,38,42}}--
 
     {"LLVMInitializeAllTargetInfos_internal",0,LLVMInitializeAllTargetInfos_nif},
     {"LLVMInitializeAllTargets_internal",0,LLVMInitializeAllTargets_nif},
@@ -8346,7 +7734,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMDisposeTargetData_internal",1,LLVMDisposeTargetData_nif},
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2011,7,2},{17,38,36}}--
+// -- Start generating from Scalar_8h.xml on {{2011,10,2},{18,38,41}}--
 
     {"LLVMAddAggressiveDCEPass_internal",1,LLVMAddAggressiveDCEPass_nif},
     {"LLVMAddCFGSimplificationPass_internal",1,LLVMAddCFGSimplificationPass_nif},
@@ -8373,11 +7761,11 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMAddVerifierPass_internal",1,LLVMAddVerifierPass_nif},
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,7,2},{17,38,35}}--
+// -- Start generating from LinkTimeOptimizer_8h.xml on {{2011,10,2},{18,38,39}}--
 
 // --- Stop generating from LinkTimeOptimizer_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2011,7,2},{17,38,33}}--
+// -- Start generating from Initialization_8h.xml on {{2011,10,2},{18,38,38}}--
 
     {"LLVMInitializeTransformUtils_internal",1,LLVMInitializeTransformUtils_nif},
     {"LLVMInitializeScalarOpts_internal",1,LLVMInitializeScalarOpts_nif},
@@ -8388,7 +7776,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMInitializeTarget_internal",1,LLVMInitializeTarget_nif},
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2011,7,2},{17,38,32}}--
+// -- Start generating from IPO_8h.xml on {{2011,10,2},{18,38,37}}--
 
     {"LLVMAddArgumentPromotionPass_internal",1,LLVMAddArgumentPromotionPass_nif},
     {"LLVMAddConstantMergePass_internal",1,LLVMAddConstantMergePass_nif},
@@ -8408,7 +7796,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMAddStripSymbolsPass_internal",1,LLVMAddStripSymbolsPass_nif},
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2011,7,2},{17,38,30}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2011,10,2},{18,38,36}}--
 
     {"LLVMLinkInJIT_internal",0,LLVMLinkInJIT_nif},
     {"LLVMLinkInInterpreter_internal",0,LLVMLinkInInterpreter_nif},
@@ -8443,7 +7831,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMGetPointerToGlobal_internal",2,LLVMGetPointerToGlobal_nif},
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from EnhancedDisassembly_8h.xml on {{2011,7,2},{17,38,29}}--
+// -- Start generating from EnhancedDisassembly_8h.xml on {{2011,10,2},{18,38,35}}--
 
     {"EDGetDisassembler_internal",3,EDGetDisassembler_nif},
     {"EDGetRegisterName_internal",3,EDGetRegisterName_nif},
@@ -8480,7 +7868,7 @@ static ErlNifFunc nif_funcs[] =
     {"EDEvaluateOperand_internal",4,EDEvaluateOperand_nif},
 // --- Stop generating from EnhancedDisassembly_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2011,7,2},{17,38,27}}--
+// -- Start generating from Core_8h.xml on {{2011,10,2},{18,38,33}}--
 
     {"LLVMDisposeMessage_internal",1,LLVMDisposeMessage_nif},
     {"LLVMContextCreate_internal",0,LLVMContextCreate_nif},
@@ -8927,14 +8315,14 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMDisposePassManager_internal",1,LLVMDisposePassManager_nif},
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from BitWriter_8h.xml on {{2011,10,2},{18,38,33}}--
 
     {"LLVMWriteBitcodeToFile_internal",2,LLVMWriteBitcodeToFile_nif},
     {"LLVMWriteBitcodeToFD_internal",4,LLVMWriteBitcodeToFD_nif},
     {"LLVMWriteBitcodeToFileHandle_internal",2,LLVMWriteBitcodeToFileHandle_nif},
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from BitReader_8h.xml on {{2011,10,2},{18,38,33}}--
 
     {"LLVMParseBitcode_internal",1,LLVMParseBitcode_nif},
     {"LLVMParseBitcodeInContext_internal",2,LLVMParseBitcodeInContext_nif},
@@ -8944,7 +8332,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMGetBitcodeModuleProvider_internal",1,LLVMGetBitcodeModuleProvider_nif},
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2011,7,2},{17,38,25}}--
+// -- Start generating from Analysis_8h.xml on {{2011,10,2},{18,38,33}}--
 
     {"LLVMVerifyModule_internal",2,LLVMVerifyModule_nif},
     {"LLVMVerifyFunction_internal",2,LLVMVerifyFunction_nif},

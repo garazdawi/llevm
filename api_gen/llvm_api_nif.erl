@@ -26,8 +26,8 @@ generate_functions([#function{name = Name,
 			      return_type = Return}|Rest]) ?LIMIT ->
     put({param_count,Name},0),
     ["static ERL_NIF_TERM ",Name,"_nif(ErlNifEnv* env, int argc, "
-     "const ERL_NIF_TERM argv[]) {~n"
-     "  printf(\"\\rCalling ",Name,"\\r\\n\");~n",
+     "const ERL_NIF_TERM argv[]) {~n",
+%     "  printf(\"\\rCalling ",Name,"\\r\\n\");~n",
      [generate_param_extract(Name,Param) || Param <- Params],
      if Return /= "void" ->
 	     ["  ",Return," retVal = ",Name,"(",
@@ -83,9 +83,13 @@ generate_param_extract(_Func,#param{ name = Name, type = "double" = Type}, Num) 
     ["  ",Type," ",Name,";~n"
      "  enif_get_double(env, argv[",Num,"], (double*)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
-  when ?IS_ENUM(Type); Type == "unsigned"->
+  when ?IS_ENUM(Type); Type == "unsigned"  ->
     ["  ",Type," ",Name,";~n"
      "  enif_get_uint(env, argv[",Num,"], (",Type,"*)&",Name,");~n~n"];
+generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
+  when Type == "unsigned long long"->
+    ["  ",Type," ",Name,";~n"
+     "  enif_get_uint64(env, argv[",Num,"], (ErlNifUInt64 *)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
   when Type == "int"->
     ["  ",Type," ",Name,";~n"
