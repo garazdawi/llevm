@@ -2,7 +2,7 @@
 
 -compile(export_all).
 
--include_lib("common_test/include/ct.hrl").
+%-include_lib("common_test/include/ct.hrl").
 
 -define(PRINT(Str,Args), ct:pal(Str,Args)).
 
@@ -27,41 +27,37 @@ end_per_testcase(_Tc, _Config) ->
     ok.
 
 all() ->
-    [fibonacci, fibonacci_perf].
+    [factorial, nfactorial, nfactorial_perf].
 
-fibonacci(Config) ->
-    {ModRef, [Fib]} = 
-	build(Config, [{fib, "fib(1) -> 1;fib(N) -> N * fib(N-1)."}]),
-    run(ModRef, Fib, [10]).
+factorial(_Config) ->
+    {ModRef, [Fact]} = build([fact]),
+    run(ModRef, Fact, [10]).
+
+nfactorial(_Config) ->
+    {ModRef, [_Fact,NFact]} = build([fact,nfact]),
+    run(ModRef, NFact, [10]).
 
 
-fibonacci_perf(Config) ->
-    {ModRef, [Fib]} = 
-	build(Config, [{fib, "fib(1) -> 1;fib(N) -> N * fib(N-1)."}]),
+nfactorial_perf(_Config) ->
+    {ModRef, [_Fact,NFact]} = build([fact,nfact]),
     
     {_, EERef, _} = llevm:'LLVMCreateExecutionEngineForModule'(ModRef),
-    LLVMFib = fun(I) ->
+    LLVMFact = fun(I) ->
 		      Args = {llevm:'LLVMCreateGenericValueOfInt'(
 				llevm:'LLVMInt32Type'(),I, true)},
 		      Res = llevm:'LLVMRunFunction'(
-			      EERef, Fib, 1,
+			      EERef, NFact, 1,
 			      Args),
-		      llevm:'LLVMGenericValueToInt'(Res, false)
+		      element(2,llevm:'LLVMGenericValueToInt'(Res, false))
 	      end,
-    ErlangFib = fun fib/1,
-    {N,_R} = timer:tc(fun() -> [LLVMFib((I rem 5)+1) || I <- lists:seq(1,100000)] end),
-    {E,R} = timer:tc(fun() -> [ErlangFib((I rem 5)+1) || I <- lists:seq(1,100000)] end),
+    LLVMFact(1),
+    ErlangFact = fun nfact/1,
+    {N,_R} = timer:tc(fun() -> LLVMFact(1000000) end),
+    {E,_} = timer:tc(fun() -> ErlangFact(1000000) end),
     ct:pal("N = ~p~nE = ~p~n",[N,E]).
 
-get_erlang_ast(Config, Name, Str) ->
-    Erl = filename:join(proplists:get_value(priv_dir, Config),"tmp.erl"),
-    Beam = filename:join(proplists:get_value(priv_dir, Config),"tmp.beam"),
-    {ok, D} = file:open(Erl,[write]),
-    io:format(D,"-module(tmp).~n-compile(export_all).~n",[]),
-    io:format(D,Str,[]),
-    file:close(D),
-    {ok,_} = compile:file(Erl,[{outdir,proplists:get_value(priv_dir, Config)}]),
-    {beam_file,_Mod,_Export,_Vsn,_Opts,Function} = beam_disasm:file(Beam),
+get_erlang_ast(Name) ->
+    {beam_file,_Mod,_Export,_Vsn,_Opts,Function} = beam_disasm:file(code:which(?MODULE)),
     lists:keyfind(Name, 2, Function).
     
 
@@ -74,7 +70,7 @@ run(ModRef, FunRef, Args) ->
 	    IntArgs),
     llevm:'LLVMGenericValueToInt'(Res, false).
     
-build(Config, Strs) ->
+build(Funcs) ->
     llevm:'LLVMLinkInInterpreter'(),
 
     Ctx = llevm:'LLVMGetGlobalContext'(),
@@ -88,15 +84,17 @@ build(Config, Strs) ->
     llevm:'LLVMAddCFGSimplificationPass'(FPMRef),
 
     llevm:'LLVMInitializeFunctionPassManager'(FPMRef),
-    FunRefs = lists:map(fun({Func,Str}) ->
-				EAST = get_erlang_ast(Config, Func, Str),
+    FunRefs = lists:map(fun(Func) ->
+				EAST = get_erlang_ast(Func),
+				ct:print("EAST: ~p",[EAST]),
 				FunRef = erlang_gen:gen_function(ModRef,BuildRef,EAST),
 				llevm:'LLVMRunFunctionPassManager'(FPMRef, FunRef),
 				FunRef
-			end,Strs),
+			end,Funcs),
     llevm:'LLVMFinalizeFunctionPassManager'(FPMRef),
     llevm:'LLVMDumpModule'(ModRef),
     {ModRef,FunRefs}.
 
 
-fib(1) -> 1;fib(N) -> N * fib(N-1).
+fact(0) -> 1;fact(N) -> N * fact(N-1).
+nfact(1) -> 0; nfact(N) -> (fact((N rem 10)+1)+nfact(N-1)) rem (1 bsl 30).

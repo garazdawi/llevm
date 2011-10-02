@@ -62,9 +62,11 @@ gen_bb(_FunRef, _Name, []) ->
 
 gen_body(M, B, V, BBs, [{label, _},{func_info, _, _, _}|Body]) ->
     gen_body(M, B, V, BBs, Body);
-gen_body(M, B, V, BBs, [{label, No}|Body]) ->
+gen_body(M, B, _V, BBs, [{label, No}|Body]) ->
     llevm:'LLVMPositionBuilderAtEnd'(B, proplists:get_value(No, BBs)),
-    gen_body(M, B, V, BBs, Body);
+    FunRef = llevm:'LLVMGetBasicBlockParent'(
+	       llevm:'LLVMGetInsertBlock'(B)),
+    gen_body(M, B, get_params(FunRef, 1, 0), BBs, Body);
 gen_body(M, B, V, BBs, [{test, is_eq_exact, {f, FBB}, [A1,A2]}|Body]) ->
     A1Ref = get_ref(V, A1),
     A2Ref = get_ref(V, A2),
@@ -86,8 +88,12 @@ gen_body(M, B, V, BBs, [{gc_bif, Op, _Fail, _Needed, [A1,A2], Result}|Body]) ->
     NewRegRef = case Op of
 		    '-' -> llevm:'LLVMBuildSub'(B, A1Ref, A2Ref, 
 						reg_to_string(Result));
+		    '+' -> llevm:'LLVMBuildAdd'(B, A1Ref, A2Ref, 
+						reg_to_string(Result));
 		    '*' -> llevm:'LLVMBuildMul'(B, A1Ref, A2Ref, 
-						reg_to_string(Result))
+						reg_to_string(Result));
+		    'rem' -> llevm:'LLVMBuildURem'(B,A1Ref, A2Ref, 
+						   reg_to_string(Result))
 		end,
     gen_body(M, B, [{Result, NewRegRef}|V], BBs, Body);
 gen_body(M, B, V, BBs, [{move, From, To}|Body]) ->
