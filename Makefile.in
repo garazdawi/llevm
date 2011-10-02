@@ -60,4 +60,4 @@ shell:
 	erl -pa ebin
 
 test: compile logs
-	ct_run -noshell -pa ../llevm/ebin -logdir logs -suite tests/kaleidoscope_SUITE.erl
+	ct_run -noshell -pa ../llevm/ebin -logdir logs -suite tests/kaleidoscope_SUITE.erl -suite tests/erlang_SUITE.erl
