@@ -59,7 +59,7 @@ parse_enum(XML, Enum) when is_list(XML) ->
 		       fun(#enum_member{ value = undefined } = Member, Num) ->
 			       {Member#enum_member{ value = Num}, Num + 1};
 			  (Member, Num) ->
-			       {Member, Num}
+			       {Member, Num + Member#enum_member.value + 1}
 		       end,0, Members),
     FinEnum#enum{ members = NewMembers }.
     
