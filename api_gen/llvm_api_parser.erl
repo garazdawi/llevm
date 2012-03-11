@@ -59,7 +59,7 @@ parse_enum(XML, Enum) when is_list(XML) ->
 		       fun(#enum_member{ value = undefined } = Member, Num) ->
 			       {Member#enum_member{ value = Num}, Num + 1};
 			  (Member, Num) ->
-			       {Member, Num}
+			       {Member, Num + Member#enum_member.value + 1} % Use initializer's value
 		       end,0, Members),
     FinEnum#enum{ members = NewMembers }.
     
@@ -263,6 +263,8 @@ to_erlang_tag("double") ->
     "float";
 to_erlang_tag("void") ->
     "atom";
+to_erlang_tag("bool") ->
+    "boolean";
 to_erlang_tag("LLVMBool") ->
     "boolean";
 to_erlang_tag("constcharconst") ->
@@ -276,7 +278,7 @@ to_erlang_tag("enum "++Rest) ->
 to_erlang_tag(Else) ->
     "'"++Else++"'".
 
-%% Check hardoded arrays
+%% Check hardcoded arrays
 is_array(FName,PName) ->
     lists:member({FName,PName},?ARRAYS).
 is_out_param(_FName,"Out"++_) ->

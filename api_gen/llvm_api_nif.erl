@@ -18,7 +18,7 @@ generate_types([_|R]) ->
 generate_types([]) ->
     [].
 
-generate_resource_types(Entities) ->
+generate_resource_types(_Entities) ->
     "".
 
 generate_functions([#function{name = Name, 
@@ -83,7 +83,7 @@ generate_param_extract(_Func,#param{ name = Name, type = "double" = Type}, Num) 
     ["  ",Type," ",Name,";~n"
      "  enif_get_double(env, argv[",Num,"], (double*)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
-  when ?IS_ENUM(Type); Type == "unsigned"  ->
+  when Type == "unsigned"  ->
     ["  ",Type," ",Name,";~n"
      "  enif_get_uint(env, argv[",Num,"], (",Type,"*)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
@@ -115,6 +115,8 @@ generate_return(Params, Return) ->
     end.
 
 generate_return("unsigned"++_) ->
+    ["  enif_make_uint(env, retVal)"];
+generate_return("uint64_t") ->
     ["  enif_make_uint(env, retVal)"];
 generate_return("int") ->
     ["  enif_make_int(env, retVal)"];
