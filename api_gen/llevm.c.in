@@ -14,6 +14,9 @@
 #include "llvm-c/BitReader.h"
 #include "llvm-c/EnhancedDisassembly.h"
 #include "llvm-c/Analysis.h"
+#include "llvm-c/Transforms/PassManagerBuilder.h"
+#include "llvm-c/Object.h"
+#include "llvm-c/Disassembler.h"
 
 #include "erl_nif.h"
 

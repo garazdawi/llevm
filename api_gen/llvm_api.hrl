@@ -74,6 +74,8 @@
       ,Name /= "LLVMInitializeIPO"
       ,Name /= "LLVMInitializeAnalysis"
       ,Name /= "EDInstID"
+      ,Name /= "LLVMDisasmInstruction"
+      ,Name /= "LLVMConstIntOfArbitraryPrecision"
       %% I think the LinkTimeOptimizer is supposed to be used from C++ code to
       %% interface with existing LTO C code.
       ,Name /= "llvm_create_optimizer"
