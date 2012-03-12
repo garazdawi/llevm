@@ -9,8 +9,8 @@ OBJ_DIR=obj.$(ARCH)
 
 # llvm Variables
 LLVM_CONFIG=@llvm_config_var@
-LLVM_CFLAGS=-g3 -Wall -fPIC -I`$(LLVM_CONFIG) --includedir`  -DNDEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS  -fno-common
-LLVM_LDFLAGS=$(shell $(LLVM_CONFIG) --ldflags) `$(LLVM_CONFIG) --libs` -lEnhancedDisassembly -lLTO
+LLVM_CFLAGS=-g3 -Wall -fPIC -I`$(LLVM_CONFIG) --includedir`  -DNDEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS -D SIZEOF_LONG_LONG=8 -fno-common
+LLVM_LDFLAGS=`$(LLVM_CONFIG) --ldflags` `$(LLVM_CONFIG) --libs` -lEnhancedDisassembly #-lLTO
 
 # Erlang Variables
 ERL_TOP=@ERLANG_ROOT_DIR@
@@ -54,7 +54,7 @@ clean:
 	rm -rf $(OBJ_DIR) priv $(EBIN)
 
 very_clean: clean
-	rm -rf config.status autom4te.cache Makefile config.log
+	rm -rf config.status autom4te.cache Makefile config.log api_gen/llvm_xml/
 
 shell:
 	erl -pa ebin

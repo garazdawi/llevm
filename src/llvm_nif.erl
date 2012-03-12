@@ -7,11 +7,11 @@
 load_my_nifs() ->
     erlang:load_nif("./priv/x86_64/llevm",0).
 
-module_new(Name) ->
+module_new(_Name) ->
     not_loaded.
 
-module_getFunction(Mod, Callee) ->
+module_getFunction(_Mod, _Callee) ->
     not_loaded.
 
-module_dump(Mod) ->
+module_dump(_Mod) ->
     not_loaded.

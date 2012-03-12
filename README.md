@@ -45,7 +45,7 @@ regerated. The code which generated the llevm interface is in the api_gen
 folder and divided into the different files that they generate. 
 
 
-Runnig test
+Running test
 ---------------------
 llevm comes with a set of test which tests that everything works as it should.
 To run the tests type:
@@ -61,4 +61,4 @@ Debugging
 It is possible to enable lots of debug printouts in `api_gen/llvm_api_nif.erl`.
 Just search for printf and uncomment those lines and then regenerate llevm. 
 It is also helpful to use gdb to step through execution, there are some 
-example commands in `os_lathund` to show how I do it on my mac. 
+example commands in `os_lathund` to show how I do it on my mac.

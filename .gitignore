@@ -1,1 +1,21 @@
+## Temp files
 *~
+\#*
+
+## Auto-generated files
+Makefile
+config.log
+config.status
+
+api_gen/Makefile
+api_gen/doxygen.conf
+api_gen/llvm_xml/
+
+## Binary files
+*.beam
+ebin/
+priv/
+obj.*/
+
+## Misc
+autom4te.cache/
