@@ -27,8 +27,21 @@ ERTS_DIR=$ERLANG_ROOT_DIR`erl -noshell -eval 'io:format("~s~n",[[lists:concat([[
 AC_SUBST(ERTS_DIR)
 AC_MSG_NOTICE(ERL ROOT DIR: [$ERLANG_ROOT_DIR])
 
-AC_CHECK_SIZEOF(void *)
 
+case $host_os in
+     darwin*)
+	CC=gcc
+	CXX=gcc
+	LINKER=gcc
+	;;
+     *)
+	CC=gcc
+	CXX=g++
+	LINKER=g++
+	;;
+esac
+
+AC_CHECK_SIZEOF(void *)
 case $ac_cv_sizeof_void_p in
      8)
 	CFLAGS="-m64"
@@ -43,15 +56,12 @@ CFLAGS="-g3 -Wall -fPIC"
 case $host_os in
      darwin*)
 	LDFLAGS="-fPIC -bundle -flat_namespace -undefined suppress"
-	LINKER=gcc
 	;;
      *)
 	LDFLAGS="-shared -fPIC"
-	LINKER=g++
 	;;
 esac
 AC_SUBST(LINKER)
-
 
 # Checks for libraries.
 

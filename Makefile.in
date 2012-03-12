@@ -8,9 +8,10 @@ INCLUDE_DIR=include
 OBJ_DIR=obj.$(ARCH)
 
 # llvm Variables
+
 LLVM_CONFIG=@llvm_config_var@
 LLVM_CFLAGS=-g3 -Wall -fPIC -I`$(LLVM_CONFIG) --includedir`  -DNDEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS -D SIZEOF_LONG_LONG=8 -fno-common
-LLVM_LDFLAGS=`$(LLVM_CONFIG) --ldflags` -Xlinker --start-group `$(LLVM_CONFIG) --libdir`/libLTO.a `$(LLVM_CONFIG) --libs` -Xlinker --end-group
+LLVM_LDFLAGS=`$(LLVM_CONFIG) --ldflags` `$(LLVM_CONFIG) --libdir`/libLTO.a `$(LLVM_CONFIG) --libs`
 
 # Erlang Variables
 ERL_TOP=@ERLANG_ROOT_DIR@
@@ -27,6 +28,7 @@ CFLAGS+=$(LLVM_CFLAGS)
 CFLAGS+=-I @ERTS_DIR@/include/
 LDFLAGS=@LDFLAGS@
 LDFLAGS+=$(LLVM_LDFLAGS)
+LIBS=@LIBS@
 OBJ_FILES=$(patsubst $(CSRC)/%.c, $(OBJ_DIR)/%.o, $(wildcard $(CSRC)/*.c))
 H_FILES=$(wildcard $(CSRC)/*.h)
 
@@ -45,7 +47,7 @@ $(OBJ_DIR)/%.o: $(CSRC)/%.c $(H_FILES) $(OBJ_DIR)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 priv/$(ARCH)/llevm.so: $(OBJ_FILES) priv/$(ARCH)
-	$(LINKER) $(OBJ_FILES) $(LDFLAGS) -o $@
+	$(LINKER) $(OBJ_FILES) $(LIBS) $(LDFLAGS) -o $@
 
 priv/$(ARCH) $(OBJ_DIR) $(EBIN) $(INCLUDE_DIR) logs:
 	@mkdir -p $@
