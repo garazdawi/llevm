@@ -11,12 +11,44 @@
 -on_load(load_my_nifs/0).
 
 %% @@EXPORTS@@
-%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,26,18}}--
+%% -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+
+-export(['lto_get_version'/0]).
+-export(['lto_get_error_message'/0]).
+-export(['lto_module_is_object_file'/1]).
+-export(['lto_module_is_object_file_for_target'/2]).
+-export(['lto_module_is_object_file_in_memory'/2]).
+-export(['lto_module_is_object_file_in_memory_for_target'/3]).
+-export(['lto_module_create'/1]).
+-export(['lto_module_create_from_memory'/2]).
+-export(['lto_module_create_from_fd_at_offset'/5]).
+-export(['lto_module_dispose'/1]).
+-export(['lto_module_get_target_triple'/1]).
+-export(['lto_module_set_target_triple'/2]).
+-export(['lto_module_get_num_symbols'/1]).
+-export(['lto_module_get_symbol_name'/2]).
+-export(['lto_module_get_symbol_attribute'/2]).
+-export(['lto_codegen_create'/0]).
+-export(['lto_codegen_dispose'/1]).
+-export(['lto_codegen_add_module'/2]).
+-export(['lto_codegen_set_debug_model'/2]).
+-export(['lto_codegen_set_pic_model'/2]).
+-export(['lto_codegen_set_cpu'/2]).
+-export(['lto_codegen_set_assembler_path'/2]).
+-export(['lto_codegen_set_assembler_args'/3]).
+-export(['lto_codegen_add_must_preserve_symbol'/2]).
+-export(['lto_codegen_write_merged_modules'/2]).
+-export(['lto_codegen_compile'/2]).
+-export(['lto_codegen_compile_to_file'/2]).
+-export(['lto_codegen_debug_options'/2]).
+%% --- Stop generating from lto_8h.xml
+
+%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
 
 -export(['LLVMAddBBVectorizePass'/1]).
 %% --- Stop generating from Vectorize_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,26,17}}--
+%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
 
 -export(['LLVMInitializeAllTargetInfos'/0]).
 -export(['LLVMInitializeAllTargets'/0]).
@@ -44,7 +76,7 @@
 -export(['LLVMDisposeTargetData'/1]).
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,26,16}}--
+%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
 
 -export(['LLVMAddAggressiveDCEPass'/1]).
 -export(['LLVMAddCFGSimplificationPass'/1]).
@@ -78,7 +110,7 @@
 -export(['LLVMAddBasicAliasAnalysisPass'/1]).
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,26,15}}--
+%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,36}}--
 
 -export(['LLVMPassManagerBuilderCreate'/0]).
 -export(['LLVMPassManagerBuilderDispose'/1]).
@@ -93,7 +125,7 @@
 -export(['LLVMPassManagerBuilderPopulateLTOPassManager'/4]).
 %% --- Stop generating from PassManagerBuilder_8h.xml
 
-%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,26,14}}--
+%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,35}}--
 
 -export(['LLVMCreateObjectFile'/1]).
 -export(['LLVMDisposeObjectFile'/1]).
@@ -127,7 +159,11 @@
 -export(['LLVMGetRelocationValueString'/1]).
 %% --- Stop generating from Object_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,26,13}}--
+%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,35}}--
+
+%% --- Stop generating from LinkTimeOptimizer_8h.xml
+
+%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
 
 -export(['LLVMInitializeTransformUtils'/1]).
 -export(['LLVMInitializeScalarOpts'/1]).
@@ -139,7 +175,7 @@
 -export(['LLVMInitializeTarget'/1]).
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,26,13}}--
+%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
 
 -export(['LLVMAddArgumentPromotionPass'/1]).
 -export(['LLVMAddConstantMergePass'/1]).
@@ -157,7 +193,7 @@
 -export(['LLVMAddStripSymbolsPass'/1]).
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,26,12}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
 
 -export(['LLVMLinkInJIT'/0]).
 -export(['LLVMLinkInInterpreter'/0]).
@@ -192,13 +228,50 @@
 -export(['LLVMGetPointerToGlobal'/2]).
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,31}}--
+
+-export(['EDGetDisassembler'/3]).
+-export(['EDGetRegisterName'/3]).
+-export(['EDRegisterIsStackPointer'/2]).
+-export(['EDRegisterIsProgramCounter'/2]).
+-export(['EDCreateInsts'/6]).
+-export(['EDReleaseInst'/1]).
+-export(['EDInstByteSize'/1]).
+-export(['EDGetInstString'/2]).
+-export(['EDInstIsBranch'/1]).
+-export(['EDInstIsMove'/1]).
+-export(['EDBranchTargetID'/1]).
+-export(['EDMoveSourceID'/1]).
+-export(['EDMoveTargetID'/1]).
+-export(['EDNumTokens'/1]).
+-export(['EDGetToken'/3]).
+-export(['EDGetTokenString'/2]).
+-export(['EDOperandIndexForToken'/1]).
+-export(['EDTokenIsWhitespace'/1]).
+-export(['EDTokenIsPunctuation'/1]).
+-export(['EDTokenIsOpcode'/1]).
+-export(['EDTokenIsLiteral'/1]).
+-export(['EDTokenIsRegister'/1]).
+-export(['EDTokenIsNegativeLiteral'/1]).
+-export(['EDLiteralTokenAbsoluteValue'/2]).
+-export(['EDRegisterTokenValue'/2]).
+-export(['EDNumOperands'/1]).
+-export(['EDGetOperand'/3]).
+-export(['EDOperandIsRegister'/1]).
+-export(['EDOperandIsImmediate'/1]).
+-export(['EDOperandIsMemory'/1]).
+-export(['EDRegisterOperandValue'/2]).
+-export(['EDImmediateOperandValue'/2]).
+-export(['EDEvaluateOperand'/4]).
+%% --- Stop generating from EnhancedDisassembly_8h.xml
+
+%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
 
 -export(['LLVMCreateDisasm'/5]).
 -export(['LLVMDisasmDispose'/1]).
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
 
 -export(['LLVMDisposeMessage'/1]).
 -export(['LLVMContextCreate'/0]).
@@ -660,14 +733,14 @@
 -export(['LLVMDisposePassManager'/1]).
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
 
 -export(['LLVMWriteBitcodeToFile'/2]).
 -export(['LLVMWriteBitcodeToFD'/4]).
 -export(['LLVMWriteBitcodeToFileHandle'/2]).
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
 
 -export(['LLVMParseBitcode'/1]).
 -export(['LLVMParseBitcodeInContext'/2]).
@@ -677,7 +750,7 @@
 -export(['LLVMGetBitcodeModuleProvider'/1]).
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
 
 -export(['LLVMVerifyModule'/2]).
 -export(['LLVMVerifyFunction'/2]).
@@ -689,11 +762,22 @@
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
 %% @@TYPES@@
-%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,26,17}}--
+%% -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+
+-opaque 'lto_symbol_attributes'() :: {'lto_symbol_attributes',integer()}.
+-opaque 'lto_debug_model'() :: {'lto_debug_model',integer()}.
+-opaque 'lto_codegen_model'() :: {'lto_codegen_model',integer()}.
+-opaque 'lto_module_t'() :: {'lto_module_t',binary()}.
+%% opaque reference to a loaded object module 
+-opaque 'lto_code_gen_t'() :: {'lto_code_gen_t',binary()}.
+%% opaque reference to a code generator 
+%% --- Stop generating from lto_8h.xml
+
+%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
 
 %% --- Stop generating from Vectorize_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,26,17}}--
+%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
 
 -opaque 'LLVMByteOrdering'() :: {'LLVMByteOrdering',integer()}.
 -opaque 'LLVMTargetDataRef'() :: {'LLVMTargetDataRef',binary()}.
@@ -704,17 +788,17 @@
 %% 
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,26,16}}--
+%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,26,15}}--
+%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,36}}--
 
 -opaque 'LLVMPassManagerBuilderRef'() :: {'LLVMPassManagerBuilderRef',binary()}.
 %% 
 %% --- Stop generating from PassManagerBuilder_8h.xml
 
-%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,26,14}}--
+%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,35}}--
 
 -opaque 'LLVMObjectFileRef'() :: {'LLVMObjectFileRef',binary()}.
 %% 
@@ -726,15 +810,25 @@
 %% 
 %% --- Stop generating from Object_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,26,13}}--
+%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,34}}--
+
+-opaque 'llvm_lto_status'() :: {'llvm_lto_status',integer()}.
+-opaque 'llvm_lto_t'() :: {'llvm_lto_t',binary()}.
+%% 
+-type 'llvm_lto_status_t'() :: llvm_lto_status().
+%% This provides a C-visible enumerator to manage status codes. This should map exactly onto the C++ enumerator LTOStatus. 
+
+%% --- Stop generating from LinkTimeOptimizer_8h.xml
+
+%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
 
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,26,13}}--
+%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,26,12}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
 
 -opaque 'LLVMGenericValueRef'() :: {'LLVMGenericValueRef',binary()}.
 %% 
@@ -742,7 +836,27 @@
 %% 
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,31}}--
+
+-opaque '@0'() :: {'@0',integer()}.
+-opaque 'EDByteReaderCallback'() :: {'EDByteReaderCallback',binary()}.
+%% Interface to memory from which instructions may be read. byteA pointer whose target should be filled in with the data returned. addressThe address of the byte to be read. argAn anonymous argument for client use. 0 on success; -1 otherwise. 
+-opaque 'EDRegisterReaderCallback'() :: {'EDRegisterReaderCallback',binary()}.
+%% Interface to registers from which registers may be read. valueA pointer whose target should be filled in with the value of the register. regIDThe LLVM register identifier for the register to read. argAn anonymous argument for client use. 0 if the register could be read; -1 otherwise. 
+-type 'EDAssemblySyntax_t'() :: integer().
+%% An assembly syntax for use in tokenizing instructions. 
+
+-opaque 'EDDisassemblerRef'() :: {'EDDisassemblerRef',binary()}.
+%% Encapsulates a disassembler for a single CPU architecture. 
+-opaque 'EDInstRef'() :: {'EDInstRef',binary()}.
+%% Encapsulates a single disassembled instruction in one assembly syntax. 
+-opaque 'EDTokenRef'() :: {'EDTokenRef',binary()}.
+%% Encapsulates a token from the disassembly of an instruction. 
+-opaque 'EDOperandRef'() :: {'EDOperandRef',binary()}.
+%% Encapsulates an operand of an instruction. 
+%% --- Stop generating from EnhancedDisassembly_8h.xml
+
+%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
 
 -opaque 'LLVMDisasmContextRef'() :: {'LLVMDisasmContextRef',binary()}.
 %% An opaque reference to a disassembler context. 
@@ -752,7 +866,7 @@
 %% The type for the symbol lookup function. This may be called by the disassembler for things like adding a comment for a PC plus a constant offset load instruction to use a symbol name instead of a load address value. It is passed the block information is saved when the disassembler context is created and the ReferenceValue to look up as a symbol. If no symbol is found for the ReferenceValue NULL is returned. The ReferenceType of the instruction is passed indirectly as is the PC of the instruction in ReferencePC. If the output reference can be determined its type is returned indirectly in ReferenceType along with ReferenceName if any, or that is set to NULL. 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -790,15 +904,15 @@
 %% Used to get the users and usees of a Value. See the llvm::Use class. 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
 
 -opaque 'LLVMVerifierFailureAction'() :: {'LLVMVerifierFailureAction',integer()}.
 %% --- Stop generating from Analysis_8h.xml
@@ -808,7 +922,207 @@ load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
 %% @@FUNCTIONS@@
-%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,26,18}}--
+%% -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+
+%% @doc Returns a printable string. 
+-spec 'lto_get_version'() -> string().
+'lto_get_version'() ->
+	{string,'lto_get_version_internal'()}.
+'lto_get_version_internal'() ->
+	nif_not_loaded.
+
+%% @doc Returns the last error string or NULL if last operation was successful. 
+-spec 'lto_get_error_message'() -> string().
+'lto_get_error_message'() ->
+	{string,'lto_get_error_message_internal'()}.
+'lto_get_error_message_internal'() ->
+	nif_not_loaded.
+
+%% @doc Checks if a file is a loadable object file. 
+-spec 'lto_module_is_object_file'(Path :: string()) -> boolean().
+'lto_module_is_object_file'(Path) ->
+	{boolean,'lto_module_is_object_file_internal'(Path)}.
+'lto_module_is_object_file_internal'(_Path) ->
+	nif_not_loaded.
+
+%% @doc Checks if a file is a loadable object compiled for requested target. 
+-spec 'lto_module_is_object_file_for_target'(Path :: string(),Target_triple_prefix :: string()) -> boolean().
+'lto_module_is_object_file_for_target'(Path,Target_triple_prefix) ->
+	{boolean,'lto_module_is_object_file_for_target_internal'(Path,Target_triple_prefix)}.
+'lto_module_is_object_file_for_target_internal'(_Path,_Target_triple_prefix) ->
+	nif_not_loaded.
+
+%% @doc Checks if a buffer is a loadable object file. 
+-spec 'lto_module_is_object_file_in_memory'(Mem :: llvm_ptr(atom()),Length :: integer()) -> boolean().
+'lto_module_is_object_file_in_memory'({ptr,{'void',Mem}},Length) ->
+	{boolean,'lto_module_is_object_file_in_memory_internal'(Mem,Length)}.
+'lto_module_is_object_file_in_memory_internal'(_Mem,_Length) ->
+	nif_not_loaded.
+
+%% @doc Checks if a buffer is a loadable object compiled for requested target. 
+-spec 'lto_module_is_object_file_in_memory_for_target'(Mem :: llvm_ptr(atom()),Length :: integer(),Target_triple_prefix :: string()) -> boolean().
+'lto_module_is_object_file_in_memory_for_target'({ptr,{'void',Mem}},Length,Target_triple_prefix) ->
+	{boolean,'lto_module_is_object_file_in_memory_for_target_internal'(Mem,Length,Target_triple_prefix)}.
+'lto_module_is_object_file_in_memory_for_target_internal'(_Mem,_Length,_Target_triple_prefix) ->
+	nif_not_loaded.
+
+%% @doc Loads an object file from disk. Returns NULL on error (check lto_get_error_message() for details). 
+-spec 'lto_module_create'(Path :: string()) -> 'lto_module_t'().
+'lto_module_create'(Path) ->
+	{'lto_module_t','lto_module_create_internal'(Path)}.
+'lto_module_create_internal'(_Path) ->
+	nif_not_loaded.
+
+%% @doc Loads an object file from memory. Returns NULL on error (check lto_get_error_message() for details). 
+-spec 'lto_module_create_from_memory'(Mem :: llvm_ptr(atom()),Length :: integer()) -> 'lto_module_t'().
+'lto_module_create_from_memory'({ptr,{'void',Mem}},Length) ->
+	{'lto_module_t','lto_module_create_from_memory_internal'(Mem,Length)}.
+'lto_module_create_from_memory_internal'(_Mem,_Length) ->
+	nif_not_loaded.
+
+%% @doc Loads an object file from disk. The seek point of fd is not preserved. Returns NULL on error (check lto_get_error_message() for details). 
+-spec 'lto_module_create_from_fd_at_offset'(Fd :: integer(),Path :: string(),File_size :: integer(),Map_size :: integer(),Offset :: integer()) -> 'lto_module_t'().
+'lto_module_create_from_fd_at_offset'(Fd,Path,File_size,Map_size,Offset) ->
+	{'lto_module_t','lto_module_create_from_fd_at_offset_internal'(Fd,Path,File_size,Map_size,Offset)}.
+'lto_module_create_from_fd_at_offset_internal'(_Fd,_Path,_File_size,_Map_size,_Offset) ->
+	nif_not_loaded.
+
+%% @doc Frees all memory internally allocated by the module. Upon return the lto_module_t is no longer valid. 
+-spec 'lto_module_dispose'(Mod :: 'lto_module_t'()) -> atom().
+'lto_module_dispose'({'lto_module_t',Mod}) ->
+	{atom,'lto_module_dispose_internal'(Mod)}.
+'lto_module_dispose_internal'(_Mod) ->
+	nif_not_loaded.
+
+%% @doc Returns triple string which the object module was compiled under. 
+-spec 'lto_module_get_target_triple'(Mod :: 'lto_module_t'()) -> string().
+'lto_module_get_target_triple'({'lto_module_t',Mod}) ->
+	{string,'lto_module_get_target_triple_internal'(Mod)}.
+'lto_module_get_target_triple_internal'(_Mod) ->
+	nif_not_loaded.
+
+%% @doc Sets triple string with which the object will be codegened. 
+-spec 'lto_module_set_target_triple'(Mod :: 'lto_module_t'(),Triple :: string()) -> atom().
+'lto_module_set_target_triple'({'lto_module_t',Mod},Triple) ->
+	{atom,'lto_module_set_target_triple_internal'(Mod,Triple)}.
+'lto_module_set_target_triple_internal'(_Mod,_Triple) ->
+	nif_not_loaded.
+
+%% @doc Returns the number of symbols in the object module. 
+-spec 'lto_module_get_num_symbols'(Mod :: 'lto_module_t'()) -> integer().
+'lto_module_get_num_symbols'({'lto_module_t',Mod}) ->
+	{integer,'lto_module_get_num_symbols_internal'(Mod)}.
+'lto_module_get_num_symbols_internal'(_Mod) ->
+	nif_not_loaded.
+
+%% @doc Returns the name of the ith symbol in the object module. 
+-spec 'lto_module_get_symbol_name'(Mod :: 'lto_module_t'(),Index :: integer()) -> string().
+'lto_module_get_symbol_name'({'lto_module_t',Mod},Index) ->
+	{string,'lto_module_get_symbol_name_internal'(Mod,Index)}.
+'lto_module_get_symbol_name_internal'(_Mod,_Index) ->
+	nif_not_loaded.
+
+%% @doc Returns the attributes of the ith symbol in the object module. 
+-spec 'lto_module_get_symbol_attribute'(Mod :: 'lto_module_t'(),Index :: integer()) -> 'lto_symbol_attributes'().
+'lto_module_get_symbol_attribute'({'lto_module_t',Mod},Index) ->
+	{'lto_symbol_attributes','lto_module_get_symbol_attribute_internal'(Mod,Index)}.
+'lto_module_get_symbol_attribute_internal'(_Mod,_Index) ->
+	nif_not_loaded.
+
+%% @doc Instantiates a code generator. Returns NULL on error (check lto_get_error_message() for details). 
+-spec 'lto_codegen_create'() -> 'lto_code_gen_t'().
+'lto_codegen_create'() ->
+	{'lto_code_gen_t','lto_codegen_create_internal'()}.
+'lto_codegen_create_internal'() ->
+	nif_not_loaded.
+
+%% @doc Frees all code generator and all memory it internally allocated. Upon return the lto_code_gen_t is no longer valid. 
+-spec 'lto_codegen_dispose'(Code_gen :: 'lto_code_gen_t'()) -> atom().
+'lto_codegen_dispose'({'lto_code_gen_t',Code_gen}) ->
+	{atom,'lto_codegen_dispose_internal'(Code_gen)}.
+'lto_codegen_dispose_internal'(_Code_gen) ->
+	nif_not_loaded.
+
+%% @doc Add an object module to the set of modules for which code will be generated. Returns true on error (check lto_get_error_message() for details). 
+-spec 'lto_codegen_add_module'(Cg :: 'lto_code_gen_t'(),Mod :: 'lto_module_t'()) -> boolean().
+'lto_codegen_add_module'({'lto_code_gen_t',Cg},{'lto_module_t',Mod}) ->
+	{boolean,'lto_codegen_add_module_internal'(Cg,Mod)}.
+'lto_codegen_add_module_internal'(_Cg,_Mod) ->
+	nif_not_loaded.
+
+%% @doc Sets if debug info should be generated. Returns true on error (check lto_get_error_message() for details). 
+-spec 'lto_codegen_set_debug_model'(Cg :: 'lto_code_gen_t'(),Dbg :: 'lto_debug_model'()) -> boolean().
+'lto_codegen_set_debug_model'({'lto_code_gen_t',Cg},{'lto_debug_model',Dbg}) ->
+	{boolean,'lto_codegen_set_debug_model_internal'(Cg,Dbg)}.
+'lto_codegen_set_debug_model_internal'(_Cg,_Dbg) ->
+	nif_not_loaded.
+
+%% @doc Sets which PIC code model to generated. Returns true on error (check lto_get_error_message() for details). 
+-spec 'lto_codegen_set_pic_model'(Cg :: 'lto_code_gen_t'(),Code_gen :: 'lto_codegen_model'()) -> boolean().
+'lto_codegen_set_pic_model'({'lto_code_gen_t',Cg},{'lto_codegen_model',Code_gen}) ->
+	{boolean,'lto_codegen_set_pic_model_internal'(Cg,Code_gen)}.
+'lto_codegen_set_pic_model_internal'(_Cg,_Code_gen) ->
+	nif_not_loaded.
+
+%% @doc Sets the cpu to generate code for. 
+-spec 'lto_codegen_set_cpu'(Cg :: 'lto_code_gen_t'(),Cpu :: string()) -> atom().
+'lto_codegen_set_cpu'({'lto_code_gen_t',Cg},Cpu) ->
+	{atom,'lto_codegen_set_cpu_internal'(Cg,Cpu)}.
+'lto_codegen_set_cpu_internal'(_Cg,_Cpu) ->
+	nif_not_loaded.
+
+%% @doc Sets the location of the assembler tool to run. If not set, libLTO will use gcc to invoke the assembler. 
+-spec 'lto_codegen_set_assembler_path'(Cg :: 'lto_code_gen_t'(),Path :: string()) -> atom().
+'lto_codegen_set_assembler_path'({'lto_code_gen_t',Cg},Path) ->
+	{atom,'lto_codegen_set_assembler_path_internal'(Cg,Path)}.
+'lto_codegen_set_assembler_path_internal'(_Cg,_Path) ->
+	nif_not_loaded.
+
+%% @doc Sets extra arguments that libLTO should pass to the assembler. 
+-spec 'lto_codegen_set_assembler_args'(Cg :: 'lto_code_gen_t'(),Args :: tuple(string()),Nargs :: integer()) -> atom().
+'lto_codegen_set_assembler_args'({'lto_code_gen_t',Cg},Args,Nargs) ->
+	{atom,'lto_codegen_set_assembler_args_internal'(Cg,Args,Nargs)}.
+'lto_codegen_set_assembler_args_internal'(_Cg,_Args,_Nargs) ->
+	nif_not_loaded.
+
+%% @doc Adds to a list of all global symbols that must exist in the final generated code. If a function is not listed, it might be inlined into every usage and optimized away. 
+-spec 'lto_codegen_add_must_preserve_symbol'(Cg :: 'lto_code_gen_t'(),Symbol :: string()) -> atom().
+'lto_codegen_add_must_preserve_symbol'({'lto_code_gen_t',Cg},Symbol) ->
+	{atom,'lto_codegen_add_must_preserve_symbol_internal'(Cg,Symbol)}.
+'lto_codegen_add_must_preserve_symbol_internal'(_Cg,_Symbol) ->
+	nif_not_loaded.
+
+%% @doc Writes a new object file at the specified path that contains the merged contents of all modules added so far. Returns true on error (check lto_get_error_message() for details). 
+-spec 'lto_codegen_write_merged_modules'(Cg :: 'lto_code_gen_t'(),Path :: string()) -> boolean().
+'lto_codegen_write_merged_modules'({'lto_code_gen_t',Cg},Path) ->
+	{boolean,'lto_codegen_write_merged_modules_internal'(Cg,Path)}.
+'lto_codegen_write_merged_modules_internal'(_Cg,_Path) ->
+	nif_not_loaded.
+
+%% @doc Generates code for all added modules into one native object file. On success returns a pointer to a generated mach-o/ELF buffer and length set to the buffer size. The buffer is owned by the lto_code_gen_t and will be freed when lto_codegen_dispose() is called, or lto_codegen_compile() is called again. On failure, returns NULL (check lto_get_error_message() for details). 
+-spec 'lto_codegen_compile'(Cg :: 'lto_code_gen_t'(),Length :: llvm_ptr(integer())) -> llvm_ptr(atom()).
+'lto_codegen_compile'({'lto_code_gen_t',Cg},{ptr,{'size_t',Length}}) ->
+	{'void *','lto_codegen_compile_internal'(Cg,Length)}.
+'lto_codegen_compile_internal'(_Cg,_Length) ->
+	nif_not_loaded.
+
+%% @doc Generates code for all added modules into one native object file. The name of the file is written to name. Returns true on error. 
+-spec 'lto_codegen_compile_to_file'(Cg :: 'lto_code_gen_t'(),Name :: llvm_ptr(string())) -> boolean().
+'lto_codegen_compile_to_file'({'lto_code_gen_t',Cg},{ptr,{'string',Name}}) ->
+	{boolean,'lto_codegen_compile_to_file_internal'(Cg,Name)}.
+'lto_codegen_compile_to_file_internal'(_Cg,_Name) ->
+	nif_not_loaded.
+
+%% @doc Sets options to help debug codegen bugs. 
+-spec 'lto_codegen_debug_options'(Cg :: 'lto_code_gen_t'(),String :: string()) -> atom().
+'lto_codegen_debug_options'({'lto_code_gen_t',Cg},String) ->
+	{atom,'lto_codegen_debug_options_internal'(Cg,String)}.
+'lto_codegen_debug_options_internal'(_Cg,_String) ->
+	nif_not_loaded.
+
+%% --- Stop generating from lto_8h.xml
+
+%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
 
 %% @doc See llvm::createBBVectorizePass function. 
 -spec 'LLVMAddBBVectorizePass'(PM :: 'LLVMPassManagerRef'()) -> atom().
@@ -819,7 +1133,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Vectorize_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,26,17}}--
+%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
 
 %% @doc LLVMInitializeAllTargetInfos - The main program should call this function if it wants access to all available targets that LLVM is configured to support. 
 -spec 'LLVMInitializeAllTargetInfos'() -> atom().
@@ -991,7 +1305,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,26,16}}--
+%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
 
 %% @doc See llvm::createAggressiveDCEPass function. 
 -spec 'LLVMAddAggressiveDCEPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
@@ -1205,7 +1519,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,26,15}}--
+%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,36}}--
 
 %% @doc See llvm::PassManagerBuilder. 
 -spec 'LLVMPassManagerBuilderCreate'() -> 'LLVMPassManagerBuilderRef'().
@@ -1286,7 +1600,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from PassManagerBuilder_8h.xml
 
-%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,26,14}}--
+%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,35}}--
 
 %% @doc 
 -spec 'LLVMCreateObjectFile'(MemBuf :: 'LLVMMemoryBufferRef'()) -> 'LLVMObjectFileRef'().
@@ -1500,7 +1814,11 @@ load_my_nifs() ->
 
 %% --- Stop generating from Object_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,26,14}}--
+%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,35}}--
+
+%% --- Stop generating from LinkTimeOptimizer_8h.xml
+
+%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
 
 %% @doc 
 -spec 'LLVMInitializeTransformUtils'(R :: 'LLVMPassRegistryRef'()) -> atom().
@@ -1560,7 +1878,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,26,13}}--
+%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
 
 %% @doc See llvm::createArgumentPromotionPass function. 
 -spec 'LLVMAddArgumentPromotionPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
@@ -1662,7 +1980,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,26,12}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
 
 %% @doc 
 -spec 'LLVMLinkInJIT'() -> atom().
@@ -1892,7 +2210,242 @@ load_my_nifs() ->
 
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,32}}--
+
+%% @doc Getting a disassemblerEDGetDisassembler Gets the disassembler for a given target. disassemblerA pointer whose target will be filled in with the disassembler. tripleIdentifies the target. Example: "x86_64-apple-darwin10" syntaxThe assembly syntax to use when decoding instructions. 0 on success; -1 otherwise. 
+-spec 'EDGetDisassembler'(Disassembler :: llvm_ptr('EDDisassemblerRef'()),Triple :: string(),Syntax :: 'EDAssemblySyntax_t'()) -> integer().
+'EDGetDisassembler'({ptr,{'EDDisassemblerRef',Disassembler}},Triple,{'EDAssemblySyntax_t',Syntax}) ->
+	{integer,'EDGetDisassembler_internal'(Disassembler,Triple,Syntax)}.
+'EDGetDisassembler_internal'(_Disassembler,_Triple,_Syntax) ->
+	nif_not_loaded.
+
+%% @doc Generic architectural queriesEDGetRegisterName Gets the human-readable name for a given register. regNameA pointer whose target will be pointed at the name of the register. The name does not need to be deallocated and will be disassemblerThe disassembler to query for the name. regIDThe register identifier, as returned by EDRegisterTokenValue. 0 on success; -1 otherwise. 
+-spec 'EDGetRegisterName'(RegName :: llvm_ptr(string()),Disassembler :: 'EDDisassemblerRef'(),RegID :: integer()) -> integer().
+'EDGetRegisterName'({ptr,{'string',RegName}},{'EDDisassemblerRef',Disassembler},RegID) ->
+	{integer,'EDGetRegisterName_internal'(RegName,Disassembler,RegID)}.
+'EDGetRegisterName_internal'(_RegName,_Disassembler,_RegID) ->
+	nif_not_loaded.
+
+%% @doc EDRegisterIsStackPointer Determines if a register is one of the platform's stack-pointer registers. disassemblerThe disassembler to query. regIDThe register identifier, as returned by EDRegisterTokenValue. 1 if true; 0 otherwise. 
+-spec 'EDRegisterIsStackPointer'(Disassembler :: 'EDDisassemblerRef'(),RegID :: integer()) -> integer().
+'EDRegisterIsStackPointer'({'EDDisassemblerRef',Disassembler},RegID) ->
+	{integer,'EDRegisterIsStackPointer_internal'(Disassembler,RegID)}.
+'EDRegisterIsStackPointer_internal'(_Disassembler,_RegID) ->
+	nif_not_loaded.
+
+%% @doc EDRegisterIsProgramCounter Determines if a register is one of the platform's stack-pointer registers. disassemblerThe disassembler to query. regIDThe register identifier, as returned by EDRegisterTokenValue. 1 if true; 0 otherwise. 
+-spec 'EDRegisterIsProgramCounter'(Disassembler :: 'EDDisassemblerRef'(),RegID :: integer()) -> integer().
+'EDRegisterIsProgramCounter'({'EDDisassemblerRef',Disassembler},RegID) ->
+	{integer,'EDRegisterIsProgramCounter_internal'(Disassembler,RegID)}.
+'EDRegisterIsProgramCounter_internal'(_Disassembler,_RegID) ->
+	nif_not_loaded.
+
+%% @doc Creating and querying instructionsEDCreateInst Gets a set of contiguous instructions from a disassembler. instsA pointer to an array that will be filled in with the instructions. Must have at least count entries. Entries not filled in will be set to NULL. countThe maximum number of instructions to fill in. disassemblerThe disassembler to use when decoding the instructions. byteReaderThe function to use when reading the instruction's machine code. addressThe address of the first byte of the instruction. argAn anonymous argument to be passed to byteReader. The number of instructions read on success; 0 otherwise. 
+-spec 'EDCreateInsts'(Insts :: llvm_ptr('EDInstRef'()),Count :: integer(),Disassembler :: 'EDDisassemblerRef'(),ByteReader :: 'EDByteReaderCallback'(),Address :: integer(),Arg :: llvm_ptr(atom())) -> integer().
+'EDCreateInsts'({ptr,{'EDInstRef',Insts}},Count,{'EDDisassemblerRef',Disassembler},{'EDByteReaderCallback',ByteReader},Address,{ptr,{'void',Arg}}) ->
+	{integer,'EDCreateInsts_internal'(Insts,Count,Disassembler,ByteReader,Address,Arg)}.
+'EDCreateInsts_internal'(_Insts,_Count,_Disassembler,_ByteReader,_Address,_Arg) ->
+	nif_not_loaded.
+
+%% @doc EDReleaseInst Frees the memory for an instruction. The instruction can no longer be accessed after this call. instThe instruction to be freed. 
+-spec 'EDReleaseInst'(Inst :: 'EDInstRef'()) -> atom().
+'EDReleaseInst'({'EDInstRef',Inst}) ->
+	{atom,'EDReleaseInst_internal'(Inst)}.
+'EDReleaseInst_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDInstByteSize instThe instruction to be queried. The number of bytes in the instruction's machine-code representation. 
+-spec 'EDInstByteSize'(Inst :: 'EDInstRef'()) -> integer().
+'EDInstByteSize'({'EDInstRef',Inst}) ->
+	{integer,'EDInstByteSize_internal'(Inst)}.
+'EDInstByteSize_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDGetInstString Gets the disassembled text equivalent of the instruction. bufA pointer whose target will be filled in with a pointer to the string. (The string becomes invalid when the instruction is released.) instThe instruction to be queried. 0 on success; -1 otherwise. 
+-spec 'EDGetInstString'(Buf :: llvm_ptr(string()),Inst :: 'EDInstRef'()) -> integer().
+'EDGetInstString'({ptr,{'string',Buf}},{'EDInstRef',Inst}) ->
+	{integer,'EDGetInstString_internal'(Buf,Inst)}.
+'EDGetInstString_internal'(_Buf,_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDInstIsBranch instThe instruction to be queried. 1 if the instruction is a branch instruction; 0 if it is some other type of instruction; -1 if there was an error. 
+-spec 'EDInstIsBranch'(Inst :: 'EDInstRef'()) -> integer().
+'EDInstIsBranch'({'EDInstRef',Inst}) ->
+	{integer,'EDInstIsBranch_internal'(Inst)}.
+'EDInstIsBranch_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDInstIsMove instThe instruction to be queried. 1 if the instruction is a move instruction; 0 if it is some other type of instruction; -1 if there was an error. 
+-spec 'EDInstIsMove'(Inst :: 'EDInstRef'()) -> integer().
+'EDInstIsMove'({'EDInstRef',Inst}) ->
+	{integer,'EDInstIsMove_internal'(Inst)}.
+'EDInstIsMove_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDBranchTargetID instThe instruction to be queried. The ID of the branch target operand, suitable for use with EDCopyOperand. -1 if no such operand exists. 
+-spec 'EDBranchTargetID'(Inst :: 'EDInstRef'()) -> integer().
+'EDBranchTargetID'({'EDInstRef',Inst}) ->
+	{integer,'EDBranchTargetID_internal'(Inst)}.
+'EDBranchTargetID_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDMoveSourceID instThe instruction to be queried. The ID of the move source operand, suitable for use with EDCopyOperand. -1 if no such operand exists. 
+-spec 'EDMoveSourceID'(Inst :: 'EDInstRef'()) -> integer().
+'EDMoveSourceID'({'EDInstRef',Inst}) ->
+	{integer,'EDMoveSourceID_internal'(Inst)}.
+'EDMoveSourceID_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDMoveTargetID instThe instruction to be queried. The ID of the move source operand, suitable for use with EDCopyOperand. -1 if no such operand exists. 
+-spec 'EDMoveTargetID'(Inst :: 'EDInstRef'()) -> integer().
+'EDMoveTargetID'({'EDInstRef',Inst}) ->
+	{integer,'EDMoveTargetID_internal'(Inst)}.
+'EDMoveTargetID_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc Creating and querying tokensEDNumTokens instThe instruction to be queried. The number of tokens in the instruction, or -1 on error. 
+-spec 'EDNumTokens'(Inst :: 'EDInstRef'()) -> integer().
+'EDNumTokens'({'EDInstRef',Inst}) ->
+	{integer,'EDNumTokens_internal'(Inst)}.
+'EDNumTokens_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDGetToken Retrieves a token from an instruction. The token is valid until the instruction is released. tokenA pointer to be filled in with the token. instThe instruction to be queried. indexThe index of the token in the instruction. 0 on success; -1 otherwise. 
+-spec 'EDGetToken'(Token :: llvm_ptr('EDTokenRef'()),Inst :: 'EDInstRef'(),Index :: integer()) -> integer().
+'EDGetToken'({ptr,{'EDTokenRef',Token}},{'EDInstRef',Inst},Index) ->
+	{integer,'EDGetToken_internal'(Token,Inst,Index)}.
+'EDGetToken_internal'(_Token,_Inst,_Index) ->
+	nif_not_loaded.
+
+%% @doc EDGetTokenString Gets the disassembled text for a token. bufA pointer whose target will be filled in with a pointer to the string. (The string becomes invalid when the token is released.) tokenThe token to be queried. 0 on success; -1 otherwise. 
+-spec 'EDGetTokenString'(Buf :: llvm_ptr(string()),Token :: 'EDTokenRef'()) -> integer().
+'EDGetTokenString'({ptr,{'string',Buf}},{'EDTokenRef',Token}) ->
+	{integer,'EDGetTokenString_internal'(Buf,Token)}.
+'EDGetTokenString_internal'(_Buf,_Token) ->
+	nif_not_loaded.
+
+%% @doc EDOperandIndexForToken Returns the index of the operand to which a token belongs. tokenThe token to be queried. The operand index on success; -1 otherwise 
+-spec 'EDOperandIndexForToken'(Token :: 'EDTokenRef'()) -> integer().
+'EDOperandIndexForToken'({'EDTokenRef',Token}) ->
+	{integer,'EDOperandIndexForToken_internal'(Token)}.
+'EDOperandIndexForToken_internal'(_Token) ->
+	nif_not_loaded.
+
+%% @doc EDTokenIsWhitespace tokenThe token to be queried. 1 if the token is whitespace; 0 if not; -1 on error. 
+-spec 'EDTokenIsWhitespace'(Token :: 'EDTokenRef'()) -> integer().
+'EDTokenIsWhitespace'({'EDTokenRef',Token}) ->
+	{integer,'EDTokenIsWhitespace_internal'(Token)}.
+'EDTokenIsWhitespace_internal'(_Token) ->
+	nif_not_loaded.
+
+%% @doc EDTokenIsPunctuation tokenThe token to be queried. 1 if the token is punctuation; 0 if not; -1 on error. 
+-spec 'EDTokenIsPunctuation'(Token :: 'EDTokenRef'()) -> integer().
+'EDTokenIsPunctuation'({'EDTokenRef',Token}) ->
+	{integer,'EDTokenIsPunctuation_internal'(Token)}.
+'EDTokenIsPunctuation_internal'(_Token) ->
+	nif_not_loaded.
+
+%% @doc EDTokenIsOpcode tokenThe token to be queried. 1 if the token is opcode; 0 if not; -1 on error. 
+-spec 'EDTokenIsOpcode'(Token :: 'EDTokenRef'()) -> integer().
+'EDTokenIsOpcode'({'EDTokenRef',Token}) ->
+	{integer,'EDTokenIsOpcode_internal'(Token)}.
+'EDTokenIsOpcode_internal'(_Token) ->
+	nif_not_loaded.
+
+%% @doc EDTokenIsLiteral tokenThe token to be queried. 1 if the token is a numeric literal; 0 if not; -1 on error. 
+-spec 'EDTokenIsLiteral'(Token :: 'EDTokenRef'()) -> integer().
+'EDTokenIsLiteral'({'EDTokenRef',Token}) ->
+	{integer,'EDTokenIsLiteral_internal'(Token)}.
+'EDTokenIsLiteral_internal'(_Token) ->
+	nif_not_loaded.
+
+%% @doc EDTokenIsRegister tokenThe token to be queried. 1 if the token identifies a register; 0 if not; -1 on error. 
+-spec 'EDTokenIsRegister'(Token :: 'EDTokenRef'()) -> integer().
+'EDTokenIsRegister'({'EDTokenRef',Token}) ->
+	{integer,'EDTokenIsRegister_internal'(Token)}.
+'EDTokenIsRegister_internal'(_Token) ->
+	nif_not_loaded.
+
+%% @doc EDTokenIsNegativeLiteral tokenThe token to be queried. 1 if the token is a negative signed literal; 0 if not; -1 on error. 
+-spec 'EDTokenIsNegativeLiteral'(Token :: 'EDTokenRef'()) -> integer().
+'EDTokenIsNegativeLiteral'({'EDTokenRef',Token}) ->
+	{integer,'EDTokenIsNegativeLiteral_internal'(Token)}.
+'EDTokenIsNegativeLiteral_internal'(_Token) ->
+	nif_not_loaded.
+
+%% @doc EDLiteralTokenAbsoluteValue valueA pointer whose target will be filled in with the absolute value of the literal. tokenThe token to be queried. 0 on success; -1 otherwise. 
+-spec 'EDLiteralTokenAbsoluteValue'(Value :: llvm_ptr(integer()),Token :: 'EDTokenRef'()) -> integer().
+'EDLiteralTokenAbsoluteValue'({ptr,{'uint64_t',Value}},{'EDTokenRef',Token}) ->
+	{integer,'EDLiteralTokenAbsoluteValue_internal'(Value,Token)}.
+'EDLiteralTokenAbsoluteValue_internal'(_Value,_Token) ->
+	nif_not_loaded.
+
+%% @doc EDRegisterTokenValue registerIDA pointer whose target will be filled in with the LLVM register identifier for the token. tokenThe token to be queried. 0 on success; -1 otherwise. 
+-spec 'EDRegisterTokenValue'(RegisterID :: llvm_ptr(integer()),Token :: 'EDTokenRef'()) -> integer().
+'EDRegisterTokenValue'({ptr,{'unsigned',RegisterID}},{'EDTokenRef',Token}) ->
+	{integer,'EDRegisterTokenValue_internal'(RegisterID,Token)}.
+'EDRegisterTokenValue_internal'(_RegisterID,_Token) ->
+	nif_not_loaded.
+
+%% @doc Creating and querying operandsEDNumOperands instThe instruction to be queried. The number of operands in the instruction, or -1 on error. 
+-spec 'EDNumOperands'(Inst :: 'EDInstRef'()) -> integer().
+'EDNumOperands'({'EDInstRef',Inst}) ->
+	{integer,'EDNumOperands_internal'(Inst)}.
+'EDNumOperands_internal'(_Inst) ->
+	nif_not_loaded.
+
+%% @doc EDGetOperand Retrieves an operand from an instruction. The operand is valid until the instruction is released. operandA pointer to be filled in with the operand. instThe instruction to be queried. indexThe index of the operand in the instruction. 0 on success; -1 otherwise. 
+-spec 'EDGetOperand'(Operand :: llvm_ptr('EDOperandRef'()),Inst :: 'EDInstRef'(),Index :: integer()) -> integer().
+'EDGetOperand'({ptr,{'EDOperandRef',Operand}},{'EDInstRef',Inst},Index) ->
+	{integer,'EDGetOperand_internal'(Operand,Inst,Index)}.
+'EDGetOperand_internal'(_Operand,_Inst,_Index) ->
+	nif_not_loaded.
+
+%% @doc EDOperandIsRegister operandThe operand to be queried. 1 if the operand names a register; 0 if not; -1 on error. 
+-spec 'EDOperandIsRegister'(Operand :: 'EDOperandRef'()) -> integer().
+'EDOperandIsRegister'({'EDOperandRef',Operand}) ->
+	{integer,'EDOperandIsRegister_internal'(Operand)}.
+'EDOperandIsRegister_internal'(_Operand) ->
+	nif_not_loaded.
+
+%% @doc EDOperandIsImmediate operandThe operand to be queried. 1 if the operand specifies an immediate value; 0 if not; -1 on error. 
+-spec 'EDOperandIsImmediate'(Operand :: 'EDOperandRef'()) -> integer().
+'EDOperandIsImmediate'({'EDOperandRef',Operand}) ->
+	{integer,'EDOperandIsImmediate_internal'(Operand)}.
+'EDOperandIsImmediate_internal'(_Operand) ->
+	nif_not_loaded.
+
+%% @doc EDOperandIsMemory operandThe operand to be queried. 1 if the operand specifies a location in memory; 0 if not; -1 on error. 
+-spec 'EDOperandIsMemory'(Operand :: 'EDOperandRef'()) -> integer().
+'EDOperandIsMemory'({'EDOperandRef',Operand}) ->
+	{integer,'EDOperandIsMemory_internal'(Operand)}.
+'EDOperandIsMemory_internal'(_Operand) ->
+	nif_not_loaded.
+
+%% @doc EDRegisterOperandValue valueA pointer whose target will be filled in with the LLVM register ID of the register named by the operand. operandThe operand to be queried. 0 on success; -1 otherwise. 
+-spec 'EDRegisterOperandValue'(Value :: llvm_ptr(integer()),Operand :: 'EDOperandRef'()) -> integer().
+'EDRegisterOperandValue'({ptr,{'unsigned',Value}},{'EDOperandRef',Operand}) ->
+	{integer,'EDRegisterOperandValue_internal'(Value,Operand)}.
+'EDRegisterOperandValue_internal'(_Value,_Operand) ->
+	nif_not_loaded.
+
+%% @doc EDImmediateOperandValue valueA pointer whose target will be filled in with the value of the immediate. operandThe operand to be queried. 0 on success; -1 otherwise. 
+-spec 'EDImmediateOperandValue'(Value :: llvm_ptr(integer()),Operand :: 'EDOperandRef'()) -> integer().
+'EDImmediateOperandValue'({ptr,{'uint64_t',Value}},{'EDOperandRef',Operand}) ->
+	{integer,'EDImmediateOperandValue_internal'(Value,Operand)}.
+'EDImmediateOperandValue_internal'(_Value,_Operand) ->
+	nif_not_loaded.
+
+%% @doc EDEvaluateOperand Evaluates an operand using a client-supplied register state accessor. Register operands are evaluated by reading the value of the register; immediate operands are evaluated by reporting the immediate value; memory operands are evaluated by computing the target address (with only those relocations applied that were already applied to the original bytes). resultA pointer whose target is to be filled with the result of evaluating the operand. operandThe operand to be evaluated. regReaderThe function to use when reading registers from the register state. argAn anonymous argument for client use. 0 if the operand could be evaluated; -1 otherwise. 
+-spec 'EDEvaluateOperand'(Result :: llvm_ptr(integer()),Operand :: 'EDOperandRef'(),RegReader :: 'EDRegisterReaderCallback'(),Arg :: llvm_ptr(atom())) -> integer().
+'EDEvaluateOperand'({ptr,{'uint64_t',Result}},{'EDOperandRef',Operand},{'EDRegisterReaderCallback',RegReader},{ptr,{'void',Arg}}) ->
+	{integer,'EDEvaluateOperand_internal'(Result,Operand,RegReader,Arg)}.
+'EDEvaluateOperand_internal'(_Result,_Operand,_RegReader,_Arg) ->
+	nif_not_loaded.
+
+%% --- Stop generating from EnhancedDisassembly_8h.xml
+
+%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
 
 %% @doc Create a disassembler for the TripleName. Symbolic disassembly is supported by passing a block of information in the DisInfo parameter and specifying the TagType and callback functions as described above. These can all be passed as NULL. If successful, this returns a disassembler context. If not, it returns NULL. 
 -spec 'LLVMCreateDisasm'(TripleName :: string(),DisInfo :: llvm_ptr(atom()),TagType :: integer(),GetOpInfo :: 'LLVMOpInfoCallback'(),SymbolLookUp :: 'LLVMSymbolLookupCallback'()) -> 'LLVMDisasmContextRef'().
@@ -1910,7 +2463,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
 
 %% @doc 
 -spec 'LLVMDisposeMessage'(Message :: string()) -> atom().
@@ -5121,7 +5674,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
 
 %% @doc Writes a module to the specified path. Returns 0 on success. 
 -spec 'LLVMWriteBitcodeToFile'(M :: 'LLVMModuleRef'(),Path :: string()) -> integer().
@@ -5146,7 +5699,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
 
 %% @doc 
 -spec 'LLVMParseBitcode'(MemBuf :: 'LLVMMemoryBufferRef'()) -> boolean().
@@ -5198,7 +5751,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,26,11}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
 
 %% @doc 
 -spec 'LLVMVerifyModule'(M :: 'LLVMModuleRef'(),Action :: 'LLVMVerifierFailureAction'()) -> boolean().

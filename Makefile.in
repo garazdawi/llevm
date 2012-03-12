@@ -10,7 +10,7 @@ OBJ_DIR=obj.$(ARCH)
 # llvm Variables
 LLVM_CONFIG=@llvm_config_var@
 LLVM_CFLAGS=-g3 -Wall -fPIC -I`$(LLVM_CONFIG) --includedir`  -DNDEBUG -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS -D SIZEOF_LONG_LONG=8 -fno-common
-LLVM_LDFLAGS=`$(LLVM_CONFIG) --ldflags` `$(LLVM_CONFIG) --libs` -lLTO
+LLVM_LDFLAGS=`$(LLVM_CONFIG) --ldflags` -Xlinker --start-group `$(LLVM_CONFIG) --libdir`/libLTO.a `$(LLVM_CONFIG) --libs` -Xlinker --end-group
 
 # Erlang Variables
 ERL_TOP=@ERLANG_ROOT_DIR@

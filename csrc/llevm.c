@@ -27,11 +27,20 @@
 
 typedef enum {
 //  @@TYPES@@
-// -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,26,18}}--
+// -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+
+RTlto_symbol_attributes,
+RTlto_debug_model,
+RTlto_codegen_model,
+RTlto_module_t,
+RTlto_code_gen_t,
+// --- Stop generating from lto_8h.xml
+
+// -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
 
 // --- Stop generating from Vectorize_8h.xml
 
-// -- Start generating from Target_8h.xml on {{2012,3,12},{11,26,17}}--
+// -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
 
 RTLLVMByteOrdering,
 RTLLVMTargetDataRef,
@@ -39,16 +48,16 @@ RTLLVMTargetLibraryInfoRef,
 RTLLVMStructLayoutRef,
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,26,16}}--
+// -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,26,15}}--
+// -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,36}}--
 
 RTLLVMPassManagerBuilderRef,
 // --- Stop generating from PassManagerBuilder_8h.xml
 
-// -- Start generating from Object_8h.xml on {{2012,3,12},{11,26,14}}--
+// -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,36}}--
 
 RTLLVMObjectFileRef,
 RTLLVMSectionIteratorRef,
@@ -56,28 +65,46 @@ RTLLVMSymbolIteratorRef,
 RTLLVMRelocationIteratorRef,
 // --- Stop generating from Object_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,26,14}}--
+// -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,35}}--
+
+RTllvm_lto_status,
+RTllvm_lto_t,
+RTllvm_lto_status_t,
+// --- Stop generating from LinkTimeOptimizer_8h.xml
+
+// -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2012,3,12},{11,26,13}}--
+// -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,26,12}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
 
 RTLLVMGenericValueRef,
 RTLLVMExecutionEngineRef,
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,26,12}}--
+// -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,32}}--
+
+RTEDByteReaderCallback,
+RTEDRegisterReaderCallback,
+RTEDAssemblySyntax_t,
+RTEDDisassemblerRef,
+RTEDInstRef,
+RTEDTokenRef,
+RTEDOperandRef,
+// --- Stop generating from EnhancedDisassembly_8h.xml
+
+// -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
 
 RTLLVMDisasmContextRef,
 RTLLVMOpInfoCallback,
 RTLLVMSymbolLookupCallback,
 // --- Stop generating from Disassembler_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
 
 RTLLVMAttribute,
 RTLLVMOpcode,
@@ -102,15 +129,15 @@ RTLLVMPassRegistryRef,
 RTLLVMUseRef,
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
 
 RTLLVMVerifierFailureAction,
 // --- Stop generating from Analysis_8h.xml
@@ -124,55 +151,67 @@ typedef struct llvm_ptr {
 } llvm_ptr_t;
 
 // @@RESOURCE_TYPES@@
-// -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,26,18}}--
+// -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+
+// --- Stop generating from lto_8h.xml
+
+// -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
 
 // --- Stop generating from Vectorize_8h.xml
 
-// -- Start generating from Target_8h.xml on {{2012,3,12},{11,26,17}}--
+// -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
 
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,26,16}}--
+// -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,26,15}}--
+// -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,37}}--
 
 // --- Stop generating from PassManagerBuilder_8h.xml
 
-// -- Start generating from Object_8h.xml on {{2012,3,12},{11,26,15}}--
+// -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,36}}--
 
 // --- Stop generating from Object_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,26,14}}--
+// -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,35}}--
+
+// --- Stop generating from LinkTimeOptimizer_8h.xml
+
+// -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2012,3,12},{11,26,13}}--
+// -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,26,12}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
 
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,26,12}}--
+// -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,32}}--
+
+// --- Stop generating from EnhancedDisassembly_8h.xml
+
+// -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
 
 // --- Stop generating from Disassembler_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
 
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
 
 // --- Stop generating from Analysis_8h.xml
 
@@ -212,7 +251,367 @@ enif_keep_resource(ptr);
 
 
 // @@FUNCTIONS@@
-// -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,26,18}}--
+// -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+
+static ERL_NIF_TERM lto_get_version_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_get_version\r\n");
+  const char * retVal = lto_get_version();
+
+  return   enif_make_string(env,retVal,ERL_NIF_LATIN1);
+}
+
+static ERL_NIF_TERM lto_get_error_message_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_get_error_message\r\n");
+  const char * retVal = lto_get_error_message();
+
+  return   enif_make_string(env,retVal,ERL_NIF_LATIN1);
+}
+
+static ERL_NIF_TERM lto_module_is_object_file_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_is_object_file\r\n");
+  char *path = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[0], (char*)path, 255, ERL_NIF_LATIN1);
+
+  bool retVal = lto_module_is_object_file((const char *)path);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_module_is_object_file_for_target_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_is_object_file_for_target\r\n");
+  char *path = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[0], (char*)path, 255, ERL_NIF_LATIN1);
+
+  char *target_triple_prefix = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)target_triple_prefix, 255, ERL_NIF_LATIN1);
+
+  bool retVal = lto_module_is_object_file_for_target((const char *)path,(const char *)target_triple_prefix);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_module_is_object_file_in_memory_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_is_object_file_in_memory\r\n");
+  void * mem;
+  llvm_ptr_deref(env, argv[0], (void **) &mem);
+
+  size_t length;
+  llvm_ptr_deref(env, argv[1], (void **) &length);
+
+  bool retVal = lto_module_is_object_file_in_memory((const void *)mem,(size_t)length);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_module_is_object_file_in_memory_for_target_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_is_object_file_in_memory_for_target\r\n");
+  void * mem;
+  llvm_ptr_deref(env, argv[0], (void **) &mem);
+
+  size_t length;
+  llvm_ptr_deref(env, argv[1], (void **) &length);
+
+  char *target_triple_prefix = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[2], (char*)target_triple_prefix, 255, ERL_NIF_LATIN1);
+
+  bool retVal = lto_module_is_object_file_in_memory_for_target((const void *)mem,(size_t)length,(const char *)target_triple_prefix);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_module_create_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_create\r\n");
+  char *path = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[0], (char*)path, 255, ERL_NIF_LATIN1);
+
+  lto_module_t retVal = lto_module_create((const char *)path);
+
+  return   llvm_ptr_create(env, RTlto_module_t, retVal);
+}
+
+static ERL_NIF_TERM lto_module_create_from_memory_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_create_from_memory\r\n");
+  void * mem;
+  llvm_ptr_deref(env, argv[0], (void **) &mem);
+
+  size_t length;
+  llvm_ptr_deref(env, argv[1], (void **) &length);
+
+  lto_module_t retVal = lto_module_create_from_memory((const void *)mem,(size_t)length);
+
+  return   llvm_ptr_create(env, RTlto_module_t, retVal);
+}
+
+static ERL_NIF_TERM lto_module_create_from_fd_at_offset_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_create_from_fd_at_offset\r\n");
+  int fd;
+  enif_get_int(env, argv[0], (int*)&fd);
+
+  char *path = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)path, 255, ERL_NIF_LATIN1);
+
+  size_t file_size;
+  llvm_ptr_deref(env, argv[2], (void **) &file_size);
+
+  size_t map_size;
+  llvm_ptr_deref(env, argv[3], (void **) &map_size);
+
+  off_t offset;
+  llvm_ptr_deref(env, argv[4], (void **) &offset);
+
+  lto_module_t retVal = lto_module_create_from_fd_at_offset((int)fd,(const char *)path,(size_t)file_size,(size_t)map_size,(off_t)offset);
+
+  return   llvm_ptr_create(env, RTlto_module_t, retVal);
+}
+
+static ERL_NIF_TERM lto_module_dispose_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_dispose\r\n");
+  lto_module_t mod;
+  llvm_ptr_deref(env, argv[0], (void **) &mod);
+
+lto_module_dispose((lto_module_t)mod);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM lto_module_get_target_triple_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_get_target_triple\r\n");
+  lto_module_t mod;
+  llvm_ptr_deref(env, argv[0], (void **) &mod);
+
+  const char * retVal = lto_module_get_target_triple((lto_module_t)mod);
+
+  return   enif_make_string(env,retVal,ERL_NIF_LATIN1);
+}
+
+static ERL_NIF_TERM lto_module_set_target_triple_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_set_target_triple\r\n");
+  lto_module_t mod;
+  llvm_ptr_deref(env, argv[0], (void **) &mod);
+
+  char *triple = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)triple, 255, ERL_NIF_LATIN1);
+
+lto_module_set_target_triple((lto_module_t)mod,(const char *)triple);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM lto_module_get_num_symbols_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_get_num_symbols\r\n");
+  lto_module_t mod;
+  llvm_ptr_deref(env, argv[0], (void **) &mod);
+
+  unsigned int retVal = lto_module_get_num_symbols((lto_module_t)mod);
+
+  return   enif_make_uint(env, retVal);
+}
+
+static ERL_NIF_TERM lto_module_get_symbol_name_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_get_symbol_name\r\n");
+  lto_module_t mod;
+  llvm_ptr_deref(env, argv[0], (void **) &mod);
+
+  unsigned int index;
+  llvm_ptr_deref(env, argv[1], (void **) &index);
+
+  const char * retVal = lto_module_get_symbol_name((lto_module_t)mod,(unsigned int)index);
+
+  return   enif_make_string(env,retVal,ERL_NIF_LATIN1);
+}
+
+static ERL_NIF_TERM lto_module_get_symbol_attribute_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_module_get_symbol_attribute\r\n");
+  lto_module_t mod;
+  llvm_ptr_deref(env, argv[0], (void **) &mod);
+
+  unsigned int index;
+  llvm_ptr_deref(env, argv[1], (void **) &index);
+
+  lto_symbol_attributes retVal = lto_module_get_symbol_attribute((lto_module_t)mod,(unsigned int)index);
+
+  return   enif_make_int(env, (int)retVal);
+}
+
+static ERL_NIF_TERM lto_codegen_create_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_create\r\n");
+  lto_code_gen_t retVal = lto_codegen_create();
+
+  return   llvm_ptr_create(env, RTlto_code_gen_t, retVal);
+}
+
+static ERL_NIF_TERM lto_codegen_dispose_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_dispose\r\n");
+  lto_code_gen_t code_gen;
+  llvm_ptr_deref(env, argv[0], (void **) &code_gen);
+
+lto_codegen_dispose((lto_code_gen_t)code_gen);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM lto_codegen_add_module_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_add_module\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  lto_module_t mod;
+  llvm_ptr_deref(env, argv[1], (void **) &mod);
+
+  bool retVal = lto_codegen_add_module((lto_code_gen_t)cg,(lto_module_t)mod);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_codegen_set_debug_model_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_set_debug_model\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  lto_debug_model dbg;
+  enif_get_uint(env, argv[1], (lto_debug_model*)&dbg);
+
+  bool retVal = lto_codegen_set_debug_model((lto_code_gen_t)cg,(lto_debug_model)dbg);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_codegen_set_pic_model_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_set_pic_model\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  lto_codegen_model code_gen;
+  enif_get_uint(env, argv[1], (lto_codegen_model*)&code_gen);
+
+  bool retVal = lto_codegen_set_pic_model((lto_code_gen_t)cg,(lto_codegen_model)code_gen);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_codegen_set_cpu_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_set_cpu\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  char *cpu = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)cpu, 255, ERL_NIF_LATIN1);
+
+lto_codegen_set_cpu((lto_code_gen_t)cg,(const char *)cpu);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM lto_codegen_set_assembler_path_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_set_assembler_path\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  char *path = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)path, 255, ERL_NIF_LATIN1);
+
+lto_codegen_set_assembler_path((lto_code_gen_t)cg,(const char *)path);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM lto_codegen_set_assembler_args_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_set_assembler_args\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  int argssize = 0;
+  ERL_NIF_TERM *argsarray;
+  enif_get_tuple(env, argv[1], &argssize, (const ERL_NIF_TERM **)&argsarray);
+  char ** args;
+  if (argssize == 0)
+    args = NULL;
+  else {
+    args = (char **)malloc(sizeof(char **)*argssize);
+    int i,local_size=0;
+    ERL_NIF_TERM *local_array;
+    for(i = 0;i < argssize; i++) {
+      enif_get_tuple(env,*(argsarray+i), &local_size, (const ERL_NIF_TERM **)&local_array);
+      llvm_ptr_deref(env,*(local_array+1),(void **)args+i);
+    }
+  }
+
+  int nargs;
+  enif_get_int(env, argv[2], (int*)&nargs);
+
+lto_codegen_set_assembler_args((lto_code_gen_t)cg,(const char **)args,(int)nargs);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM lto_codegen_add_must_preserve_symbol_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_add_must_preserve_symbol\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  char *symbol = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)symbol, 255, ERL_NIF_LATIN1);
+
+lto_codegen_add_must_preserve_symbol((lto_code_gen_t)cg,(const char *)symbol);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM lto_codegen_write_merged_modules_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_write_merged_modules\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  char *path = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)path, 255, ERL_NIF_LATIN1);
+
+  bool retVal = lto_codegen_write_merged_modules((lto_code_gen_t)cg,(const char *)path);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_codegen_compile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_compile\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  size_t * length;
+  llvm_ptr_deref(env, argv[1], (void **) &length);
+
+  const void * retVal = lto_codegen_compile((lto_code_gen_t)cg,(size_t *)length);
+
+  return   llvm_ptr_create(env, RTVoidPtr, (void *)retVal);
+}
+
+static ERL_NIF_TERM lto_codegen_compile_to_file_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_compile_to_file\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  char ** name;
+  llvm_ptr_deref(env, argv[1], (void **) &name);
+
+  bool retVal = lto_codegen_compile_to_file((lto_code_gen_t)cg,(const char **)name);
+
+  return   retVal ? enif_make_atom(env,"true") : enif_make_atom(env,"false");
+}
+
+static ERL_NIF_TERM lto_codegen_debug_options_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling lto_codegen_debug_options\r\n");
+  lto_code_gen_t cg;
+  llvm_ptr_deref(env, argv[0], (void **) &cg);
+
+  char *string = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)string, 255, ERL_NIF_LATIN1);
+
+lto_codegen_debug_options((lto_code_gen_t)cg,(const char *)string);
+
+  return enif_make_atom(env,"ok");
+}
+
+// --- Stop generating from lto_8h.xml
+
+// -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
 
 static ERL_NIF_TERM LLVMAddBBVectorizePass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMAddBBVectorizePass\r\n");
@@ -226,7 +625,7 @@ LLVMAddBBVectorizePass((LLVMPassManagerRef)PM);
 
 // --- Stop generating from Vectorize_8h.xml
 
-// -- Start generating from Target_8h.xml on {{2012,3,12},{11,26,17}}--
+// -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
 
 static ERL_NIF_TERM LLVMInitializeAllTargetInfos_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMInitializeAllTargetInfos\r\n");
@@ -488,7 +887,7 @@ LLVMDisposeTargetData((LLVMTargetDataRef)TD);
 
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,26,16}}--
+// -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,38}}--
 
 static ERL_NIF_TERM LLVMAddAggressiveDCEPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMAddAggressiveDCEPass\r\n");
@@ -795,7 +1194,7 @@ LLVMAddBasicAliasAnalysisPass((LLVMPassManagerRef)PM);
 
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,26,15}}--
+// -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,37}}--
 
 static ERL_NIF_TERM LLVMPassManagerBuilderCreate_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMPassManagerBuilderCreate\r\n");
@@ -942,7 +1341,7 @@ LLVMPassManagerBuilderPopulateLTOPassManager((LLVMPassManagerBuilderRef)PMB,(LLV
 
 // --- Stop generating from PassManagerBuilder_8h.xml
 
-// -- Start generating from Object_8h.xml on {{2012,3,12},{11,26,15}}--
+// -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,36}}--
 
 static ERL_NIF_TERM LLVMCreateObjectFile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMCreateObjectFile\r\n");
@@ -1261,7 +1660,11 @@ static ERL_NIF_TERM LLVMGetRelocationValueString_nif(ErlNifEnv* env, int argc, c
 
 // --- Stop generating from Object_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,26,14}}--
+// -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,35}}--
+
+// --- Stop generating from LinkTimeOptimizer_8h.xml
+
+// -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
 
 static ERL_NIF_TERM LLVMInitializeTransformUtils_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMInitializeTransformUtils\r\n");
@@ -1345,7 +1748,7 @@ LLVMInitializeTarget((LLVMPassRegistryRef)R);
 
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2012,3,12},{11,26,13}}--
+// -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
 
 static ERL_NIF_TERM LLVMAddArgumentPromotionPass_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMAddArgumentPromotionPass\r\n");
@@ -1492,7 +1895,7 @@ LLVMAddStripSymbolsPass((LLVMPassManagerRef)PM);
 
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,26,12}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,33}}--
 
 static ERL_NIF_TERM LLVMLinkInJIT_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMLinkInJIT\r\n");
@@ -1965,7 +2368,413 @@ static ERL_NIF_TERM LLVMGetPointerToGlobal_nif(ErlNifEnv* env, int argc, const E
 
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,26,12}}--
+// -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,32}}--
+
+static ERL_NIF_TERM EDGetDisassembler_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDGetDisassembler\r\n");
+  EDDisassemblerRef * disassembler;
+  llvm_ptr_deref(env, argv[0], (void **) &disassembler);
+
+  char *triple = (char *) malloc(sizeof(char) * 255);
+  enif_get_string(env, argv[1], (char*)triple, 255, ERL_NIF_LATIN1);
+
+  EDAssemblySyntax_t syntax;
+  llvm_ptr_deref(env, argv[2], (void **) &syntax);
+
+  int retVal = EDGetDisassembler((EDDisassemblerRef *)disassembler,(const char *)triple,(EDAssemblySyntax_t)syntax);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDGetRegisterName_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDGetRegisterName\r\n");
+  char ** regName;
+  llvm_ptr_deref(env, argv[0], (void **) &regName);
+
+  EDDisassemblerRef disassembler;
+  llvm_ptr_deref(env, argv[1], (void **) &disassembler);
+
+  unsigned regID;
+  enif_get_uint(env, argv[2], (unsigned*)&regID);
+
+  int retVal = EDGetRegisterName((const char **)regName,(EDDisassemblerRef)disassembler,(unsigned)regID);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDRegisterIsStackPointer_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDRegisterIsStackPointer\r\n");
+  EDDisassemblerRef disassembler;
+  llvm_ptr_deref(env, argv[0], (void **) &disassembler);
+
+  unsigned regID;
+  enif_get_uint(env, argv[1], (unsigned*)&regID);
+
+  int retVal = EDRegisterIsStackPointer((EDDisassemblerRef)disassembler,(unsigned)regID);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDRegisterIsProgramCounter_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDRegisterIsProgramCounter\r\n");
+  EDDisassemblerRef disassembler;
+  llvm_ptr_deref(env, argv[0], (void **) &disassembler);
+
+  unsigned regID;
+  enif_get_uint(env, argv[1], (unsigned*)&regID);
+
+  int retVal = EDRegisterIsProgramCounter((EDDisassemblerRef)disassembler,(unsigned)regID);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDCreateInsts_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDCreateInsts\r\n");
+  EDInstRef * insts;
+  llvm_ptr_deref(env, argv[0], (void **) &insts);
+
+  unsigned int count;
+  llvm_ptr_deref(env, argv[1], (void **) &count);
+
+  EDDisassemblerRef disassembler;
+  llvm_ptr_deref(env, argv[2], (void **) &disassembler);
+
+  EDByteReaderCallback byteReader;
+  llvm_ptr_deref(env, argv[3], (void **) &byteReader);
+
+  uint64_t address;
+  llvm_ptr_deref(env, argv[4], (void **) &address);
+
+  void * arg;
+  llvm_ptr_deref(env, argv[5], (void **) &arg);
+
+  unsigned int retVal = EDCreateInsts((EDInstRef *)insts,(unsigned int)count,(EDDisassemblerRef)disassembler,(EDByteReaderCallback)byteReader,(uint64_t)address,(void *)arg);
+
+  return   enif_make_uint(env, retVal);
+}
+
+static ERL_NIF_TERM EDReleaseInst_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDReleaseInst\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+EDReleaseInst((EDInstRef)inst);
+
+  return enif_make_atom(env,"ok");
+}
+
+static ERL_NIF_TERM EDInstByteSize_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDInstByteSize\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+  int retVal = EDInstByteSize((EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDGetInstString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDGetInstString\r\n");
+  char ** buf;
+  llvm_ptr_deref(env, argv[0], (void **) &buf);
+
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[1], (void **) &inst);
+
+  int retVal = EDGetInstString((const char **)buf,(EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDInstIsBranch_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDInstIsBranch\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+  int retVal = EDInstIsBranch((EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDInstIsMove_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDInstIsMove\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+  int retVal = EDInstIsMove((EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDBranchTargetID_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDBranchTargetID\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+  int retVal = EDBranchTargetID((EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDMoveSourceID_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDMoveSourceID\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+  int retVal = EDMoveSourceID((EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDMoveTargetID_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDMoveTargetID\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+  int retVal = EDMoveTargetID((EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDNumTokens_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDNumTokens\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+  int retVal = EDNumTokens((EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDGetToken_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDGetToken\r\n");
+  EDTokenRef * token;
+  llvm_ptr_deref(env, argv[0], (void **) &token);
+
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[1], (void **) &inst);
+
+  int index;
+  enif_get_int(env, argv[2], (int*)&index);
+
+  int retVal = EDGetToken((EDTokenRef *)token,(EDInstRef)inst,(int)index);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDGetTokenString_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDGetTokenString\r\n");
+  char ** buf;
+  llvm_ptr_deref(env, argv[0], (void **) &buf);
+
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[1], (void **) &token);
+
+  int retVal = EDGetTokenString((const char **)buf,(EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDOperandIndexForToken_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDOperandIndexForToken\r\n");
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[0], (void **) &token);
+
+  int retVal = EDOperandIndexForToken((EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDTokenIsWhitespace_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDTokenIsWhitespace\r\n");
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[0], (void **) &token);
+
+  int retVal = EDTokenIsWhitespace((EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDTokenIsPunctuation_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDTokenIsPunctuation\r\n");
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[0], (void **) &token);
+
+  int retVal = EDTokenIsPunctuation((EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDTokenIsOpcode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDTokenIsOpcode\r\n");
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[0], (void **) &token);
+
+  int retVal = EDTokenIsOpcode((EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDTokenIsLiteral_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDTokenIsLiteral\r\n");
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[0], (void **) &token);
+
+  int retVal = EDTokenIsLiteral((EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDTokenIsRegister_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDTokenIsRegister\r\n");
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[0], (void **) &token);
+
+  int retVal = EDTokenIsRegister((EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDTokenIsNegativeLiteral_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDTokenIsNegativeLiteral\r\n");
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[0], (void **) &token);
+
+  int retVal = EDTokenIsNegativeLiteral((EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDLiteralTokenAbsoluteValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDLiteralTokenAbsoluteValue\r\n");
+  uint64_t * value;
+  llvm_ptr_deref(env, argv[0], (void **) &value);
+
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[1], (void **) &token);
+
+  int retVal = EDLiteralTokenAbsoluteValue((uint64_t *)value,(EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDRegisterTokenValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDRegisterTokenValue\r\n");
+  unsigned * registerID;
+  llvm_ptr_deref(env, argv[0], (void **) &registerID);
+
+  EDTokenRef token;
+  llvm_ptr_deref(env, argv[1], (void **) &token);
+
+  int retVal = EDRegisterTokenValue((unsigned *)registerID,(EDTokenRef)token);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDNumOperands_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDNumOperands\r\n");
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[0], (void **) &inst);
+
+  int retVal = EDNumOperands((EDInstRef)inst);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDGetOperand_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDGetOperand\r\n");
+  EDOperandRef * operand;
+  llvm_ptr_deref(env, argv[0], (void **) &operand);
+
+  EDInstRef inst;
+  llvm_ptr_deref(env, argv[1], (void **) &inst);
+
+  int index;
+  enif_get_int(env, argv[2], (int*)&index);
+
+  int retVal = EDGetOperand((EDOperandRef *)operand,(EDInstRef)inst,(int)index);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDOperandIsRegister_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDOperandIsRegister\r\n");
+  EDOperandRef operand;
+  llvm_ptr_deref(env, argv[0], (void **) &operand);
+
+  int retVal = EDOperandIsRegister((EDOperandRef)operand);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDOperandIsImmediate_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDOperandIsImmediate\r\n");
+  EDOperandRef operand;
+  llvm_ptr_deref(env, argv[0], (void **) &operand);
+
+  int retVal = EDOperandIsImmediate((EDOperandRef)operand);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDOperandIsMemory_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDOperandIsMemory\r\n");
+  EDOperandRef operand;
+  llvm_ptr_deref(env, argv[0], (void **) &operand);
+
+  int retVal = EDOperandIsMemory((EDOperandRef)operand);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDRegisterOperandValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDRegisterOperandValue\r\n");
+  unsigned * value;
+  llvm_ptr_deref(env, argv[0], (void **) &value);
+
+  EDOperandRef operand;
+  llvm_ptr_deref(env, argv[1], (void **) &operand);
+
+  int retVal = EDRegisterOperandValue((unsigned *)value,(EDOperandRef)operand);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDImmediateOperandValue_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDImmediateOperandValue\r\n");
+  uint64_t * value;
+  llvm_ptr_deref(env, argv[0], (void **) &value);
+
+  EDOperandRef operand;
+  llvm_ptr_deref(env, argv[1], (void **) &operand);
+
+  int retVal = EDImmediateOperandValue((uint64_t *)value,(EDOperandRef)operand);
+
+  return   enif_make_int(env, retVal);
+}
+
+static ERL_NIF_TERM EDEvaluateOperand_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
+  printf("\rCalling EDEvaluateOperand\r\n");
+  uint64_t * result;
+  llvm_ptr_deref(env, argv[0], (void **) &result);
+
+  EDOperandRef operand;
+  llvm_ptr_deref(env, argv[1], (void **) &operand);
+
+  EDRegisterReaderCallback regReader;
+  llvm_ptr_deref(env, argv[2], (void **) &regReader);
+
+  void * arg;
+  llvm_ptr_deref(env, argv[3], (void **) &arg);
+
+  int retVal = EDEvaluateOperand((uint64_t *)result,(EDOperandRef)operand,(EDRegisterReaderCallback)regReader,(void *)arg);
+
+  return   enif_make_int(env, retVal);
+}
+
+// --- Stop generating from EnhancedDisassembly_8h.xml
+
+// -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
 
 static ERL_NIF_TERM LLVMCreateDisasm_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMCreateDisasm\r\n");
@@ -2001,7 +2810,7 @@ LLVMDisasmDispose((LLVMDisasmContextRef)DC);
 
 // --- Stop generating from Disassembler_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
 
 static ERL_NIF_TERM LLVMDisposeMessage_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMDisposeMessage\r\n");
@@ -8130,7 +8939,7 @@ LLVMDisposePassManager((LLVMPassManagerRef)PM);
 
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
 
 static ERL_NIF_TERM LLVMWriteBitcodeToFile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMWriteBitcodeToFile\r\n");
@@ -8179,7 +8988,7 @@ static ERL_NIF_TERM LLVMWriteBitcodeToFileHandle_nif(ErlNifEnv* env, int argc, c
 
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
 
 static ERL_NIF_TERM LLVMParseBitcode_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMParseBitcode\r\n");
@@ -8288,7 +9097,7 @@ static ERL_NIF_TERM LLVMGetBitcodeModuleProvider_nif(ErlNifEnv* env, int argc, c
 
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
 
 static ERL_NIF_TERM LLVMVerifyModule_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]) {
   printf("\rCalling LLVMVerifyModule\r\n");
@@ -8346,12 +9155,44 @@ LLVMViewFunctionCFGOnly((LLVMValueRef)Fn);
 static ErlNifFunc nif_funcs[] =
   {
 // @@NIF_MAPPINGS@@
-// -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,26,18}}--
+// -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,41}}--
+
+    {"lto_get_version_internal",0,lto_get_version_nif},
+    {"lto_get_error_message_internal",0,lto_get_error_message_nif},
+    {"lto_module_is_object_file_internal",1,lto_module_is_object_file_nif},
+    {"lto_module_is_object_file_for_target_internal",2,lto_module_is_object_file_for_target_nif},
+    {"lto_module_is_object_file_in_memory_internal",2,lto_module_is_object_file_in_memory_nif},
+    {"lto_module_is_object_file_in_memory_for_target_internal",3,lto_module_is_object_file_in_memory_for_target_nif},
+    {"lto_module_create_internal",1,lto_module_create_nif},
+    {"lto_module_create_from_memory_internal",2,lto_module_create_from_memory_nif},
+    {"lto_module_create_from_fd_at_offset_internal",5,lto_module_create_from_fd_at_offset_nif},
+    {"lto_module_dispose_internal",1,lto_module_dispose_nif},
+    {"lto_module_get_target_triple_internal",1,lto_module_get_target_triple_nif},
+    {"lto_module_set_target_triple_internal",2,lto_module_set_target_triple_nif},
+    {"lto_module_get_num_symbols_internal",1,lto_module_get_num_symbols_nif},
+    {"lto_module_get_symbol_name_internal",2,lto_module_get_symbol_name_nif},
+    {"lto_module_get_symbol_attribute_internal",2,lto_module_get_symbol_attribute_nif},
+    {"lto_codegen_create_internal",0,lto_codegen_create_nif},
+    {"lto_codegen_dispose_internal",1,lto_codegen_dispose_nif},
+    {"lto_codegen_add_module_internal",2,lto_codegen_add_module_nif},
+    {"lto_codegen_set_debug_model_internal",2,lto_codegen_set_debug_model_nif},
+    {"lto_codegen_set_pic_model_internal",2,lto_codegen_set_pic_model_nif},
+    {"lto_codegen_set_cpu_internal",2,lto_codegen_set_cpu_nif},
+    {"lto_codegen_set_assembler_path_internal",2,lto_codegen_set_assembler_path_nif},
+    {"lto_codegen_set_assembler_args_internal",3,lto_codegen_set_assembler_args_nif},
+    {"lto_codegen_add_must_preserve_symbol_internal",2,lto_codegen_add_must_preserve_symbol_nif},
+    {"lto_codegen_write_merged_modules_internal",2,lto_codegen_write_merged_modules_nif},
+    {"lto_codegen_compile_internal",2,lto_codegen_compile_nif},
+    {"lto_codegen_compile_to_file_internal",2,lto_codegen_compile_to_file_nif},
+    {"lto_codegen_debug_options_internal",2,lto_codegen_debug_options_nif},
+// --- Stop generating from lto_8h.xml
+
+// -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,40}}--
 
     {"LLVMAddBBVectorizePass_internal",1,LLVMAddBBVectorizePass_nif},
 // --- Stop generating from Vectorize_8h.xml
 
-// -- Start generating from Target_8h.xml on {{2012,3,12},{11,26,17}}--
+// -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,39}}--
 
     {"LLVMInitializeAllTargetInfos_internal",0,LLVMInitializeAllTargetInfos_nif},
     {"LLVMInitializeAllTargets_internal",0,LLVMInitializeAllTargets_nif},
@@ -8379,7 +9220,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMDisposeTargetData_internal",1,LLVMDisposeTargetData_nif},
 // --- Stop generating from Target_8h.xml
 
-// -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,26,16}}--
+// -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,38}}--
 
     {"LLVMAddAggressiveDCEPass_internal",1,LLVMAddAggressiveDCEPass_nif},
     {"LLVMAddCFGSimplificationPass_internal",1,LLVMAddCFGSimplificationPass_nif},
@@ -8413,7 +9254,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMAddBasicAliasAnalysisPass_internal",1,LLVMAddBasicAliasAnalysisPass_nif},
 // --- Stop generating from Scalar_8h.xml
 
-// -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,26,16}}--
+// -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,37}}--
 
     {"LLVMPassManagerBuilderCreate_internal",0,LLVMPassManagerBuilderCreate_nif},
     {"LLVMPassManagerBuilderDispose_internal",1,LLVMPassManagerBuilderDispose_nif},
@@ -8428,7 +9269,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMPassManagerBuilderPopulateLTOPassManager_internal",4,LLVMPassManagerBuilderPopulateLTOPassManager_nif},
 // --- Stop generating from PassManagerBuilder_8h.xml
 
-// -- Start generating from Object_8h.xml on {{2012,3,12},{11,26,15}}--
+// -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,36}}--
 
     {"LLVMCreateObjectFile_internal",1,LLVMCreateObjectFile_nif},
     {"LLVMDisposeObjectFile_internal",1,LLVMDisposeObjectFile_nif},
@@ -8462,7 +9303,11 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMGetRelocationValueString_internal",1,LLVMGetRelocationValueString_nif},
 // --- Stop generating from Object_8h.xml
 
-// -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,26,14}}--
+// -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,35}}--
+
+// --- Stop generating from LinkTimeOptimizer_8h.xml
+
+// -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
 
     {"LLVMInitializeTransformUtils_internal",1,LLVMInitializeTransformUtils_nif},
     {"LLVMInitializeScalarOpts_internal",1,LLVMInitializeScalarOpts_nif},
@@ -8474,7 +9319,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMInitializeTarget_internal",1,LLVMInitializeTarget_nif},
 // --- Stop generating from Initialization_8h.xml
 
-// -- Start generating from IPO_8h.xml on {{2012,3,12},{11,26,13}}--
+// -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,34}}--
 
     {"LLVMAddArgumentPromotionPass_internal",1,LLVMAddArgumentPromotionPass_nif},
     {"LLVMAddConstantMergePass_internal",1,LLVMAddConstantMergePass_nif},
@@ -8492,7 +9337,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMAddStripSymbolsPass_internal",1,LLVMAddStripSymbolsPass_nif},
 // --- Stop generating from IPO_8h.xml
 
-// -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,26,13}}--
+// -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,33}}--
 
     {"LLVMLinkInJIT_internal",0,LLVMLinkInJIT_nif},
     {"LLVMLinkInInterpreter_internal",0,LLVMLinkInInterpreter_nif},
@@ -8527,13 +9372,50 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMGetPointerToGlobal_internal",2,LLVMGetPointerToGlobal_nif},
 // --- Stop generating from ExecutionEngine_8h.xml
 
-// -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,26,12}}--
+// -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,32}}--
+
+    {"EDGetDisassembler_internal",3,EDGetDisassembler_nif},
+    {"EDGetRegisterName_internal",3,EDGetRegisterName_nif},
+    {"EDRegisterIsStackPointer_internal",2,EDRegisterIsStackPointer_nif},
+    {"EDRegisterIsProgramCounter_internal",2,EDRegisterIsProgramCounter_nif},
+    {"EDCreateInsts_internal",6,EDCreateInsts_nif},
+    {"EDReleaseInst_internal",1,EDReleaseInst_nif},
+    {"EDInstByteSize_internal",1,EDInstByteSize_nif},
+    {"EDGetInstString_internal",2,EDGetInstString_nif},
+    {"EDInstIsBranch_internal",1,EDInstIsBranch_nif},
+    {"EDInstIsMove_internal",1,EDInstIsMove_nif},
+    {"EDBranchTargetID_internal",1,EDBranchTargetID_nif},
+    {"EDMoveSourceID_internal",1,EDMoveSourceID_nif},
+    {"EDMoveTargetID_internal",1,EDMoveTargetID_nif},
+    {"EDNumTokens_internal",1,EDNumTokens_nif},
+    {"EDGetToken_internal",3,EDGetToken_nif},
+    {"EDGetTokenString_internal",2,EDGetTokenString_nif},
+    {"EDOperandIndexForToken_internal",1,EDOperandIndexForToken_nif},
+    {"EDTokenIsWhitespace_internal",1,EDTokenIsWhitespace_nif},
+    {"EDTokenIsPunctuation_internal",1,EDTokenIsPunctuation_nif},
+    {"EDTokenIsOpcode_internal",1,EDTokenIsOpcode_nif},
+    {"EDTokenIsLiteral_internal",1,EDTokenIsLiteral_nif},
+    {"EDTokenIsRegister_internal",1,EDTokenIsRegister_nif},
+    {"EDTokenIsNegativeLiteral_internal",1,EDTokenIsNegativeLiteral_nif},
+    {"EDLiteralTokenAbsoluteValue_internal",2,EDLiteralTokenAbsoluteValue_nif},
+    {"EDRegisterTokenValue_internal",2,EDRegisterTokenValue_nif},
+    {"EDNumOperands_internal",1,EDNumOperands_nif},
+    {"EDGetOperand_internal",3,EDGetOperand_nif},
+    {"EDOperandIsRegister_internal",1,EDOperandIsRegister_nif},
+    {"EDOperandIsImmediate_internal",1,EDOperandIsImmediate_nif},
+    {"EDOperandIsMemory_internal",1,EDOperandIsMemory_nif},
+    {"EDRegisterOperandValue_internal",2,EDRegisterOperandValue_nif},
+    {"EDImmediateOperandValue_internal",2,EDImmediateOperandValue_nif},
+    {"EDEvaluateOperand_internal",4,EDEvaluateOperand_nif},
+// --- Stop generating from EnhancedDisassembly_8h.xml
+
+// -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
 
     {"LLVMCreateDisasm_internal",5,LLVMCreateDisasm_nif},
     {"LLVMDisasmDispose_internal",1,LLVMDisasmDispose_nif},
 // --- Stop generating from Disassembler_8h.xml
 
-// -- Start generating from Core_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,31}}--
 
     {"LLVMDisposeMessage_internal",1,LLVMDisposeMessage_nif},
     {"LLVMContextCreate_internal",0,LLVMContextCreate_nif},
@@ -8995,14 +9877,14 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMDisposePassManager_internal",1,LLVMDisposePassManager_nif},
 // --- Stop generating from Core_8h.xml
 
-// -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
 
     {"LLVMWriteBitcodeToFile_internal",2,LLVMWriteBitcodeToFile_nif},
     {"LLVMWriteBitcodeToFD_internal",4,LLVMWriteBitcodeToFD_nif},
     {"LLVMWriteBitcodeToFileHandle_internal",2,LLVMWriteBitcodeToFileHandle_nif},
 // --- Stop generating from BitWriter_8h.xml
 
-// -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
 
     {"LLVMParseBitcode_internal",1,LLVMParseBitcode_nif},
     {"LLVMParseBitcodeInContext_internal",2,LLVMParseBitcodeInContext_nif},
@@ -9012,7 +9894,7 @@ static ErlNifFunc nif_funcs[] =
     {"LLVMGetBitcodeModuleProvider_internal",1,LLVMGetBitcodeModuleProvider_nif},
 // --- Stop generating from BitReader_8h.xml
 
-// -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,26,11}}--
+// -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
 
     {"LLVMVerifyModule_internal",2,LLVMVerifyModule_nif},
     {"LLVMVerifyFunction_internal",2,LLVMVerifyFunction_nif},
