@@ -83,7 +83,7 @@ generate_param_extract(_Func,#param{ name = Name, type = "double" = Type}, Num) 
     ["  ",Type," ",Name,";~n"
      "  enif_get_double(env, argv[",Num,"], (double*)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
-  when Type == "unsigned"  ->
+  when ?IS_ENUM(Type); Type == "unsigned"  ->
     ["  ",Type," ",Name,";~n"
      "  enif_get_uint(env, argv[",Num,"], (",Type,"*)&",Name,");~n~n"];
 generate_param_extract(_Func,#param{ name = Name, type = Type}, Num) 
