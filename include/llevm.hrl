@@ -4,7 +4,7 @@
 %%
 
 %% @@CONST@@
-%% -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+%% -- Start generating from lto_8h.xml on {{2012,3,12},{19,42,11}}--
 
 %% enum lto_symbol_attributes
 -define(LTO_SYMBOL_ALIGNMENT_MASK,{'lto_symbol_attributes',31}).
@@ -36,11 +36,11 @@
 
 %% --- Stop generating from lto_8h.xml
 
-%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
+%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{19,42,10}}--
 
 %% --- Stop generating from Vectorize_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
+%% -- Start generating from Target_8h.xml on {{2012,3,12},{19,42,9}}--
 
 %% enum LLVMByteOrdering
 -define(LLVMBigEndian,{'LLVMByteOrdering',0}).
@@ -48,19 +48,19 @@
 
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
+%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{19,42,8}}--
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,36}}--
+%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{19,42,7}}--
 
 %% --- Stop generating from PassManagerBuilder_8h.xml
 
-%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,35}}--
+%% -- Start generating from Object_8h.xml on {{2012,3,12},{19,42,6}}--
 
 %% --- Stop generating from Object_8h.xml
 
-%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,34}}--
+%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{19,42,6}}--
 
 %% enum llvm_lto_status
 -define(LLVM_LTO_UNKNOWN,{'llvm_lto_status',0}).
@@ -76,19 +76,19 @@
 
 %% --- Stop generating from LinkTimeOptimizer_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
+%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{19,42,5}}--
 
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
+%% -- Start generating from IPO_8h.xml on {{2012,3,12},{19,42,4}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{19,42,4}}--
 
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,31}}--
+%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{19,42,3}}--
 
 %% enum @0
 -define(kEDAssemblySyntaxX86Intel,{'@0',0}).
@@ -99,11 +99,11 @@
 
 %% --- Stop generating from EnhancedDisassembly_8h.xml
 
-%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{19,42,2}}--
 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from Core_8h.xml on {{2012,3,12},{19,42,2}}--
 
 %% enum LLVMAttribute
 -define(LLVMZExtAttribute,{'LLVMAttribute',1}).
@@ -342,15 +342,15 @@
 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{19,42,1}}--
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{19,42,1}}--
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{19,42,1}}--
 
 %% enum LLVMVerifierFailureAction
 -define(LLVMAbortProcessAction,{'LLVMVerifierFailureAction',0}).

@@ -11,7 +11,7 @@
 -on_load(load_my_nifs/0).
 
 %% @@EXPORTS@@
-%% -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+%% -- Start generating from lto_8h.xml on {{2012,3,12},{19,42,11}}--
 
 -export(['lto_get_version'/0]).
 -export(['lto_get_error_message'/0]).
@@ -43,12 +43,12 @@
 -export(['lto_codegen_debug_options'/2]).
 %% --- Stop generating from lto_8h.xml
 
-%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
+%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{19,42,10}}--
 
 -export(['LLVMAddBBVectorizePass'/1]).
 %% --- Stop generating from Vectorize_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
+%% -- Start generating from Target_8h.xml on {{2012,3,12},{19,42,9}}--
 
 -export(['LLVMInitializeAllTargetInfos'/0]).
 -export(['LLVMInitializeAllTargets'/0]).
@@ -76,7 +76,7 @@
 -export(['LLVMDisposeTargetData'/1]).
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
+%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{19,42,8}}--
 
 -export(['LLVMAddAggressiveDCEPass'/1]).
 -export(['LLVMAddCFGSimplificationPass'/1]).
@@ -110,7 +110,7 @@
 -export(['LLVMAddBasicAliasAnalysisPass'/1]).
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,36}}--
+%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{19,42,7}}--
 
 -export(['LLVMPassManagerBuilderCreate'/0]).
 -export(['LLVMPassManagerBuilderDispose'/1]).
@@ -125,7 +125,7 @@
 -export(['LLVMPassManagerBuilderPopulateLTOPassManager'/4]).
 %% --- Stop generating from PassManagerBuilder_8h.xml
 
-%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,35}}--
+%% -- Start generating from Object_8h.xml on {{2012,3,12},{19,42,7}}--
 
 -export(['LLVMCreateObjectFile'/1]).
 -export(['LLVMDisposeObjectFile'/1]).
@@ -159,11 +159,11 @@
 -export(['LLVMGetRelocationValueString'/1]).
 %% --- Stop generating from Object_8h.xml
 
-%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,35}}--
+%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{19,42,6}}--
 
 %% --- Stop generating from LinkTimeOptimizer_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
+%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{19,42,5}}--
 
 -export(['LLVMInitializeTransformUtils'/1]).
 -export(['LLVMInitializeScalarOpts'/1]).
@@ -175,7 +175,7 @@
 -export(['LLVMInitializeTarget'/1]).
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
+%% -- Start generating from IPO_8h.xml on {{2012,3,12},{19,42,4}}--
 
 -export(['LLVMAddArgumentPromotionPass'/1]).
 -export(['LLVMAddConstantMergePass'/1]).
@@ -193,7 +193,7 @@
 -export(['LLVMAddStripSymbolsPass'/1]).
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{19,42,4}}--
 
 -export(['LLVMLinkInJIT'/0]).
 -export(['LLVMLinkInInterpreter'/0]).
@@ -228,7 +228,7 @@
 -export(['LLVMGetPointerToGlobal'/2]).
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,31}}--
+%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{19,42,3}}--
 
 -export(['EDGetDisassembler'/3]).
 -export(['EDGetRegisterName'/3]).
@@ -265,13 +265,13 @@
 -export(['EDEvaluateOperand'/4]).
 %% --- Stop generating from EnhancedDisassembly_8h.xml
 
-%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{19,42,2}}--
 
 -export(['LLVMCreateDisasm'/5]).
 -export(['LLVMDisasmDispose'/1]).
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from Core_8h.xml on {{2012,3,12},{19,42,2}}--
 
 -export(['LLVMDisposeMessage'/1]).
 -export(['LLVMContextCreate'/0]).
@@ -733,14 +733,14 @@
 -export(['LLVMDisposePassManager'/1]).
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{19,42,1}}--
 
 -export(['LLVMWriteBitcodeToFile'/2]).
 -export(['LLVMWriteBitcodeToFD'/4]).
 -export(['LLVMWriteBitcodeToFileHandle'/2]).
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{19,42,1}}--
 
 -export(['LLVMParseBitcode'/1]).
 -export(['LLVMParseBitcodeInContext'/2]).
@@ -750,7 +750,7 @@
 -export(['LLVMGetBitcodeModuleProvider'/1]).
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{19,42,1}}--
 
 -export(['LLVMVerifyModule'/2]).
 -export(['LLVMVerifyFunction'/2]).
@@ -762,7 +762,7 @@
 -type llvm_ptr(Base) :: {llvm_ptr, Base}.
 
 %% @@TYPES@@
-%% -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+%% -- Start generating from lto_8h.xml on {{2012,3,12},{19,42,11}}--
 
 -opaque 'lto_symbol_attributes'() :: {'lto_symbol_attributes',integer()}.
 -opaque 'lto_debug_model'() :: {'lto_debug_model',integer()}.
@@ -773,11 +773,11 @@
 %% opaque reference to a code generator 
 %% --- Stop generating from lto_8h.xml
 
-%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
+%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{19,42,10}}--
 
 %% --- Stop generating from Vectorize_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
+%% -- Start generating from Target_8h.xml on {{2012,3,12},{19,42,9}}--
 
 -opaque 'LLVMByteOrdering'() :: {'LLVMByteOrdering',integer()}.
 -opaque 'LLVMTargetDataRef'() :: {'LLVMTargetDataRef',binary()}.
@@ -788,17 +788,17 @@
 %% 
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
+%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{19,42,8}}--
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,36}}--
+%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{19,42,7}}--
 
 -opaque 'LLVMPassManagerBuilderRef'() :: {'LLVMPassManagerBuilderRef',binary()}.
 %% 
 %% --- Stop generating from PassManagerBuilder_8h.xml
 
-%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,35}}--
+%% -- Start generating from Object_8h.xml on {{2012,3,12},{19,42,6}}--
 
 -opaque 'LLVMObjectFileRef'() :: {'LLVMObjectFileRef',binary()}.
 %% 
@@ -810,7 +810,7 @@
 %% 
 %% --- Stop generating from Object_8h.xml
 
-%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,34}}--
+%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{19,42,6}}--
 
 -opaque 'llvm_lto_status'() :: {'llvm_lto_status',integer()}.
 -opaque 'llvm_lto_t'() :: {'llvm_lto_t',binary()}.
@@ -820,15 +820,15 @@
 
 %% --- Stop generating from LinkTimeOptimizer_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
+%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{19,42,5}}--
 
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
+%% -- Start generating from IPO_8h.xml on {{2012,3,12},{19,42,4}}--
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{19,42,4}}--
 
 -opaque 'LLVMGenericValueRef'() :: {'LLVMGenericValueRef',binary()}.
 %% 
@@ -836,7 +836,7 @@
 %% 
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,31}}--
+%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{19,42,3}}--
 
 -opaque '@0'() :: {'@0',integer()}.
 -opaque 'EDByteReaderCallback'() :: {'EDByteReaderCallback',binary()}.
@@ -856,7 +856,7 @@
 %% Encapsulates an operand of an instruction. 
 %% --- Stop generating from EnhancedDisassembly_8h.xml
 
-%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{19,42,2}}--
 
 -opaque 'LLVMDisasmContextRef'() :: {'LLVMDisasmContextRef',binary()}.
 %% An opaque reference to a disassembler context. 
@@ -866,7 +866,7 @@
 %% The type for the symbol lookup function. This may be called by the disassembler for things like adding a comment for a PC plus a constant offset load instruction to use a symbol name instead of a load address value. It is passed the block information is saved when the disassembler context is created and the ReferenceValue to look up as a symbol. If no symbol is found for the ReferenceValue NULL is returned. The ReferenceType of the instruction is passed indirectly as is the PC of the instruction in ReferencePC. If the output reference can be determined its type is returned indirectly in ReferenceType along with ReferenceName if any, or that is set to NULL. 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from Core_8h.xml on {{2012,3,12},{19,42,2}}--
 
 -opaque 'LLVMAttribute'() :: {'LLVMAttribute',integer()}.
 -opaque 'LLVMOpcode'() :: {'LLVMOpcode',integer()}.
@@ -904,15 +904,15 @@
 %% Used to get the users and usees of a Value. See the llvm::Use class. 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{19,42,1}}--
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{19,42,1}}--
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{19,42,1}}--
 
 -opaque 'LLVMVerifierFailureAction'() :: {'LLVMVerifierFailureAction',integer()}.
 %% --- Stop generating from Analysis_8h.xml
@@ -922,7 +922,7 @@ load_my_nifs() ->
     erlang:load_nif(filename:join([code:priv_dir(llevm),"x86_64/llevm"]),0).
 
 %% @@FUNCTIONS@@
-%% -- Start generating from lto_8h.xml on {{2012,3,12},{11,57,40}}--
+%% -- Start generating from lto_8h.xml on {{2012,3,12},{19,42,11}}--
 
 %% @doc Returns a printable string. 
 -spec 'lto_get_version'() -> string().
@@ -1122,7 +1122,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from lto_8h.xml
 
-%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{11,57,39}}--
+%% -- Start generating from Vectorize_8h.xml on {{2012,3,12},{19,42,10}}--
 
 %% @doc See llvm::createBBVectorizePass function. 
 -spec 'LLVMAddBBVectorizePass'(PM :: 'LLVMPassManagerRef'()) -> atom().
@@ -1133,7 +1133,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Vectorize_8h.xml
 
-%% -- Start generating from Target_8h.xml on {{2012,3,12},{11,57,38}}--
+%% -- Start generating from Target_8h.xml on {{2012,3,12},{19,42,9}}--
 
 %% @doc LLVMInitializeAllTargetInfos - The main program should call this function if it wants access to all available targets that LLVM is configured to support. 
 -spec 'LLVMInitializeAllTargetInfos'() -> atom().
@@ -1305,7 +1305,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Target_8h.xml
 
-%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{11,57,37}}--
+%% -- Start generating from Scalar_8h.xml on {{2012,3,12},{19,42,8}}--
 
 %% @doc See llvm::createAggressiveDCEPass function. 
 -spec 'LLVMAddAggressiveDCEPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
@@ -1519,7 +1519,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Scalar_8h.xml
 
-%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{11,57,36}}--
+%% -- Start generating from PassManagerBuilder_8h.xml on {{2012,3,12},{19,42,7}}--
 
 %% @doc See llvm::PassManagerBuilder. 
 -spec 'LLVMPassManagerBuilderCreate'() -> 'LLVMPassManagerBuilderRef'().
@@ -1600,7 +1600,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from PassManagerBuilder_8h.xml
 
-%% -- Start generating from Object_8h.xml on {{2012,3,12},{11,57,35}}--
+%% -- Start generating from Object_8h.xml on {{2012,3,12},{19,42,7}}--
 
 %% @doc 
 -spec 'LLVMCreateObjectFile'(MemBuf :: 'LLVMMemoryBufferRef'()) -> 'LLVMObjectFileRef'().
@@ -1814,11 +1814,11 @@ load_my_nifs() ->
 
 %% --- Stop generating from Object_8h.xml
 
-%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{11,57,35}}--
+%% -- Start generating from LinkTimeOptimizer_8h.xml on {{2012,3,12},{19,42,6}}--
 
 %% --- Stop generating from LinkTimeOptimizer_8h.xml
 
-%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{11,57,34}}--
+%% -- Start generating from Initialization_8h.xml on {{2012,3,12},{19,42,5}}--
 
 %% @doc 
 -spec 'LLVMInitializeTransformUtils'(R :: 'LLVMPassRegistryRef'()) -> atom().
@@ -1878,7 +1878,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Initialization_8h.xml
 
-%% -- Start generating from IPO_8h.xml on {{2012,3,12},{11,57,33}}--
+%% -- Start generating from IPO_8h.xml on {{2012,3,12},{19,42,4}}--
 
 %% @doc See llvm::createArgumentPromotionPass function. 
 -spec 'LLVMAddArgumentPromotionPass'(PM :: 'LLVMPassManagerRef'()) -> atom().
@@ -1980,7 +1980,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from IPO_8h.xml
 
-%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{11,57,32}}--
+%% -- Start generating from ExecutionEngine_8h.xml on {{2012,3,12},{19,42,4}}--
 
 %% @doc 
 -spec 'LLVMLinkInJIT'() -> atom().
@@ -2210,7 +2210,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from ExecutionEngine_8h.xml
 
-%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{11,57,32}}--
+%% -- Start generating from EnhancedDisassembly_8h.xml on {{2012,3,12},{19,42,3}}--
 
 %% @doc Getting a disassemblerEDGetDisassembler Gets the disassembler for a given target. disassemblerA pointer whose target will be filled in with the disassembler. tripleIdentifies the target. Example: "x86_64-apple-darwin10" syntaxThe assembly syntax to use when decoding instructions. 0 on success; -1 otherwise. 
 -spec 'EDGetDisassembler'(Disassembler :: llvm_ptr('EDDisassemblerRef'()),Triple :: string(),Syntax :: 'EDAssemblySyntax_t'()) -> integer().
@@ -2445,7 +2445,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from EnhancedDisassembly_8h.xml
 
-%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{11,57,31}}--
+%% -- Start generating from Disassembler_8h.xml on {{2012,3,12},{19,42,2}}--
 
 %% @doc Create a disassembler for the TripleName. Symbolic disassembly is supported by passing a block of information in the DisInfo parameter and specifying the TagType and callback functions as described above. These can all be passed as NULL. If successful, this returns a disassembler context. If not, it returns NULL. 
 -spec 'LLVMCreateDisasm'(TripleName :: string(),DisInfo :: llvm_ptr(atom()),TagType :: integer(),GetOpInfo :: 'LLVMOpInfoCallback'(),SymbolLookUp :: 'LLVMSymbolLookupCallback'()) -> 'LLVMDisasmContextRef'().
@@ -2463,7 +2463,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Disassembler_8h.xml
 
-%% -- Start generating from Core_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from Core_8h.xml on {{2012,3,12},{19,42,2}}--
 
 %% @doc 
 -spec 'LLVMDisposeMessage'(Message :: string()) -> atom().
@@ -5674,7 +5674,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from Core_8h.xml
 
-%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from BitWriter_8h.xml on {{2012,3,12},{19,42,1}}--
 
 %% @doc Writes a module to the specified path. Returns 0 on success. 
 -spec 'LLVMWriteBitcodeToFile'(M :: 'LLVMModuleRef'(),Path :: string()) -> integer().
@@ -5699,7 +5699,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from BitWriter_8h.xml
 
-%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from BitReader_8h.xml on {{2012,3,12},{19,42,1}}--
 
 %% @doc 
 -spec 'LLVMParseBitcode'(MemBuf :: 'LLVMMemoryBufferRef'()) -> boolean().
@@ -5751,7 +5751,7 @@ load_my_nifs() ->
 
 %% --- Stop generating from BitReader_8h.xml
 
-%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{11,57,30}}--
+%% -- Start generating from Analysis_8h.xml on {{2012,3,12},{19,42,1}}--
 
 %% @doc 
 -spec 'LLVMVerifyModule'(M :: 'LLVMModuleRef'(),Action :: 'LLVMVerifierFailureAction'()) -> boolean().
